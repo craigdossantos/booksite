@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Empathic Coffee Order",
+    "goal": "Successfully place a coffee order by using tactical empathy to improve the barista's experience and potentially receive better service.",
+    "steps": [
+      "Observe: Before approaching the counter, watch the barista for 30 seconds. Note their demeanor, how they interact with other customers, and the overall atmosphere.",
+      "Mirror: Subtly mirror the barista's body language and tone. If they're energetic, match that energy slightly. If they're calm, adopt a calm tone.",
+      "Label: As you approach, offer an observation about their work. Say something like, \"Looks like you're having a busy morning,\" or \"You seem to be handling the rush really well.\"",
+      "Inquire: When ordering, use open-ended questions like, \"What coffee would you recommend today?\" or \"What's your favorite drink to make right now?\"",
+      "Listen Actively: Pay close attention to the barista's responses, acknowledge their suggestions with phrases like \"That sounds great, thank you for suggesting that.\""
+    ],
+    "duration": "5-10 mins",
+    "success_criteria": "Did the barista seem more engaged with me than with other customers? Did I feel like I established a small connection beyond a transactional interaction?",
+    "related_concept": "Tactical Empathy"
+  },
+  {
+    "title": "Inclusive Brainstorm Facilitation",
+    "goal": "Conduct a team brainstorming session ensuring equal participation and valuing diverse perspectives.",
+    "steps": [
+      "Before the meeting, send out a pre-read with the brainstorming topic and instructions to all team members.",
+      "At the start of the meeting, explicitly state your intention to ensure everyone's voice is heard and valued.",
+      "Use a 'round-robin' approach, asking each team member in turn to share one idea (without interruption from others) before opening the floor for general discussion.",
+      "Actively solicit input from quieter members by asking direct questions like, 'What are your thoughts on this, [Name]?' or 'Do you have a different perspective, [Name]?'",
+      "Conclude the session by summarizing the key ideas and thanking everyone for their contributions, highlighting how the diverse perspectives enriched the outcome."
+    ],
+    "duration": "1 hour",
+    "success_criteria": "Did I ensure all team members shared at least one idea during the brainstorming session, and did I explicitly acknowledge the value of diverse perspectives in the summary?",
+    "related_concept": "Inclusive Leadership"
+  },
+  {
+    "title": "Elevator Pitch Perfected",
+    "goal": "Deliver a concise and compelling elevator pitch without filler words or rambling.",
+    "steps": [
+      "Write a 30-second elevator pitch about your current role or a project you're working on.",
+      "Record yourself reciting the pitch.",
+      "Review the recording, identifying any filler words (um, ah, like, so) or areas where you lose focus.",
+      "Practice the pitch 5 times, focusing on eliminating filler words and maintaining a clear, engaging tone.",
+      "Record yourself again and compare it to the first recording."
+    ],
+    "duration": "30 minutes",
+    "success_criteria": "Delivered the 30-second pitch smoothly, without filler words, and feeling confident.",
+    "related_concept": "Continuous Improvement Through Repetition"
+  }
+]

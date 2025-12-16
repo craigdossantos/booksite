@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Copyright Charade",
+    "goal": "To understand the practical implications of copyright law by acting out different scenarios involving copyright infringement and fair use.",
+    "steps": [
+      "Divide into small groups (3-4 people per group).",
+      "Each group selects a common work of art (song, book, movie clip).",
+      "Each group creates a 30-second skit demonstrating a clear copyright infringement scenario related to their chosen work (e.g., unauthorized distribution, selling copies).",
+      "Each group creates a 30-second skit demonstrating a fair use scenario related to their chosen work (e.g., parody, educational use, news reporting).",
+      "Perform the skits for the class, and after each skit, the audience must identify whether it's infringement or fair use, and why."
+    ],
+    "duration": "60 minutes",
+    "success_criteria": "Did I participate in both creating and performing skits demonstrating copyright infringement and fair use scenarios?",
+    "related_concept": "Copyright"
+  },
+  {
+    "title": "The 2-Minute Plank Challenge",
+    "goal": "To consistently improve core strength and endurance through a small, daily commitment.",
+    "steps": [
+      "Day 1: Hold a plank for 20 seconds.",
+      "Day 2: Hold a plank for 25 seconds.",
+      "Day 3: Hold a plank for 30 seconds.",
+      "Day 4: Hold a plank for 35 seconds.",
+      "Day 5: Hold a plank for 40 seconds."
+    ],
+    "duration": "5 days",
+    "success_criteria": "Did I complete each plank hold for the specified duration each day?",
+    "related_concept": "Atomic Habits"
+  },
+  {
+    "title": "Identity Affirmation Journaling",
+    "goal": "To reinforce a chosen identity through consistent journaling, thereby strengthening habits aligned with that identity.",
+    "steps": [
+      "Choose an identity you want to cultivate (e.g., 'Writer,' 'Athlete,' 'Disciplined Person').",
+      "Each day, write for 5 minutes about how you embody that identity. Focus on actions, thoughts, and feelings.",
+      "Specifically, describe one small action you took that day (or will take) which aligns with the chosen identity.",
+      "Reflect on how performing that action made you feel and how it reinforced your belief in this identity."
+    ],
+    "duration": "7 days",
+    "success_criteria": "I wrote in my journal for 5 minutes each day for 7 consecutive days, focusing on my chosen identity and related actions.",
+    "related_concept": "Habit and Identity"
+  },
+  {
+    "title": "Hydration Habit Hack",
+    "goal": "Drink 8 glasses of water daily for one week using the Four Laws of Behavior Change.",
+    "steps": [
+      "1. **Make it Obvious:** Place a filled water bottle in your line of sight in three key locations (desk, kitchen counter, bedside table).",
+      "2. **Make it Attractive:** Add slices of lemon, cucumber, or berries to your water to enhance its flavor.",
+      "3. **Make it Easy:** Use a water bottle with measurements to track your intake throughout the day.",
+      "4. **Make it Satisfying:** Each evening, mark off on a chart every glass of water you drank. Reward yourself at the end of the week with a healthy treat if you met your daily goal."
+    ],
+    "duration": "7 days",
+    "success_criteria": "Did I drink 8 glasses of water each day for the entire week (7 days)?",
+    "related_concept": "Four Laws of Behavior Change"
+  },
+  {
+    "title": "Habit Tracker in Sight",
+    "goal": "Visually connect a new habit to an existing routine to increase its likelihood.",
+    "steps": [
+      "Choose a new habit you want to build (e.g., drinking more water).",
+      "Identify an existing habit you already do consistently (e.g., brushing your teeth).",
+      "Get a roll of brightly colored tape and a marker.",
+      "Write the new habit ('Drink Water') on a piece of tape and stick it to your toothbrush or bathroom mirror.",
+      "Each time you brush your teeth, the visual cue will remind you to immediately drink water afterwards."
+    ],
+    "duration": "3 days",
+    "success_criteria": "Did I place the visual reminder and notice it before/during my existing habit each day?",
+    "related_concept": "Make It Obvious"
+  },
+  {
+    "title": "Nudge Your Water Intake",
+    "goal": "Increase daily water consumption by strategically placing water cues.",
+    "steps": [
+      "1. Place a full water bottle or glass on your desk or workspace.",
+      "2. Keep a water bottle visible in your car or bag.",
+      "3. Set a recurring phone reminder every hour to take a few sips.",
+      "4. After each bathroom break, refill your water bottle."
+    ],
+    "duration": "3 days",
+    "success_criteria": "Did I consistently implement all four steps for three days?",
+    "related_concept": "Environment Matters"
+  },
+  {
+    "title": "Temptation Bundle Your Workout",
+    "goal": "Make exercise more attractive by linking it to an enjoyable activity.",
+    "steps": [
+      "Identify a task you should do but dread (e.g., 30 minutes of cardio).",
+      "Identify something you genuinely enjoy doing (e.g., watching your favorite TV show).",
+      "Designate a specific TV show that you ONLY watch while doing your cardio.",
+      "Schedule your workout and TV show combination for the next day.",
+      "Complete the workout while ONLY watching the designated TV show. No peeking at other times!"
+    ],
+    "duration": "1 day",
+    "success_criteria": "Did I complete the scheduled workout while ONLY watching the designated TV show?",
+    "related_concept": "Make It Attractive"
+  },
+  {
+    "title": "Two-Minute Meditation Jumpstart",
+    "goal": "Establish a consistent, minimal meditation habit to reduce friction for future, longer sessions.",
+    "steps": [
+      "Prepare: Set a timer for 2 minutes. Find a quiet place where you won't be disturbed.",
+      "Sit: Sit comfortably, either on a cushion, chair, or the floor. Close your eyes gently.",
+      "Focus: Bring your attention to your breath. Notice the sensation of the air entering and leaving your body.",
+      "Return: When your mind wanders (and it will), gently guide your attention back to your breath."
+    ],
+    "duration": "3 days",
+    "success_criteria": "Did I meditate for at least 2 minutes each day for three consecutive days?",
+    "related_concept": "Make It Easy"
+  },
+  {
+    "title": "Hydration Habit Tracker",
+    "goal": "Drink more water consistently throughout the day using a visual tracker to reinforce the habit.",
+    "steps": [
+      "Get a reusable water bottle and mark it with lines indicating water levels for 4 equal intervals throughout the day.",
+      "Create a simple chart with 7 rows (one for each day of the week) and 4 columns (one for each water interval).",
+      "Each time you finish one interval of water (reach a marked line), immediately fill in or check off the corresponding box on your chart.",
+      "Keep the bottle and chart visible throughout the day as a constant reminder and visual progress indicator.",
+      "At the end of the day, review your progress and reflect on how consistently you met your hydration goals."
+    ],
+    "duration": "1 week",
+    "success_criteria": "Did I fill in/check off at least 3 out of 4 water intervals on my chart for each day of the week?",
+    "related_concept": "Make It Satisfying"
+  },
+  {
+    "title": "Accountability Buddy Check-In",
+    "goal": "Establish a clear check-in process with your accountability partner for a specific task.",
+    "steps": [
+      "Identify a specific task or goal you want to be held accountable for this week (e.g., \"Exercise for 30 minutes, 3 times this week\").",
+      "Contact a friend, family member, or colleague and ask them to be your accountability partner for this task.",
+      "Agree on a specific check-in method (e.g., text message, phone call, email) and frequency (e.g., daily, every other day, weekly).",
+      "During your initial check-in, clearly state your task/goal and how your partner can best support you (e.g., \"Just ask if I did it, no excuses.\")",
+      "Document the agreed-upon task, check-in method, and frequency in a note for yourself to ensure you both remember."
+    ],
+    "duration": "30 minutes",
+    "success_criteria": "Did I clearly communicate my task and check-in plan to my accountability partner?",
+    "related_concept": "Accountability Partner"
+  }
+]

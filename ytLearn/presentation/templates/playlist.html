@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Analysis - ytLearn</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="playlist-header">
+            <a href="/" class="back-btn">← Back to Library</a>
+            <h1 id="playlist-title">Loading Playlist...</h1>
+        </header>
+
+        <main class="playlist-content" id="playlist-container">
+            <!-- Sticky Player Container -->
+            <div id="sticky-player-container" class="sticky-player hidden">
+                <div id="youtube-player"></div>
+                <button id="close-player" class="close-player-btn">&times;</button>
+            </div>
+
+            <div class="loader-container">
+                <div class="loader"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const playlistId = "{{ playlist_id }}";
+            const container = document.getElementById('playlist-container');
+            const titleEl = document.getElementById('playlist-title');
+            const playerContainer = document.getElementById('sticky-player-container');
+            const closePlayerBtn = document.getElementById('close-player');
+
+            let player;
+            let currentVideoId = null;
+
+            // Load YouTube API
+            if (!window.YT) {
+                const tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                const firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+
+            window.onYouTubeIframeAPIReady = function () {
+                console.log("YouTube API Ready");
+            };
+
+            window.playVideo = function (videoId, startTime = 0) {
+                playerContainer.classList.remove('hidden');
+
+                if (player && currentVideoId === videoId) {
+                    player.seekTo(startTime, true);
+                    player.playVideo();
+                } else {
+                    if (player) {
+                        player.loadVideoById({ videoId: videoId, startSeconds: startTime });
+                    } else {
+                        player = new YT.Player('youtube-player', {
+                            height: '200',
+                            width: '356',
+                            videoId: videoId,
+                            playerVars: { 'playsinline': 1, 'start': startTime },
+                            events: { 'onReady': (e) => e.target.playVideo() }
+                        });
+                    }
+                    currentVideoId = videoId;
+                }
+            };
+
+            closePlayerBtn.addEventListener('click', () => {
+                playerContainer.classList.add('hidden');
+                if (player) player.stopVideo();
+            });
+
+            fetch(`/api/playlist/${playlistId}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.error) {
+                        container.innerHTML = `<p class="error">${data.error}</p>`;
+                        return;
+                    }
+
+                    titleEl.textContent = data.title;
+                    // Remove loader but keep player container
+                    const loader = container.querySelector('.loader-container');
+                    if (loader) loader.remove();
+
+                    if (data.videos.length === 0) {
+                        container.innerHTML += '<p>No videos found in this playlist.</p>';
+                        return;
+                    }
+
+                    data.videos.forEach(video => {
+                        const section = document.createElement('section');
+                        section.className = 'playlist-video-section';
+
+                        let thumbnailHtml = '';
+                        if (video.id) {
+                            thumbnailHtml = `<div class="playlist-thumb-wrapper" onclick="playVideo('${video.id}')">
+                                <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}" class="playlist-thumb">
+                                <div class="play-overlay">▶</div>
+                            </div>`;
+                        }
+
+                        let contentHtml = '';
+
+                        // Actionable Advice
+                        if (video.insights && video.insights.actionable_advice) {
+                            contentHtml += `
+                                <div class="playlist-advice">
+                                    <h3>Key Advice</h3>
+                                    <ul>
+                                        ${video.insights.actionable_advice.map(item => `
+                                            <li>
+                                                <span class="timestamp-btn" onclick="playVideo('${video.id}', ${item.timestamp})">${formatTime(item.timestamp)}</span>
+                                                ${item.advice}
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            `;
+                        }
+
+                        // Deep Analysis
+                        if (video.deep_analysis && video.deep_analysis.items) {
+                            contentHtml += `
+                                <div class="playlist-analysis">
+                                    <h3>Deep Analysis</h3>
+                                    <div class="analysis-grid">
+                                        ${video.deep_analysis.items.map(item => `
+                                            <div class="analysis-card type-${item.type.toLowerCase()}">
+                                                <div class="card-header">
+                                                    <span class="badge">${item.type}</span>
+                                                    <span class="timestamp-btn" onclick="playVideo('${video.id}', ${item.timestamp})">${formatTime(item.timestamp)}</span>
+                                                </div>
+                                                <p class="context"><strong>Context:</strong> ${item.context}</p>
+                                                <p class="action"><strong>Action:</strong> ${item.action}</p>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        if (!contentHtml) {
+                            contentHtml = '<p class="no-data">No analysis available for this video.</p>';
+                        }
+
+                        section.innerHTML = `
+                            <div class="video-header">
+                                ${thumbnailHtml}
+                                <div class="header-text">
+                                    <h2>${video.title}</h2>
+                                    <button class="play-video-btn" onclick="playVideo('${video.id}')">Play Video</button>
+                                </div>
+                            </div>
+                            <div class="video-body">
+                                ${contentHtml}
+                            </div>
+                        `;
+                        container.appendChild(section);
+                    });
+                })
+                .catch(err => {
+                    container.innerHTML = `<p class="error">Failed to load playlist: ${err}</p>`;
+                });
+
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return `${m}:${s.toString().padStart(2, '0')}`;
+            }
+        });
+    </script>
+</body>
+
+</html>

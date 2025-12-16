@@ -1,0 +1,334 @@
+{
+  "title": "Never Split the Difference",
+  "author": "Chris Voss",
+  "processedAt": "2025-12-07T08:16:31.815540",
+  "chapters": [
+    {
+      "id": "00_textPart01.html.md",
+      "title": "THE NEW RULES",
+      "summary": "Chapter 1, \"The New Rules,\" introduces the author's background as an FBI hostage negotiator and contrasts his practical experience with the theoretical approaches to negotiation taught at Harvard. The chapter highlights the limitations of purely rational, problem-solving negotiation techniques when dealing with emotionally charged situations. It emphasizes the importance of understanding human psychology and using emotional intelligence, particularly tactical empathy, to influence outcomes. The author recounts his experiences at Harvard, both in an executive course and a law school negotiation class, to illustrate the effectiveness of the FBI's emotionally-driven approach compared to the more traditional, rational methods.",
+      "stories": [
+        {
+          "title": "The Harvard Negotiation Exercise",
+          "description": "The author is challenged by Harvard negotiation professors Robert Mnookin and Gabriella Blum in a mock hostage situation where they 'kidnap' his son. Mnookin demands $1 million. The author uses open-ended, calibrated questions like, 'How am I supposed to do that?' to deflect their demands and force them to address the logistical problems of getting the money. They get frustrated and end the exercise.",
+          "lesson": "Open-ended questions can shift the frame of a negotiation, create the illusion of control for the other party, and buy you time while revealing their constraints. It also highlights the importance of not being easily bulldozed by demands."
+        },
+        {
+          "title": "Harvard Law School Winter Negotiation Course",
+          "description": "The author participates in a winter negotiation course at Harvard Law School. He consistently outperforms his classmates, including one named Andy, by using simple questions and active listening techniques. He completely depletes Andy's budget in a mock negotiation, showcasing the effectiveness of his emotionally-attuned approach over the students' rational, logic-based strategies.",
+          "lesson": "Practical experience and understanding of human psychology can be more effective than purely theoretical knowledge. Asking questions that make the other party question themselves can be a very strong tactic."
+        },
+        {
+          "title": "The Downs Hijacking Case",
+          "description": "The chapter recounts the 1971 Downs hijacking case where the FBI's impatience and use of force led to the deaths of hostages, including the hijacker's estranged wife and the pilot. This case became a pivotal moment, highlighting the need for negotiation over brute force, and leading to the development of hostage negotiation techniques.",
+          "lesson": "The use of force without attempting negotiation can lead to disastrous outcomes. This event emphasizes the importance of a reasonable attempt at negotiation before tactical intervention."
+        }
+      ],
+      "learningObjectives": [
+        "Understand the limitations of purely rational, problem-solving negotiation techniques.",
+        "Recognize the importance of human psychology and emotional intelligence in negotiation.",
+        "Learn how to use calibrated, open-ended questions to influence the other party and gain information.",
+        "Appreciate the value of tactical empathy and active listening in building rapport and trust.",
+        "Understand the historical shift in negotiation strategies from brute force to psychological approaches.",
+        "Recognize how cognitive biases influence decision-making in negotiations."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "An image depicting the contrast between a Harvard Law School negotiation classroom and an FBI hostage negotiation situation.",
+          "prompt": "Create a split image. On the left: A polished Harvard Law School negotiation classroom, students in suits, laptops open, discussing strategy. On the right: A tense, dimly lit room with FBI agents negotiating with a shadowy figure representing a hostage taker. Use contrasting colors and lighting to emphasize the difference in atmosphere.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><rect width=\"50\" height=\"50\" fill=\"blue\" /><rect x=\"50\" width=\"50\" height=\"50\" fill=\"red\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "An infographic illustrating Kahneman's System 1 and System 2 thinking, emphasizing the influence of System 1 (emotional) on System 2 (rational) thought processes.",
+          "prompt": "Create an infographic comparing System 1 (fast, emotional, instinctive) and System 2 (slow, rational, deliberate) thinking. Visually represent System 1 as a large, powerful, and subtly directing the smaller, more focused System 2. Use icons and short descriptions to highlight the key characteristics of each system. Include the phrase 'System 1 feeds System 2'.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><circle cx=\"25\" cy=\"25\" r=\"20\" fill=\"green\" /><circle cx=\"75\" cy=\"25\" r=\"10\" fill=\"yellow\" /></svg>"
+        },
+        {
+          "type": "image",
+          "description": "An image contrasting the old-school negotiation of brute force with the new-school negotiation of tactical empathy.",
+          "prompt": "Create a visual metaphor comparing old-school vs new-school negotiation. Old-school: A muscular arm wrestling a weaker person, representing brute force. New-school: Two people engaged in conversation, one actively listening with empathy, representing tactical empathy and influence.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><line x1=\"0\" y1=\"50\" x2=\"50\" y2=\"0\" stroke=\"black\" /><line x1=\"50\" y1=\"50\" x2=\"100\" y2=\"0\" stroke=\"gray\" /></svg>"
+        }
+      ]
+    },
+    {
+      "id": "01_textPart02.html.md",
+      "title": "BE A MIRROR",
+      "summary": "This chapter recounts the author's first hostage negotiation during a bank robbery in 1993. It emphasizes the importance of questioning assumptions, actively listening, using the right tone of voice, and mirroring to build trust and gather information. The chapter details the challenges faced due to misinformation and the negotiator's evolving strategies to manage the situation and establish a connection with the hostage-takers.",
+      "stories": [
+        {
+          "title": "Chase Manhattan Bank Robbery",
+          "description": "The author describes his first hostage negotiation scenario during a bank robbery, detailing the initial chaos, the misinformation provided by the lead robber, and the challenges of establishing communication and control.",
+          "lesson": "Question assumptions and be prepared to adapt your strategy based on new information. Initial intelligence can be misleading, so remain flexible and open to new insights."
+        },
+        {
+          "title": "The Late-Night FM DJ Voice",
+          "description": "The author takes over the negotiation and uses a calm, reassuring voice (the 'Late-Night FM DJ Voice') to try to connect with the lead hostage-taker and de-escalate the situation.",
+          "lesson": "The tone of voice is a powerful tool in negotiation. A calm and reassuring voice can create a sense of safety and control, influencing the other party's emotional state and willingness to cooperate."
+        },
+        {
+          "title": "Mirroring Chris Watts",
+          "description": "The author successfully employs mirroring to encourage Chris Watts to reveal information, even though a direct question afterward ruins the momentum. This highlights the importance of mirroring and also the need to provide silence afterward for the action to be effective.",
+          "lesson": "Mirroring, or repeating the last few words of what someone says, can create rapport and encourage them to elaborate. However, it's important to allow silence for the mirroring to take effect."
+        },
+        {
+          "title": "Bobby Goodwin's Hesitation",
+          "description": "The author recalls speaking to Watts's accomplice. Goodwin, who was in over his head, clearly expressed trust in the author's calm demeanor.",
+          "lesson": "Even in high-pressure situations, creating a sense of trust and safety can persuade even a hostage taker to see a way to de-escalate."
+        }
+      ],
+      "learningObjectives": [
+        "Question assumptions and gather as much information as possible.",
+        "Practice active listening to understand the other party's needs and wants.",
+        "Use the appropriate tone of voice to create a safe and controlled environment.",
+        "Employ mirroring to build rapport and encourage communication.",
+        "Slow down the negotiation process to avoid rushing to conclusions and build trust.",
+        "Identify the difference between wants and needs."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "A bank robbery scene with negotiators outside and robbers inside, highlighting the chaos and tension of a hostage situation.",
+          "prompt": "Create a realistic image of a bank robbery in progress. Show police and negotiators outside the bank, with SWAT teams positioned on rooftops. Inside, masked robbers are holding hostages. The scene should be tense and chaotic, conveying the high-stakes nature of a hostage negotiation.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><rect width=\"100\" height=\"50\" fill=\"red\" /></svg>"
+        },
+        {
+          "type": "image",
+          "description": "A person with a calm and reassuring expression, representing the 'Late-Night FM DJ Voice'.",
+          "prompt": "Create a portrait of a person with a calm, reassuring, and trustworthy expression. The lighting should be soft and gentle, and the person's eyes should convey empathy and understanding. The overall image should evoke a sense of safety and control.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><circle cx=\"50\" cy=\"25\" r=\"20\" fill=\"blue\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "An infographic illustrating the concept of mirroring in negotiation, showing how repeating words can build rapport.",
+          "prompt": "Design an infographic that explains the concept of mirroring in negotiation. Use speech bubbles to illustrate a conversation where one person mirrors the other's words. Highlight the key phrases that are being mirrored and explain how this technique builds rapport and encourages communication. Include visual cues to represent trust and connection.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><line x1=\"0\" y1=\"0\" x2=\"100\" y2=\"50\" stroke=\"green\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "An infographic illustrating the difference in 3 types of voice tones available to negotiators: The Late-Night, FM DJ voice, the positive/playful voice, and the direct/assertive voice.",
+          "prompt": "Design an infographic illustrating the three different voice tones for negotiators, the Late-Night, FM DJ voice, the positive/playful voice, and the direct/assertive voice. Highlight when to use each and some examples of how they can be used.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"50\"><line x1=\"0\" y1=\"0\" x2=\"100\" y2=\"50\" stroke=\"green\" /></svg>"
+        }
+      ]
+    },
+    {
+      "id": "02_textPart03.html.md",
+      "title": "DON\u2019T FEEL THEIR PAIN, LABEL IT",
+      "summary": "Chapter 3, \"Don't Feel Their Pain, Label It,\" focuses on the negotiation technique of labeling emotions to build trust and influence. It emphasizes tactical empathy, which involves understanding and verbalizing the other party's feelings to diffuse negativity and reinforce positive sentiments. The chapter explains how to identify emotions through 'words, music, and dance' (verbal, tone, and body language cues), and how labeling involves specific phrases like 'It seems like...' followed by silence. The chapter concludes with the idea of an accusation audit, or listing out every negative thing someone could say about you to disarm your counterpart.",
+      "stories": [
+        {
+          "title": "Harlem Fugitives",
+          "description": "The author recounts a situation where he negotiated with armed fugitives in Harlem by using tactical empathy and labeling. He verbalized their fears of getting shot or going back to jail, which eventually led them to surrender.",
+          "lesson": "Labeling the other party's emotions, especially their fears, can de-escalate tense situations and build trust, leading to a more favorable outcome."
+        },
+        {
+          "title": "Canadian FBI Official",
+          "description": "The author shares an anecdote about angering a top FBI official in Canada by failing to follow proper protocol. To resolve the situation, he apologized and directly acknowledged the official's potential anger and feelings of disrespect, which diffused the tension and allowed him to obtain the necessary clearance.",
+          "lesson": "Addressing negative dynamics head-on by acknowledging the other person's anger or frustration can quickly establish a working relationship and resolve conflicts."
+        },
+        {
+          "title": "Crabby Grandfather",
+          "description": "The author illustrates the use of neutralizing the negative and reinforcing the positive by labeling the underlying feelings in a situation with a cranky grandfather.",
+          "lesson": "Addressing the root causes and the underlying feelings of a person's attitude, while offering solutions can turn the situation around."
+        },
+        {
+          "title": "Washington Redskins Ticket Sales",
+          "description": "A student in the author's class, TJ, rewrote a script to connect with season ticket holders who hadn't paid their bills. By using empathetic language that acknowledged their difficult economic circumstances and emphasized their importance to the team, he was able to set up payment plans with all of them.",
+          "lesson": "Framing communications with empathy and understanding of the other party's situation can significantly improve results, even without offering financial incentives."
+        },
+        {
+          "title": "Girl Scout Fundraiser",
+          "description": "A student found a potential donor was difficult to please until the student labeled the feelings to uncover her underlying motivation.",
+          "lesson": "Digging deep to uncover the primary emotion and labels can transform the state of the conversation."
+        },
+        {
+          "title": "Sixty Seconds or She Dies",
+          "description": "The author describes the first day of class with an exercise in hostage taking.",
+          "lesson": "Labeling your audience's fears will help diffuse them and let it sink in."
+        }
+      ],
+      "learningObjectives": [
+        "Understand the concept of tactical empathy and its importance in negotiation.",
+        "Learn how to identify and label emotions effectively using specific phrases.",
+        "Apply labeling techniques to neutralize negative emotions and reinforce positive ones.",
+        "Recognize the role of 'words, music, and dance' in detecting emotional cues.",
+        "Understand how to perform an accusation audit to disarm a counterpart in negotiation."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "A person actively listening to another, showcasing non-verbal cues like eye contact, nodding, and an open posture.",
+          "prompt": "Close-up shot of a person actively listening to another. Focus on facial expressions (attentive eyes, slight nod) and body language (open posture, leaning slightly forward). Soft, natural lighting. The listener has a calm and understanding expression.",
+          "svgPlaceholder": "<svg width='200' height='100'><rect width='200' height='100' fill='#ddd'/><circle cx='50' cy='50' r='20' fill='#999'/><path d='M80,40 L120,40 L100,70 Z' fill='#999'/></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "A step-by-step guide to labeling emotions in negotiation, covering detection, labeling phrases, and the importance of silence.",
+          "prompt": "Infographic titled \"Labeling Emotions: A Negotiation Guide\". Step 1: \"Detect Emotional State\" - image of a face showing different emotions. Step 2: \"Use Labeling Phrases\" - text examples: 'It seems like...', 'It sounds like...', 'It looks like...'. Step 3: \"Be Silent\" - image of a person listening attentively. Arrows connecting each step. Clean, modern design with blue and green color scheme.",
+          "svgPlaceholder": "<svg width='200' height='150'><rect x='0' y='0' width='60' height='60' fill='#ccc'/><rect x='70' y='0' width='60' height='60' fill='#ccc'/><rect x='140' y='0' width='60' height='60' fill='#ccc'/><text x='10' y='80'>Step 1</text><text x='80' y='80'>Step 2</text><text x='150' y='80'>Step 3</text></svg>"
+        },
+        {
+          "type": "image",
+          "description": "An illustration depicting tactical empathy as emotional intelligence on steroids, visually representing the difference between empathy and sympathy.",
+          "prompt": "Digital illustration showcasing the concept of tactical empathy. One side shows a person offering a comforting hug (sympathy), the other side shows a person actively listening and understanding (empathy). A winding staircase leads upwards from empathy to a figure labeled 'Tactical Empathy' radiating energy and intelligence. Use vibrant colors and a futuristic style.",
+          "svgPlaceholder": "<svg width='200' height='100'><rect width='60' height='60' x='10' y='10' fill='#ddd'/><rect width='60' height='60' x='130' y='10' fill='#ccc'/><path d='M70,70 L130,70' stroke='black'/></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "A visual representation of the accusation audit process, listing potential accusations and how to address them proactively.",
+          "prompt": "Infographic titled \"Accusation Audit: Disarm Your Counterpart\". A list of potential negative accusations (e.g., 'You're being unfair', 'You're only in it for the money'). Next to each accusation, a corresponding proactive statement is made (e.g., 'I know it might seem like I'm being unfair...', 'I understand that you might think I'm only in it for the money...'). Use a clear, organized layout with distinct sections for each accusation and response. Use a business-like color palette.",
+          "svgPlaceholder": "<svg width='200' height='150'><rect width='90' height='40' x='10' y='10' fill='#ccc'/><rect width='90' height='40' x='110' y='10' fill='#ddd'/><rect width='90' height='40' x='10' y='60' fill='#ccc'/><rect width='90' height='40' x='110' y='60' fill='#ddd'/><rect width='90' height='40' x='10' y='110' fill='#ccc'/><rect width='90' height='40' x='110' y='110' fill='#ddd'/></svg>"
+        }
+      ]
+    },
+    {
+      "id": "03_textPart04.html.md",
+      "title": "BEWARE \u201cYES\u201d\u2014MASTER \u201cNO\u201d",
+      "summary": "This chapter challenges the conventional view that \"Yes\" is always good and \"No\" is always bad in negotiations. It argues that \"No\" can be a powerful tool for clarifying positions, creating a safe environment, and ultimately leading to more successful agreements. The chapter provides strategies for embracing \"No\" and understanding its underlying meanings to improve negotiation outcomes.",
+      "stories": [
+        {
+          "title": "Amy Bonderow and the FBI Crisis Negotiation Team",
+          "description": "The author recounts his initial attempt to join the FBI's Crisis Negotiation Team, where Amy Bonderow repeatedly turned him down due to his lack of experience. However, her \"No's\" led him to volunteer at a suicide hotline, which ultimately provided him with valuable experience and paved the way for his acceptance into the team.",
+          "lesson": "\"No\" can be a gateway to \"Yes\" by providing time to pivot, adjust, and reexamine. Rejection can lead to valuable experiences and opportunities."
+        },
+        {
+          "title": "Daryl the Cabbie and the HelpLine Experience",
+          "description": "The author describes a call with a frequent caller named Daryl at the crisis hotline. Initially, the author felt successful in \"CareFronting\" Daryl, but his supervisor pointed out that Daryl's effusive praise was a sign that the author had taken too much control of the conversation and hadn't empowered Daryl to find his own solutions.",
+          "lesson": "It's crucial to guide your counterpart to discover their goals as their own, rather than simply imposing your solutions on them. A superficial \"Yes\" can be a sign that the other person doesn't truly own the agreement."
+        },
+        {
+          "title": "Marti Evelsizer Stands Her Ground",
+          "description": "The author describes how Marti Evelsizer, an FBI Crisis Negotiation Coordinator, used a \"No\"-oriented question to defuse a situation where her jealous supervisor was trying to remove her from her position. By asking \"Do you want the FBI to be embarrassed?\", Marti put her supervisor in a position where he had to consider the negative consequences of his actions and ultimately allowed her to keep her job.",
+          "lesson": "By pushing for a 'No', you can nudge your counterpart into a zone where they are making the decisions, furthering feelings of safety and power."
+        },
+        {
+          "title": "The Fundraiser Script",
+          "description": "The author describes how an improvement was seen when using a 'No'-oriented script to raise money for Republican congressional candidates. It gave the speaker a feeling of safety, security and control.",
+          "lesson": "Used strategically 'No' is an answer that opens the path forward. Don't be horrified by the word 'No'. It is a reaffirmation of autonomy."
+        }
+      ],
+      "learningObjectives": [
+        "Understand that \"No\" is not always negative and can be a valuable tool in negotiations.",
+        "Recognize the different types of \"Yes\" (Counterfeit, Confirmation, Commitment) and how to distinguish between them.",
+        "Learn how to create a safe environment for negotiation by inviting and accepting \"No\".",
+        "Identify the underlying meanings of \"No\" and respond accordingly.",
+        "Persuade from the other person's perspective by understanding their needs for safety, security, and control.",
+        "Use \"No\" to clarify positions, bring forth real issues, and move efforts forward."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "A split image showing a telemarketer on one side aggressively pushing for a 'Yes', contrasted with a negotiator calmly inviting a 'No'.",
+          "prompt": "Create a split image. On the left side, depict a telemarketer with a forced smile, aggressively leaning into a phone, speech bubbles filled with 'Yes' questions. The background is cluttered and stressful. On the right side, show a calm negotiator sitting across from someone, hands relaxed, invitingly gesturing. The background is a clean, open space. The overall style should be contrasting and impactful, highlighting the difference in approach.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"100\"><rect width=\"100\" height=\"100\" fill=\"red\" /><rect x=\"100\" width=\"100\" height=\"100\" fill=\"blue\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "An infographic breaking down the three types of 'Yes': Counterfeit, Confirmation, and Commitment.",
+          "prompt": "Design an infographic titled 'The Three Types of Yes'. Divide it into three sections: 'Counterfeit Yes' (person hiding behind a mask), 'Confirmation Yes' (person neutrally nodding), and 'Commitment Yes' (person shaking hands on a deal). For each type, include a brief description, a visual representation, and a key takeaway. Use a clean, modern design with contrasting colors.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"100\"><rect width=\"66\" height=\"100\" fill=\"green\" /><rect x=\"67\" width=\"66\" height=\"100\" fill=\"yellow\" /><rect x=\"134\" width=\"66\" height=\"100\" fill=\"purple\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "A flow chart illustrating how to respond when someone says \"No\" in a negotiation.",
+          "prompt": "Create a flowchart titled 'Responding to No'. The starting point is 'Counterpart Says No'. From there, branch out to potential meanings: 'Not Ready to Agree', 'Uncomfortable', 'Doesn't Understand', etc. For each meaning, provide a suggested response in a callout bubble (e.g., 'What about this doesn't work for you?'). Use arrows to show the flow of the conversation. Style should be clear, concise, and visually appealing.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"100\"><rect width=\"50\" height=\"50\" fill=\"orange\" /><rect x=\"75\" width=\"50\" height=\"50\" fill=\"pink\" /><rect x=\"150\" width=\"50\" height=\"50\" fill=\"grey\" /></svg>"
+        },
+        {
+          "type": "image",
+          "description": "Image of a shield with 'No' written on it, symbolizing protection, safety, and control.",
+          "prompt": "Generate an image of an ornate shield made of brushed steel. Prominently displayed on the shield, in a bold, stylized font, is the word 'NO'. The shield should appear strong and resilient, symbolizing protection, safety, and control. The background should be a soft, blurred gradient to emphasize the shield. Use dramatic lighting to highlight the texture and shape of the shield.",
+          "svgPlaceholder": "<svg width=\"100\" height=\"100\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"silver\" /></svg>"
+        }
+      ]
+    },
+    {
+      "id": "04_textPart05.html.md",
+      "title": "TRIGGER THE TWO WORDS THAT IMMEDIATELY TRANSFORM ANY NEGOTIATION",
+      "summary": "Chapter 5 emphasizes the power of 'That's right' in negotiations, arguing it signifies genuine understanding and agreement, leading to breakthroughs. It contrasts this with 'You're right,' which often implies dismissal. The chapter uses real-life hostage negotiation scenarios (Abu Sayyaf) and personal anecdotes (his son, Brandon) to demonstrate how active listening, empathy, and summarizing can elicit 'That's right,' facilitating behavior change and successful outcomes in various contexts, from hostage situations to sales and career negotiations.",
+      "stories": [
+        {
+          "title": "Jeffrey Schilling Hostage Negotiation",
+          "description": "The story details Chris Voss's involvement in negotiating the release of Jeffrey Schilling, an American hostage held by the Abu Sayyaf group in the Philippines. The key was getting Abu Sabaya, the rebel leader, to say 'That's right' by summarizing his grievances and acknowledging his perspective, which ultimately led to the war damages demand disappearing and Schilling's eventual escape.",
+          "lesson": "Achieving a 'That's right' breakthrough by actively listening and summarizing the adversary's viewpoint can dissolve barriers and pave the way for successful negotiation, even with hardened criminals."
+        },
+        {
+          "title": "Brandon's Football Career",
+          "description": "This anecdote recounts how Voss helped his son, Brandon, improve his football performance by getting him to acknowledge why he was reluctant to dodge blockers. By labeling his feelings ('You seem to think it\u2019s unmanly to dodge a block'), Voss prompted Brandon to say 'That's right,' leading to a change in his behavior and improved performance.",
+          "lesson": "Identifying and addressing the underlying beliefs or emotions that prevent someone from changing their behavior can unlock a 'That's right' moment, enabling them to overcome obstacles and achieve their goals."
+        },
+        {
+          "title": "Pharmaceutical Sales Representative",
+          "description": "A student of Voss used the 'That's right' technique to win over a skeptical doctor. By focusing on the doctor's passion for his patients and summarizing his treatment approaches, she got him to say 'That's right,' building trust and ultimately leading to a successful sale of her company's new product.",
+          "lesson": "Understanding and acknowledging a client's needs and motivations can build rapport and create a 'That's right' moment, transforming a skeptical prospect into a receptive customer."
+        },
+        {
+          "title": "Korean Student's Career Negotiation",
+          "description": "A Korean student used 'That's right' to negotiate with his former boss for a job in a different department. By asking questions and summarizing the ex-boss's needs for networking and promotion support, he got him to say 'That's right,' securing the desired position and uncovering hidden motivations.",
+          "lesson": "Strategic questioning and summarizing can reveal underlying needs and motivations, leading to a 'That's right' moment that unlocks unexpected opportunities and favorable outcomes in career negotiations."
+        }
+      ],
+      "learningObjectives": [
+        "Understand the difference between 'That's right' and 'You're right' in negotiations.",
+        "Learn how to create unconditional positive regard to open the door to changing thoughts and behaviors.",
+        "Master the use of summaries to trigger a 'That's right' response.",
+        "Identify the building blocks of a good summary: Labeling combined with paraphrasing.",
+        "Apply active listening skills to understand and acknowledge the other party's perspective.",
+        "Recognize the power of 'That's right' in breaking through negotiation deadlocks."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "A split image contrasting a brick wall with 'YES' written on it and an open door with 'THAT'S RIGHT' written above it.",
+          "prompt": "Create a split image. On the left, depict a solid brick wall with the word 'YES' spray-painted in red. On the right, show an open, inviting doorway with sunlight streaming through and the words 'THAT'S RIGHT' elegantly displayed above the entrance in a friendly, approachable font. The overall style should be clean and modern.",
+          "svgPlaceholder": "<svg width='200' height='100'><rect width='100' height='100' fill='red'/><rect x='100' width='100' height='100' fill='green'/></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "A staircase diagram illustrating the Behavioral Change Stairway Model (BCSM), highlighting the steps and leading to the 'That's Right' breakthrough.",
+          "prompt": "Design an infographic depicting a staircase with five steps. Each step represents a stage of the Behavioral Change Stairway Model (BCSM): Active Listening, Empathy, Rapport, Influence, Behavioral Change.  At the top of the staircase, prominently display the words 'THAT'S RIGHT!' in a large, bold font. Use colors to differentiate the steps and icons to represent each stage.  Include brief descriptions of each stage on its corresponding step.",
+          "svgPlaceholder": "<svg width='200' height='150'><rect width='200' height='20' fill='lightgray'/><rect y='30' width='180' height='20' fill='gray'/><rect y='60' width='160' height='20' fill='lightgray'/><rect y='90' width='140' height='20' fill='gray'/><rect y='120' width='120' height='20' fill='lightgray'/></svg>"
+        },
+        {
+          "type": "image",
+          "description": "An image illustrating a negotiator using active listening skills with someone and a lightbulb appears above the listener's head.",
+          "prompt": "Create an image depicting a negotiator actively listening to someone with a concerned expression. The negotiator should be leaning in attentively, with a thoughtful gaze. Above the person speaking, a lightbulb should be brightly illuminated, symbolizing a moment of understanding or epiphany. The style should be realistic and empathetic.",
+          "svgPlaceholder": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='blue'/></svg>"
+        }
+      ]
+    },
+    {
+      "id": "05_textPart06.html.md",
+      "title": "BEND THEIR REALITY",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    },
+    {
+      "id": "06_textPart07.html.md",
+      "title": "CREATE THE ILLUSION OF CONTROL",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    },
+    {
+      "id": "07_textPart08.html.md",
+      "title": "GUARANTEE EXECUTION",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    },
+    {
+      "id": "08_textPart09.html.md",
+      "title": "BARGAIN HARD",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    },
+    {
+      "id": "09_textPart10.html.md",
+      "title": "FIND THE BLACK SWAN",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    },
+    {
+      "id": "10_nav.xhtml.md",
+      "title": "nav",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 28\n}\n]"
+    }
+  ]
+}

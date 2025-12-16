@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Calibrated Questions / Illusion of Control",
+    "definition": "Open-ended questions designed to give the other side the illusion of control, encourage thinking, remove aggression, and guide towards solutions, creating a perception that they are in charge while you guide the conversation.",
+    "mechanism": "By asking questions that require the other party to think and provide answers, you shift the focus, gain information, and guide them towards solving your problems, while making them feel in control and heard. This encourages them to suggest solutions that align with your desired outcome.",
+    "context": "Use in any negotiation, at the beginning and throughout, to gain information, build rapport, guide thinking, uncover roadblocks, and create the illusion of control, especially when you need to influence decisions without resistance.",
+    "occurrences": [
+      "00 textPart01.html",
+      "06 textPart07.html",
+      "07 textPart08.html",
+      "06 textPart07.html",
+      "10 nav.xhtml"
+    ]
+  },
+  {
+    "name": "System 1 & System 2 Thinking",
+    "definition": "System 1 is fast, instinctive, and emotional thinking, while System 2 is slow, deliberative, and logical thinking; System 1 heavily influences System 2.",
+    "mechanism": "Emotional reactions (System 1) precede and shape rational thoughts (System 2); influencing someone's System 1 can modify their System 2 responses.",
+    "context": "Understanding this model helps you to craft your words and actions in negotiations so as to influence someone's emotional, intuitive reactions.",
+    "occurrences": [
+      "00 textPart01.html"
+    ]
+  },
+  {
+    "name": "Tactical Empathy / Active Listening / Forced Empathy / Understanding the Other Party's Perspective",
+    "definition": "Listening as a martial art, balancing emotional intelligence and influence to gain access to another person's mind and increase your influence. Encompasses actively focusing entirely on the other person, prioritizing their perspective, and creating situations where they are compelled to consider your needs, including understanding their worldview and values.",
+    "mechanism": "By actively listening and demonstrating understanding, you build rapport, gain trust, elicit needs, anticipate actions, and persuade the other party by showing empathy, leading them to become less defensive and more open to your viewpoint. Use calibrated 'How' questions to prompt reciprocity and engage the other party. Understanding core beliefs builds rapport and allows for tailored solutions. Similarity increases rapport and facilitates trust. Tactical empathy uses labeled emotions to create a safe environment.",
+    "context": "Use in any situation where you need to understand and influence another person, particularly in high-stakes negotiations, conflict resolution, or when influencing behavior. Use active listening during the initial stages of a negotiation to disarm the counterpart, build rapport, and gain a deeper understanding of their motivations. Employ tactical empathy in highly emotional situations or when the other party is resistant to your needs.",
+    "occurrences": [
+      "00 textPart01.html",
+      "02 textPart03.html",
+      "01 textPart02.html",
+      "04 textPart05.html",
+      "07 textPart08.html",
+      "09 textPart10.html",
+      "10 nav.xhtml"
+    ]
+  },
+  {
+    "name": "Loss Aversion",
+    "definition": "The concept that people are statistically more likely to act to avoid a loss than to achieve an equivalent gain; also involves the certainty effect.",
+    "mechanism": "People feel the pain of a loss more strongly than the pleasure of an equivalent gain, making them more motivated to prevent losses; people prefer certain outcomes over probabilities.",
+    "context": "Frame your offers and proposals to highlight potential losses the other party might incur if they don't agree to your terms; use in negotiations involving risk, uncertainty, or potential gains and losses.",
+    "occurrences": [
+      "00 textPart01.html",
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "Assumptions vs. Hypotheses",
+    "definition": "Good negotiators use multiple hypotheses and test them with new information, rather than relying on untested assumptions.",
+    "mechanism": "Assumptions limit perception and agility by creating a flawed, unchanging view, while hypotheses allow for flexibility and adaptation based on new information gathered during the negotiation.",
+    "context": "Apply this at the outset of any negotiation by formulating multiple potential explanations for the situation and being ready to discard or refine these as you gather new data.",
+    "occurrences": [
+      "01 textPart02.html"
+    ]
+  },
+  {
+    "name": "Slowing Down Negotiation",
+    "definition": "Slowing down the pace of a negotiation helps to calm the situation and allows for better information gathering and rapport building.",
+    "mechanism": "By avoiding rushing to a quick solution, you allow the other party to feel heard, build trust, and prevent undermining the negotiation process, while also providing time to gather information.",
+    "context": "Use this technique when the negotiation feels rushed or when the other party seems unwilling to cooperate, slowing the pace to foster a more productive environment.",
+    "occurrences": [
+      "01 textPart02.html"
+    ]
+  },
+  {
+    "name": "The Voice (Late-Night FM DJ Voice)",
+    "definition": "Using a deep, soft, slow, and reassuring voice to convey control and calm in a negotiation.",
+    "mechanism": "The downward-inflecting tone of voice communicates that you are in control, which calms the other party and creates a sense of safety, making them more receptive to what you have to say.",
+    "context": "Employ this voice when you need to take control of a situation or when you want to create a calming effect, especially in high-stress negotiations.",
+    "occurrences": [
+      "01 textPart02.html"
+    ]
+  },
+  {
+    "name": "Mirroring (Isopraxism)",
+    "definition": "Imitating the other person's speech patterns, vocabulary, or key words to create rapport and trust.",
+    "mechanism": "Repeating the last three words (or the critical few words) of what someone has just said triggers an unconscious mirroring instinct, making the counterpart feel understood and encouraging them to elaborate.",
+    "context": "Use mirroring throughout a negotiation to build rapport, encourage the other party to open up, and establish a connection based on similarity and trust.",
+    "occurrences": [
+      "01 textPart02.html"
+    ]
+  },
+  {
+    "name": "Labeling / Neutralize the Negative, Reinforce the Positive / Summary (Paraphrasing + Labeling)",
+    "definition": "Validating someone's emotion by acknowledging it, giving it a name to show you identify with how that person feels. Involves addressing and diffusing negative emotions while reinforcing positive emotions. Also involves combining rearticulating the meaning of what is said with acknowledging the underlying emotions.",
+    "mechanism": "By verbally acknowledging someone's emotions, you diffuse their intensity and create a sense of understanding and connection, which then makes the person more receptive to rational discussion; reinforces positive emotions. By identifying and verbalizing the underlying negative emotions, you make them seem less frightening and reduce their power, while emphasizing positive emotions promotes collaboration and trust. By accurately summarizing both content and emotion, you demonstrate deep understanding and validate their perspective.",
+    "context": "Use when the counterpart is tense to diffuse negative emotions or to reinforce positive emotions. Utilize when attempting to de-escalate conflict, build trust, or improve collaboration. Effective for triggering a \"that's right\" response and moving the negotiation forward.",
+    "occurrences": [
+      "02 textPart03.html",
+      "04 textPart05.html",
+      "02 textPart03.html",
+      "04 textPart05.html"
+    ]
+  },
+  {
+    "name": "Accusation Audit",
+    "definition": "Listing every terrible thing your counterpart could say about you to defuse their negative perceptions from the outset.",
+    "mechanism": "By proactively acknowledging potential criticisms, you disarm your counterpart and create a sense of openness and honesty, which makes them more receptive to your perspective; inflames loss aversion.",
+    "context": "Employ at the beginning of a negotiation or interaction where negative perceptions or distrust may be present; used to anchor their emotions.",
+    "occurrences": [
+      "02 textPart03.html",
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "Beware 'Yes', Master 'No' / 'No' is Protection",
+    "definition": "Prioritize eliciting 'No' responses to create a safe environment for negotiation and uncover true objections, rather than pushing for superficial 'Yes' answers. Recognizing that 'No' provides the speaker with feelings of safety, security, and control.",
+    "mechanism": "Saying 'No' provides a sense of control and safety, encouraging honesty and revealing underlying concerns that can be addressed, while pressuring for 'Yes' can lead to insincere agreement and hidden resistance. When someone says 'No', they feel in control of the situation, and safe from potentially negative consequences.",
+    "context": "Apply in any negotiation or persuasive situation where genuine commitment and understanding are crucial for a successful outcome; frame questions so they can say 'No'. Use in negotiations by framing questions that make the other party feel safe by clearly giving them permission to say 'No' to your ideas.",
+    "occurrences": [
+      "03 textPart04.html",
+      "03 textPart04.html"
+    ]
+  },
+  {
+    "name": "Types of 'Yes'",
+    "definition": "Distinguish between different types of 'Yes' to gauge true agreement and commitment in a negotiation (Counterfeit, Confirmation, and Commitment).",
+    "mechanism": "A counterfeit 'Yes' is used to avoid conflict or gain information, a confirmation 'Yes' is a simple affirmation, and a commitment 'Yes' is a genuine agreement that leads to action; recognizing these distinctions prevents manipulation and ensures meaningful progress.",
+    "context": "Use during negotiations to interpret responses accurately and avoid being misled by superficial agreement.",
+    "occurrences": [
+      "03 textPart04.html"
+    ]
+  },
+  {
+    "name": "Persuade in Their World",
+    "definition": "Influence others by understanding and addressing their needs and perspective, rather than imposing your own.",
+    "mechanism": "By focusing on the other party's needs for safety, security, and control, you create an environment where they feel understood and are more likely to be receptive to your proposals.",
+    "context": "Apply in any situation where you need to influence someone's decision or behavior, especially in negotiations or sales.",
+    "occurrences": [
+      "03 textPart04.html"
+    ]
+  },
+  {
+    "name": "Behavioral Change Stairway Model (BCSM)",
+    "definition": "A five-stage model for negotiators progressing from listening to influencing behavior: active listening, empathy, rapport, influence, and behavioral change.",
+    "mechanism": "The model proposes five stages that take any negotiator from listening to influencing behavior, building trust and connection to establish unconditional positive regard.",
+    "context": "Applicable in any negotiation where the goal is not just compliance, but genuine change in behavior or perspective.",
+    "occurrences": [
+      "04 textPart05.html"
+    ]
+  },
+  {
+    "name": "Unconditional Positive Regard",
+    "definition": "Accepting a person completely as they are, which fosters real change.",
+    "mechanism": "By accepting a person's current state without judgment, you create a safe environment where they feel understood and are more open to changing their thoughts and behaviors.",
+    "context": "Essential for breaking down barriers and influencing behavior in negotiations, therapy, and interpersonal relationships.",
+    "occurrences": [
+      "04 textPart05.html"
+    ]
+  },
+  {
+    "name": "\"That's Right\"",
+    "definition": "A statement of agreement from the counterpart that signals a breakthrough in negotiation.",
+    "mechanism": "It indicates the counterpart feels understood and has independently validated your understanding of their perspective, leading to a shift in their position.",
+    "context": "A desirable outcome in negotiations that unlocks deadlocks and fosters further progress.",
+    "occurrences": [
+      "04 textPart05.html"
+    ]
+  },
+  {
+    "name": "\"You're Right\" Trap",
+    "definition": "An agreement that is insincere and merely dismissive.",
+    "mechanism": "People use \nYou\n\n\n\n\nYou\n\n\n\n\n\nyou\u2019re right\nYou\n\n\n\n\n\n\nto get someone to stop bothering them without actually agreeing with their position.",
+    "context": "Generally a negative signal in negotiation. It indicates disengagement and lack of genuine agreement.",
+    "occurrences": [
+      "04 textPart05.html"
+    ]
+  },
+  {
+    "name": "Leverage / Leverage in Negotiation",
+    "definition": "The ability to influence a negotiation by understanding the other party's unspoken needs and expectations, encompassing positive leverage (the ability to provide or withhold something the counterpart wants), negative leverage (the ability to make the counterpart suffer if they do not comply), and normative leverage (using the other party's norms, values, and standards to advance one's position).",
+    "mechanism": "By uncovering the subterranean world of unspoken needs and thoughts, a negotiator can find variables that can be leveraged to change the counterpart's needs and expectations. Leverage works by creating a sense of potential loss or withholding desired gains, influencing the other party's decisions and actions. Positive leverage controls access to desired outcomes. Negative leverage exploits loss aversion. Normative leverage highlights inconsistencies between beliefs and actions.",
+    "context": "In any negotiation where the other party seems to hold all the power. Use leverage in negotiations to gain an advantage by identifying and exploiting what the other party wants to gain or fears to lose. Apply positive leverage when the other side expresses a specific desire or need. Use negative leverage cautiously. Apply normative leverage by appealing to the other party's moral framework.",
+    "occurrences": [
+      "05 textPart06.html",
+      "09 textPart10.html",
+      "09 textPart10.html",
+      "09 textPart10.html",
+      "09 textPart10.html"
+    ]
+  },
+  {
+    "name": "No Deal is Better Than a Bad Deal",
+    "definition": "A principle stating that it is better to walk away from a negotiation than to accept an agreement that is unfavorable or detrimental.",
+    "mechanism": "A bad deal can lead to negative outcomes and dissatisfaction, whereas walking away preserves resources and allows for future opportunities.",
+    "context": "Whenever the terms of a negotiation are significantly unfavorable or compromise one's core interests.",
+    "occurrences": [
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "Deadlines",
+    "definition": "A time constraint that can be used as a tool to pressure the other party or be exploited by them.",
+    "mechanism": "Deadlines create a sense of urgency, prompting impulsive decisions; understanding and managing deadlines can shift leverage.",
+    "context": "In any negotiation where time is a factor, either imposed externally or self-imposed.",
+    "occurrences": [
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "The Illusion of Fairness",
+    "definition": "The subjective perception of equitable treatment that greatly influences emotional responses and decision-making in negotiations.",
+    "mechanism": "People are highly sensitive to fairness; perceived unfairness can trigger strong negative reactions, leading to irrational choices.",
+    "context": "In negotiations where emotions and perceptions of respect and equity are significant factors.",
+    "occurrences": [
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "Emotional Drivers",
+    "definition": "The underlying emotions, needs, and pain points that motivate a person's decisions and actions.",
+    "mechanism": "By uncovering the emotional drivers behind what the other party values, it allows a negotiator to frame a deal that resonates with those emotions and unmet objectives, thus making their proposal a perfect solution.",
+    "context": "In negotiations where understanding the other party's deeper motivations can help in creating a more appealing offer.",
+    "occurrences": [
+      "05 textPart06.html"
+    ]
+  },
+  {
+    "name": "Suspend Unbelief",
+    "definition": "Reducing or eliminating the other party's resistance and skepticism towards your proposals or ideas.",
+    "mechanism": "By acknowledging their concerns and asking calibrated questions, you create an environment of understanding and collaboration, making them more receptive to your point of view.",
+    "context": "Use when encountering strong resistance or skepticism from the other party, aiming to lower their defenses and open them up to persuasion.",
+    "occurrences": [
+      "06 textPart07.html"
+    ]
+  },
+  {
+    "name": "Negotiation as Coaxing",
+    "definition": "Approaching negotiation as a process of gently persuading and guiding the other party, rather than overpowering or defeating them.",
+    "mechanism": "Instead of forceful demands or ultimatums, use empathy, active listening, and calibrated questions to encourage the other party to see your perspective and voluntarily move towards an agreement.",
+    "context": "Apply in situations where building long-term relationships and maintaining goodwill are important, such as business partnerships, team collaborations, or personal relationships.",
+    "occurrences": [
+      "06 textPart07.html"
+    ]
+  },
+  {
+    "name": "Team Behind the Counterpart / Level II Players",
+    "definition": "Recognizing and understanding the influence and dynamics of the team or individuals supporting your counterpart in a negotiation, including those not directly involved but who can influence or block implementation.",
+    "mechanism": "Negotiation efforts must consider the stakeholders and influences impacting your counterpart to ensure that agreements are sustainable and not undermined by internal conflicts or hidden agendas. These \"behind the table\" players can affect outcomes by supporting or undermining agreements, so understanding their motivations and addressing their concerns is crucial for successful implementation.",
+    "context": "Use when negotiating with individuals who are part of a larger organization or group, especially in high-stakes negotiations where internal dynamics can significantly affect outcomes. Apply when other parties outside the negotiation are capable of influencing or stopping the agreement from going through.",
+    "occurrences": [
+      "06 textPart07.html",
+      "07 textPart08.html"
+    ]
+  },
+  {
+    "name": "Guarantee Execution / Ensuring Commitment and Discovering Hidden Information",
+    "definition": "Negotiation isn't just about reaching an agreement, but ensuring it's implemented successfully. Focuses on guaranteeing follow-through and uncovering critical hidden information.",
+    "mechanism": "Dynamically design verbal and nonverbal elements to gain consent and ensure the other party follows through, understanding that the true value lies in the implementation of the agreement, not just the agreement itself. Execution guarantee involves detecting deception and setting clear expectations. Black Swan Discovery requires deep questioning and active listening.",
+    "context": "Apply this concept in any negotiation scenario where the agreement's value depends on its successful implementation. Use execution guarantees when managing projects and delegating tasks. Seek Black Swan discoveries when facing impossible deals or seeking breakthroughs.",
+    "occurrences": [
+      "07 textPart08.html",
+      "10 nav.xhtml"
+    ]
+  },
+  {
+    "name": "Decision Architect / Strategic Communication and Influence",
+    "definition": "A negotiator must proactively shape the negotiation through communication. Employing specific communication techniques to influence the other party, including setting boundaries with 'no', gaining agreement to be heard, shaping their perception of fairness, and creating the perception of control.",
+    "mechanism": "By carefully crafting the message of the negotiation, the negotiator can influence the other parties into agreement and action. 'No' clarifies wants and defines boundaries. Permission triggers receptiveness. Reality shaping presents information to shift understanding. Illusion of control uses questions to guide the conversation.",
+    "context": "Apply this to any situation where the negotiator is trying to influence decisions. Use 'no' to set boundaries and understand priorities. Gain permission before persuading. Shape reality when negotiating price or terms. Use the illusion of control to influence decisions without confrontation.",
+    "occurrences": [
+      "07 textPart08.html",
+      "10 nav.xhtml",
+      "10 nav.xhtml",
+      "10 nav.xhtml",
+      "10 nav.xhtml"
+    ]
+  },
+  {
+    "name": "7-38-55 Percent Rule",
+    "definition": "A communication model suggesting that only 7% of a message is conveyed through words, 38% through tone of voice, and 55% through body language.",
+    "mechanism": "By paying close attention to tone and body language, negotiators can identify inconsistencies with the spoken words, indicating potential deception or lack of conviction.",
+    "context": "Use when assessing the sincerity and commitment of the other party in a negotiation.",
+    "occurrences": [
+      "07 textPart08.html"
+    ]
+  },
+  {
+    "name": "Rule of Three",
+    "definition": "Securing agreement on the same point three times in a conversation to ensure genuine commitment.",
+    "mechanism": "Repeatedly confirming an agreement, using different phrasing and tactics, uncovers potential falsehoods or hesitations that might undermine implementation.",
+    "context": "Use when you need to confirm the other party is being genuine.",
+    "occurrences": [
+      "07 textPart08.html"
+    ]
+  },
+  {
+    "name": "Pinocchio Effect",
+    "definition": "Liars tend to use more words, third-person pronouns, and complex sentences to distance themselves from the lie.",
+    "mechanism": "Recognizing these linguistic patterns can help identify deception during negotiations.",
+    "context": "Use when trying to determine whether the other party is lying.",
+    "occurrences": [
+      "07 textPart08.html"
+    ]
+  },
+  {
+    "name": "Bargaining / Aggressive Negotiation Tactics",
+    "definition": "The process of negotiation involving offers and counteroffers to reach an agreement on price or terms, negotiating aggressively to achieve the best outcome.",
+    "mechanism": "It involves psychological strategies, tactics, and understanding the other party's motivations to influence the outcome. Using strategies such as anchoring, bracketing, and concession patterns to influence the final price.",
+    "context": "When negotiating prices, terms, or any aspect of a deal where there is room for compromise. In any negotiation where the price or value is a key point of contention.",
+    "occurrences": [
+      "08 textPart09.html",
+      "10 nav.xhtml"
+    ]
+  },
+  {
+    "name": "Negotiation Styles (Analyst, Accommodator, Assertive)",
+    "definition": "Three distinct behavioral profiles that influence how individuals approach and conduct negotiations.",
+    "mechanism": "Each style has different priorities (data, relationships, or speed), interpretations of silence, and preferred communication methods that affect negotiation dynamics.",
+    "context": "Identifying and adapting to different negotiation styles can lead to more effective communication and outcomes.",
+    "occurrences": [
+      "08 textPart09.html"
+    ]
+  },
+  {
+    "name": "Extreme Anchor",
+    "definition": "An initial offer that is intentionally very high or very low to influence the other party's perception of value and negotiation range.",
+    "mechanism": "It sets a reference point that can skew the subsequent offers and concessions, often leading to a more favorable outcome for the anchor.",
+    "context": "When making the first offer in a negotiation, or when facing an extreme offer from the other side.",
+    "occurrences": [
+      "08 textPart09.html"
+    ]
+  },
+  {
+    "name": "Strategic Umbrage",
+    "definition": "A well-timed expression of offense or indignation to signal strong disagreement and potentially influence the other party to reconsider their position.",
+    "mechanism": "By conveying strong conviction, strategic umbrage can make the other party question their own assertiveness and be more willing to make concessions.",
+    "context": "When a negotiation is at an impasse or when the other party's offer is perceived as unreasonable or insulting, but should be used carefully to avoid damaging the negotiation.",
+    "occurrences": [
+      "08 textPart09.html"
+    ]
+  },
+  {
+    "name": "Ready-to-Walk Mindset",
+    "definition": "The willingness to abandon a negotiation if the terms are not acceptable, indicating a clear bottom line and preventing being taken hostage.",
+    "mechanism": "It gives negotiator power by signaling independence and preventing them from making desperate concessions to avoid a failed negotiation.",
+    "context": "Before entering any negotiation, particularly when the potential outcome is not crucial.",
+    "occurrences": [
+      "08 textPart09.html"
+    ]
+  },
+  {
+    "name": "ZOPA (Zone of Possible Agreement)",
+    "definition": "The range between the seller's reservation price (the lowest they'll accept) and the buyer's reservation price (the highest they'll pay), within which an agreement can be reached.",
+    "mechanism": "If the reservation prices overlap, a ZOPA exists, and a deal is possible; if they don't, no agreement can be reached unless one party changes their reservation price.",
+    "context": "Analyzing potential negotiation outcomes, especially in economics or business contexts.",
+    "occurrences": [
+      "08 textPart09.html"
+    ]
+  },
+  {
+    "name": "Black Swan",
+    "definition": "An unpredictable event or piece of information, previously considered impossible or never imagined, that has significant and game-changing effects.",
+    "mechanism": "Black Swans operate outside regular expectations and cannot be predicted based on past experiences, rendering traditional predictive models useless and requiring a shift in mindset to recognize and adapt to them.",
+    "context": "Apply this concept in any negotiation or situation where unpredictable information could drastically alter the dynamics or outcomes.",
+    "occurrences": [
+      "09 textPart10.html"
+    ]
+  },
+  {
+    "name": "Knowns and Unknowns",
+    "definition": "A framework for categorizing information and uncertainty, encompassing known knowns (facts and information one is aware of and certain about), known unknowns (uncertainties one is aware of but lacks specific knowledge about), and unknown unknowns (information one is unaware of and has never imagined).",
+    "mechanism": "Known knowns guide decision-making based on established knowledge. Acknowledging known unknowns allows for contingency planning. Uncovering unknown unknowns requires a shift in mindset to more intuitive ways of listening and questioning.",
+    "context": "Use this framework in negotiations to understand the current state of knowledge, anticipate potential challenges, and actively seek hidden information to gain a competitive edge and create breakthroughs.",
+    "occurrences": [
+      "09 textPart10.html",
+      "09 textPart10.html",
+      "09 textPart10.html"
+    ]
+  }
+]

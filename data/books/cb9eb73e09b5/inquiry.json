@@ -1,0 +1,200 @@
+[
+  {
+    "question_type": "Skeptic",
+    "question": "While the author claims the FBI's experiential techniques were highly successful in resolving kidnapping cases, is there empirical data available to substantiate the claim that these techniques led to higher success rates compared to other methods, or is the author relying on anecdotal evidence?",
+    "context": "The author contrasts Harvard's theoretical approach with the FBI's practical success, implying a causal link between their techniques and positive outcomes. However, without concrete data, it's difficult to ascertain if this is truly the case or if other factors contributed to the successful resolutions.",
+    "source_chapter": "00 textPart01.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "The author describes dominating Harvard students using calibrated questions. How can these techniques be adapted and effectively implemented in situations where there is a significant power imbalance or cultural differences between the negotiators, such as negotiating with a powerful corporation or in a cross-cultural business negotiation?",
+    "context": "The chapter highlights the author's success in a specific environment (Harvard negotiation course). It is not clear how well the described techniques would translate to real-world scenarios where factors such as power dynamics, cultural context, and resource disparities could heavily influence the outcome.",
+    "source_chapter": "00 textPart01.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiation techniques, like those described, become widely adopted and refined to maximize individual gains in all interactions, could this lead to a society where genuine collaboration and trust are diminished, ultimately impacting social cohesion and long-term relationships?",
+    "context": "The chapter focuses on achieving optimal outcomes through specific negotiation tactics. It's important to consider the broader societal implications if these tactics become ubiquitous, potentially fostering a more transactional and less collaborative environment.",
+    "source_chapter": "00 textPart01.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The author suggests that slowing down negotiations is a key tool, supported by research, but what specific research validates 'the passage of time' as the most important tool, and how do we account for situations where time is of the essence?",
+    "context": "The chapter emphasizes slowing down negotiations, citing research as validation. Questioning the specific research and considering counter-examples ensures the advice is grounded in evidence and not overgeneralized.",
+    "source_chapter": "01 textPart02.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given that the 'Late-Night, FM DJ Voice' and 'positive/playful voice' are presented as universally effective across cultures, how does one adapt these vocal techniques for individuals with communication disorders or cultural backgrounds where directness and seriousness are more valued, and what are the risks of misinterpretation or offense?",
+    "context": "The chapter advocates specific vocal tones for negotiation success. This question challenges the practical applicability of these techniques in diverse communication scenarios, highlighting the potential for miscommunication and cultural insensitivity.",
+    "source_chapter": "01 textPart02.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators are trained to become highly skilled at 'reading' and influencing others' emotions through vocal cues and other techniques, what are the ethical implications of potentially manipulating individuals in vulnerable situations, and how can we prevent such skills from being used for exploitation rather than genuine conflict resolution?",
+    "context": "The chapter details techniques for understanding and influencing emotions. This question explores the potential for misuse of these skills and the ethical considerations surrounding emotional manipulation in negotiations.",
+    "source_chapter": "01 textPart02.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "While the author presents a compelling anecdote about diffusing a tense situation using 'tactical empathy' and labeling, is there empirical evidence to suggest that these techniques are consistently effective across diverse negotiation scenarios and personality types, or could success be attributed to other factors such as the negotiator's inherent charisma or the specific circumstances of the situation?",
+    "context": "The chapter heavily relies on anecdotal evidence to support the effectiveness of tactical empathy and labeling. Questioning whether these techniques are universally applicable or if other variables contribute to their success is crucial for assessing the robustness of the author's claims.",
+    "source_chapter": "02 textPart03.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given the emphasis on active listening, emotional awareness, and carefully chosen language in 'tactical empathy' and labeling, how can these techniques be effectively applied in high-pressure, time-constrained negotiation scenarios where individuals may be operating under significant stress, fatigue, or with limited emotional bandwidth?",
+    "context": "The chapter advocates for a nuanced approach to negotiation that requires considerable cognitive and emotional resources. It's important to assess the practicality of implementing these techniques in real-world situations where negotiators may face significant constraints.",
+    "source_chapter": "02 textPart03.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If 'tactical empathy' and labeling become widely adopted as dominant negotiation strategies, could this lead to a society where genuine emotional expression is suppressed in favor of calculated displays of empathy, potentially eroding trust and authenticity in interpersonal interactions and creating a culture of manipulation?",
+    "context": "The chapter promotes the use of emotions as tools in negotiation. It is important to consider the long-term ethical implications of widespread adoption of these techniques and their potential impact on the nature of human relationships.",
+    "source_chapter": "02 textPart03.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The author suggests that 'No' provides a safe haven of control. Is there empirical evidence to support the claim that initiating a negotiation with 'No'-oriented questions consistently leads to more favorable outcomes compared to other approaches?",
+    "context": "The chapter heavily promotes the use of 'No' as a powerful tool in negotiation. This questions challenges whether this strategy is truly more effective than other methods, or if it is just an anecdotal observation.",
+    "source_chapter": "03 textPart04.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "While the chapter emphasizes the importance of understanding the other party's world, how can negotiators effectively balance empathy and assertiveness, particularly in high-stakes situations where cultural differences, power imbalances, or time constraints may hinder in-depth understanding?",
+    "context": "The chapter focuses on persuading in the other party's world, but it doesn't fully address the real-world constraints and complexities that can make it challenging to apply this approach in all situations.",
+    "source_chapter": "03 textPart04.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators overly focus on eliciting 'No' to create a sense of safety and control, could this lead to a negotiation environment where genuine collaboration and trust are diminished, ultimately hindering the ability to reach mutually beneficial agreements?",
+    "context": "The chapter positions 'No' as a way to start negotiations, but doesn't consider if it could create a long-term atmosphere of distrust.",
+    "source_chapter": "03 textPart04.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "While the chapter presents 'that's right' as a breakthrough, is there empirical evidence beyond anecdotal cases, like the Sabaya negotiation, to support its effectiveness across different negotiation contexts and cultural backgrounds?",
+    "context": "The chapter heavily relies on anecdotal evidence. Questioning the generalizability and statistical significance of 'that's right' is important to evaluate the validity of the claim.",
+    "source_chapter": "04 textPart05.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "In a high-pressure negotiation where time is severely limited (e.g., a rapidly escalating crisis or a short-notice business deal), how can a negotiator effectively implement the active listening techniques and summary strategies needed to elicit a 'that's right' response without sacrificing crucial decision-making time?",
+    "context": "The chapter describes techniques that take time. Questioning the practicality of using the approach when rapid response time is crucial highlights the limitations of the strategy.",
+    "source_chapter": "04 textPart05.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators increasingly rely on techniques designed to elicit 'that's right' to manipulate or subtly influence counterparts, could this erode trust and foster cynicism in negotiation environments, potentially leading to a decrease in authentic agreement and increased adversarial dynamics over time?",
+    "context": "The chapter frames 'that's right' as a positive outcome. Questioning its long-term implications on trust and the potential for misuse is vital for assessing the ethical considerations of using this technique.",
+    "source_chapter": "04 textPart05.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The author presents anecdotal evidence from his experiences and the Ultimatum Game. How generalizable are these scenarios, and what statistical evidence supports the claim that avoiding compromise consistently leads to better outcomes in various negotiation contexts?",
+    "context": "The chapter heavily relies on specific examples to argue against compromise. Questioning the broader validity of these examples and seeking statistical backing challenges the core premise of the argument.",
+    "source_chapter": "05 textPart06.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given that many negotiations involve power imbalances (e.g., employer-employee, large corporation-small vendor), how can individuals with limited leverage effectively apply the techniques described in the chapter, especially the advice to 'never split the difference,' without risking the complete breakdown of negotiations and potential negative consequences?",
+    "context": "The chapter's advice seems geared towards situations where the negotiator has some degree of power. This question examines the practical application of these strategies when the negotiator is in a weaker position, addressing real-world limitations.",
+    "source_chapter": "05 textPart06.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators universally adopted the strategies of 'bending reality' and strictly avoiding compromise, what would be the long-term impact on trust and collaboration in personal, professional, and international relationships, and could this lead to a more adversarial and less cooperative society?",
+    "context": "The chapter advocates for a highly assertive negotiation style. This question considers the potential negative consequences of widespread adoption of this style, specifically concerning the erosion of trust and cooperative relationships.",
+    "source_chapter": "05 textPart06.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "How can we ensure that the 'illusion of control' tactic doesn't devolve into manipulation, and what are the ethical boundaries of using this approach in negotiations?",
+    "context": "The chapter emphasizes giving the counterpart the illusion of control. This raises concerns about the ethics of potentially manipulating someone into a specific outcome. It is important to evaluate what separates a helpful negotiation tactic from potentially coercive manipulation, and to define where the ethical limits of this tactic lie.",
+    "source_chapter": "06 textPart07.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "In scenarios with high power imbalances or where one party has significantly fewer resources, how effective is the calibrated question technique, and what modifications might be necessary to ensure a fair negotiation?",
+    "context": "The success of calibrated questions hinges on a level playing field where both parties can engage in meaningful dialogue. In scenarios with unequal power dynamics, such as negotiating with a large corporation or in situations of extreme poverty, the technique might be less effective or even exacerbate existing inequalities. It's necessary to explore adjustments or alternative strategies that address these real-world constraints.",
+    "source_chapter": "06 textPart07.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If calibrated questions and the 'illusion of control' become widespread negotiation tactics, what are the potential long-term societal effects on trust, transparency, and genuine communication?",
+    "context": "The chapter presents a technique for persuasion that involves creating an illusion. If this approach becomes common, the long-term consequences could involve a decline in trust, as people become more skeptical of others' intentions. This question aims to explore the broader societal impact if these tactics become the norm.",
+    "source_chapter": "06 textPart07.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "While the examples provided highlight the success of using calibrated 'How' questions, is there data available demonstrating the effectiveness of this technique across a wider range of negotiation scenarios and cultural contexts, or are these anecdotes cherry-picked?",
+    "context": "The chapter relies heavily on anecdotal evidence. Questioning the breadth and generalizability of these examples encourages a critical examination of the technique's validity.",
+    "source_chapter": "07 textPart08.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "In situations where there is a significant power imbalance or urgency, such as negotiating with a sophisticated and ruthless adversary or during a rapidly escalating crisis, how can the calibrated 'How' questions be effectively employed without appearing weak or delaying critical decisions?",
+    "context": "The chapter doesn't fully address the challenges of applying this technique in high-stakes scenarios where time and power dynamics are not in the negotiator's favor. It is important to consider practicality in a real-world situation.",
+    "source_chapter": "07 textPart08.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators consistently prioritize the illusion of control and ownership by allowing counterparts to believe solutions are 'their idea,' could this lead to a decline in truly innovative or collaborative problem-solving in the long run, as negotiators may become overly focused on manipulation rather than genuine partnership?",
+    "context": "This question explores the potential long-term consequences of prioritizing perceived ownership over authentic collaboration and innovation. It aims to challenge the idea that manipulation is always the best approach.",
+    "source_chapter": "07 textPart08.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The chapter presents three negotiator types (Analyst, Accommodator, Assertive). Is this a comprehensive or overly simplified categorization of negotiation styles, and what evidence supports this specific grouping over other potential models?",
+    "context": "The text simplifies negotiator styles into three categories. It's important to question whether this simplification accurately represents the complexity of human behavior in negotiations or if it omits crucial aspects, especially since the author admits to simplifying existing research.",
+    "source_chapter": "08 textPart09.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given the author's description of the Assertive negotiator type, which often prioritizes winning at the expense of others, how can individuals with less power or in vulnerable situations effectively negotiate against this type without being exploited or disadvantaged?",
+    "context": "The chapter discusses negotiation styles without explicitly addressing power dynamics. It is important to consider how these tactics apply to individuals in unequal power relationships, such as employees negotiating with employers, or individuals from marginalized groups negotiating with dominant groups.",
+    "source_chapter": "08 textPart09.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If everyone adopted these negotiation tactics and became highly skilled bargainers, would this ultimately lead to a less collaborative and more adversarial world, potentially damaging long-term relationships and societal trust?",
+    "context": "The chapter focuses on individual negotiation success. It is important to consider the broader societal implications if these tactics become widespread, potentially leading to a breakdown in cooperation and trust, even if individuals become more effective at achieving their immediate goals.",
+    "source_chapter": "08 textPart09.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The text claims that the 'markers were all there' for events like Pearl Harbor and 9/11. Is this hindsight bias, and what objective evidence supports the idea that these events were predictable enough to be considered failures of observation rather than genuine Black Swans?",
+    "context": "The chapter emphasizes recognizing the unexpected, but it's crucial to distinguish between genuinely unpredictable events and those that appear predictable only after the fact. Questioning the predictability of past events challenges the core premise of identifying Black Swans.",
+    "source_chapter": "09 textPart10.html"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given that uncovering Black Swans requires intense listening, interrogation, and intuition, how can this strategy be effectively implemented in negotiations where there are significant power imbalances, language barriers, or cultural differences that may impede clear communication and understanding?",
+    "context": "The chapter does not discuss the challenges involved in real-world negotiations involving participants of different backgrounds and/or power. These are all factors that make it difficult to extract true, unbiased information from your counterpart.",
+    "source_chapter": "09 textPart10.html"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If negotiators become hyper-focused on uncovering Black Swans and exploiting leverage, could this lead to a more adversarial and less collaborative negotiation environment, potentially eroding trust and long-term relationships between parties?",
+    "context": "The chapter focuses on exploiting hidden information for leverage, but it doesn't address the potential negative consequences of this approach on trust and collaboration. Excessive focus on uncovering and exploiting Black Swans could potentially create a more combative negotiation environment.",
+    "source_chapter": "09 textPart10.html"
+  },
+  {
+    "question_type": "Skeptic",
+    "question": "The chapter titles suggest methods for manipulation and control. Is there empirical evidence supporting the long-term effectiveness and ethical implications of consistently employing these tactics in negotiations and interactions?",
+    "context": "The titles promise manipulation ('Bend Their Reality,' 'Create the Illusion of Control'), which requires strong evidence to justify its use and address potential ethical concerns.",
+    "source_chapter": "10 nav.xhtml"
+  },
+  {
+    "question_type": "Realist",
+    "question": "Given that these strategies seem geared towards high-stakes negotiation scenarios, how adaptable are these tactics for everyday interactions and negotiations faced by individuals with limited power or resources, such as a tenant negotiating rent or an employee seeking a raise?",
+    "context": "The chapter titles imply a focus on high-power negotiations, but many people face negotiations from a position of weakness. The practicality of these strategies for them needs to be examined.",
+    "source_chapter": "10 nav.xhtml"
+  },
+  {
+    "question_type": "Futurist",
+    "question": "If individuals and organizations increasingly adopt these strategies to optimize their negotiations and interactions, what are the potential long-term societal effects on trust, cooperation, and authentic relationships?",
+    "context": "The widespread adoption of these tactics could erode trust and increase cynicism, impacting social cohesion in the long run. This potential negative consequence needs consideration.",
+    "source_chapter": "10 nav.xhtml"
+  }
+]

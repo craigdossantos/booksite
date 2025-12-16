@@ -1,0 +1,6 @@
+youtube-transcript-api
+yt-dlp
+flask
+markdown
+google-generativeai
+python-dotenv

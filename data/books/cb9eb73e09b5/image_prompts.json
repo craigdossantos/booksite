@@ -1,0 +1,62 @@
+[
+  {
+    "visual_metaphor": "A skilled chess player guiding their opponent into a checkmate through a series of seemingly advantageous moves.",
+    "prompt": "A highly detailed and intricately designed chess board. The pieces are arranged in a complex mid-game scenario. Dominating one side is a sleek, modern chess set, crafted from polished chrome and dark ebony. The opposing side features antique, ornate pieces made from ivory and gold, appearing powerful but strategically vulnerable. Soft, diffused light illuminates the board, creating dramatic shadows and highlighting the tension of the game. The background is a blurred tableau of an opulent study with leather-bound books and a globe. No people are visible. The focus is entirely on the chessboard and pieces, telling a story of subtle control and strategic advantage.",
+    "style": "Photorealistic",
+    "concept_name": "Calibrated Questions"
+  },
+  {
+    "visual_metaphor": "A large, complex clock (System 2) being subtly but consistently nudged off course by a hidden, powerful magnet (System 1).",
+    "prompt": "A highly detailed, intricate clockwork mechanism, gears precisely aligned, crafted from polished brass and steel. The clock face shows a slightly distorted time. A large, unseen magnet is positioned just out of frame, its magnetic field lines subtly bending the trajectory of a small, but critical gear within the clockwork. The background is a dark, textured canvas.",
+    "style": "Steampunk",
+    "concept_name": "System 1 & System 2 Thinking"
+  },
+  {
+    "visual_metaphor": "A Bonsai Tree being carefully shaped.",
+    "prompt": "An intricate, aged bonsai tree with meticulously pruned branches. Subtle light shines on the tree, highlighting the delicate balance of its form. The hands of a gardener are gently guiding a single branch with precision and care. The surrounding environment is a minimalist, serene Japanese garden with raked gravel and smooth stones.",
+    "style": "Japanese Woodblock Print",
+    "concept_name": "Tactical Empathy"
+  },
+  {
+    "visual_metaphor": "Two hands are reaching for something. One hand is desperately clinging to a possession, resisting its forceful removal. The other hand is reaching towards an identical object, presented freely.",
+    "prompt": "A close-up photograph of two hands in stark contrast. On the left, a weathered hand fiercely clutches a tarnished silver coin, knuckles white, as if someone is trying to take it away. The background behind this hand is dark and ominous, suggesting scarcity. On the right, a clean, open hand reaches out to receive a gleaming, identical silver coin, offered freely. The background behind this hand is bright and inviting, symbolizing opportunity. The lighting should be dramatic, with strong shadows and highlights emphasizing the tension and difference between the two scenarios.",
+    "style": "Photorealistic",
+    "concept_name": "Loss Aversion"
+  },
+  {
+    "visual_metaphor": "A river flowing into a lake. An assumption is represented by a single, narrow channel leading directly into the lake, quickly becoming stagnant. Hypotheses are represented by multiple streams, each taking different paths, merging and diverging, testing the terrain before entering the lake.",
+    "prompt": "Overhead view of a wide, shallow lake surrounded by varied terrain. A single, narrow, straight channel flows directly into the lake, carrying dark, still water. Several other streams approach the lake from different directions. These streams are clear and lively, splitting into smaller rivulets and rejoining, some encountering rocks and changing course. The lighting is soft and diffused, creating subtle shadows that emphasize the textures of the terrain and water. No visible text or labels.",
+    "style": "Realistic Watercolor",
+    "concept_name": "Assumptions vs. Hypotheses"
+  },
+  {
+    "visual_metaphor": "A radio receiver with a very large, clean antenna and a dial tuned precisely to a faint radio signal. The receiver is powered by a strong, stable power source, indicating focus and energy directed towards receiving.",
+    "prompt": "A highly detailed image of a vintage radio receiver. The antenna is disproportionately large and pristine, clearly receiving a very weak radio signal barely visible as waves in the air. The dial is precisely set on the frequency of the signal. The radio is powered by a large, clean battery with visible power flowing into the device. The background is a soft, out-of-focus representation of radio waves. The overall composition emphasizes clarity and focused reception.",
+    "style": "Steampunk",
+    "concept_name": "Active Listening"
+  },
+  {
+    "visual_metaphor": "A river flowing through a dry riverbed. At normal speed, the river disappears into the dry ground. When the water is slowed to a trickle, it pools in small sections, creating temporary wetlands where small plants and animals flourish.",
+    "prompt": "A wide, dry riverbed under a scorching sun. The river flows as a very slow trickle. Small pools of water form in the depressions, supporting tiny, vibrant green plant life and miniature animals (frogs, insects). The surrounding landscape is arid and cracked. Focus on the contrast between the barren riverbed and the life-giving pools. Overhead shot.",
+    "style": "Surreal Photography",
+    "concept_name": "Slow It Down"
+  },
+  {
+    "visual_metaphor": "A large, slow-moving, heavily laden barge being gently guided down a wide, calm river by a barely perceptible current.",
+    "prompt": "A wide, tranquil river reflecting a soft, dusky sky. A massive, ancient barge filled with stacked stone blocks slowly navigates the river's center. The barge appears heavy and stable, moving with an almost imperceptible grace. The riverbanks are lined with smooth, rounded stones. Focus on the gentle reflections in the water and the immense scale of the barge. The overall mood is peaceful, serene, and authoritative.",
+    "style": "Romanticism",
+    "concept_name": "The Voice (Late-Night FM DJ Voice)"
+  },
+  {
+    "visual_metaphor": "Two interlocking gears, one subtly influencing the rotation of the other.",
+    "prompt": "Two intricately designed gears, one larger and made of polished brass, the other smaller and made of brushed silver, meshing perfectly. The larger gear drives the smaller gear, but the smaller gear subtly alters the speed and direction of the larger one. The background is a complex clockwork mechanism rendered in high detail. Soft, diffused lighting highlights the intricate details and the subtle interaction between the gears.",
+    "style": "Steampunk",
+    "concept_name": "Mirroring (Isopraxism)"
+  },
+  {
+    "visual_metaphor": "A pressure gauge connected to a balloon. As air is released from the balloon, the gauge reading decreases.",
+    "prompt": "A vintage-style pressure gauge, intricately detailed with brass fittings and a glass face, is connected to a vibrant red balloon by a slender tube. The gauge needle is visibly decreasing, indicating a drop in pressure. The background is a soft, blurred gradient of pastel colors, reminiscent of dawn. The lighting is diffused, creating a calming and gentle atmosphere.",
+    "style": "Steampunk",
+    "concept_name": "Labeling"
+  }
+]

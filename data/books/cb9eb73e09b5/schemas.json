@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Negotiation Strategy Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Initial Situation: Conflicting Needs/Demands] --> B{Compromise?};\n    B -- Yes, Split the Difference --> C[Potential Bad Deal: Mismatched Shoes];\n    B -- No, Avoid Compromise --> D{Assess Time/Deadlines};\n    D -- Time Pressure Present --> E{Leverage Deadline};\n    E -- Stalling Tactics --> F[Potential Advantage];\n    D -- No Time Pressure --> G{Understand Underlying Emotions & 'Fairness'};\n    G --> H{Frame Offer to Address Emotional Needs};\n    H --> I[Creative Solution: Addresses Real Needs, Not Just Initial Demands];\n    C --> J[Unsatisfactory Outcome];\n    I --> K[Successful Negotiation];",
+    "description": "This flowchart visualizes the negotiation strategies presented in the chapter, emphasizing avoiding compromise and leveraging time/deadlines. It shows the process from initial conflict to potentially successful or unsuccessful outcomes.",
+    "source_chapter": "05 textPart06.html"
+  },
+  {
+    "title": "Fairness in Negotiation Mindmap",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Fairness in Negotiation))\n    Central Ideas\n      Subjective Perception\n        Emotional Impact\n          Triggers Defensiveness\n          Influences Decisions\n      Ultimatum Game\n        Irrational Rejection\n        Value of Perception\n      Application\n        Defensive Use: 'We just want what's fair'\n        Offensive Use: 'We've given you a fair offer'\n        Constructive Use: 'I want you to feel treated fairly'\n    Examples\n      Robin Williams/Aladdin\n      Iran Nuclear Program\n    Strategies\n      Acknowledge & Address Feelings\n      Provide Evidence of Fairness\n      Establish a Reputation of Fairness",
+    "description": "This mindmap breaks down the concept of 'fairness' in negotiation, showing its subjective nature, emotional impact, different applications (defensive, offensive, constructive), examples, and strategies for managing it.",
+    "source_chapter": "05 textPart06.html"
+  }
+]

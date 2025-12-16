@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Full Fee Agent Strategy",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Full Fee Agent))\n    Ignore Human Nature\n    Relationship Building\n      Favorite or Fool\n      No Free Consulting\n      Elephants Out Early\n    Responsibility & Autonomy\n      Put Responsibility Where It Belongs\n      Let Them Say No\n    Lasting Impression\n      Nail the Lasting Impression\n    Full Service Commitment\n      Full-Service, Full Fee Agent",
+    "description": "Mindmap showing the core components of becoming a Full Fee Agent, focusing on relationships, responsibility, and service.",
+    "source_chapter": "00 Chris-Voss Steve-Shull FM EBOOK.xhtml"
+  },
+  {
+    "title": "Agent Client Relationship Cycle",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Initial Contact] --> B{Understanding Needs};\n    B -- Yes --> C[Present Full Value];\n    B -- No --> D[Re-evaluate Needs];\n    D --> B;\n    C --> E{Client Accepts};\n    E -- Yes --> F[Full Service Agreement];\n    E -- No --> G[Negotiation/Walk Away];\n    G --> H[Lasting Impression];\n    F --> H;\n    H --> I[Referrals & Repeat Business];",
+    "description": "Flowchart outlining the relationship cycle between an agent and a client, emphasizing understanding needs, presenting value, and securing full service agreement.",
+    "source_chapter": "00 Chris-Voss Steve-Shull FM EBOOK.xhtml"
+  },
+  {
+    "title": "Influence vs. Tactical Empathy",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Traditional Influence: Shouting across the street] --> B(Convincing/Arguing);\n    B --> C{Client crosses if convinced};\n    D[Tactical Empathy: Crossing the street, understanding the client's view] --> E(Pointing out missed things, navigating together);\n    E --> F{Client feels understood and navigates to their goal};\n    C -.-> G[Ineffective, builds no trust];\n    F --> H[Effective, builds trust and oxytocin];\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style D fill:#ccf,stroke:#333,stroke-width:2px",
+    "description": "Illustrates the difference between traditional influence tactics (shouting across the street) and Tactical Empathy (crossing the street and understanding the client's perspective) in real estate, highlighting the effectiveness of the latter in building trust.",
+    "source_chapter": "05 Chris-Voss Steve-Shull C1 EBOOK.xhtml"
+  },
+  {
+    "title": "Seven Essential Truths' Relationship to Tactical Empathy",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Tactical Empathy))\n    1. Predict Future Behavior\n      a. Past Behavior\n    2. No Fully Open Mind\n      a. Pre-existing Opinions\n    3. Humans are Negative\n      a. Amygdala's Role\n    4. Fear of Loss\n      a. Prospect Theory\n    5. Compromise is Downward\n      a. Unhappy Clients\n    6. Autonomy\n      a. 'Liberty or Death'\n    7. Vision Drives\n      a. Unspoken Desires\n",
+    "description": "A mindmap showing how the Seven Essential Truths of Human Behavior all connect to and are addressed by Tactical Empathy, which is the core tool for understanding and relating to clients.",
+    "source_chapter": "05 Chris-Voss Steve-Shull C1 EBOOK.xhtml"
+  },
+  {
+    "title": "Seven Essential Truths of Human Behavior",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Seven Essential Truths of Human Behavior))\n    Past Behavior: Best predictor of future behavior\n    Open Mind: No such thing as a fully open mind\n    Negativity: Humans are hardwired to be negative\n    Loss Aversion: Fear of loss is the primary motivator\n    Compromise: Never equal - downward spiral\n    Autonomy: People will die over their autonomy\n    Vision: Drives decision",
+    "description": "Mindmap visualizing the Seven Essential Truths of Human Behavior and their relationships.",
+    "source_chapter": "06 Chris-Voss Steve-Shull C1 EBOOK-1.xhtml"
+  },
+  {
+    "title": "Decision Making Process",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Fact, Logic, Reason] --> B{Emotions and Unconscious Biases}\n    B --> C{Human Behavior}\n    C --> D{Seemingly Irrational}\n    E[Tactical Empathy] --> C",
+    "description": "Flowchart illustrating how facts, logic, emotions, and biases influence decision-making and behavior, including Tactical Empathy.",
+    "source_chapter": "06 Chris-Voss Steve-Shull C1 EBOOK-1.xhtml"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "hook": "Mastering human behavior gives you an undeniable edge in negotiations and life.",
+    "jargon": [
+      {
+        "term": "Tactical Empathy",
+        "definition": "Understanding the other party's feelings and using that knowledge to influence them."
+      },
+      {
+        "term": "Loss Aversion",
+        "definition": "The tendency to prefer avoiding losses to acquiring equivalent gains."
+      },
+      {
+        "term": "Autonomy",
+        "definition": "The need for people to feel in control of their own decisions and lives."
+      }
+    ],
+    "knowledge_gaps": [
+      "Why do logic and facts often fail to persuade people?",
+      "What are the fundamental truths that govern human behavior?",
+      "How can I use empathy to predict and influence others' actions?"
+    ],
+    "map": "This chapter introduces the limitations of logic, unveils the seven core truths of human behavior, and positions Tactical Empathy as a practical method for navigating the complexities of human interaction.",
+    "source_chapter": "06 Chris-Voss Steve-Shull C1 EBOOK-1.xhtml"
+  }
+]

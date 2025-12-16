@@ -1,0 +1,26 @@
+[
+  {
+    "hook": "In high-stakes negotiations, understanding the irrationality of human behavior is more critical than traditional rational approaches.",
+    "jargon": [
+      {
+        "term": "Calibrated Questions",
+        "definition": "Open-ended questions designed to give the other party the illusion of control while subtly constraining their responses."
+      },
+      {
+        "term": "BATNA (Best Alternative To a Negotiated Agreement)",
+        "definition": "The most advantageous alternative course of action a party can take if a negotiation fails and an agreement cannot be reached."
+      },
+      {
+        "term": "Behavioral Economics",
+        "definition": "A field that studies the effects of psychological, cognitive, emotional, and social factors on the economic decisions of individuals and institutions."
+      }
+    ],
+    "knowledge_gaps": [
+      "Why did traditional negotiation techniques fail Chris Voss against Harvard Law professors?",
+      "What are the key differences between the FBI's negotiation techniques and the Harvard Negotiation Project's approach?",
+      "How can understanding human psychology improve negotiation outcomes in business and life?"
+    ],
+    "map": "This chapter recounts a negotiation challenge against Harvard professors, contrasts traditional negotiation methods with the FBI's emotionally intelligent approach, and argues that understanding human psychology is key to successful negotiation in all aspects of life.",
+    "source_chapter": "00 textPart01.html"
+  }
+]

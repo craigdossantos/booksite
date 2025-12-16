@@ -1,0 +1,118 @@
+DEBUG: Template dir: /Users/craigdossantos/Coding/booksite/ytLearn/presentation/templates
+DEBUG: Static dir: /Users/craigdossantos/Coding/booksite/ytLearn/presentation/static
+DEBUG: Templates content: ['index.html', 'playlist.html']
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/Dec/2025 14:10:42] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:10:54] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:11:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:11:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:11:10] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:11:10] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:11:10] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:11:18] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:12:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:12:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:12:20] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:12:21] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:12:21] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:12:36] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:02] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:02] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:03] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:19] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:13:42] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:13:49] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:14:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:14:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:14:16] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:14:16] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Me_at_the_zoo_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/n8n_Essentials_in_25_Minutes_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Sundar_Pichai_Gemini_3_Vibe_Coding_and_Googles_Full_Stack_Strategy_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Gradient_descent_how_neural_networks_learn__Deep_Learning_Chapter_2_analysis.json
+DEBUG: Loaded analysis with 6 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/I_Built_3_Apps_to_35KMonth_With_This_Playbook_DropMagic_AI_Breakdown_analysis.json
+DEBUG: Loaded analysis with 11 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/How_to_build_reliable_AI_Agents_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/30Minute_AI_Automations_Anyone_Can_Set_Up__Sell_Right_Now_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Vibe_coding_and_context_engineering_with_ADK_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/But_what_is_a_neural_network__Deep_learning_chapter_1_analysis.json
+DEBUG: Loaded analysis with 5 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Me_at_the_zoo_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/n8n_Essentials_in_25_Minutes_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Sundar_Pichai_Gemini_3_Vibe_Coding_and_Googles_Full_Stack_Strategy_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Gradient_descent_how_neural_networks_learn__Deep_Learning_Chapter_2_analysis.json
+DEBUG: Loaded analysis with 6 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/I_Built_3_Apps_to_35KMonth_With_This_Playbook_DropMagic_AI_Breakdown_analysis.json
+DEBUG: Loaded analysis with 11 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/How_to_build_reliable_AI_Agents_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/30Minute_AI_Automations_Anyone_Can_Set_Up__Sell_Right_Now_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Vibe_coding_and_context_engineering_with_ADK_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/But_what_is_a_neural_network__Deep_learning_chapter_1_analysis.json
+DEBUG: Loaded analysis with 5 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Me_at_the_zoo_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/n8n_Essentials_in_25_Minutes_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Sundar_Pichai_Gemini_3_Vibe_Coding_and_Googles_Full_Stack_Strategy_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Gradient_descent_how_neural_networks_learn__Deep_Learning_Chapter_2_analysis.json
+DEBUG: Loaded analysis with 6 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/I_Built_3_Apps_to_35KMonth_With_This_Playbook_DropMagic_AI_Breakdown_analysis.json
+DEBUG: Loaded analysis with 11 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/How_to_build_reliable_AI_Agents_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/30Minute_AI_Automations_Anyone_Can_Set_Up__Sell_Right_Now_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Vibe_coding_and_context_engineering_with_ADK_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/But_what_is_a_neural_network__Deep_learning_chapter_1_analysis.json
+DEBUG: Loaded analysis with 5 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Me_at_the_zoo_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/n8n_Essentials_in_25_Minutes_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Sundar_Pichai_Gemini_3_Vibe_Coding_and_Googles_Full_Stack_Strategy_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Gradient_descent_how_neural_networks_learn__Deep_Learning_Chapter_2_analysis.json
+DEBUG: Loaded analysis with 6 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/I_Built_3_Apps_to_35KMonth_With_This_Playbook_DropMagic_AI_Breakdown_analysis.json
+DEBUG: Loaded analysis with 11 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/How_to_build_reliable_AI_Agents_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/30Minute_AI_Automations_Anyone_Can_Set_Up__Sell_Right_Now_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Vibe_coding_and_context_engineering_with_ADK_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/But_what_is_a_neural_network__Deep_learning_chapter_1_analysis.json
+DEBUG: Loaded analysis with 5 items
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json
+DEBUG: Loaded analysis with 12 items
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Me_at_the_zoo_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/n8n_Essentials_in_25_Minutes_analysis.json
+DEBUG: Analysis file NOT found at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/Sundar_Pichai_Gemini_3_Vibe_Coding_and_Googles_Full_Stack_Strategy_analysis.json
+DEBUG: Found analysis file at /Users/craigdossantos/Coding/booksite/ytLearn/transcripts/The_Freezer_Hack_Thats_Changing_My_Life_analysis.json127.0.0.1 - - [01/Dec/2025 14:14:16] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:14:23] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:14:53] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:16:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:16:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:16:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:16:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [01/Dec/2025 14:16:48] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [01/Dec/2025 14:17:01] "GET /api/video/The_Freezer_Hack_Thats_Changing_My_Life.md HTTP/1.1" 200 -

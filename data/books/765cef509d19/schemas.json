@@ -1,0 +1,450 @@
+[
+  {
+    "title": "Copyright Relationships",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Copyright))\n    Author\n      James Clear\n    Publisher\n      Penguin Random House LLC\n    Reader\n      Supports Copyright\n    Content\n      Protected by Copyright\n    Legal\n      Copyright Laws",
+    "description": "A mindmap illustrating the relationships centered around copyright, including the author, publisher, reader, content, and legal aspects.",
+    "source_chapter": "00 xhtml03 Copyright.xhtml"
+  },
+  {
+    "title": "Copyright Protection Flow",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Author creates work] --> B{Copyright protection};\n    B -- Yes --> C[Publisher publishes];\n    C --> D[Reader buys authorized edition];\n    D --> E{Support Copyright};\n    E -- Yes --> F[Encourages creativity, diverse voices, free speech, vibrant culture];\n    E -- No --> G[No reproducing, scanning, or distributing];\n    F --> H[Authors continue to publish books]",
+    "description": "A flowchart describing the flow of copyright protection from author creation to the reader supporting the copyright which in turn allows authors to continue to create content.",
+    "source_chapter": "00 xhtml03 Copyright.xhtml"
+  },
+  {
+    "title": "Habit Formation Laws Relationship Diagram",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Atomic Habits))\n    The Fundamentals\n      Why Tiny Changes Make a Big Difference\n        1. The Surprising Power of Atomic Habits\n        2. How Your Habits Shape Your Identity (and Vice Versa)\n        3. How to Build Better Habits in 4 Simple Steps\n    1st Law: Make It Obvious\n      4. The Man Who Didn\u2019t Look Right\n      5. The Best Way to Start a New Habit\n      6. Motivation Is Overrated; Environment Often Matters More\n      7. The Secret to Self-Control\n    2nd Law: Make It Attractive\n      8. How to Make a Habit Irresistible\n      9. The Role of Family and Friends in Shaping Your Habits\n      10. How to Find and Fix the Causes of Your Bad Habits\n    3rd Law: Make It Easy\n      11. Walk Slowly, but Never Backward\n      12. The Law of Least Effort\n      13. How to Stop Procrastinating by Using the Two-Minute Rule\n      14. How to Make Good Habits Inevitable and Bad Habits Impossible\n    4th Law: Make It Satisfying\n      15. The Cardinal Rule of Behavior Change\n      16. How to Stick with Good Habits Every Day\n      17. How an Accountability Partner Can Change Everything\n    Advanced Tactics\n      How to Go from Being Merely Good to Being Truly Great\n        18. The Truth About Talent (When Genes Matter and When They Don\u2019t)\n        19. The Goldilocks Rule: How to Stay Motivated in Life and Work\n        20. The Downside of Creating Good Habits",
+    "description": "A mindmap representing the core structure of the 'Atomic Habits' book, focusing on the relationships between the fundamental concepts, the four laws of behavior change, and advanced tactics.",
+    "source_chapter": "02 xhtml05 Contents.xhtml"
+  },
+  {
+    "title": "Injury and Recovery Cycle",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Baseball Bat Incident] --> B(Physical Injuries: Nose, Skull, Eyes)\n    B --> C{Loss of Consciousness, Seizures, Hospitalization}\n    C --> D[Medically Induced Coma]\n    D --> E(Initial Recovery: Smell, Vision Problems)\n    E --> F{Physical Therapy, Motor Skills}\n    F --> G(Emotional Challenges: Depression, Overwhelm)\n    G --> H[Return to Baseball: Setbacks]\n    H --> I(College: New Beginning at Denison)\n    I --> J{Focus on Small Habits: Sleep, Order, Study}\n    J --> K(Improved Confidence and Grades)\n    K --> L[Athletic Success: Team Captain, All-Conference]\n    L --> M(Academic Success: All-American, President's Medal)\n    M --> N(Fulfilling Potential)\n",
+    "description": "Flowchart illustrating the progression from the initial baseball bat injury through the recovery process and eventual success through habit formation.",
+    "source_chapter": "03 xhtml06 Introduction My Story.xhtml"
+  },
+  {
+    "title": "Habit Formation and Success",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Initial Injury & Setbacks] --> B{Desire for Improvement}\n    B --> C(Focus on Small Habits)\n    C --> D[Consistent Application of Habits]\n    D --> E{Improved Performance (Athletic, Academic, Professional)}\n    E --> F(Increased Confidence & Belief)\n    F --> G[Achievement of Potential]\n    G --> H(Sharing Knowledge: Writing & Teaching)\n",
+    "description": "Flowchart visualizing how focusing on small habits leads to consistent improvements, increased confidence, and the eventual achievement of one's potential, culminating in sharing knowledge with others.",
+    "source_chapter": "03 xhtml06 Introduction My Story.xhtml"
+  },
+  {
+    "title": "Habit Formation System",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Goals (Desired Results)] --> B{Systems (Processes)};\n    B -- Focus --> C[Daily Actions/Habits];\n    C -- Compound Effect --> D{Plateau of Latent Potential};\n    D -- Persistence --> E[Breakthrough/Success];\n    E --> F[Long-Term Progress];\n    B --> G{Environment and Influences};\n    G --> C",
+    "description": "Visualizes the relationship between goals, systems, habits, and long-term progress, highlighting the importance of systems over goals and the compound effect of habits.",
+    "source_chapter": "05 xhtml08 1 The Surprising Powe.xhtml"
+  },
+  {
+    "title": "Compounding Effects of Habits",
+    "type": "table",
+    "mermaid_code": "| Category | Positive Compounding | Negative Compounding |\n|----------|------------------------|------------------------|\n| Productivity | Accomplishing extra tasks | Stagnation, inefficiency |\n| Knowledge  | Lifelong learning, deeper understanding | Ignorance, outdated skills |\n| Relationships | Strong network, mutual support | Isolation, conflict |\n| Health     | Improved fitness, well-being | Chronic stress, health issues |\n| Thoughts   | Positive self-image, optimism | Negative self-talk, pessimism |\n| Finances   | Savings, investments, financial freedom | Debt, overspending, financial instability |",
+    "description": "Compares and contrasts the positive and negative compounding effects across different life categories (productivity, knowledge, relationships, health, thoughts, and finances) to demonstrate the impact of good and bad habits.",
+    "source_chapter": "05 xhtml08 1 The Surprising Powe.xhtml"
+  },
+  {
+    "title": "Habit Formation Process",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Desired Identity] --> B{Actions/Habits}\n    B --> C{Evidence Accumulation}\n    C --> D[Reinforced Identity]\n    D --> B\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style D fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "Flowchart illustrating the feedback loop between desired identity, actions/habits, evidence accumulation, and reinforced identity. This highlights how habits shape identity and vice-versa.",
+    "source_chapter": "06 xhtml09 2 How Your Habits Sha.xhtml"
+  },
+  {
+    "title": "Three Levels of Behavior Change",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Behavior Change))\n    Outcomes\n      Results (e.g., losing weight)\n    Processes\n      Habits & Systems (e.g., new routine)\n    Identity\n      Beliefs (e.g., worldview)",
+    "description": "Mindmap breaking down the three levels of behavior change: Outcomes, Processes, and Identity, showing how each level relates to habits and beliefs.",
+    "source_chapter": "06 xhtml09 2 How Your Habits Sha.xhtml"
+  },
+  {
+    "title": "Habit Loop Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Cue] --> B(Craving)\n    B --> C{Response}\n    C --> D((Reward))\n    D --> A\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#ccf,stroke:#333,stroke-width:2px\n    style C fill:#ccf,stroke:#333,stroke-width:2px\n    style D fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "Visualizes the four stages of the habit loop: Cue, Craving, Response, and Reward, forming a continuous feedback loop.",
+    "source_chapter": "07 xhtml10 3 How to Build Better.xhtml"
+  },
+  {
+    "title": "Four Laws of Behavior Change",
+    "type": "table",
+    "mermaid_code": "| Law | Good Habit | Bad Habit |\n|---|---|---|\n| 1st Law (Cue) | Make it Obvious | Make it Invisible |\n| 2nd Law (Craving) | Make it Attractive | Make it Unattractive |\n| 3rd Law (Response) | Make it Easy | Make it Difficult |\n| 4th Law (Reward) | Make it Satisfying | Make it Unsatisfying |",
+    "description": "Presents the Four Laws of Behavior Change for creating good habits and breaking bad habits in a tabular format.",
+    "source_chapter": "07 xhtml10 3 How to Build Better.xhtml"
+  },
+  {
+    "title": "Habit Formation and Awareness",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Experience/Repetition] --> B{Brain Notices Relevant Cues}\n    B -- Yes --> C[Encode Lessons (Non-conscious)]\n    C --> D{Automatic Action}\n    D -- Unaware --> E[Potential for Bad Habits]\n    D -- Aware (Pointing & Calling, Habits Scorecard) --> F[Conscious Response & Change]\n",
+    "description": "Flowchart illustrating how habits form through repetition and the importance of awareness in changing them.",
+    "source_chapter": "08 xhtml12 4 The Man Who Didn t .xhtml"
+  },
+  {
+    "title": "Habits Scorecard Breakdown",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habits Scorecard))\n    (List Daily Habits)\n      (Wake up)\n      (Check phone)\n      (Brush teeth)\n    (Categorize Habits)\n      (Good Habit (+))\n      (Bad Habit (-))\n      (Neutral Habit (=))\n    (Goal: Awareness))\n      (No Judgement)\n      (Observe Actions)\n",
+    "description": "Mindmap visualizing the steps and components of the Habits Scorecard exercise for increasing self-awareness.",
+    "source_chapter": "08 xhtml12 4 The Man Who Didn t .xhtml"
+  },
+  {
+    "title": "Implementation Intention Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Identify Goal: Behavior] --> B{Choose Time & Location};\n    B -- Yes --> C[Formulate Plan: \"I will [BEHAVIOR] at [TIME] in [LOCATION]\"];\n    C --> D{Situation Arises (Time & Location)};\n    D -- Yes --> E[Perform Predetermined Behavior];\n    E --> F[Habit Formation];\n    D -- No --> D",
+    "description": "Flowchart representing the process of forming a habit using implementation intentions, focusing on the relationship between identifying a goal, setting a specific time and location, and following through when the situation arises.",
+    "source_chapter": "09 xhtml13 5 The Best Way to Sta.xhtml"
+  },
+  {
+    "title": "Habit Stacking Mindmap",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Stacking))\n    Central Idea: Pair New Habit with Current Habit\n      Formula: After [CURRENT HABIT], I will [NEW HABIT]\n      Benefits\n        Leverages Existing Routines\n        Creates Obvious Cues\n        Positive 'Diderot Effect'\n      Considerations\n        Cue Specificity\n        Cue Frequency\n        Appropriate Time & Place\n      Examples\n        After coffee, meditate\n        After work shoes off, workout clothes on",
+    "description": "Mindmap showing the components and benefits of habit stacking, emphasizing its relationship to current routines and the creation of obvious cues for new habits.",
+    "source_chapter": "09 xhtml13 5 The Best Way to Sta.xhtml"
+  },
+  {
+    "title": "Environment Design and Habit Formation",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Environment Design] --> B{Obvious Cues?}\n    B -- Yes --> C[Desired Habit Triggered]\n    B -- No --> D[Habit Unlikely]\n    C --> E[Consistent Behavior]\n    D --> F[Ignore/Forget Habit]\n    E --> G[Desired Outcome]\n    F --> H[Undesired Outcome]",
+    "description": "Flowchart illustrating how environment design, particularly the presence of obvious cues, impacts habit formation and resulting outcomes.",
+    "source_chapter": "10 xhtml14 6 Motivation Is Overr.xhtml"
+  },
+  {
+    "title": "Context and Habit Association",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Context & Habit))\n    New Environment\n      Easier to change habits\n      Escape subtle triggers\n    Current Environment\n      One Space, One Use\n      Separate Activity Zones\n    Context as Cue\n      Associated with entire behavior\n      Triggers habit",
+    "description": "Mindmap showing the relationship between context (environment) and habit formation.  It outlines strategies for using new and existing environments to create or change habits, emphasizing the context's role as a cue.",
+    "source_chapter": "10 xhtml14 6 Motivation Is Overr.xhtml"
+  },
+  {
+    "title": "Habit Formation and Environment",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Environmental Cues] --> B{Trigger Bad Habit?}\n    B -- Yes --> C[Compulsive Craving]\n    C --> D[Bad Habit]\n    D --> E[Negative Feelings]\n    E --> A\n    B -- No --> F[No Habit Triggered]\n    F --> G[Maintain Status Quo]",
+    "description": "This flowchart visualizes the cycle of bad habits, highlighting the relationship between environmental cues, cravings, behavior, and subsequent feelings. Breaking the cycle involves reducing exposure to cues.",
+    "source_chapter": "11 xhtml15 7 The Secret to Self-.xhtml"
+  },
+  {
+    "title": "Self-Control Strategies",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Desire to Change Behavior] --> B{Rely on Self-Control?}\n    B -- Yes --> C[Short-Term Resistance]\n    C --> D[Potential Willpower Exhaustion]\n    D --> E[Relapse to Bad Habit]\n    B -- No --> F[Optimize Environment]\n    F --> G[Reduce Exposure to Cues]\n    G --> H[Long-Term Habit Change]\n    H --> I[Increased Self-Control]",
+    "description": "This flowchart illustrates the difference between relying on self-control (short-term) and optimizing the environment (long-term) for breaking bad habits. Optimizing the environment by reducing cues is presented as a more effective long-term strategy.",
+    "source_chapter": "11 xhtml15 7 The Secret to Self-.xhtml"
+  },
+  {
+    "title": "Habit Formation: Dopamine Loop",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Cue] --> B(Anticipation/Craving)\n    B --> C{Action}\n    C --> D[Reward (Dopamine Release)]\n    D --> A",
+    "description": "Visualizes the dopamine-driven feedback loop in habit formation. The cue triggers anticipation, leading to action, and then a dopamine-releasing reward which reinforces the cue.",
+    "source_chapter": "12 xhtml17 8 How to Make a Habit.xhtml"
+  },
+  {
+    "title": "Temptation Bundling",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Current Habit (Need)] --> B{Action: Perform 'Need' Habit}\n    B --> C[Desired Habit (Want)]\n    C --> D{Action: Perform 'Want' Habit}\n    D --> E[Reward/Enjoyment]\n    E --> A",
+    "description": "Represents the temptation bundling strategy, where a 'need' habit is linked with a 'want' habit to make the former more attractive. Performing the needed habit enables the desired habit and associated reward.",
+    "source_chapter": "12 xhtml17 8 How to Make a Habit.xhtml"
+  },
+  {
+    "title": "Influence of Social Groups on Habit Formation",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Formation)) --> Close\n  root --> Many\n  root --> Powerful\n\n  Close --> Proximity\n  Close --> Imitation of Family and Friends\n  Close --> Peer Pressure (Positive or Negative)\n\n  Many --> Social Norms\n  Many --> Conformity\n  Many --> Group Behavior\n\n  Powerful --> Status and Prestige\n  Powerful --> Imitation of Successful People\n  Powerful --> Approval and Respect",
+    "description": "This mindmap illustrates how social groups (Close, Many, and Powerful) influence habit formation through various factors like proximity, social norms, imitation, and the pursuit of status.",
+    "source_chapter": "13 xhtml18 9 The Role of Family .xhtml"
+  },
+  {
+    "title": "Culture and Habit Attractiveness",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Culture] --> B{Behaviors Praised and Approved by Culture}\n    B --> C{Desire to Fit In and Belong}\n    C --> D[Attractive Habits]\n    D --> E[Adoption of Habits]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#ccf,stroke:#333,stroke-width:2px\n    style C fill:#ccf,stroke:#333,stroke-width:2px\n    style D fill:#ccf,stroke:#333,stroke-width:2px\n    style E fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "This flowchart demonstrates how culture shapes the attractiveness of habits. Behaviors praised by the culture lead to a desire to fit in, making those habits more attractive and likely to be adopted.",
+    "source_chapter": "13 xhtml18 9 The Role of Family .xhtml"
+  },
+  {
+    "title": "Habit Formation and Underlying Motives",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Cue] --> B{Prediction: What will happen next?}\n    B --> C{Feeling/Emotion: Is this good or bad?}\n    C --> D{Craving: Desire to change internal state}\n    D --> E[Response/Habit]\n    E --> F{Underlying Motive: Conserve energy, find love, reduce uncertainty, etc.}\n    F --> B",
+    "description": "This diagram illustrates the cycle of habit formation, emphasizing the role of predictions, feelings, and underlying motives in driving behavior.",
+    "source_chapter": "14 xhtml19 10 How to Find and Fi.xhtml"
+  },
+  {
+    "title": "Reframing Habits for Attractiveness",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Reframing Habits))\n    Benefits[Highlight Benefits]\n    Mindset[Shift Mindset]\n      Mindset --> GetTo[\"'Have to' to 'Get to'\"]\n    MotivationRitual[Motivation Ritual]\n      MotivationRitual --> Associate[Associate with Enjoyable Activity]\n      MotivationRitual --> Cue[Use Cue When Needed]",
+    "description": "This mindmap shows how to make habits more attractive by reframing them to focus on their benefits, shifting one's mindset from obligation to opportunity, and creating a motivation ritual to associate them with positive feelings.",
+    "source_chapter": "14 xhtml19 10 How to Find and Fi.xhtml"
+  },
+  {
+    "title": "Motion vs Action Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Motion: Planning, Strategizing, Learning] --> B{Produces Result?}\n    B -- No --> C[No Outcome]\n    B -- Yes --> D[Action: Behavior delivering outcome]\n    D --> E[Desired Outcome]",
+    "description": "This flowchart visualizes the difference between being in motion and taking action. Motion involves planning and strategizing but doesn't directly produce results. Action, on the other hand, leads to a tangible outcome.",
+    "source_chapter": "15 xhtml21 11 Walk Slowly but Ne.xhtml"
+  },
+  {
+    "title": "Habit Formation Cycle",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Repetition of Action] --> B{Neural Circuit Activation}\n    B --> C[Strengthening of Neural Connections (Long-Term Potentiation)]\n    C --> D[Increased Automaticity]\n    D --> E[Habit Formation]",
+    "description": "This diagram illustrates the habit formation process, starting with repetition, leading to neural changes and automaticity.",
+    "source_chapter": "15 xhtml21 11 Walk Slowly but Ne.xhtml"
+  },
+  {
+    "title": "Law of Least Effort Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Start: Decision Point] --> B{Similar Options?}\n    B -- Yes --> C[Choose Option with Least Effort]\n    B -- No --> D[Evaluate Options]\n    D --> C\n    C --> E[Action Realized]\n    E --> F[Outcome: Most Value for Least Effort]\n    F --> G[End]",
+    "description": "Illustrates the decision-making process according to the Law of Least Effort. When faced with similar options, individuals tend to choose the one requiring the least amount of work.",
+    "source_chapter": "16 xhtml22 12 The Law of Least E.xhtml"
+  },
+  {
+    "title": "Friction and Habit Relationship",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Formation))\n    Good Habits\n      Reduce Friction\n        Environment Design\n          Prime Environment\n          Make it Convenient\n      Increase Likelihood\n    Bad Habits\n      Increase Friction\n        Unplug TV\n        Hide Phone\n      Decrease Likelihood",
+    "description": "This diagram visualizes how friction impacts habit formation, differentiating between good and bad habits and illustrating how to increase the likelihood of good habits and decrease the likelihood of bad habits through environment design.",
+    "source_chapter": "16 xhtml22 12 The Law of Least E.xhtml"
+  },
+  {
+    "title": "Decisive Moments and Habit Stacking",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Decisive Moment: Choice Point] --> B{Productive Path?}\n    B -- Yes --> C[Healthy/Useful Habit]\n    B -- No --> D[Unproductive Path]\n    D --> E[Unhealthy/Harmful Habit]\n    C --> F[Positive Outcome]\n    E --> G[Negative Outcome]\n    F --> H((Future Success))\n    G --> I((Future Difficulty))",
+    "description": "Flowchart illustrating how decisive moments lead to either productive or unproductive paths, affecting future outcomes.",
+    "source_chapter": "17 xhtml23 13 How to Stop Procra.xhtml"
+  },
+  {
+    "title": "Two-Minute Rule and Habit Shaping",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Start New Habit] --> B{Two-Minute Rule: < 2 minutes}\n    B -- Yes --> C[Easy to Start]\n    C --> D[Consistent Action]\n    D --> E{Habit Established?}\n    E -- Yes --> F[Habit Shaping: Gradual Increase]\n    F --> G[Ultimate Goal Achieved]\n    E -- No --> H[Maintain Two-Minute Habit]\n    B -- No --> I[Simplify Further]",
+    "description": "Flowchart illustrating the Two-Minute Rule and Habit Shaping for building new habits.",
+    "source_chapter": "17 xhtml23 13 How to Stop Procra.xhtml"
+  },
+  {
+    "title": "Habit Loop with Satisfaction",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Cue] --> B(Craving)\n    B --> C{Response}\n    C --> D{Reward: Immediate Satisfaction}\n    D --> A\n    C --> E{Reward: Delayed Gratification}\n    style D fill:#ccffcc,stroke:#333,stroke-width:2px\n    style E fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "Flowchart illustrating the habit loop with a focus on the role of immediate satisfaction in reinforcing the behavior.",
+    "source_chapter": "19 xhtml26 15 The Cardinal Rule .xhtml"
+  },
+  {
+    "title": "Delayed vs Immediate Rewards",
+    "type": "table",
+    "mermaid_code": "| Category | Immediate-Return Environment | Delayed-Return Environment |\n|---|---|---|\n| **Time Horizon** | Present, very near future | Future, often distant |\n| **Payoff** | Instant and clear outcomes | Payoff delayed, requires sustained effort |\n| **Brain Preference** | Quick payoffs, instant gratification | Long-term benefits, delayed gratification |\n| **Example** | Animal hunting for food | Saving for retirement |\n| **Behavior** | Responding to threats, securing immediate needs | Planning for long-term goals, developing good habits |\n",
+    "description": "Table comparing immediate-return and delayed-return environments and their impact on behavior and rewards.",
+    "source_chapter": "19 xhtml26 15 The Cardinal Rule .xhtml"
+  },
+  {
+    "title": "Habit Tracking Loop",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Start with Habit Tracker] --> B{Perform Habit?}\n    B -- Yes --> C[Record Habit on Tracker]\n    C --> D{Satisfying?}\n    D -- Yes --> E[Motivation Increase]\n    E --> B\n    B -- No --> F[Identify Obstacles]\n    F --> G[Adjust Strategy or Environment]\n    G --> B\n    D -- No --> H[Re-evaluate Reward/Motivation]\nH --> B",
+    "description": "Flowchart illustrating the continuous loop of habit tracking, emphasizing the feedback and adjustment mechanisms.",
+    "source_chapter": "20 xhtml27 16 How to Stick with .xhtml"
+  },
+  {
+    "title": "Benefits of Habit Tracking",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Tracking))\n\n  Obvious\n    Recording last action\n    Visual cues (streak)\n    Honesty (real behavior)\n\n  Attractive\n    Motivation from progress\n    Visual proof of hard work\n    Avoid breaking streak\n\n  Satisfying\n    Reward\n    Focused on process\n    Intrinsic gratification",
+    "description": "Mindmap outlining the core benefits of habit tracking, making behaviors more obvious, attractive, and satisfying.",
+    "source_chapter": "20 xhtml27 16 How to Stick with .xhtml"
+  },
+  {
+    "title": "Habit Contract Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Desire to Change Behavior] --> B{Create Habit Contract}\n    B -- Yes --> C[Define Habit and Punishment]\n    C --> D[Find Accountability Partner(s)]\n    D --> E[Sign Contract]\n    E --> F{Behavior Performed?}\n    F -- Yes --> G[No Punishment]\n    F -- No --> H[Apply Punishment]\n    H --> I[Behavior Modified?]\n    I -- Yes --> J[Goal Achieved]\n    I -- No --> K[Revise Contract/Punishment]\n    K --> C\n",
+    "description": "This flowchart illustrates the process of using a habit contract to change behavior, highlighting the roles of defining the habit, finding an accountability partner, and applying punishment for failing to meet the habit.",
+    "source_chapter": "21 xhtml28 17 How an Accountabil.xhtml"
+  },
+  {
+    "title": "Accountability Partner Mindmap",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Accountability Partner))\n    Benefits\n      Immediate Cost of Inaction\n      Social Cost of Failure\n      Increased Motivation\n      Reduced Procrastination\n    Methods\n      Verbal Agreement\n      Written Contract\n        Specific Habit\n        Defined Punishment\n      Automated Systems (e.g., tweets)\n    Examples\n      Bryan Harris (Weight Loss)\n      Margaret Cho (Joke/Song a Day)\n      Thomas Frank (Waking Up Early)\n",
+    "description": "This mindmap visualizes the concept of an accountability partner, including the benefits, methods of implementation (such as contracts and automated systems), and real-world examples from the chapter.",
+    "source_chapter": "21 xhtml28 17 How an Accountabil.xhtml"
+  },
+  {
+    "title": "Genes and Habit Alignment",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Genes (Natural Abilities)] --> B{Environment/Opportunity}\n    B -- Favorable --> C[Advantage: Easier Habits, Satisfaction]\n    B -- Unfavorable --> D[Disadvantage: Difficult Habits, Frustration]\n    C --> E{Aligned Ambition & Ability}\n    D --> E\n    E -- Yes --> F[Success & Motivation]\n    E -- No --> G[Trial & Error, Explore/Exploit]\n    G --> H{Find Right Game/Create New Game}\n    H --> F\n    F --> I[Hard Work & Right Strategy]\n    I --> J[Fulfilling Potential]",
+    "description": "This flowchart illustrates how genes influence habits based on environment and opportunities. Alignment of ambition and ability leads to success and motivation, which in turn leads to hard work and fulfilling potential. Exploration and creating a new game are feedback loops to find optimal alignment.",
+    "source_chapter": "23 xhtml30 18 The Truth About Ta.xhtml"
+  },
+  {
+    "title": "Explore/Exploit Trade-off",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Start: New Activity] --> B{Exploration Phase}\n    B -- Try Many Possibilities --> C{Evaluate Results}\n    C -- Winning? (80-90%) --> D{Exploit: Focus on Best Solution}\n    C -- Losing? (10-20%) --> B\n    D --> E[Long-Term Results]\n    B --> F{Time Available?}\n    F -- Lot of Time --> B\n    F -- Limited Time --> D",
+    "description": "This flowchart visualizes the explore/exploit trade-off strategy. Depending on if you're winning or losing, you either exploit your current best solutions or explore new possibilities. The time available influences the balance between exploration and exploitation.",
+    "source_chapter": "23 xhtml30 18 The Truth About Ta.xhtml"
+  },
+  {
+    "title": "Goldilocks Rule and Motivation",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Challenge Level] -->|Too Easy| B(Boredom, Lack of Motivation)\n    A -->|Too Hard| C(Anxiety, Loss of Motivation)\n    A -->|Just Right (Goldilocks Zone)| D{Peak Motivation, Flow State}\n    D --> E[Continued Improvement]\n    E --> F{Increased Ability}\n    F --> G[Seek New, Slightly Harder Challenges]\n    G --> A",
+    "description": "A flowchart illustrating the Goldilocks Rule: how challenge level affects motivation, leading to a flow state and continuous improvement.",
+    "source_chapter": "24 xhtml31 19 The Goldilocks Rul.xhtml"
+  },
+  {
+    "title": "Boredom and Habit Formation",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Habit Formation] --> B{Routine & Predictability}\n    B --> C{Decreased Interest, Boredom}\n    C --> D{Seek Novelty, Variable Rewards}\n    D --> E[Potential Derailment of Progress]\n    E --> F{Fall in Love with Boredom, Professional Approach}\n    F --> G[Consistency & Continued Progress]\n    G --> H[Mastery]",
+    "description": "A flowchart illustrating the relationship between habit formation, boredom, seeking novelty, and the importance of consistency in achieving mastery by embracing boredom.",
+    "source_chapter": "24 xhtml31 19 The Goldilocks Rul.xhtml"
+  },
+  {
+    "title": "Habits and Mastery",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Habits: Automaticity] --> B{Benefits: Speed, Efficiency}\n    B --> C{Drawbacks: Complacency, Reduced Feedback Sensitivity}\n    C --> D[Need for Deliberate Practice]\n    D --> E[Reflection & Review]\n    E --> F{Adjustments & Improvements}\n    F --> G[Mastery]\n    G --> A",
+    "description": "This flowchart illustrates the cycle of habits leading to mastery, highlighting the benefits and drawbacks of habits, the need for deliberate practice, and the importance of reflection and review for continuous improvement.",
+    "source_chapter": "25 xhtml32 20 The Downside of Cr.xhtml"
+  },
+  {
+    "title": "Identity and Growth",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Forming Identity] --> B{Habits Reinforce Identity}\n    B --> C{Potential Rigidity & Resistance to Change}\n    C --> D[Keep Identity Small & Flexible]\n    D --> E[Adapt to Changing Circumstances]\n    E --> F[Continued Growth]\n    F --> A",
+    "description": "This flowchart visualizes how forming an identity is reinforced by habits. Over time, this can lead to inflexibility and resistance to change, which can be overcome by keeping the identity small and flexible to adapt to evolving situations and ensure continued growth.",
+    "source_chapter": "25 xhtml32 20 The Downside of Cr.xhtml"
+  },
+  {
+    "title": "Habit Improvement Cycle",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Identify Area for Improvement] --> B(Make it Obvious)\n    B --> C(Make it Attractive)\n    C --> D(Make it Easy)\n    D --> E(Make it Satisfying)\n    E --> F{Achieved Improvement?}\n    F -- Yes --> G(Maintain & Repeat Cycle)\n    F -- No --> A\n    G --> A",
+    "description": "This diagram illustrates the continuous improvement cycle of habits, rotating through the Four Laws of Behavior Change.",
+    "source_chapter": "26 xhtml33 Conclusion The Secret.xhtml"
+  },
+  {
+    "title": "Spectrum of Habit Difficulty",
+    "type": "table",
+    "mermaid_code": "| Good Habits | Bad Habits |\n|---|---|\n| Obvious | Invisible |\n| Attractive | Unattractive |\n| Easy | Hard |\n| Satisfying | Unsatisfying |\n\nDescription: Compares and contrasts the desired states for good habits (left side of the spectrum) and bad habits (right side).",
+    "description": "This table visually represents the desired states of good and bad habits, contrasting them across the four laws.",
+    "source_chapter": "26 xhtml33 Conclusion The Secret.xhtml"
+  },
+  {
+    "title": "Reading Recommendation Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Read Atomic Habits] --> B{Enjoyed?}\n    B -- Yes --> C[Read James Clear's Newsletter]\n    C --> D[Newest Articles]\n    C --> E[Newest Books & Projects]\n    C --> F[Reading List of Favorite Books]\n    B -- No --> G[Explore other authors/topics]",
+    "description": "Flowchart illustrating the reading recommendations based on enjoyment of 'Atomic Habits'.",
+    "source_chapter": "27 xhtml35 What Should You Read .xhtml"
+  },
+  {
+    "title": "James Clear's Content Ecosystem",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((James Clear))\n    Books\n      Atomic Habits\n      Other Books\n    Newsletter\n      Newest Articles\n      Books & Projects Updates\n      Reading List",
+    "description": "A mindmap representing the different types of content offered by James Clear.",
+    "source_chapter": "27 xhtml35 What Should You Read .xhtml"
+  },
+  {
+    "title": "Four Laws and Emotional States",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Cue] --> B(Craving)\n    B --> C{Desire to Change State?}\n    C -- Yes --> D[Response]\n    C -- No --> E[Peace/Contentment]\n    D --> F[Reward]\n    F --> G{Expectation Met?}\n    G -- Yes --> H[Satisfaction]\n    G -- No --> I[Dissatisfaction]\n    H --> A\n    I --> A\n    style E fill:#f9f,stroke:#333,stroke-width:2px\n    style H fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "This diagram visualizes the relationship between the four laws (Cue, Craving, Response, Reward) and their influence on emotional states like peace, contentment, satisfaction, and dissatisfaction. It shows how desire drives action and how expectation influences satisfaction.",
+    "source_chapter": "28 xhtml36 Little Lessons from t.xhtml"
+  },
+  {
+    "title": "Desire vs. Pleasure",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Desire] --> B{Action}\n    B --> C[Pleasure/Satisfaction]\n    C --> D{Repeat Behavior?}\n    D -- Yes --> A\n    D -- No --> E[New Desire or Acceptance]\n    E --> A\n",
+    "description": "This diagram illustrates the relationship between desire, action, and pleasure. It shows how desire initiates behavior, while pleasure sustains it. The diagram also shows that if the action is not pleasurable, a new desire may arise or the individual may find acceptance.",
+    "source_chapter": "28 xhtml36 Little Lessons from t.xhtml"
+  },
+  {
+    "title": "Habit Loop Relationship",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Cue] --> B(Craving)\n    B --> C{Response}\n    C --> D([Reward])\n    D --> A\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#ccf,stroke:#333,stroke-width:2px\n    style C fill:#ccf,stroke:#333,stroke-width:2px\n    style D fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "Visualizes the core habit loop: Cue triggers Craving, leading to Response, which results in Reward, reinforcing the loop.",
+    "source_chapter": "33 xhtml41 Index.xhtml"
+  },
+  {
+    "title": "Layers of Behavior Change",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Behavior Change))\n    Central\n      Outcomes\n      Process\n      Identity",
+    "description": "Presents the three layers of behavior change: Outcomes, Process, and Identity, illustrating their hierarchical relationship.",
+    "source_chapter": "33 xhtml41 Index.xhtml"
+  },
+  {
+    "title": "Book Structure Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Atomic Habits] --> B(Fundamentals)\n    B --> C{Make It Obvious}\n    C --> D{Make It Attractive}\n    D --> E{Make It Easy}\n    E --> F{Make It Satisfying}\n    F --> G(Advanced Tactics)\n    G --> H(Conclusion)\n    H --> I(Appendix)",
+    "description": "Flowchart showing the book's structure, progressing from fundamentals to advanced tactics and conclusion, with the Four Laws in between.",
+    "source_chapter": "34 navDoc.xhtml"
+  },
+  {
+    "title": "Habit Formation Mindmap",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Formation))\n    Fundamentals\n      Atomic Habits\n      Identity\n      4 Simple Steps\n    Four Laws\n      Make It Obvious\n      Make It Attractive\n      Make It Easy\n      Make It Satisfying\n    Advanced Tactics\n      Talent\n      Goldilocks Rule\n      Downside of Habits",
+    "description": "Mindmap visualizing the core components of habit formation according to the book, including fundamentals, the four laws, and advanced tactics.",
+    "source_chapter": "34 navDoc.xhtml"
+  },
+  {
+    "title": "Relationship between Consciousness Terms",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Terms Describing Absence of Awareness))\n    Unconscious\n      description[Interchangeable with nonconscious and subconscious]\n    Nonconscious\n      description[Preferred term; encompasses inaccessible processes and inattention]\n    Subconscious\n      description[Interchangeable with nonconscious and unconscious]",
+    "description": "Mindmap showing the relationship between unconscious, nonconscious, and subconscious, highlighting nonconscious as the preferred term.",
+    "source_chapter": "38 xhtml45 Footnote.xhtml"
+  },
+  {
+    "title": "Shinkansen Incident Flowchart",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Son steps onto Shinkansen as doors close] --> B{Mother's arm stuck in door};\n    B -- Train about to depart --> C[Employee performs Pointing-and-Calling];\n    C -- Notices Woman --> D{Train Stopped};\n    D --> E[Door opens, Woman reunites with son];\n    E --> F[Train departs safely]",
+    "description": "This flowchart visualizes the sequence of events during the Shinkansen incident, emphasizing the role of Pointing-and-Calling in averting a potential disaster.",
+    "source_chapter": "42 xhtml49 Footnote.xhtml"
+  },
+  {
+    "title": "Relationships in Safety Incident",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Safety Incident))\n    Child 1((Person affected))\n      Child 1.1(Mother)\n      Child 1.2(Son)\n    Child 2((System))\n      Child 2.1(Shinkansen Train)\n      Child 2.2(Train Doors)\n    Child 3((Safety Mechanism))\n      Child 3.1(Employee)\n      Child 3.2(Pointing-and-Calling)",
+    "description": "This mindmap illustrates the relationships between the key components involved in the safety incident: the people affected, the system involved, and the safety mechanism that prevented harm.",
+    "source_chapter": "42 xhtml49 Footnote.xhtml"
+  },
+  {
+    "title": "Habit Formation - Dopamine's Role",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Habit Formation] --> B(Multiple Brain Regions & Neurochemicals)\n    B --> C{Dopamine Circuit}\n    C -- influences --> D[Desire]\n    C -- influences --> E[Craving]\n    C -- influences --> F[Motivation]\n    D --> A\n    E --> A\n    F --> A\n    style C fill:#f9f,stroke:#333,stroke-width:2px",
+    "description": "This flowchart visualizes how dopamine, within the broader context of brain regions and neurochemicals, influences desire, craving, and motivation, which are key components of habit formation.",
+    "source_chapter": "47 xhtml54 Footnote.xhtml"
+  },
+  {
+    "title": "Dopamine in Habit Loop",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Habit Formation))\n    (Biological Underpinnings)\n      (Dopamine Circuit)\n        (Desire)\n        (Craving)\n        (Motivation)\n    (Other Factors)\n      (Multiple Brain Regions)\n      (Other Neurochemicals)",
+    "description": "This mindmap illustrates the role of the dopamine circuit (and its components: desire, craving, motivation) as one of the biological underpinnings to habit formation in the context of other factors (Multiple Brain Regions and Other Neurochemicals).",
+    "source_chapter": "47 xhtml54 Footnote.xhtml"
+  },
+  {
+    "title": "Risk Perception Bias",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Immediate Threat\n(Low Likelihood)] --> B(Brain Overestimates Danger)\n    C[Distant Threat\n(High Likelihood)] --> D(Brain Underestimates Danger)\n    B --> E{Derails Decision Making}\n    D --> E",
+    "description": "Flowchart visualizing how the brain overestimates immediate threats (low likelihood) and underestimates distant threats (high likelihood), ultimately leading to flawed decision-making.",
+    "source_chapter": "59 xhtml66 Footnote.xhtml"
+  },
+  {
+    "title": "Threat Categories and Examples",
+    "type": "table",
+    "mermaid_code": "| Category | Threat Level | Likelihood | Example |\n|---|---|---|---|\n| Immediate Threat | Overestimated | Low | Plane crash during turbulence, Burglar breaking in, Terrorist attack on bus |\n| Distant Threat | Underestimated | High | Unhealthy food leading to fat, Sitting at desk leading to muscle decay, Clutter accumulation from not tidying up |",
+    "description": "Table contrasting immediate and distant threats with their respective perceived threat levels, likelihoods, and examples from the text.",
+    "source_chapter": "59 xhtml66 Footnote.xhtml"
+  },
+  {
+    "title": "System 1 and System 2 in Flow State",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[System 1: Fast, Instinctual, Habits] --> C{Flow State}\n    B[System 2: Slow, Effortful, Problem Solving] --> C\n    C --> D{Fully Engaged Brain Modes}\n    D --> E[Conscious & Nonconscious Sync]",
+    "description": "Visualizes the relationship between System 1 and System 2 thinking modes and how they relate to achieving a flow state. Flow state requires engagement of both systems leading to synchronicity.",
+    "source_chapter": "63 xhtml71 Footnote.xhtml"
+  },
+  {
+    "title": "Flow State Placement",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Thinking Spectrum))\n    System1[System 1: Automatic, Implicit Knowledge]\n    Flow[Flow State: Razor's Edge - Both Systems]\n    System2[System 2: Effortful, Challenging Tasks]",
+    "description": "Illustrates the placement of flow state on a spectrum between System 1 and System 2 thinking. It emphasizes that flow state exists in between fully automatic processing and highly effortful cognitive functions.",
+    "source_chapter": "63 xhtml71 Footnote.xhtml"
+  },
+  {
+    "title": "Variable Reward Discovery",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Skinner's Experiment: Food Pellet Shortage] --> B{Why reinforce every press?};\n    B -- No --> C[Intermittent Reward Delivery];\n    C --> D[Behavior Increased! (Variable Reward Effect)];\n    D --> E(Variable Rewards Discovery)",
+    "description": "Flowchart illustrating the accidental discovery of variable rewards by B.F. Skinner.",
+    "source_chapter": "64 xhtml72 Footnote.xhtml"
+  },
+  {
+    "title": "Elements of Variable Rewards",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Variable Rewards))\n    Accidental Discovery\n      B.F. Skinner\n      Food Pellet Shortage\n    Experiment\n      Rats\n      Lever Pressing\n    Result\n      Increased Behavior\n      Intermittent Reinforcement",
+    "description": "Mindmap breaking down the elements involved in the discovery of variable rewards.",
+    "source_chapter": "64 xhtml72 Footnote.xhtml"
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "title": "Calibrated Coffee Negotiation",
+    "goal": "Secure a free coffee upgrade or discount by using calibrated questions in a real-world scenario.",
+    "steps": [
+      "Identify a local coffee shop where you're a somewhat regular customer.",
+      "When ordering, mention you're considering a more expensive drink (e.g., a latte instead of a regular coffee).",
+      "Instead of directly asking for a discount, use calibrated questions: 'What would be the best way to justify the extra cost today?' or 'What do you recommend I try that provides good value?'",
+      "Listen carefully to the barista's response and adapt your next question based on their answer. Try to subtly steer the conversation toward a potential discount or a free add-on.",
+      "Document the conversation immediately after, noting which questions you used and the barista's reactions."
+    ],
+    "duration": "30 mins (including travel and execution)",
+    "success_criteria": "Did I ask at least two calibrated questions during the coffee ordering process with the goal of securing a discount or upgrade?",
+    "related_concept": "Calibrated Questions"
+  },
+  {
+    "title": "Persuasion Challenge: Emotional Ad vs. Logical Ad",
+    "goal": "To observe how System 1 (emotional) and System 2 (logical) thinking influence ad effectiveness.",
+    "steps": [
+      "Choose a common product (e.g., coffee, shoes, phone).",
+      "Create two short ad scripts for the product: one that heavily relies on emotional appeals (joy, fear, excitement) and another on logical appeals (price, features, stats). Each script should be 30-60 seconds long.",
+      "Recruit 3-5 participants. Randomly assign them to hear either the emotional ad first or the logical ad first. Then play the second ad for them after a brief pause.",
+      "Immediately after each ad, ask participants to rate on a scale of 1-5 (1=not at all, 5=very much) how much they 'liked' the ad and how likely they would be to 'purchase' the product.",
+      "Record the results, compare the ratings for each ad type. Note any observable reactions or comments after hearing each ad. Look for a pattern where the first ad shapes the response to the second."
+    ],
+    "duration": "2 hours (including prep and participant sessions)",
+    "success_criteria": "Did I create and test both types of ads with at least three participants and record their ratings?",
+    "related_concept": "System 1 & System 2 Thinking"
+  },
+  {
+    "title": "Mirror & Label: Tactical Empathy in Action",
+    "goal": "Successfully apply mirroring and labeling techniques in a brief conversation to de-escalate a potentially tense situation.",
+    "steps": [
+      "Identify a low-stakes situation where someone expresses frustration or disagreement (e.g., a colleague complaining about a project deadline).",
+      "Actively listen to the person for 2-3 minutes without interrupting or offering solutions.",
+      "Mirror their body language and tone subtly. If they are leaning forward, slightly lean forward yourself. If their tone is frustrated, reflect a similar tone (without exaggerating).",
+      "Use labels to identify their emotions (e.g., \"It sounds like you're really frustrated with this deadline,\" or \"Are you feeling overwhelmed by the amount of work?\"). Wait for confirmation.",
+      "Observe their reaction. Note if they become less agitated or more receptive."
+    ],
+    "duration": "5-10 minutes",
+    "success_criteria": "The person I interacted with visibly relaxed (e.g., softened their tone, changed their posture, or explicitly acknowledged feeling understood) after I used mirroring and labeling.",
+    "related_concept": "Tactical Empathy"
+  },
+  {
+    "title": "The Coffee Mug Challenge",
+    "goal": "Observe loss aversion in action when offering and then reclaiming a coffee mug.",
+    "steps": [
+      "1. Find a volunteer (friend, family member, or colleague).",
+      "2. Offer the volunteer a coffee mug (or similar item) as a gift. Make it clear it's now theirs.",
+      "3. After a few minutes, ask if you can have the mug back. Offer them a small sum of money (e.g., $1) in return.",
+      "4. Record their reaction: Do they seem reluctant to give it back? Do they ask for more money than you offered?",
+      "5. Reflect: Did they exhibit loss aversion? How strong was their reaction?"
+    ],
+    "duration": "15 mins",
+    "success_criteria": "I successfully offered the mug, asked for it back, and recorded the volunteer's reaction.",
+    "related_concept": "Loss Aversion"
+  },
+  {
+    "title": "Negotiation Role-Play: Assumptions vs. Hypotheses",
+    "goal": "To experience the difference between negotiating with untested assumptions and flexible hypotheses.",
+    "steps": [
+      "1. Choose a negotiation scenario (e.g., salary negotiation, buying a used car).",
+      "2. Round 1: Prepare for the negotiation based on 3 ASSUMPTIONS you hold about the other party (e.g., \"They are desperate to sell.\"). Write these down. Conduct a 5-minute negotiation, sticking rigidly to your assumptions.",
+      "3. Round 2: Before negotiating again, create 3 HYPOTHESES about the other party (e.g., \"They might be willing to negotiate on price if I offer a quick close.\"). Prepare questions to test these. Conduct another 5-minute negotiation, actively testing your hypotheses and adapting your approach based on their responses.",
+      "4. Reflect: Compare your experience in both rounds. Which approach felt more effective? Why?"
+    ],
+    "duration": "20 mins",
+    "success_criteria": "I completed both negotiation rounds, clearly identified my assumptions and hypotheses beforehand, and actively attempted to test my hypotheses during the second round.",
+    "related_concept": "Assumptions vs. Hypotheses"
+  },
+  {
+    "title": "The Active Listener's Notebook",
+    "goal": "To demonstrate active listening by summarizing a conversation partner's perspective accurately and empathetically.",
+    "steps": [
+      "Choose a partner and ask them a question about a topic they are passionate about (e.g., their favorite hobby, a current project, or a cause they support).",
+      "Listen attentively to your partner for 5 minutes, focusing solely on understanding their perspective. Avoid interrupting or formulating your response.",
+      "After 5 minutes, summarize your partner's perspective in your own words in a notebook, aiming for accuracy and empathy. Include their main points and the emotions they conveyed.",
+      "Ask your partner if your summary accurately reflects their perspective. If not, ask clarifying questions and revise your summary until they agree it is accurate."
+    ],
+    "duration": "15 minutes",
+    "success_criteria": "Partner confirms that the written summary accurately and empathetically reflects their perspective.",
+    "related_concept": "Active Listening"
+  },
+  {
+    "title": "The Deliberate Pause",
+    "goal": "Successfully integrate strategic pauses into a simulated negotiation to observe its impact on rapport and information gathering.",
+    "steps": [
+      "Prepare a short negotiation scenario (e.g., salary negotiation, buying/selling an item) with a partner.",
+      "During the negotiation, consciously introduce at least three pauses of 5-10 seconds each after key statements or questions from your partner.",
+      "Use these pauses to actively listen and observe your partner's non-verbal cues (body language, tone).",
+      "After each pause, verbally acknowledge your partner's statement before responding (e.g., \"So, what I'm hearing is...\").",
+      "After the negotiation, reflect on how the pauses impacted the flow of the conversation, your understanding of your partner's position, and the overall outcome."
+    ],
+    "duration": "30 minutes",
+    "success_criteria": "Did I intentionally incorporate at least three pauses of 5-10 seconds each into the negotiation, actively listen during those pauses, and verbally acknowledge my partner after each pause?",
+    "related_concept": "Slow It Down"
+  },
+  {
+    "title": "Negotiation Voice Simulation",
+    "goal": "To successfully use a 'late-night FM DJ' voice during a simulated negotiation to de-escalate a tense situation.",
+    "steps": [
+      "Write a short (3-sentence) statement acknowledging the other party's frustration or concern regarding a fictitious issue (e.g., 'I understand you're upset about the project delay.')",
+      "Practice delivering this statement aloud using your normal speaking voice.",
+      "Practice delivering the same statement again, but this time use a deep, soft, slow, and downward-inflecting tone, as if you were a late-night FM DJ. Focus on sounding calm and reassuring.",
+      "Record both versions of the statement (normal and 'DJ voice') using your phone or computer.",
+      "Listen to both recordings and compare. Assess which version sounds more calming and in control."
+    ],
+    "duration": "20 minutes",
+    "success_criteria": "I successfully recorded both statements and identified the 'DJ voice' version as sounding more calming and in control.",
+    "related_concept": "The Voice (Late-Night FM DJ Voice)"
+  },
+  {
+    "title": "Mirroring in Conversation",
+    "goal": "To successfully use mirroring (isopraxism) in a real-world conversation to build rapport and observe the counterpart's response.",
+    "steps": [
+      "Initiate a conversation with someone you don't know well (e.g., a barista, a cashier, or a person at a networking event).",
+      "Listen attentively to what the other person is saying.",
+      "Throughout the conversation, consciously repeat the last three words (or the critical few words) of their sentences as a way to encourage them to continue.",
+      "Pay attention to their body language, tone, and the amount of detail they provide after you mirror them. Note any changes.",
+      "Conclude the conversation naturally and make a note of your overall impression."
+    ],
+    "duration": "15 minutes",
+    "success_criteria": "Did I consciously mirror the other person's words at least three times during the conversation?",
+    "related_concept": "Mirroring (Isopraxism)"
+  },
+  {
+    "title": "Emotional Validation Challenge",
+    "goal": "Practice labeling emotions to de-escalate potentially tense situations and foster understanding.",
+    "steps": [
+      "Identify three upcoming situations where someone might express strong emotions (e.g., family disagreement, team project discussion, customer service interaction).",
+      "For each situation, anticipate the potential emotions the person might express (e.g., frustration, anger, disappointment).",
+      "Plan a phrase you can use to label their emotion, such as \"It sounds like you're feeling frustrated with...\" or \"I understand you're disappointed because...\". Write these phrases down.",
+      "During each situation, actively listen to the person and, when appropriate, use your planned phrase to label their emotion.",
+      "Note the person's reaction after you labeled their emotion. Did their tone soften? Were they more receptive to discussion?"
+    ],
+    "duration": "1 week",
+    "success_criteria": "Did I actively use emotion labeling in at least three distinct situations this week?",
+    "related_concept": "Labeling"
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "title": "Mirroring Rapport Builder",
+    "goal": "Establish immediate rapport with a new client by subtly mirroring their behavior.",
+    "steps": [
+      "Identify a new client interaction (e.g., phone call, meeting).",
+      "During the first 5 minutes, consciously observe their communication style (e.g., speaking pace, hand gestures, posture).",
+      "Subtly mirror ONE aspect of their behavior. If they speak slowly, slow your pace. If they use hand gestures, incorporate similar gestures.",
+      "Continue the interaction naturally, observing if the client seems more engaged or agreeable."
+    ],
+    "duration": "15 minutes (including 5 minutes observation)",
+    "success_criteria": "Did I consciously mirror at least one aspect of the client's behavior during the initial interaction?",
+    "related_concept": "Ignore Human Nature at Your Peril"
+  },
+  {
+    "title": "Client Appreciation Blitz",
+    "goal": "Reinforce a positive client relationship to foster loyalty and solidify your role as a trusted advisor.",
+    "steps": [
+      "Identify your top 3 clients based on revenue generated or overall relationship value.",
+      "For each client, write a personalized handwritten note expressing your gratitude for their business and highlighting a specific positive outcome you achieved for them.",
+      "Include a small, relevant gift with each note (e.g., a useful gadget related to their industry, a gift card to a local coffee shop they frequent).",
+      "Deliver the notes and gifts personally if feasible, or mail them with tracking to ensure receipt.",
+      "Follow up with each client a week later via phone to gauge their reaction and reinforce your commitment to their success."
+    ],
+    "duration": "1 week",
+    "success_criteria": "Did I send personalized notes and gifts to my top 3 clients and follow up with a phone call to each?",
+    "related_concept": "The Favorite or the Fool"
+  },
+  {
+    "title": "Elephant Pre-Mortem",
+    "goal": "Identify and document potential project roadblocks early in a client engagement.",
+    "steps": [
+      "Schedule a 'pre-mortem' meeting with your team and the client.",
+      "Ask: 'Imagine this project fails spectacularly. What went wrong?'",
+      "Brainstorm all possible failure points related to communication, resources, expectations, and technical challenges.",
+      "Document each identified 'elephant' (potential issue) and assign a mitigation strategy or owner.",
+      "Share the documented list of elephants and mitigation plans with all stakeholders."
+    ],
+    "duration": "1 hour",
+    "success_criteria": "A documented list of potential 'elephants' and associated mitigation strategies has been created and shared with all relevant project stakeholders.",
+    "related_concept": "Get the Elephants Out Early"
+  },
+  {
+    "title": "Client Needs & Wants Prioritization",
+    "goal": "Enable clients to clarify and prioritize their needs and wants independently before property viewings.",
+    "steps": [
+      "1. Provide each client (or couple) with a blank 'Needs & Wants' worksheet (template provided below).",
+      "2. Instruct the clients to individually list their top 5 'Needs' (must-haves) and 5 'Wants' (nice-to-haves) for their ideal property.",
+      "3. Allocate 15 minutes for individual completion.",
+      "4. After 15 minutes, instruct the clients to discuss and consolidate their lists into a single prioritized 'Needs' list (max 5 items) and 'Wants' list (max 5 items).",
+      "5. You, the agent, must NOT participate in the consolidation, only clarify the instructions if necessary."
+    ],
+    "duration": "30 mins",
+    "success_criteria": "Did I successfully guide the clients to independently create their prioritized lists of needs and wants without directly contributing to their decisions?",
+    "related_concept": "Put the Responsibility Where It Belongs"
+  },
+  {
+    "title": "Identify Your 'Favorite' and 'Fool' in a Simulated Hiring Scenario",
+    "goal": "Determine how likely you are to be perceived as the 'Favorite' or the 'Fool' in a potential client interaction by analyzing your strengths and weaknesses against a specific job description and a competitor.",
+    "steps": [
+      "Find a real job posting in your field that you would be qualified for.",
+      "Identify one competitor (another professional in your field) and research their online presence (LinkedIn, website, etc.) to gauge their strengths and weaknesses relative to the job posting.",
+      "Write down three reasons why a client *might* see you as the 'Favorite' for this job, focusing on your unique skills or experiences that align with the job description.",
+      "Write down three reasons why a client *might* see you as the 'Fool' relative to your competitor and the job description. Focus on areas where your competitor might be perceived as stronger or more experienced.",
+      "Based on your analysis, state whether you believe you are more likely to be perceived as the 'Favorite' or the 'Fool' in this scenario, and briefly explain why."
+    ],
+    "duration": "60 mins",
+    "success_criteria": "I have completed all five steps and have a clear understanding of my perceived strengths and weaknesses in the context of the specific job and competitor, and a reasoned conclusion about my likely role as 'Favorite' or 'Fool'.",
+    "related_concept": "Favorite and the Fool"
+  },
+  {
+    "title": "Prioritize Your Outreach",
+    "goal": "Identify and rank potential clients based on their likelihood of conversion to improve outreach efficiency.",
+    "steps": [
+      "List 10 potential clients you could reach out to this week.",
+      "For each client, estimate the probability (as a percentage from 0-100%) of them becoming a paying client.",
+      "Calculate a \"potential value\" for each client by multiplying your estimated deal size (in dollars) by the probability percentage.",
+      "Rank the list of clients in descending order based on their potential value.",
+      "Commit to contacting the top 3 clients on your list within the specified duration."
+    ],
+    "duration": "1 hour",
+    "success_criteria": "Did I create a ranked list of potential clients based on probability of conversion and commit to contacting the top 3?",
+    "related_concept": "Possibility vs. Probability"
+  },
+  {
+    "title": "The Color Bias Test",
+    "goal": "To demonstrate how readily preferences are formed, even when consciously trying to be unbiased.",
+    "steps": [
+      "1. Prepare four blank sheets of paper and label them: \"Color A\", \"Color B\", \"Color C\", and \"Color D\".",
+      "2. Search online for images of four distinct colors (e.g., red, blue, green, yellow). Do NOT choose your favorite colors. Save one image for each color.",
+      "3. For each color, spend 2 minutes ONLY researching negative aspects or associations. For example, search \"negative associations with red\" or \"disadvantages of blue cars\". Write down ONLY negative points about each color on the corresponding sheet of paper.",
+      "4. After your research, write down which color you now dislike the MOST and a sentence or two explaining why.",
+      "5. Reflect: Even though you started with the intention of being neutral, did the focused negative research sway your preference? "
+    ],
+    "duration": "15 mins",
+    "success_criteria": "Did I complete all the steps, including writing down the color I disliked most and explaining why?",
+    "related_concept": "No such thing as a fully open mind"
+  },
+  {
+    "title": "Identify and Prioritize High-Probability Sales Leads",
+    "goal": "To create a prioritized list of sales leads based on the likelihood of closing a deal.",
+    "steps": [
+      "List all current active sales leads (minimum 5).",
+      "For each lead, assign a probability score (1-10, 10 being highest) based on factors like existing relationship, budget alignment, and expressed interest.",
+      "Rank the leads in descending order based on their probability score.",
+      "Identify the top 3 leads with the highest probability scores."
+    ],
+    "duration": "30 mins",
+    "success_criteria": "Did I create a prioritized list with probability scores and identify the top 3 high-probability leads?",
+    "related_concept": "High-Probability Activity"
+  },
+  {
+    "title": "Proof of Life Challenge: Qualifying Prospects",
+    "goal": "Identify at least one prospect who is likely to convert to a paying client using 'Proof of Life' questioning.",
+    "steps": [
+      "Identify 3 potential clients you're currently engaging with or planning to engage with.",
+      "For each prospect, prepare three 'Proof of Life' questions. Examples: 'What specific problem are you trying to solve?', 'What is your budget for this?', 'What are the consequences of NOT solving this?'",
+      "Contact each prospect (via phone, email, or in-person) and ask your prepared questions.",
+      "Document their responses. Specifically note how directly they answered, their level of detail, and their willingness to share information."
+    ],
+    "duration": "3 days",
+    "success_criteria": "Did I contact at least three prospects and document their responses to my 'Proof of Life' questions for each?",
+    "related_concept": "Getting Proof of Life"
+  },
+  {
+    "title": "Decode the Coffee Shop Customer",
+    "goal": "Accurately assess a stranger's interest level in a conversation based on their observable behaviors.",
+    "steps": [
+      "Visit a local coffee shop or public space where interactions are likely.",
+      "Observe a customer interacting with an employee or another customer for approximately 5 minutes.  Do not eavesdrop on the content of the conversation.",
+      "Silently record (via notes on your phone or a small notepad) at least 3 specific behaviors (e.g., frequent eye contact, open posture, fidgeting, brief replies) that might indicate engagement or disinterest.",
+      "Based on your observations, predict whether the person is highly engaged ('Favorite') or disengaged ('Fool') in the interaction.  Write down your prediction.",
+      "After they conclude their conversation, reflect on whether their closing behavior (e.g., enthusiastic goodbye, quick exit) seemed to confirm or contradict your initial assessment."
+    ],
+    "duration": "30 mins",
+    "success_criteria": "I observed a customer, recorded at least 3 behaviors, predicted their engagement level, and reflected on the outcome.",
+    "related_concept": "Cold Read"
+  }
+]

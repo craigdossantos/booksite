@@ -1,0 +1,62 @@
+[
+  {
+    "visual_metaphor": "A delicate, intricate spiderweb (the original work) with strands of light emanating from it, connecting to various objects (representations/copies of the work). Some strands are vibrant and strong, representing authorized uses, while others are frayed or broken, symbolizing copyright infringement.",
+    "prompt": "Create an image of a highly detailed and delicate spiderweb, shimmering with a soft, ethereal light. The web is intricately woven, and strands of light emanate from its center, connecting to various objects in the background: a book, a musical note, a painter's palette, and a stage curtain. Some light strands are bright and unbroken, while others appear frayed, severed, or dulled. The background is a softly blurred, dreamlike space. The overall mood is magical and slightly melancholic.",
+    "style": "Photorealistic illustration with soft, diffused lighting",
+    "concept_name": "Copyright"
+  },
+  {
+    "visual_metaphor": "A single seed growing into a massive tree over many years.",
+    "prompt": "A time-lapse image sequence showing a single, tiny seed sprouting from barren earth. Over weeks, months, and years, the seedling grows taller and stronger, its roots digging deep into the ground. As time passes, the small plant transforms into a towering, majestic tree with thick branches reaching towards the sky. Leaves change colors through the seasons, and animals gather at the base for shelter. The final image shows the enormous tree dominating the landscape, a testament to its slow but steady growth from a single, insignificant seed.",
+    "style": "Hyperrealistic",
+    "concept_name": "Atomic Habits"
+  },
+  {
+    "visual_metaphor": "A potter's wheel where the clay is being shaped by the potter's hands (habits) as the wheel spins. Simultaneously, the shape of the clay (identity) influences how the potter molds it.",
+    "prompt": "A potter's wheel made of aged oak in a brightly lit workshop. Soft, damp clay rotates on the wheel. The potter's hands, strong and weathered, gently shape the clay into a vase. The form of the vase is elegant, but still rough. The clay appears to be exerting a subtle influence back on the hands shaping it, as if the clay has a will of its own. Focus on the interplay of forces and the reciprocal nature of the shaping process.",
+    "style": "Renaissance Painting",
+    "concept_name": "Habit and Identity"
+  },
+  {
+    "visual_metaphor": "A Rube Goldberg machine represents the Four Laws of Behavior Change. Each law is a distinct mechanism within the machine, contributing to a final, satisfying outcome. Obvious is the initial trigger, Attractive is a colorful, enticing element, Easy is a smooth, frictionless pathway, and Satisfying is the final action that completes the process.",
+    "prompt": "A highly intricate Rube Goldberg machine. The machine starts with a large domino (Obvious) that triggers a series of actions. The next stage involves a bright, colorful, and visually appealing set of gears and levers (Attractive). This leads to a simple, smooth slide (Easy) that propels a ball towards a target, ultimately causing a small bell to ring and release confetti (Satisfying). The overall composition should be complex and detailed, but also whimsical and playful. Avoid any human figures or text. Emphasize the interconnectedness of each stage.",
+    "style": "Isometric 3D",
+    "concept_name": "Four Laws of Behavior Change"
+  },
+  {
+    "visual_metaphor": "A winding path obscured by dense fog gradually becomes clearer as glowing markers appear along the way, illuminating the path ahead.",
+    "prompt": "A winding, overgrown path disappearing into dense fog. As the path continues, glowing, ethereal markers appear at regular intervals, emitting a soft light that pushes back the fog and reveals the path more clearly. The markers are distinct and easily visible, contrasting with the natural environment. Emphasize the transition from obscured to illuminated. No text.",
+    "style": "Surreal Photorealism",
+    "concept_name": "Make It Obvious"
+  },
+  {
+    "visual_metaphor": "A flowing river diverting into two channels. One channel is wide, clear, and gently sloped, leading towards a lush, inviting meadow. The other channel is narrow, rocky, overgrown, and leads uphill towards a barren desert.",
+    "prompt": "A digitally painted aerial view of a river splitting into two distinct channels. The left channel is wide, clear, and gently sloping, leading to a vibrant, green meadow filled with wildflowers. The right channel is narrow, choked with weeds and rocks, sharply inclining toward a desolate, arid desert landscape. The lighting is soft and diffused, emphasizing the contrast between the two destinations. The water in the left channel appears clear and inviting, while the right channel has a murky, stagnant quality. No text. No figures.",
+    "style": "Surreal Digital Painting",
+    "concept_name": "Environment Matters"
+  },
+  {
+    "visual_metaphor": "A blossoming flower, initially unattractive, grafted onto a thriving, vibrant plant.",
+    "prompt": "A close-up shot of a delicate, pale flower bud being carefully grafted onto a strong, healthy plant with lush, colorful leaves. The plant is thriving, bathed in warm sunlight. The bud is secured with natural twine, suggesting a deliberate and nurturing connection. The background is a soft blur of a flourishing garden.",
+    "style": "Botanical Illustration",
+    "concept_name": "Make It Attractive"
+  },
+  {
+    "visual_metaphor": "A ball rolling down a hill.  One hill is very steep and rocky, the other is a gentle slope covered in soft grass.",
+    "prompt": "A side-by-side comparison of two hills. On the left, a very steep and jagged rocky hill with a large boulder stuck near the top. On the right, a gently sloping hill covered in lush green grass with a small ball easily rolling down it.  The background is a clear blue sky.",
+    "style": "Minimalist Illustration",
+    "concept_name": "Make It Easy"
+  },
+  {
+    "visual_metaphor": "A Rube Goldberg machine that dispenses a small treat (e.g., a gumball) after completing a series of steps. Each step is clearly visible and contributes to the final reward.",
+    "prompt": "A complex Rube Goldberg machine, meticulously crafted from wood and metal. The machine features a series of interconnected contraptions: gears turning, balls rolling down tracks, levers triggering other actions, and weights dropping. The machine's final action dispenses a single, brightly colored gumball into a small cup. The background is a clean, organized workshop. The lighting is soft and diffused, highlighting the details of the machine. The perspective is a slightly elevated, wide-angle view to showcase the entire machine.",
+    "style": "Steampunk",
+    "concept_name": "Make It Satisfying"
+  },
+  {
+    "visual_metaphor": "A tightrope walker navigating a rope suspended between two cliffs of varying heights. The rope sags slightly but is taut enough to walk. The first cliff is low and easy to reach, while the second is much taller and more challenging.",
+    "prompt": "A lone tightrope walker carefully balancing on a rope stretched between two imposing cliffs. The cliff on the left is shorter and easier to ascend, while the one on the right towers above, shrouded in mist. The rope dips slightly under the walker's weight, creating a gentle arc against the vast sky. The scene is bathed in the warm glow of the setting sun, casting long shadows that emphasize the height and depth of the cliffs. No safety net. No text.",
+    "style": "Epic Landscape Photography",
+    "concept_name": "Goldilocks Rule"
+  }
+]

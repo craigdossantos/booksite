@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Learn | AI Video Analyst</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <div class="container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>YT Learn</h1>
+            </div>
+            <p class="tagline">Turn YouTube videos into actionable knowledge.</p>
+        </header>
+
+        <section class="hero-section">
+            <div class="input-wrapper">
+                <input type="text" id="video-url" placeholder="Paste YouTube Video or Playlist URL..."
+                    autocomplete="off">
+                <button id="analyze-btn" class="primary-btn">
+                    <span class="btn-text">Analyze</span>
+                    <span class="btn-loader hidden"></span>
+                </button>
+            </div>
+            <div id="status-message" class="status-message hidden"></div>
+        </section>
+
+        <section class="library-section">
+            <div class="section-header">
+                <h2>Your Library</h2>
+                <button id="refresh-btn" class="icon-btn" title="Refresh Library">↻</button>
+            </div>
+            <main id="video-grid" class="grid">
+                <!-- Videos will be injected here -->
+            </main>
+        </section>
+    </div>
+
+    <!-- Reader Modal -->
+    <div id="reader-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <div class="modal-meta">
+                    <span id="modal-date"></span>
+                    <a id="modal-link" href="#" target="_blank" class="youtube-link">Watch on YouTube ↗</a>
+                </div>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+
+            <!-- Embedded Player Container -->
+            <!-- <div id="player-container" class="player-container hidden">
+                <div id="youtube-player"></div>
+            </div> -->
+
+            <div class="modal-content-wrapper">
+                <!-- Insights Section -->
+                <div id="modal-insights" class="insights-section">
+                    <!-- Summary Box -->
+                    <div id="summary-box" class="summary-box hidden">
+                        <h3>Summary</h3>
+                        <div id="modal-summary"></div>
+                    </div>
+
+                    <!-- Actionable Advice Box -->
+                    <div id="advice-box" class="advice-box hidden">
+                        <h3>Actionable Advice</h3>
+                        <ul id="modal-advice"></ul>
+                    </div>
+                </div>
+
+                <!-- Deep Analysis Box -->
+                <div id="deep-analysis-box" class="analysis-box hidden"
+                    style="padding: 2rem; border-bottom: 1px solid var(--card-border);">
+                    <h3>Deep Analysis & Actionable Items</h3>
+                    <div id="modal-deep-analysis"></div>
+                </div>
+
+                <!-- Transcript Section (Hidden by default) -->
+                <div class="transcript-section">
+                    <button id="toggle-transcript-btn" class="secondary-btn">Show Transcript</button>
+                    <div id="modal-body" class="prose hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

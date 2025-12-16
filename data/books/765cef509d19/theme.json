@@ -1,0 +1,24 @@
+{
+  "colors": {
+    "primary": "#C49F5F",
+    "secondary": "#222222",
+    "accent": "#222222",
+    "background": "#FAF7EF",
+    "text": "#000000",
+    "surface": "#FFFFFF"
+  },
+  "fonts": {
+    "heading": "Bebas Neue, sans-serif",
+    "body": "Arial, sans-serif"
+  },
+  "cssVariables": {
+    "--color-primary": "#C49F5F",
+    "--color-secondary": "#222222",
+    "--color-accent": "#222222",
+    "--color-background": "#FAF7EF",
+    "--color-text": "#000000",
+    "--color-surface": "#FFFFFF",
+    "--font-body": "Arial, sans-serif",
+    "--font-heading": "Bebas Neue, sans-serif"
+  }
+}

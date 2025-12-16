@@ -1,0 +1,61 @@
+[
+  {
+    "phase_name": "Phase 1: The Foundation",
+    "phase_goal": "Establish core mental models and fundamental principles of negotiation.",
+    "rationale": "This phase focuses on building a solid understanding of human psychology and basic negotiation concepts. Understanding these concepts will help students approach negotiation with a new perspective.",
+    "concepts": [
+      "System 1 & System 2 Thinking",
+      "Tactical Empathy / Active Listening / Forced Empathy / Understanding the Other Party's Perspective",
+      "Loss Aversion",
+      "No Deal is Better Than a Bad Deal",
+      "Emotional Drivers"
+    ]
+  },
+  {
+    "phase_name": "Phase 2: The Mechanics",
+    "phase_goal": "Introduce actionable techniques and practical 'how-to' concepts for effective negotiation.",
+    "rationale": "This phase builds upon the foundational knowledge by teaching specific techniques that can be immediately applied in negotiation scenarios. It focuses on the practical aspects of influencing and persuading others.",
+    "concepts": [
+      "The Voice (Late-Night FM DJ Voice)",
+      "Mirroring (Isopraxism)",
+      "Labeling / Neutralize the Negative, Reinforce the Positive / Summary (Paraphrasing + Labeling)",
+      "Calibrated Questions / Illusion of Control",
+      "Beware 'Yes', Master 'No' / 'No' is Protection",
+      "Types of 'Yes'",
+      "Slowing Down Negotiation",
+      "Accusation Audit",
+      "Persuade in Their World"
+    ]
+  },
+  {
+    "phase_name": "Phase 3: The Mastery",
+    "phase_goal": "Explore advanced negotiation nuances, strategic thinking, and handling complex situations.",
+    "rationale": "This phase delves into the subtleties of negotiation, focusing on strategic decision-making, understanding the broader context, and adapting to challenging scenarios. It explores edge cases and philosophical considerations to elevate the student's negotiation skills to an expert level.",
+    "concepts": [
+      "Behavioral Change Stairway Model (BCSM)",
+      "\"That's Right\"",
+      "\"You're Right\" Trap",
+      "Leverage / Leverage in Negotiation",
+      "Deadlines",
+      "The Illusion of Fairness",
+      "Assumptions vs. Hypotheses",
+      "Suspend Unbelief",
+      "Negotiation as Coaxing",
+      "Team Behind the Counterpart / Level II Players",
+      "Guarantee Execution / Ensuring Commitment and Discovering Hidden Information",
+      "Decision Architect / Strategic Communication and Influence",
+      "7-38-55 Percent Rule",
+      "Rule of Three",
+      "Pinocchio Effect",
+      "Negotiation Styles (Analyst, Accommodator, Assertive)",
+      "Bargaining / Aggressive Negotiation Tactics",
+      "Extreme Anchor",
+      "Strategic Umbrage",
+      "Ready-to-Walk Mindset",
+      "ZOPA (Zone of Possible Agreement)",
+      "Black Swan",
+      "Knowns and Unknowns",
+      "Unconditional Positive Regard"
+    ]
+  }
+]

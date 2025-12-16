@@ -1,0 +1,250 @@
+[
+  {
+    "source_chapter": "00 textPart01.html",
+    "questions": [
+      {
+        "question": "According to the chapter, what is the primary difference between the FBI's negotiation techniques and the traditional Harvard negotiation approach?",
+        "type": "multiple_choice",
+        "options": [
+          "The FBI relies on rational problem-solving, while Harvard focuses on emotional intelligence.",
+          "The FBI uses experiential learning and emotional attunement, while Harvard emphasizes intellectual power and logic.",
+          "The FBI focuses on creating win-win scenarios, while Harvard prioritizes individual gains.",
+          "The FBI avoids using calibrated questions, while Harvard encourages their use."
+        ],
+        "correct_answer": "The FBI uses experiential learning and emotional attunement, while Harvard emphasizes intellectual power and logic.",
+        "explanation": "The chapter highlights that the FBI's techniques were developed through real-world experience, focusing on emotional understanding and psychological insights. In contrast, the Harvard approach historically leaned towards rational, logic-based strategies."
+      },
+      {
+        "question": "True or False: The 'Downs v. United States' decision emphasized the importance of tactical intervention over negotiation in hostage situations.",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "The 'Downs v. United States' decision actually highlighted the *necessity* of attempting reasonable negotiations *before* resorting to tactical intervention in hostage situations. It was a landmark case that shifted the focus toward negotiation."
+      },
+      {
+        "question": "In the hostage negotiation simulation at Harvard, what was Chris Voss's go-to question that disrupted the professors' strategies?",
+        "type": "multiple_choice",
+        "options": [
+          "What is your bottom line?",
+          "Why are you doing this?",
+          "How am I supposed to do that?",
+          "Can we find a compromise?"
+        ],
+        "correct_answer": "How am I supposed to do that?",
+        "explanation": "Chris Voss repeatedly asked 'How am I supposed to do that?' This calibrated question forced the Harvard professors to address the logistical and practical challenges of their demands, shifting the focus and disrupting their planned approach."
+      },
+      {
+        "question": "John wants to build a habit of actively listening during negotiations, as he learned from the chapter. Based on the principles discussed, what is the MOST effective initial step he should take?",
+        "type": "scenario",
+        "options": [
+          "Immediately interrupt the other party to clarify his understanding.",
+          "Focus solely on his own interests and desired outcomes.",
+          "Ask open-ended, calibrated questions to encourage the other party to elaborate.",
+          "Present a detailed list of his demands at the beginning of the negotiation."
+        ],
+        "correct_answer": "Ask open-ended, calibrated questions to encourage the other party to elaborate.",
+        "explanation": "The chapter emphasizes the power of calibrated questions. By asking questions like 'How am I supposed to do that?' or 'What makes you say that?', John can encourage the other party to share their perspective and reveal their underlying motivations, fostering deeper understanding and creating a more collaborative environment."
+      },
+      {
+        "question": "According to Daniel Kahneman's research, are people fully rational and completely selfish?",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "Daniel Kahneman's work in behavioral economics demonstrates that people are *not* fully rational or completely selfish. Emotions, biases, and irrational tendencies significantly influence decision-making processes."
+      }
+    ]
+  },
+  {
+    "source_chapter": "01 textPart02.html",
+    "questions": [
+      {
+        "question": "In the context of negotiation, what does the acronym MSU stand for, as mentioned in the chapter?",
+        "type": "multiple_choice",
+        "options": [
+          "Making Stuff Up",
+          "Managing Strategic Units",
+          "Michigan State University",
+          "Making Sure Understood"
+        ],
+        "correct_answer": "Making Stuff Up",
+        "explanation": "The chapter mentions that the negotiating approach used by police departments at the time was half 'MSU\u2014Making Shit Up' and half a sort of sales approach."
+      },
+      {
+        "question": "True or False: According to the chapter, the assertive voice is generally the most effective voice tone for negotiators to use.",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "The chapter explicitly states to forget the assertive voice for now, as it can signal dominance and cause the counterpart to push back."
+      },
+      {
+        "question": "During the bank robbery negotiation, the lead hostage-taker claimed there were multiple co-conspirators involved. What was the reality of the situation?",
+        "type": "multiple_choice",
+        "options": [
+          "There were actually five co-conspirators from different countries.",
+          "There were only two other bank robbers, including the lead hostage-taker.",
+          "There was only one other bank robber, who had been tricked into the robbery.",
+          "There were no other bank robbers; the lead hostage-taker was acting alone."
+        ],
+        "correct_answer": "There was only one other bank robber, who had been tricked into the robbery.",
+        "explanation": "The chapter reveals that the 'lead' hostage-taker was running a 'counterintelligence operation,' and in reality, there was only one other bank robber who didn't even know they were robbing a bank."
+      },
+      {
+        "question": "John wants to improve his negotiation skills by actively listening to the other party. According to the principles in this chapter, what should John primarily focus on?",
+        "type": "scenario",
+        "options": [
+          "Preparing strong counter-arguments to refute their claims.",
+          "Identifying their underlying needs and making them feel safe enough to talk.",
+          "Prioritizing his own arguments to ensure his position is clearly understood.",
+          "Interrupting frequently to clarify any ambiguities in their statements."
+        ],
+        "correct_answer": "Identifying their underlying needs and making them feel safe enough to talk.",
+        "explanation": "The chapter emphasizes that the goal is to identify the counterpart's needs and create a safe environment for them to talk, which will ultimately lead to discovering those needs."
+      },
+      {
+        "question": "What vocal tone is described as deep, soft, slow, and reassuring?",
+        "type": "multiple_choice",
+        "options": [
+          "The Positive/Playful Voice",
+          "The Direct/Assertive Voice",
+          "The Late-Night, FM DJ Voice",
+          "The Anxious/Nervous Voice"
+        ],
+        "correct_answer": "The Late-Night, FM DJ Voice",
+        "explanation": "The chapter describes the Late-Night, FM DJ Voice as deep, soft, slow, and reassuring, and highlights its effectiveness in calming and easing confrontation."
+      }
+    ]
+  },
+  {
+    "source_chapter": "02 textPart03.html",
+    "questions": [
+      {
+        "question": "According to the text, what is the primary reason emotions are important in negotiation?",
+        "type": "multiple_choice",
+        "options": [
+          "Emotions guarantee a good outcome.",
+          "Emotions are obstacles that should be ignored.",
+          "Emotions are the problem, but can be identified and influenced as a tool.",
+          "Emotions are irrelevant in rational discussions."
+        ],
+        "correct_answer": "Emotions are the problem, but can be identified and influenced as a tool.",
+        "explanation": "The text states that emotions are often the problem in negotiations, but good negotiators can identify, label, and influence them to facilitate communication and reach a resolution."
+      },
+      {
+        "question": "Tactical empathy involves agreeing with the other person's values and beliefs. (True or False)",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "Tactical empathy is about understanding the other person's perspective and mindset, not necessarily agreeing with their values or beliefs. It's about recognizing their feelings and hearing what's behind those feelings."
+      },
+      {
+        "question": "Which of the following phrases is recommended to start a label during a negotiation?",
+        "type": "multiple_choice",
+        "options": [
+          "I'm hearing that...",
+          "I think that...",
+          "It seems like...",
+          "You are feeling..."
+        ],
+        "correct_answer": "It seems like...",
+        "explanation": "The text recommends starting labels with phrases like 'It seems like...' because using 'I' can make the other person defensive. Phrasing it as a neutral statement encourages them to be more responsive."
+      },
+      {
+        "question": "John wants to build a habit of actively listening during conversations. According to the principles discussed in the text, what is the FIRST step he should take?",
+        "type": "scenario",
+        "options": [
+          "Interrupt the speaker frequently to show engagement.",
+          "Focus solely on formulating his response while the other person is talking.",
+          "Pay close attention to the speaker's words, tone, and body language.",
+          "Immediately offer solutions to the speaker's problems."
+        ],
+        "correct_answer": "Pay close attention to the speaker's words, tone, and body language.",
+        "explanation": "The text emphasizes that opening up your senses and listening more is crucial for emotional intelligence. Paying attention to 'words, music, and dance' allows you to detect the other person's emotional state."
+      },
+      {
+        "question": "According to the text, labeling negative emotions is generally unproductive and should be avoided. (True or False)",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "The text advocates for directly addressing negative dynamics and labeling negative emotions in a fearless but deferential manner, as it can diffuse tension and create an opportunity for resolution."
+      }
+    ]
+  },
+  {
+    "source_chapter": "06 textPart07.html",
+    "questions": [
+      {
+        "question": "What was Chris Voss's biggest professional failure, which ultimately led to a change in the FBI's negotiation techniques?",
+        "type": "multiple_choice",
+        "options": [
+          "The Waco siege",
+          "The Dos Palmas kidnapping case",
+          "A hostage situation in Pittsburgh",
+          "Negotiating with Colombian drug cartels"
+        ],
+        "correct_answer": "The Dos Palmas kidnapping case",
+        "explanation": "The Dos Palmas kidnapping case was a 'train wreck' that forced Chris Voss to re-evaluate traditional negotiation techniques and explore new approaches."
+      },
+      {
+        "question": "True or False: According to the text, the United States government officially pays ransoms for hostages.",
+        "type": "true_false",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_answer": "False",
+        "explanation": "The text explicitly states that the United States officially does not pay ransoms, although a donor was found to provide money in the Burnham case."
+      },
+      {
+        "question": "What is the primary purpose of using calibrated, or open-ended, questions in negotiation?",
+        "type": "multiple_choice",
+        "options": [
+          "To confuse the other party",
+          "To remove aggression and encourage the other side to think and offer solutions",
+          "To assert dominance in the conversation",
+          "To quickly obtain information"
+        ],
+        "correct_answer": "To remove aggression and encourage the other side to think and offer solutions",
+        "explanation": "Calibrated questions are designed to remove hostility, acknowledge the other side, and prompt them to actively participate in finding a resolution, giving them the illusion of control."
+      },
+      {
+        "question": "Scenario: A negotiator is facing a counterpart who is resistant and unwilling to cooperate. According to the text, what is the BEST approach the negotiator should take?",
+        "type": "scenario",
+        "options": [
+          "Aggressively assert their position to demonstrate strength.",
+          "Use closed-ended questions to extract specific information.",
+          "Employ calibrated questions to encourage the counterpart to consider solutions.",
+          "Refuse to negotiate further until the counterpart becomes more cooperative."
+        ],
+        "correct_answer": "Employ calibrated questions to encourage the counterpart to consider solutions.",
+        "explanation": "The text suggests that calibrated questions are the most effective way to overcome resistance by suspending 'unbelief' and guiding the other party toward a solution they feel they have contributed to."
+      },
+      {
+        "question": "According to the text, why was the FBI's traditional approach to 'proof-of-life' questions in hostage negotiations flawed?",
+        "type": "multiple_choice",
+        "options": [
+          "The questions were too complex for the kidnappers to understand.",
+          "Answering the questions required little effort from the kidnappers and triggered a sense of reciprocity, where they expected something in return.",
+          "The questions were too easy and provided no valuable information.",
+          "The questions were offensive to the kidnappers."
+        ],
+        "correct_answer": "Answering the questions required little effort from the kidnappers and triggered a sense of reciprocity, where they expected something in return.",
+        "explanation": "The traditional approach involved simple questions that were easily answered, triggering a human tendency for reciprocity, which the FBI wanted to avoid to prevent being forced to make concessions."
+      }
+    ]
+  }
+]

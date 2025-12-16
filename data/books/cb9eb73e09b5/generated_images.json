@@ -1,0 +1,72 @@
+[
+  {
+    "concept_name": "Calibrated Questions",
+    "filename": "00_Calibrated Questions.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/00_Calibrated Questions.png",
+    "style": "Photorealistic",
+    "prompt": "A highly detailed and intricately designed chess board. The pieces are arranged in a complex mid-game scenario. Dominating one side is a sleek, modern chess set, crafted from polished chrome and dark ..."
+  },
+  {
+    "concept_name": "System 1 & System 2 Thinking",
+    "filename": "01_System 1 _ System 2 Thinking.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/01_System 1 _ System 2 Thinking.png",
+    "style": "Steampunk",
+    "prompt": "A highly detailed, intricate clockwork mechanism, gears precisely aligned, crafted from polished brass and steel. The clock face shows a slightly distorted time. A large, unseen magnet is positioned j..."
+  },
+  {
+    "concept_name": "Tactical Empathy",
+    "filename": "02_Tactical Empathy.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/02_Tactical Empathy.png",
+    "style": "Japanese Woodblock Print",
+    "prompt": "An intricate, aged bonsai tree with meticulously pruned branches. Subtle light shines on the tree, highlighting the delicate balance of its form. The hands of a gardener are gently guiding a single br..."
+  },
+  {
+    "concept_name": "Loss Aversion",
+    "filename": "03_Loss Aversion.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/03_Loss Aversion.png",
+    "style": "Photorealistic",
+    "prompt": "A close-up photograph of two hands in stark contrast. On the left, a weathered hand fiercely clutches a tarnished silver coin, knuckles white, as if someone is trying to take it away. The background b..."
+  },
+  {
+    "concept_name": "Assumptions vs. Hypotheses",
+    "filename": "04_Assumptions vs_ Hypotheses.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/04_Assumptions vs_ Hypotheses.png",
+    "style": "Realistic Watercolor",
+    "prompt": "Overhead view of a wide, shallow lake surrounded by varied terrain. A single, narrow, straight channel flows directly into the lake, carrying dark, still water. Several other streams approach the lake..."
+  },
+  {
+    "concept_name": "Active Listening",
+    "filename": "05_Active Listening.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/05_Active Listening.png",
+    "style": "Steampunk",
+    "prompt": "A highly detailed image of a vintage radio receiver. The antenna is disproportionately large and pristine, clearly receiving a very weak radio signal barely visible as waves in the air. The dial is pr..."
+  },
+  {
+    "concept_name": "Slow It Down",
+    "filename": "06_Slow It Down.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/06_Slow It Down.png",
+    "style": "Surreal Photography",
+    "prompt": "A wide, dry riverbed under a scorching sun. The river flows as a very slow trickle. Small pools of water form in the depressions, supporting tiny, vibrant green plant life and miniature animals (frogs..."
+  },
+  {
+    "concept_name": "The Voice (Late-Night FM DJ Voice)",
+    "filename": "07_The Voice _Late-Night FM DJ Voice_.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/07_The Voice _Late-Night FM DJ Voice_.png",
+    "style": "Romanticism",
+    "prompt": "A wide, tranquil river reflecting a soft, dusky sky. A massive, ancient barge filled with stacked stone blocks slowly navigates the river's center. The barge appears heavy and stable, moving with an a..."
+  },
+  {
+    "concept_name": "Mirroring (Isopraxism)",
+    "filename": "08_Mirroring _Isopraxism_.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/08_Mirroring _Isopraxism_.png",
+    "style": "Steampunk",
+    "prompt": "Two intricately designed gears, one larger and made of polished brass, the other smaller and made of brushed silver, meshing perfectly. The larger gear drives the smaller gear, but the smaller gear su..."
+  },
+  {
+    "concept_name": "Labeling",
+    "filename": "09_Labeling.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/images/09_Labeling.png",
+    "style": "Steampunk",
+    "prompt": "A vintage-style pressure gauge, intricately detailed with brass fittings and a glass face, is connected to a vibrant red balloon by a slender tube. The gauge needle is visibly decreasing, indicating a..."
+  }
+]

@@ -1,0 +1,168 @@
+{
+  "title": "The Full Fee Agent",
+  "author": "Chris Voss",
+  "processedAt": "2025-11-30T17:26:51.678454",
+  "chapters": [
+    {
+      "id": "Chris-Voss_Steve-Shull_FM_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_FM_EBOOK.xhtml",
+      "summary": "This appears to be a table of contents and copyright information for a book titled 'The Full Fee Agent: How to Stack the Odds in Your Favor as a Real Estate Professional' by Chris Voss and Steve Shull. The book outlines strategies for real estate agents to maximize their earnings and success. The chapters cover topics such as understanding human nature, positioning oneself effectively, avoiding free consulting, managing client expectations, delegating responsibility, handling objections, creating a lasting impression, and operating as a full-service agent.",
+      "stories": [],
+      "learningObjectives": [
+        "Understand the importance of human nature in real estate negotiations.",
+        "Learn strategies to position oneself as a valuable and respected agent.",
+        "Avoid providing free services and establish clear boundaries.",
+        "Proactively manage client expectations early in the process.",
+        "Effectively delegate tasks and responsibilities.",
+        "Empower clients to make informed decisions.",
+        "Create a memorable and positive client experience.",
+        "Provide comprehensive services and charge appropriate fees."
+      ],
+      "visualPrompts": [
+        {
+          "type": "infographic",
+          "description": "A visual representation of the book's key strategies for real estate agents, showing how to stack the odds in their favor.",
+          "prompt": "Create an infographic titled 'Stacking the Odds: A Real Estate Agent's Guide'. Use a visually appealing design with icons and short text snippets to represent each chapter's main takeaway. Focus on themes like understanding client psychology, value proposition, and effective negotiation techniques. Include a central graphic representing a balanced scale or stacked blocks, symbolizing improved success and profitability.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"100\"><rect width=\"200\" height=\"100\" fill=\"lightblue\" /><rect width=\"50\" height=\"50\" x=\"25\" y=\"25\" fill=\"orange\" /><rect width=\"50\" height=\"50\" x=\"125\" y=\"25\" fill=\"green\" /></svg>"
+        },
+        {
+          "type": "image",
+          "description": "An image depicting a real estate agent confidently negotiating with clients.",
+          "prompt": "Create a professional-looking image of a real estate agent sitting across from two clients at a table. The agent is making a confident gesture and maintaining eye contact, while the clients appear engaged and receptive. The background should be a modern and well-lit office space with real estate related imagery such as house blueprints or framed neighborhood photos. The overall tone should be one of trust, expertise, and collaboration. Focus on the agents body language and clothing to portray a sense of professionalism and credibility",
+          "svgPlaceholder": "<svg width=\"200\" height=\"100\"><circle cx=\"50\" cy=\"50\" r=\"20\" fill=\"gray\" /><circle cx=\"150\" cy=\"50\" r=\"20\" fill=\"gray\" /><rect width=\"100\" height=\"30\" x=\"50\" y=\"70\" fill=\"brown\" /></svg>"
+        }
+      ]
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_FM_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_FM_EBOOK-1.xhtml",
+      "summary": "This chapter serves as a dedication to real estate professionals, acknowledging their hard work, trustworthiness, and the often underappreciated complexity of their role. It expresses hope that the book will provide them with insights to improve their business practices, reduce stress, and increase overall ease in their professional lives.",
+      "stories": [],
+      "learningObjectives": [
+        "Acknowledge the hard work and dedication of real estate professionals.",
+        "Understand the complexity and skill required in the real estate profession.",
+        "Provide insights to improve business practices and reduce stress for real estate professionals.",
+        "Encourage real estate professionals to conduct their business with integrity and competence."
+      ],
+      "visualPrompts": [
+        {
+          "type": "image",
+          "description": "A real estate agent helping a family find their dream home, emphasizing trust and competence.",
+          "prompt": "A heartwarming scene of a real estate agent handing the keys to a smiling family in front of their new house. The agent looks trustworthy and professional. The house should be in a suburban setting with a well-kept lawn. The overall tone should be warm and inviting, conveying a sense of accomplishment and happiness.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"150\"><rect width=\"200\" height=\"150\" fill=\"lightgreen\" /><rect x=\"20\" y=\"30\" width=\"60\" height=\"90\" fill=\"white\" /><rect x=\"120\" y=\"30\" width=\"60\" height=\"90\" fill=\"yellow\" /><circle cx=\"50\" cy=\"20\" r=\"10\" fill=\"red\" /><circle cx=\"150\" cy=\"20\" r=\"10\" fill=\"red\" /></svg>"
+        },
+        {
+          "type": "infographic",
+          "description": "An infographic illustrating the multiple skills and knowledge areas required for a successful real estate agent (negotiation, marketing, legal, etc.).",
+          "prompt": "An infographic with a central image of a real estate agent surrounded by icons representing different skills: negotiation (handshake), marketing (megaphone), legal (scales of justice), finance (money bag), communication (speech bubble). Each icon is linked to a brief explanation of how that skill is important in real estate. Use a clean and professional design with easily readable fonts and contrasting colors.",
+          "svgPlaceholder": "<svg width=\"200\" height=\"150\"><circle cx=\"100\" cy=\"75\" r=\"50\" fill=\"lightblue\" /><line x1=\"50\" y1=\"75\" x2=\"150\" y2=\"75\" stroke=\"black\" /><line x1=\"100\" y1=\"25\" x2=\"100\" y2=\"125\" stroke=\"black\" /></svg>"
+        }
+      ]
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_FM_EBOOK-3",
+      "title": "Chris-Voss_Steve-Shull_FM_EBOOK-3.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 11\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_Intro_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_Intro_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C1_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C1_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C1_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C1_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C2_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C2_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C2_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C2_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C3_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C3_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C3_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C3_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 10\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C4_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C4_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C4_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C4_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C5_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C5_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C5_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C5_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C6_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C6_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C6_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C6_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C7_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C7_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C7_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C7_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 9\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C8_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_C8_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 8\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_C8_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_C8_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 8\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_BM_EBOOK",
+      "title": "Chris-Voss_Steve-Shull_BM_EBOOK.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 8\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_BM_EBOOK-1",
+      "title": "Chris-Voss_Steve-Shull_BM_EBOOK-1.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 8\n}\n]"
+    },
+    {
+      "id": "Chris-Voss_Steve-Shull_BM_EBOOK-2",
+      "title": "Chris-Voss_Steve-Shull_BM_EBOOK-2.xhtml",
+      "error": "429 You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_requests_per_model\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash-exp\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, retry_delay {\n  seconds: 8\n}\n]"
+    }
+  ]
+}

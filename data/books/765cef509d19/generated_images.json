@@ -1,0 +1,72 @@
+[
+  {
+    "concept_name": "Copyright",
+    "filename": "00_Copyright.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/00_Copyright.png",
+    "style": "Photorealistic illustration with soft, diffused lighting",
+    "prompt": "Create an image of a highly detailed and delicate spiderweb, shimmering with a soft, ethereal light. The web is intricately woven, and strands of light emanate from its center, connecting to various o..."
+  },
+  {
+    "concept_name": "Atomic Habits",
+    "filename": "01_Atomic Habits.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/01_Atomic Habits.png",
+    "style": "Hyperrealistic",
+    "prompt": "A time-lapse image sequence showing a single, tiny seed sprouting from barren earth. Over weeks, months, and years, the seedling grows taller and stronger, its roots digging deep into the ground. As t..."
+  },
+  {
+    "concept_name": "Habit and Identity",
+    "filename": "02_Habit and Identity.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/02_Habit and Identity.png",
+    "style": "Renaissance Painting",
+    "prompt": "A potter's wheel made of aged oak in a brightly lit workshop. Soft, damp clay rotates on the wheel. The potter's hands, strong and weathered, gently shape the clay into a vase. The form of the vase is..."
+  },
+  {
+    "concept_name": "Four Laws of Behavior Change",
+    "filename": "03_Four Laws of Behavior Change.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/03_Four Laws of Behavior Change.png",
+    "style": "Isometric 3D",
+    "prompt": "A highly intricate Rube Goldberg machine. The machine starts with a large domino (Obvious) that triggers a series of actions. The next stage involves a bright, colorful, and visually appealing set of ..."
+  },
+  {
+    "concept_name": "Make It Obvious",
+    "filename": "04_Make It Obvious.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/04_Make It Obvious.png",
+    "style": "Surreal Photorealism",
+    "prompt": "A winding, overgrown path disappearing into dense fog. As the path continues, glowing, ethereal markers appear at regular intervals, emitting a soft light that pushes back the fog and reveals the path..."
+  },
+  {
+    "concept_name": "Environment Matters",
+    "filename": "05_Environment Matters.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/05_Environment Matters.png",
+    "style": "Surreal Digital Painting",
+    "prompt": "A digitally painted aerial view of a river splitting into two distinct channels. The left channel is wide, clear, and gently sloping, leading to a vibrant, green meadow filled with wildflowers. The ri..."
+  },
+  {
+    "concept_name": "Make It Attractive",
+    "filename": "06_Make It Attractive.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/06_Make It Attractive.png",
+    "style": "Botanical Illustration",
+    "prompt": "A close-up shot of a delicate, pale flower bud being carefully grafted onto a strong, healthy plant with lush, colorful leaves. The plant is thriving, bathed in warm sunlight. The bud is secured with ..."
+  },
+  {
+    "concept_name": "Make It Easy",
+    "filename": "07_Make It Easy.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/07_Make It Easy.png",
+    "style": "Minimalist Illustration",
+    "prompt": "A side-by-side comparison of two hills. On the left, a very steep and jagged rocky hill with a large boulder stuck near the top. On the right, a gently sloping hill covered in lush green grass with a ..."
+  },
+  {
+    "concept_name": "Make It Satisfying",
+    "filename": "08_Make It Satisfying.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/08_Make It Satisfying.png",
+    "style": "Steampunk",
+    "prompt": "A complex Rube Goldberg machine, meticulously crafted from wood and metal. The machine features a series of interconnected contraptions: gears turning, balls rolling down tracks, levers triggering oth..."
+  },
+  {
+    "concept_name": "Goldilocks Rule",
+    "filename": "09_Goldilocks Rule.png",
+    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/images/09_Goldilocks Rule.png",
+    "style": "Epic Landscape Photography",
+    "prompt": "A lone tightrope walker carefully balancing on a rope stretched between two imposing cliffs. The cliff on the left is shorter and easier to ascend, while the one on the right towers above, shrouded in..."
+  }
+]

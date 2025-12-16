@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Tactical Empathy",
+    "definition": "Tactical Empathy is the skill of understanding and influencing others by actively listening and considering their perspective to build trust-based influence and rapport.",
+    "mechanism": "It works by creating a connection with others through demonstrating understanding, which in turn builds trust and facilitates effective communication and cooperation.",
+    "context": "Apply it in any leadership situation where building strong relationships, gathering information, and promoting morale are important, especially in difficult conversations or negotiations.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "Hostage Negotiator Leader",
+    "definition": "A Hostage Negotiator Leader is a leader who prioritizes understanding and connecting with their employees by employing tactical empathy, humility, and inclusion to build strong relationships and improve team performance.",
+    "mechanism": "By subordinating their ego and authority, they create an environment of trust and respect, enabling open communication, informed decision-making, and increased motivation among team members.",
+    "context": "This approach is beneficial in all leadership contexts, particularly when managing direct reports, resolving conflicts, or fostering a collaborative and inclusive work environment.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "Ego and Authority Management",
+    "definition": "Ego and authority management is the practice of controlling one's ego and authority to avoid dominating interactions, instead focusing on listening and empowering others.",
+    "mechanism": "By consciously checking ego and authority, leaders can avoid imposing their views, make space for others' contributions, and improve decision-making and team morale.",
+    "context": "Apply this when engaging in conversations, especially with direct reports, and in situations where collaboration and diverse perspectives are valuable.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "Humility in Leadership",
+    "definition": "Humility in leadership involves prioritizing the needs and contributions of team members over personal recognition or power.",
+    "mechanism": "It promotes trust and fosters a collaborative environment where team members feel valued, empowered, and more likely to contribute their best work.",
+    "context": "Use this when leading teams to promote morale, innovation, and strong working relationships.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "Inclusive Leadership",
+    "definition": "Inclusive leadership is the practice of actively involving all team members in decision-making processes and valuing their unique perspectives and experiences.",
+    "mechanism": "By encouraging diverse contributions, inclusive leadership promotes creativity, informed decision-making, and a sense of belonging among team members.",
+    "context": "Apply this when making decisions, solving problems, or developing strategies to leverage the full potential of the team.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "Continuous Improvement Through Repetition",
+    "definition": "Continuous improvement through repetition is the principle that practicing new skills repeatedly, even in low-stakes situations, leads to mastery and integration into one's behavior.",
+    "mechanism": "Repetition reinforces neural pathways, making the skill more natural and effective over time.",
+    "context": "Use this to develop any new skill, including leadership and communication techniques, by practicing them consistently in various situations.",
+    "source_chapter": "17 OEBPSTextchapter0036.html"
+  },
+  {
+    "name": "I-Messages",
+    "definition": "A method of addressing counterproductive behavior by expressing how the behavior impacts you, without being confrontational.",
+    "mechanism": "By framing the issue from your perspective ( \"When you [behavior], I feel [feeling] because [effect]\"), it reduces defensiveness and encourages the other person to consider the impact of their actions.",
+    "context": "Use when addressing persistent or uncooperative behavior in a non-threatening way to maintain influence and avoid escalating conflict.",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "No-Oriented Questions",
+    "definition": "Questions framed to elicit a \"no\" response, creating a sense of safety and control for the other person.",
+    "mechanism": "By starting with phrases like \"Would it be a bad idea...?\" or \"Is it ridiculous...?\", you avoid pushing for commitment and allow the other person to feel secure in saying no, which can lead to more open communication.",
+    "context": "Use to break impasses, get someone's attention, or help someone think clearly by making them feel safe and in control.",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "Phases of No",
+    "definition": "A multi-stage approach to declining requests or setting boundaries, ranging from indirect inquiries to direct refusal.",
+    "mechanism": "By gradually increasing the directness of the refusal (e.g., from \"How am I supposed to do that?\" to \"No.\"), you can soften the impact of the rejection and maintain a positive relationship.",
+    "context": "Use when you need to say no to an employee or colleague, especially when the request is difficult or the employee expects a yes.",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "Paraphrasing Plus Labeling",
+    "definition": "A method of summarizing a person's position by combining paraphrasing (restating their content) and labeling (identifying their feelings).",
+    "mechanism": "By accurately summarizing both the content and the emotional state, you demonstrate that you are actively listening and understand their perspective, leading to validation and a feeling of being heard.",
+    "context": "Use during difficult conversations to build rapport, show empathy, and ensure mutual understanding, especially when aiming for a definitive confirmation like \"That is right!\".",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "The Rule of Three (Yeses)",
+    "definition": "A technique to validate an agreement by obtaining three distinct \"yes\" responses: counterfeit, commitment, and confirmation.",
+    "mechanism": "By testing the initial \"yes\" through mirroring, labeling, and paraphrasing, you progress through counterfeit to commitment to confirmation, increasing the likelihood that the agreement will be upheld.",
+    "context": "Use when seeking buy-in or commitment from someone to ensure that the agreement is genuine and likely to be followed through.",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "Forced Empathy",
+    "definition": "When someone shows empathy because another person has consistently demonstrated Tactical Empathy.",
+    "mechanism": "When someone else takes a good look at your situation and in turn shows empathy.",
+    "context": "When trying to convey no without cornering yourself or another person.",
+    "source_chapter": "16 OEBPSTextchapter0034.html"
+  },
+  {
+    "name": "Tactical Empathy",
+    "definition": "Tactical Empathy is demonstrating that you are trying to view things from the other person\u2019s frame of reference to attack negative emotions, impressions, assumptions, or opinions.",
+    "mechanism": "By showing understanding of the other person's perspective, you reduce negative emotions and create a positive environment for conversation.",
+    "context": "Use at the beginning of any difficult conversation to reset it in a positive light.",
+    "source_chapter": "15 OEBPSTextchapter0032.html"
+  },
+  {
+    "name": "Accusations Audit (AA)",
+    "definition": "An Accusations Audit is the process of listing all the negative emotions, impressions, assumptions, or opinions the other side might have.",
+    "mechanism": "By proactively addressing potential negatives, you diffuse them and allow the other party to focus on your message, building rapport and paving the way for a better outcome.",
+    "context": "Use at the start of a difficult conversation, negotiation, or when you anticipate resistance.",
+    "source_chapter": "15 OEBPSTextchapter0032.html"
+  },
+  {
+    "name": "Assertive Personality Type",
+    "definition": "Assertives are focused on being heard and respected, competing to win at all costs, with an aggressive communication style and low regard for future relationships.",
+    "mechanism": "Assertives prioritize achieving their goals and ensuring their voice is heard, often using direct and forceful communication, sometimes at the expense of relationships.",
+    "context": "Recognize this type in negotiations or conflicts where the other party is direct, goal-oriented, and less concerned with maintaining harmony.",
+    "source_chapter": "15 OEBPSTextchapter0032.html"
+  },
+  {
+    "name": "Accommodator Personality Type",
+    "definition": "Accommodators prioritize relationships and being liked, valuing harmony and getting satisfaction from solving others\u2019 problems.",
+    "mechanism": "Accommodators focus on maintaining positive relationships and avoiding conflict, often agreeing or conceding to keep the peace, even if it means sacrificing their own goals.",
+    "context": "Identify this type in interactions where the other party is agreeable, sensitive to your feelings, and prioritizes building rapport.",
+    "source_chapter": "15 OEBPSTextchapter0032.html"
+  },
+  {
+    "name": "Analyst Personality Type",
+    "definition": "Analysts are reserved problem-solvers, concerned with data and information, viewing conflict as a waste of time and preferring to work independently to find solutions.",
+    "mechanism": "Analysts rely on logic, data, and thorough analysis to make decisions, preferring to gather information and work independently to find the most efficient and accurate solution, often avoiding emotional engagement.",
+    "context": "Recognize this type in situations where the other party is detail-oriented, asks many questions, values data, and prefers to work independently.",
+    "source_chapter": "15 OEBPSTextchapter0032.html"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Leadership Relationships",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Leadership))\n    Central Themes\n      Ego\n      Authority\n      Failure\n    Principles\n      People First\n      Humans over Employees\n      Tactical Empathy\n      Inclusion\n    Action\n      Emotional Control\n      Decision-Making\n      Communication (Delivery, Questions, Paraphrasing)\n    Qualities\n      Non-Toxic\n      Self-Aware\n      Courageous\n",
+    "description": "Illustrates the relationships between core leadership themes, principles, actions, and qualities.",
+    "source_chapter": "00 OEBPSTextchapter0000.html"
+  },
+  {
+    "title": "Hostage Negotiator Leadership Framework",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Crisis of Leadership] --> B(People First)\n    B --> C(Humans over Employees)\n    C --> D(Tactical Empathy)\n    D --> E(Inclusion)\n    E --> F{Ego & Authority Examined}\n    F --> G(Emotional Control)\n    F --> H(Decision-Making & Mistakes)\n    G --> I[Hostage Negotiator Leadership in Action]\n    H --> I\n    I --> J(Delivery & Communication)\n",
+    "description": "Flowchart representing the progression and relationships within the Hostage Negotiator Leadership framework.",
+    "source_chapter": "00 OEBPSTextchapter0000.html"
+  },
+  {
+    "title": "Leadership Crisis and HNL Framework",
+    "type": "flowchart",
+    "mermaid_code": "graph LR\n    A[Ego and Authority (Misuse)] --> B(Toxic Leadership)\n    B --> C{Fear, Anger, Resentment, Mistrust, Hostility}\n    C --> D[Decreased Quality of Life & Retention]\n    E[Lack of Understanding & Self-Control] --> B\n    F[Emotional Intelligence (EQ) & Tactical Empathy] --> G(High-Performing Organizations)\n    G --> H{Exceptional Leaders}\n    H --> I[Effective Team Management]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#ccf,stroke:#f66,stroke-width:2px",
+    "description": "Visualizes the negative impacts of ego and authority in leadership, mitigated by emotional intelligence and tactical empathy.",
+    "source_chapter": "04 OEBPSTextchapter0006.html"
+  },
+  {
+    "title": "Levels of Listening",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((Levels of Listening))\n    1. Intermittent Listening\n      Refocusing on internal voice\n    2. Listening for Rebuttals\n      Waiting to interject\n    3. Listening for Internal Logic\n      Understanding their rationale\n    4. Listening for Emotions & Identity Issues\n      Identifying driving emotions\n    5. Listening for Life's Narrative\n      Understanding their worldview",
+    "description": "Breaks down the five levels of listening, from superficial to deep understanding.",
+    "source_chapter": "04 OEBPSTextchapter0006.html"
+  },
+  {
+    "title": "HNL People-First Approach",
+    "type": "flowchart",
+    "mermaid_code": "graph TD\n    A[Difficult Conversation] --> B{Subordinate Yourself}\n    B -- Yes --> C[Show Concern/Empathy]\n    B -- No --> D[Potential Distrust/Conflict]\n    C --> E[Earn Trust]\n    E --> F[Achieve Objectives]\n    F --> G[Positive Outcomes: Release hostages, improved relationships]\n    D --> H[Negative Outcomes: Escalation, disengagement]",
+    "description": "Flowchart illustrating the people-first approach in Hostage Negotiator Leadership (HNL). Subordinating oneself in difficult conversations leads to empathy, trust, and positive outcomes, while failing to do so can lead to distrust and negative results.",
+    "source_chapter": "05 OEBPSTextchapter0008.html"
+  },
+  {
+    "title": "Leadership Qualities and Outcomes",
+    "type": "mindmap",
+    "mermaid_code": "mindmap\n  root((People First Leadership))\n    Central Themes\n      Subordination\n      Empathy\n      Transparency\n      Authenticity\n      Humility\n      Sincerity\n    Outcomes\n      Trust\n      Engagement\n      Improved Relationships\n      Productivity\n      Sense of Ownership\n      Positive Impact",
+    "description": "Mindmap illustrating the core themes and outcomes of a people-first leadership approach. It highlights the key qualities such as empathy, transparency, and humility, leading to positive outcomes like trust, engagement, and improved relationships.",
+    "source_chapter": "05 OEBPSTextchapter0008.html"
+  }
+]
