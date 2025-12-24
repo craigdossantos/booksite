@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype 3: Depth Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-void: #0a0a0f;
+        --color-graphite: #1e1e28;
+        --color-electric-blue: #3b82f6;
+        --color-electric-purple: #8b5cf6;
+        --color-electric-cyan: #06b6d4;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--color-void) 0%,
+          var(--color-graphite) 100%
+        );
+        min-height: 100vh;
+      }
+
+      .ai-injected {
+        box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.3);
+        animation: glow 2s ease-out;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 30px 10px rgba(139, 92, 246, 0.5);
+        }
+        100% {
+          box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.1);
+        }
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      input[type="range"]::-webkit-slider-track {
+        background: linear-gradient(
+          to right,
+          #3b82f6,
+          #8b5cf6,
+          #06b6d4,
+          #10b981
+        );
+        height: 8px;
+        border-radius: 4px;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 3px solid #8b5cf6;
+        margin-top: -6px;
+      }
+    </style>
+  </head>
+  <body class="text-gray-100">
+    <div class="flex h-screen">
+      <!-- Main Content Area -->
+      <div class="flex-1 overflow-y-auto p-8">
+        <!-- Header -->
+        <div class="mb-8">
+          <a
+            href="../index.html"
+            class="text-cyan-400 hover:text-cyan-300 text-sm mb-4 inline-block"
+            >← Back to Prototypes</a
+          >
+          <h1 class="text-3xl font-bold text-white mb-2">Depth Slider</h1>
+          <p class="text-gray-400">
+            Control content visibility with depth levels
+          </p>
+        </div>
+
+        <!-- Depth Control Slider -->
+        <div
+          class="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-lg p-6 mb-8 sticky top-0 z-10"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-white">
+              Depth Level: <span class="text-cyan-400">2 - Key Points</span>
+            </h3>
+            <label class="text-xs text-gray-400 flex items-center gap-2">
+              <input type="checkbox" class="rounded" />
+              Auto-expand
+            </label>
+          </div>
+
+          <div class="relative">
+            <input type="range" min="1" max="4" value="2" class="w-full" />
+            <div class="flex justify-between text-xs text-gray-400 mt-2">
+              <span>Summary</span>
+              <span>Key Points</span>
+              <span>Deep Dive</span>
+              <span>Apply</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="max-w-3xl space-y-8">
+          <!-- Depth 1: Summary (Always visible) -->
+          <section
+            class="bg-gray-900/70 backdrop-blur border-l-4 border-blue-500 rounded-lg p-6"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">📋</span>
+              <div>
+                <div class="text-xs text-blue-400 mb-1">DEPTH 1 • SUMMARY</div>
+                <h2 class="text-xl font-bold text-white">
+                  Getting Things Done
+                </h2>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              The Getting Things Done (GTD) methodology provides a systematic
+              approach to managing tasks, projects, and commitments. By
+              capturing everything externally and processing it methodically,
+              you free your mind for creative thinking instead of remembering
+              tasks.
+            </p>
+          </section>
+
+          <!-- Depth 2: Key Points (Visible at depth >= 2) -->
+          <section
+            class="bg-gray-900/50 backdrop-blur border-l-4 border-cyan-500 rounded-lg p-6"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🔑</span>
+              <div>
+                <div class="text-xs text-cyan-400 mb-1">
+                  DEPTH 2 • KEY POINT 1
+                </div>
+                <h3 class="text-lg font-bold text-white">Capture Everything</h3>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm mb-3">
+              Your mind is for having ideas, not holding them. Capture all
+              tasks, ideas, and commitments in a trusted external system.
+            </p>
+            <p class="text-gray-400 text-sm">
+              The human brain can hold about 7 items in working memory. Every
+              uncaptured commitment creates cognitive load. By capturing
+              everything externally, you free mental bandwidth for thinking and
+              creativity.
+            </p>
+          </section>
+
+          <section
+            class="bg-gray-900/50 backdrop-blur border-l-4 border-cyan-500 rounded-lg p-6"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🔑</span>
+              <div>
+                <div class="text-xs text-cyan-400 mb-1">
+                  DEPTH 2 • KEY POINT 2
+                </div>
+                <h3 class="text-lg font-bold text-white">Process Weekly</h3>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm">
+              Set aside dedicated time each week to review and update your
+              system. Weekly reviews prevent system decay and maintain trust in
+              your GTD system.
+            </p>
+          </section>
+
+          <!-- Depth 3: Deep Dive (Faded out - would be visible at depth >= 3) -->
+          <section
+            class="bg-gray-800/30 backdrop-blur border-l-4 border-gray-700 rounded-lg p-6 opacity-30"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xl">🔬</span>
+              <div>
+                <div class="text-xs text-gray-500 mb-1">
+                  DEPTH 3 • DEEP DIVE
+                </div>
+                <h4 class="text-base font-semibold text-gray-400">
+                  The Psychology of External Storage
+                </h4>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm">
+              Neuroscience shows that unfinished tasks create 'open loops' in
+              the brain (Zeigarnik Effect)...
+            </p>
+          </section>
+
+          <!-- AI-Injected Content (Shown with glow effect) -->
+          <section
+            class="ai-injected bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur border-l-4 border-purple-500 rounded-lg p-6"
+          >
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-2xl">🤖</span>
+              <div class="flex-1">
+                <div class="text-xs text-purple-300 mb-1">
+                  AI-ENHANCED CONTENT
+                </div>
+                <p class="text-sm font-medium text-white mb-3">
+                  Building a Capture Habit
+                </p>
+                <div class="text-sm text-gray-300 space-y-2">
+                  <p>
+                    Building a capture habit requires making it frictionless.
+                    Here's a 3-step approach:
+                  </p>
+                  <p>
+                    <strong class="text-white"
+                      >1. Choose one ubiquitous tool</strong
+                    >
+                    - Use something always with you (phone app, small notebook).
+                  </p>
+                  <p>
+                    <strong class="text-white">2. Create a trigger</strong> -
+                    Capture every time you feel mental friction or think "I
+                    should remember this."
+                  </p>
+                  <p>
+                    <strong class="text-white"
+                      >3. Process daily for 21 days</strong
+                    >
+                    - Research shows habits form through consistent repetition.
+                    Set a daily alarm to review your capture system.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Depth 4: Application (Faded out - would be visible at depth >= 4) -->
+          <section
+            class="bg-gray-800/30 backdrop-blur border-l-4 border-gray-700 rounded-lg p-6 opacity-30"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xl">🎯</span>
+              <div>
+                <div class="text-xs text-gray-500 mb-1">
+                  DEPTH 4 • APPLICATION
+                </div>
+                <h4 class="text-base font-semibold text-gray-400">
+                  Build Your GTD System
+                </h4>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm">
+              Set up a complete GTD workflow that you'll actually use...
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- AI Sidebar -->
+      <aside
+        class="w-96 bg-gray-900/90 backdrop-blur border-l border-gray-800 p-6 overflow-y-auto flex flex-col"
+      >
+        <div class="mb-6">
+          <h2 class="text-lg font-bold text-white mb-2">
+            AI Learning Assistant
+          </h2>
+          <p class="text-xs text-gray-400">
+            Responses appear inline with content
+          </p>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="mb-6">
+          <input
+            type="text"
+            placeholder="Ask me anything..."
+            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple-500"
+          />
+          <div class="grid grid-cols-2 gap-2 mt-3">
+            <button
+              class="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-xs text-gray-300 transition-colors"
+            >
+              💡 Explain simply
+            </button>
+            <button
+              class="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-xs text-gray-300 transition-colors"
+            >
+              📝 Quiz me
+            </button>
+            <button
+              class="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-xs text-gray-300 transition-colors"
+            >
+              🔍 Show examples
+            </button>
+            <button
+              class="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-xs text-gray-300 transition-colors"
+            >
+              🎯 How to apply
+            </button>
+          </div>
+        </div>
+
+        <!-- Conversation History -->
+        <div class="flex-1 space-y-4">
+          <div class="text-xs text-gray-500 mb-4">Recent Conversations</div>
+
+          <!-- User message -->
+          <div class="flex justify-end">
+            <div class="bg-blue-600 rounded-lg px-4 py-2 max-w-[80%]">
+              <p class="text-sm text-white">How do I build a capture habit?</p>
+            </div>
+          </div>
+
+          <!-- AI response -->
+          <div class="bg-gray-800 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-sm">🤖</span>
+              <span class="text-xs text-purple-300">AI Assistant</span>
+            </div>
+            <p class="text-sm text-gray-300 mb-2">
+              Great question! I've added a detailed guide to the main content
+              above.
+            </p>
+            <button class="text-xs text-purple-400 hover:text-purple-300">
+              📍 Jump to content
+            </button>
+          </div>
+
+          <!-- User message -->
+          <div class="flex justify-end">
+            <div class="bg-blue-600 rounded-lg px-4 py-2 max-w-[80%]">
+              <p class="text-sm text-white">What if I forget things?</p>
+            </div>
+          </div>
+
+          <!-- AI response -->
+          <div class="bg-gray-800 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-sm">🤖</span>
+              <span class="text-xs text-purple-300">AI Assistant</span>
+            </div>
+            <p class="text-sm text-gray-300">
+              Forgetting is normal! Here are 3 recovery strategies...
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-6 pt-4 border-t border-gray-800">
+          <p class="text-xs text-gray-500 text-center">
+            AI responses inject into main content with visual indicators
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

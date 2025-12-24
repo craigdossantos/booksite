@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progressive Content Disclosure - Prototypes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-void: #0a0a0f;
+        --color-void-light: #14141a;
+        --color-graphite: #1e1e28;
+        --color-slate: #2a2a38;
+        --color-steel: #6b7280;
+        --color-silver: #9ca3af;
+        --color-pearl: #d1d5db;
+        --color-cloud: #e5e7eb;
+        --color-snow: #f9fafb;
+        --color-electric-blue: #3b82f6;
+        --color-electric-purple: #8b5cf6;
+        --color-electric-cyan: #06b6d4;
+        --color-electric-emerald: #10b981;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--color-void) 0%,
+          var(--color-graphite) 100%
+        );
+        min-height: 100vh;
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          90deg,
+          var(--color-electric-blue),
+          var(--color-electric-purple)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 20px 25px -5px rgba(59, 130, 246, 0.2),
+          0 10px 10px -5px rgba(59, 130, 246, 0.1);
+      }
+    </style>
+  </head>
+  <body class="text-gray-100 p-8">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <header class="text-center mb-16">
+        <div
+          class="inline-block mb-4 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm"
+        >
+          Interactive Prototypes
+        </div>
+        <h1 class="text-5xl font-black mb-4">
+          <span class="gradient-text">Progressive Content Disclosure</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+          Three approaches to creating a unified, progressive learning
+          experience with integrated AI assistance
+        </p>
+      </header>
+
+      <!-- Prototypes Grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Prototype 1: Accordion -->
+        <a
+          href="./prototype-1-accordion/index.html"
+          class="block p-8 bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl card-hover"
+        >
+          <div class="text-4xl mb-4">🎢</div>
+          <h2 class="text-2xl font-bold mb-3 text-white">Nested Accordion</h2>
+          <p class="text-gray-400 mb-6">
+            Hierarchical expansion where content unfolds progressively with
+            visual indentation
+          </p>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Low learning curve</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Mobile-friendly</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Linear progression</span>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 text-blue-400 font-medium">
+            View Prototype
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Prototype 2: Cards -->
+        <a
+          href="./prototype-2-cards/index.html"
+          class="block p-8 bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl card-hover"
+        >
+          <div class="text-4xl mb-4">🎴</div>
+          <h2 class="text-2xl font-bold mb-3 text-white">Card Grid</h2>
+          <p class="text-gray-400 mb-6">
+            Cards expand in-place showing sub-cards for deeper content
+            exploration
+          </p>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">High scanability</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Parallel exploration</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Visual learners</span>
+            </div>
+          </div>
+
+          <div
+            class="inline-flex items-center gap-2 text-purple-400 font-medium"
+          >
+            View Prototype
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Prototype 3: Slider -->
+        <a
+          href="./prototype-3-slider/index.html"
+          class="block p-8 bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl card-hover"
+        >
+          <div class="text-4xl mb-4">🎚️</div>
+          <h2 class="text-2xl font-bold mb-3 text-white">Depth Slider</h2>
+          <p class="text-gray-400 mb-6">
+            Horizontal slider controls content visibility with AI sidebar
+            integration
+          </p>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Systematic control</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Clear depth levels</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-400">✓</span>
+              <span class="text-gray-300">Desktop-optimized</span>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 text-cyan-400 font-medium">
+            View Prototype
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- Comparison Table -->
+      <div
+        class="bg-gray-900/30 backdrop-blur border border-gray-800 rounded-2xl p-8 mb-16"
+      >
+        <h3 class="text-2xl font-bold mb-6 text-center text-white">
+          Feature Comparison
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-800">
+                <th class="text-left py-3 px-4 text-gray-400 font-medium">
+                  Feature
+                </th>
+                <th class="text-center py-3 px-4 text-blue-400 font-medium">
+                  Accordion
+                </th>
+                <th class="text-center py-3 px-4 text-purple-400 font-medium">
+                  Cards
+                </th>
+                <th class="text-center py-3 px-4 text-cyan-400 font-medium">
+                  Slider
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+              <tr>
+                <td class="py-3 px-4 text-gray-300">Learning Curve</td>
+                <td class="py-3 px-4 text-center text-green-400">Low</td>
+                <td class="py-3 px-4 text-center text-yellow-400">Medium</td>
+                <td class="py-3 px-4 text-center text-green-400">Low</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-300">Mobile-Friendly</td>
+                <td class="py-3 px-4 text-center text-green-400">Excellent</td>
+                <td class="py-3 px-4 text-center text-green-400">Good</td>
+                <td class="py-3 px-4 text-center text-yellow-400">Fair</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-300">Scanability</td>
+                <td class="py-3 px-4 text-center text-yellow-400">Medium</td>
+                <td class="py-3 px-4 text-center text-green-400">High</td>
+                <td class="py-3 px-4 text-center text-yellow-400">Low</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-300">AI Integration</td>
+                <td class="py-3 px-4 text-center text-gray-300">Inline</td>
+                <td class="py-3 px-4 text-center text-gray-300">Card-based</td>
+                <td class="py-3 px-4 text-center text-gray-300">Sidebar</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-300">Multi-tasking</td>
+                <td class="py-3 px-4 text-center text-gray-300">Sequential</td>
+                <td class="py-3 px-4 text-center text-green-400">Parallel</td>
+                <td class="py-3 px-4 text-center text-gray-300">Sequential</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-300">Best For</td>
+                <td class="py-3 px-4 text-center text-gray-300">
+                  Linear learners
+                </td>
+                <td class="py-3 px-4 text-center text-gray-300">
+                  Visual learners
+                </td>
+                <td class="py-3 px-4 text-center text-gray-300">
+                  Systematic learners
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-8">
+        <h3 class="text-xl font-bold mb-4 text-white">How to Evaluate</h3>
+        <div class="space-y-3 text-gray-300">
+          <p>
+            • <strong>Interact naturally</strong> - Click, expand, collapse, ask
+            AI questions
+          </p>
+          <p>
+            • <strong>Mobile test</strong> - Resize your browser or test on
+            mobile device
+          </p>
+          <p>
+            • <strong>Compare approaches</strong> - Which feels most intuitive?
+          </p>
+          <p>
+            • <strong>AI integration</strong> - Does the AI feel integrated or
+            separate?
+          </p>
+          <p>
+            • <strong>Information density</strong> - Can you control how much
+            you see?
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-16 text-center text-gray-500 text-sm">
+        <p>Built with Tailwind CSS & Vanilla JavaScript</p>
+        <p class="mt-2">🤖 Generated with Claude Code</p>
+      </footer>
+    </div>
+  </body>
+</html>

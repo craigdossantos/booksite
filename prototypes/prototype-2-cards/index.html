@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype 2: Card Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-void: #0a0a0f;
+        --color-graphite: #1e1e28;
+        --color-electric-blue: #3b82f6;
+        --color-electric-purple: #8b5cf6;
+        --color-electric-cyan: #06b6d4;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--color-void) 0%,
+          var(--color-graphite) 100%
+        );
+        min-height: 100vh;
+      }
+
+      .card {
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+      }
+
+      .depth-border-1 {
+        border-left: 4px solid var(--color-electric-blue);
+      }
+      .depth-border-2 {
+        border-left: 4px solid var(--color-electric-cyan);
+      }
+      .depth-border-3 {
+        border-left: 4px solid var(--color-electric-purple);
+      }
+    </style>
+  </head>
+  <body class="text-gray-100 p-8">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <a
+          href="../index.html"
+          class="text-purple-400 hover:text-purple-300 text-sm mb-4 inline-block"
+          >← Back to Prototypes</a
+        >
+        <h1 class="text-3xl font-bold text-white mb-2">Card Grid</h1>
+        <p class="text-gray-400">Expandable cards with nested sub-cards</p>
+      </div>
+
+      <!-- Depth Legend -->
+      <div
+        class="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-lg px-4 py-3 mb-6 flex items-center gap-6 text-sm"
+      >
+        <span class="text-gray-400">Depth:</span>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded bg-blue-500"></div>
+          <span class="text-gray-300">Summary</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded bg-cyan-500"></div>
+          <span class="text-gray-300">Details</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded bg-purple-500"></div>
+          <span class="text-gray-300">Deep Dive</span>
+        </div>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <!-- Summary Card (Compact) -->
+        <div
+          class="card depth-border-1 bg-gray-900/70 backdrop-blur border border-gray-700 rounded-lg p-5"
+        >
+          <div class="flex items-start justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">📋</span>
+              <h3 class="font-bold text-white">Summary</h3>
+            </div>
+            <button class="text-gray-400 hover:text-white text-sm">+</button>
+          </div>
+          <p class="text-gray-400 text-sm line-clamp-3">
+            The GTD methodology provides a systematic approach to managing
+            tasks...
+          </p>
+        </div>
+
+        <!-- Key Point 1 Card (Expanded to show sub-cards) -->
+        <div
+          class="card depth-border-1 bg-gray-900/70 backdrop-blur border border-gray-700 rounded-lg p-5 md:col-span-2"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🔑</span>
+              <h3 class="font-bold text-white">Capture Everything</h3>
+            </div>
+            <button class="text-gray-400 hover:text-white text-sm">−</button>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4">
+            Your mind is for having ideas, not holding them. Capture all tasks,
+            ideas, and commitments in a trusted external system.
+          </p>
+
+          <p class="text-gray-400 text-sm mb-6">
+            The human brain can hold about 7 items in working memory. Every
+            uncaptured commitment creates cognitive load.
+          </p>
+
+          <!-- Sub-cards Grid -->
+          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-gray-700">
+            <!-- Deep Dive Sub-card -->
+            <div
+              class="depth-border-3 bg-gray-800/50 backdrop-blur border border-gray-600 rounded-lg p-4"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm">🔬</span>
+                <button class="text-gray-500 hover:text-white text-xs">
+                  +
+                </button>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Deep Dive</h4>
+              <p class="text-xs text-gray-400">
+                Psychology of external storage...
+              </p>
+            </div>
+
+            <!-- Examples Sub-card -->
+            <div
+              class="depth-border-2 bg-gray-800/50 backdrop-blur border border-gray-600 rounded-lg p-4"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm">📝</span>
+                <button class="text-gray-500 hover:text-white text-xs">
+                  +
+                </button>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Examples</h4>
+              <p class="text-xs text-gray-400">3 real-world capture systems</p>
+            </div>
+
+            <!-- Ask AI Sub-card -->
+            <div
+              class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur border border-purple-500/30 rounded-lg p-4"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm">🤖</span>
+                <button class="text-purple-400 hover:text-purple-300 text-xs">
+                  ↗
+                </button>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-2">Ask AI</h4>
+              <p class="text-xs text-purple-300">Get personalized guidance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Point 2 Card (Compact) -->
+        <div
+          class="card depth-border-1 bg-gray-900/70 backdrop-blur border border-gray-700 rounded-lg p-5"
+        >
+          <div class="flex items-start justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🔑</span>
+              <h3 class="font-bold text-white">Process Weekly</h3>
+            </div>
+            <button class="text-gray-400 hover:text-white text-sm">+</button>
+          </div>
+          <p class="text-gray-400 text-sm line-clamp-3">
+            Set aside dedicated time each week to review and update your
+            system...
+          </p>
+        </div>
+
+        <!-- Key Point 3 Card (Compact) -->
+        <div
+          class="card depth-border-1 bg-gray-900/70 backdrop-blur border border-gray-700 rounded-lg p-5"
+        >
+          <div class="flex items-start justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🔑</span>
+              <h3 class="font-bold text-white">Define Actions</h3>
+            </div>
+            <button class="text-gray-400 hover:text-white text-sm">+</button>
+          </div>
+          <p class="text-gray-400 text-sm line-clamp-3">
+            Every project needs a concrete next physical action defined...
+          </p>
+        </div>
+      </div>
+
+      <!-- AI Response Card (Shown when "Ask AI" is clicked) -->
+      <div
+        class="bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur border border-purple-500/30 rounded-lg p-6 mb-6"
+      >
+        <div class="flex items-start gap-3 mb-4">
+          <span class="text-2xl">🤖</span>
+          <div class="flex-1">
+            <p class="text-xs text-purple-300 mb-2">AI Assistant Response</p>
+            <p class="text-sm font-semibold text-white mb-3">
+              How do I build a capture habit?
+            </p>
+
+            <div class="text-sm text-gray-300 space-y-3">
+              <p>
+                Building a capture habit requires making it frictionless. Here's
+                a 3-step approach:
+              </p>
+
+              <div class="space-y-2">
+                <p>
+                  <strong class="text-white"
+                    >1. Choose one ubiquitous tool</strong
+                  >
+                  - Use something always with you (phone app, small notebook).
+                </p>
+                <p>
+                  <strong class="text-white">2. Create a trigger</strong> -
+                  Capture every time you feel mental friction.
+                </p>
+                <p>
+                  <strong class="text-white"
+                    >3. Process daily for 21 days</strong
+                  >
+                  - Research shows habits form through consistent repetition.
+                </p>
+              </div>
+
+              <!-- Follow-up cards -->
+              <div
+                class="grid grid-cols-3 gap-3 pt-4 mt-4 border-t border-purple-500/20"
+              >
+                <button
+                  class="bg-purple-900/30 border border-purple-500/30 rounded-lg p-3 text-left hover:bg-purple-900/50 transition-colors"
+                >
+                  <p class="text-xs text-purple-300 mb-1">🔍 Zoom Deeper</p>
+                  <p class="text-xs text-white">Real-world examples</p>
+                </button>
+                <button
+                  class="bg-purple-900/30 border border-purple-500/30 rounded-lg p-3 text-left hover:bg-purple-900/50 transition-colors"
+                >
+                  <p class="text-xs text-purple-300 mb-1">🔍 Zoom Deeper</p>
+                  <p class="text-xs text-white">Choosing tools</p>
+                </button>
+                <button
+                  class="bg-purple-900/30 border border-purple-500/30 rounded-lg p-3 text-left hover:bg-purple-900/50 transition-colors"
+                >
+                  <p class="text-xs text-purple-300 mb-1">🔍 Zoom Deeper</p>
+                  <p class="text-xs text-white">When I forget</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout Explanation -->
+      <div
+        class="bg-gray-900/30 backdrop-blur border border-gray-800 rounded-lg p-6"
+      >
+        <h3 class="text-sm font-semibold text-white mb-4">
+          Card Grid Features
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div>
+            <p class="text-gray-300 mb-2">
+              ✓ <strong>Scannable Overview</strong>
+            </p>
+            <p class="text-gray-400 text-xs">See all key points at once</p>
+          </div>
+          <div>
+            <p class="text-gray-300 mb-2">
+              ✓ <strong>Parallel Exploration</strong>
+            </p>
+            <p class="text-gray-400 text-xs">
+              Expand multiple cards simultaneously
+            </p>
+          </div>
+          <div>
+            <p class="text-gray-300 mb-2">
+              ✓ <strong>Nested Sub-cards</strong>
+            </p>
+            <p class="text-gray-400 text-xs">
+              Each card spawns related actions
+            </p>
+          </div>
+          <div>
+            <p class="text-gray-300 mb-2">✓ <strong>AI as a Card</strong></p>
+            <p class="text-gray-400 text-xs">Responses appear as new cards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,6 +5,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import LearningTree from "./LearningTree";
 import DepthPanel from "./DepthPanel";
 import AIChat from "./AIChat";
+import AccordionPanel from "./AccordionPanel";
+import AISidebar from "./AISidebar";
+import { AccordionStateProvider } from "@/contexts/AccordionStateContext";
 import { useUIActions } from "@/hooks/useUIActions";
 import type {
   UIAction,
@@ -34,7 +37,7 @@ interface BookExplorerProps {
   initialConceptId?: string;
 }
 
-type SelectionType = 'chapter' | 'concept' | null;
+type SelectionType = "chapter" | "concept" | null;
 
 export default function BookExplorer({
   bookId,
@@ -53,112 +56,161 @@ export default function BookExplorer({
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  // Feature flag for accordion mode
+  const [useAccordionMode, setUseAccordionMode] = useState(() => {
+    if (typeof window === "undefined") return false;
+    // Check URL param first
+    if (searchParams.get("accordion") === "true") return true;
+    // Check localStorage
+    return localStorage.getItem("accordion-mode-enabled") === "true";
+  });
+
   const [showAIChat, setShowAIChat] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(
-    initialChapterId || initialConceptId || null
+    initialChapterId || initialConceptId || null,
   );
   const [selectionType, setSelectionType] = useState<SelectionType>(
-    initialChapterId ? 'chapter' : initialConceptId ? 'concept' : null
+    initialChapterId ? "chapter" : initialConceptId ? "concept" : null,
   );
-  const [highlightedConcept, setHighlightedConcept] = useState<string | null>(null);
+  const [highlightedConcept, setHighlightedConcept] = useState<string | null>(
+    null,
+  );
+
+  // Save accordion mode preference to localStorage
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    localStorage.setItem("accordion-mode-enabled", String(useAccordionMode));
+  }, [useAccordionMode]);
 
   // Handle UI actions from AI chat
-  const handleUIAction = useCallback((action: UIAction) => {
-    switch (action.type) {
-      case 'navigate':
-        // Navigate to a section (chapter or concept)
-        const chapter = chapters.find(c => c.id === action.sectionId);
-        if (chapter) {
-          setSelectedNodeId(chapter.id);
-          setSelectionType('chapter');
-          router.push(`/book/${bookId}?mode=explore&chapter=${chapter.id}`, { scroll: false });
-        } else {
-          // Try to find as concept
-          const concept = concepts.find(c =>
-            c.name.toLowerCase().replace(/\s+/g, '-') === action.sectionId ||
-            c.name.toLowerCase() === action.sectionId?.toLowerCase()
-          );
-          if (concept) {
-            setSelectedNodeId(`concept-${concept.name.toLowerCase().replace(/\s+/g, '-')}`);
-            setSelectionType('concept');
+  const handleUIAction = useCallback(
+    (action: UIAction) => {
+      switch (action.type) {
+        case "navigate":
+          // Navigate to a section (chapter or concept)
+          const chapter = chapters.find((c) => c.id === action.sectionId);
+          if (chapter) {
+            setSelectedNodeId(chapter.id);
+            setSelectionType("chapter");
+            router.push(`/book/${bookId}?mode=explore&chapter=${chapter.id}`, {
+              scroll: false,
+            });
+          } else {
+            // Try to find as concept
+            const concept = concepts.find(
+              (c) =>
+                c.name.toLowerCase().replace(/\s+/g, "-") ===
+                  action.sectionId ||
+                c.name.toLowerCase() === action.sectionId?.toLowerCase(),
+            );
+            if (concept) {
+              setSelectedNodeId(
+                `concept-${concept.name.toLowerCase().replace(/\s+/g, "-")}`,
+              );
+              setSelectionType("concept");
+            }
           }
-        }
-        break;
+          break;
 
-      case 'openDepthLevel':
-        // Open a specific depth level for a node
-        setSelectedNodeId(action.nodeId);
-        // The depth level is handled by DepthPanel internally
-        break;
+        case "openDepthLevel":
+          // Open a specific depth level for a node
+          setSelectedNodeId(action.nodeId);
+          // The depth level is handled by DepthPanel internally
+          break;
 
-      case 'highlightConcept':
-        // Highlight a concept temporarily
-        setHighlightedConcept(action.conceptId);
-        setTimeout(() => setHighlightedConcept(null), 3000);
-        break;
+        case "highlightConcept":
+          // Highlight a concept temporarily
+          setHighlightedConcept(action.conceptId);
+          setTimeout(() => setHighlightedConcept(null), 3000);
+          break;
 
-      case 'showQuiz':
-        // Open quiz for a concept (handled by DepthPanel)
-        break;
+        case "showQuiz":
+          // Open quiz for a concept (handled by DepthPanel)
+          break;
 
-      case 'expandTreeNode':
-        // This would be handled by LearningTree if we passed down the action
-        break;
+        case "expandTreeNode":
+          // This would be handled by LearningTree if we passed down the action
+          break;
 
-      default:
-        break;
-    }
-  }, [chapters, concepts, bookId, router]);
+        default:
+          break;
+      }
+    },
+    [chapters, concepts, bookId, router],
+  );
 
   // Subscribe to UI actions from the action bus
   useUIActions(handleUIAction);
 
   // Handle node selection from tree
-  const handleNodeSelect = useCallback((nodeId: string, type: 'chapter' | 'concept') => {
-    setSelectedNodeId(nodeId);
-    setSelectionType(type);
+  const handleNodeSelect = useCallback(
+    (nodeId: string, type: "chapter" | "concept") => {
+      setSelectedNodeId(nodeId);
+      setSelectionType(type);
 
-    // Update URL
-    if (type === 'chapter') {
-      router.push(`/book/${bookId}?mode=explore&chapter=${nodeId}`, { scroll: false });
-    } else {
-      router.push(`/book/${bookId}?mode=explore&concept=${nodeId}`, { scroll: false });
-    }
-  }, [bookId, router]);
+      // Update URL
+      if (type === "chapter") {
+        router.push(`/book/${bookId}?mode=explore&chapter=${nodeId}`, {
+          scroll: false,
+        });
+      } else {
+        router.push(`/book/${bookId}?mode=explore&concept=${nodeId}`, {
+          scroll: false,
+        });
+      }
+    },
+    [bookId, router],
+  );
 
   // Get current chapter data
   const selectedChapter = useMemo(() => {
-    if (selectionType !== 'chapter' || !selectedNodeId) return null;
-    return chapters.find(c => c.id === selectedNodeId) || null;
+    if (selectionType !== "chapter" || !selectedNodeId) return null;
+    return chapters.find((c) => c.id === selectedNodeId) || null;
   }, [selectionType, selectedNodeId, chapters]);
 
   // Get current concept data
   const selectedConcept = useMemo(() => {
-    if (selectionType !== 'concept' || !selectedNodeId) return null;
-    const conceptName = selectedNodeId.replace('concept-', '').replace(/-/g, ' ');
-    return concepts.find(c =>
-      c.name.toLowerCase() === conceptName ||
-      c.name.toLowerCase().replace(/\s+/g, '-') === selectedNodeId.replace('concept-', '')
-    ) || null;
+    if (selectionType !== "concept" || !selectedNodeId) return null;
+    const conceptName = selectedNodeId
+      .replace("concept-", "")
+      .replace(/-/g, " ");
+    return (
+      concepts.find(
+        (c) =>
+          c.name.toLowerCase() === conceptName ||
+          c.name.toLowerCase().replace(/\s+/g, "-") ===
+            selectedNodeId.replace("concept-", ""),
+      ) || null
+    );
   }, [selectionType, selectedNodeId, concepts]);
 
   // Get Feynman explanation for current chapter
   const currentFeynman = useMemo(() => {
     if (!selectedChapter) return undefined;
-    return feynmanChapters.find(f => {
-      const normSource = f.source_chapter.toLowerCase().replace(/_/g, ' ').replace(/\.html$/, '');
-      const normChapter = selectedChapter.id.toLowerCase().replace(/_/g, ' ').replace(/\.md$/, '');
-      return normSource.includes(normChapter) || normChapter.includes(normSource);
+    return feynmanChapters.find((f) => {
+      const normSource = f.source_chapter
+        .toLowerCase()
+        .replace(/_/g, " ")
+        .replace(/\.html$/, "");
+      const normChapter = selectedChapter.id
+        .toLowerCase()
+        .replace(/_/g, " ")
+        .replace(/\.md$/, "");
+      return (
+        normSource.includes(normChapter) || normChapter.includes(normSource)
+      );
     });
   }, [selectedChapter, feynmanChapters]);
 
   // Get quizzes for current selection
   const currentQuizzes = useMemo((): QuizQuestion[] => {
     if (selectedChapter) {
-      const quizChapter = quizzes.find(q => {
-        const normSource = q.source_chapter.toLowerCase().replace(/_/g, ' ');
+      const quizChapter = quizzes.find((q) => {
+        const normSource = q.source_chapter.toLowerCase().replace(/_/g, " ");
         const normChapter = selectedChapter.title.toLowerCase();
-        return normSource.includes(normChapter) || normChapter.includes(normSource);
+        return (
+          normSource.includes(normChapter) || normChapter.includes(normSource)
+        );
       });
       return quizChapter?.questions || [];
     }
@@ -184,27 +236,30 @@ export default function BookExplorer({
   const currentProjects = useMemo(() => {
     if (selectedConcept) {
       const conceptName = selectedConcept.name.toLowerCase();
-      return projects.filter(p =>
-        p.related_concept.toLowerCase().includes(conceptName) ||
-        conceptName.includes(p.related_concept.toLowerCase())
+      return projects.filter(
+        (p) =>
+          p.related_concept.toLowerCase().includes(conceptName) ||
+          conceptName.includes(p.related_concept.toLowerCase()),
       );
     }
 
     if (selectedChapter) {
       // Get concepts for this chapter
-      const chapterConcepts = concepts.filter(c =>
-        c.occurrences?.some(occ =>
-          occ.toLowerCase().includes(selectedChapter.title.toLowerCase()) ||
-          selectedChapter.title.toLowerCase().includes(occ.toLowerCase())
-        )
+      const chapterConcepts = concepts.filter((c) =>
+        c.occurrences?.some(
+          (occ) =>
+            occ.toLowerCase().includes(selectedChapter.title.toLowerCase()) ||
+            selectedChapter.title.toLowerCase().includes(occ.toLowerCase()),
+        ),
       );
-      const conceptNames = chapterConcepts.map(c => c.name.toLowerCase());
+      const conceptNames = chapterConcepts.map((c) => c.name.toLowerCase());
 
-      return projects.filter(p =>
-        conceptNames.some(cn =>
-          cn.includes(p.related_concept.toLowerCase()) ||
-          p.related_concept.toLowerCase().includes(cn)
-        )
+      return projects.filter((p) =>
+        conceptNames.some(
+          (cn) =>
+            cn.includes(p.related_concept.toLowerCase()) ||
+            p.related_concept.toLowerCase().includes(cn),
+        ),
       );
     }
 
@@ -214,25 +269,31 @@ export default function BookExplorer({
   // Get related concepts
   const relatedConcepts = useMemo(() => {
     if (selectedChapter) {
-      return concepts.filter(c =>
-        c.occurrences?.some(occ =>
-          occ.toLowerCase().includes(selectedChapter.title.toLowerCase()) ||
-          selectedChapter.title.toLowerCase().includes(occ.toLowerCase())
+      return concepts
+        .filter((c) =>
+          c.occurrences?.some(
+            (occ) =>
+              occ.toLowerCase().includes(selectedChapter.title.toLowerCase()) ||
+              selectedChapter.title.toLowerCase().includes(occ.toLowerCase()),
+          ),
         )
-      ).slice(0, 10);
+        .slice(0, 10);
     }
 
     if (selectedConcept) {
       // Find concepts that appear in the same chapters
       const conceptOccurrences = selectedConcept.occurrences || [];
-      return concepts.filter(c =>
-        c.name !== selectedConcept.name &&
-        c.occurrences?.some(occ =>
-          conceptOccurrences.some(co =>
-            occ.toLowerCase() === co.toLowerCase()
-          )
+      return concepts
+        .filter(
+          (c) =>
+            c.name !== selectedConcept.name &&
+            c.occurrences?.some((occ) =>
+              conceptOccurrences.some(
+                (co) => occ.toLowerCase() === co.toLowerCase(),
+              ),
+            ),
         )
-      ).slice(0, 10);
+        .slice(0, 10);
     }
 
     return [];
@@ -245,16 +306,21 @@ export default function BookExplorer({
   }, []);
 
   // Handle concept click from DepthPanel
-  const handleConceptClick = useCallback((conceptName: string) => {
-    const concept = concepts.find(c => c.name.toLowerCase() === conceptName.toLowerCase());
-    if (concept) {
-      const conceptId = `concept-${concept.name.toLowerCase().replace(/\s+/g, '-')}`;
-      handleNodeSelect(conceptId, 'concept');
-    }
-  }, [concepts, handleNodeSelect]);
+  const handleConceptClick = useCallback(
+    (conceptName: string) => {
+      const concept = concepts.find(
+        (c) => c.name.toLowerCase() === conceptName.toLowerCase(),
+      );
+      if (concept) {
+        const conceptId = `concept-${concept.name.toLowerCase().replace(/\s+/g, "-")}`;
+        handleNodeSelect(conceptId, "concept");
+      }
+    },
+    [concepts, handleNodeSelect],
+  );
 
   // Current section for AI context
-  const currentSection = selectedChapter?.title || selectedConcept?.name || '';
+  const currentSection = selectedChapter?.title || selectedConcept?.name || "";
 
   return (
     <div className="flex pt-16 h-screen">
@@ -268,10 +334,49 @@ export default function BookExplorer({
         />
       </aside>
 
-      {/* Main Content - Depth Panel */}
-      <main className="flex-1 ml-80 h-[calc(100vh-4rem)] overflow-hidden">
+      {/* Mode Toggle Button */}
+      <button
+        onClick={() => setUseAccordionMode(!useAccordionMode)}
+        className="fixed top-20 left-[340px] z-50 px-4 py-2 bg-gray-800/90 backdrop-blur border border-gray-700 rounded-lg text-sm text-gray-300 hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-lg"
+        title={`Switch to ${useAccordionMode ? "Tabs" : "Accordion"} Mode`}
+      >
+        <span className="text-lg">{useAccordionMode ? "📑" : "🎢"}</span>
+        <span>{useAccordionMode ? "Tabs" : "Accordion"}</span>
+      </button>
+
+      {/* Main Content - Accordion or Depth Panel */}
+      <main
+        className={`flex-1 ml-80 h-[calc(100vh-4rem)] overflow-hidden ${useAccordionMode ? "mr-96" : ""}`}
+      >
         <div className="h-full bg-[var(--color-void-light)]">
-          {selectionType === 'chapter' && selectedChapter ? (
+          {useAccordionMode &&
+          (selectionType === "chapter" || selectionType === "concept") ? (
+            <AccordionStateProvider
+              bookId={bookId}
+              sectionId={selectedNodeId || ""}
+            >
+              <div className="flex h-full">
+                <AccordionPanel
+                  type={selectionType === "chapter" ? "chapter" : "concept"}
+                  bookId={bookId}
+                  chapter={selectedChapter || undefined}
+                  concept={selectedConcept || undefined}
+                  feynman={currentFeynman}
+                  projects={currentProjects}
+                  relatedConcepts={relatedConcepts}
+                  onConceptClick={handleConceptClick}
+                />
+                <AISidebar
+                  bookId={bookId}
+                  bookTitle={title}
+                  currentSection={currentSection}
+                  sectionId={selectedNodeId || ""}
+                />
+              </div>
+            </AccordionStateProvider>
+          ) : !useAccordionMode &&
+            selectionType === "chapter" &&
+            selectedChapter ? (
             <DepthPanel
               type="chapter"
               bookId={bookId}
@@ -286,7 +391,9 @@ export default function BookExplorer({
                 router.refresh();
               }}
             />
-          ) : selectionType === 'concept' && selectedConcept ? (
+          ) : !useAccordionMode &&
+            selectionType === "concept" &&
+            selectedConcept ? (
             <DepthPanel
               type="concept"
               bookId={bookId}
@@ -322,7 +429,7 @@ export default function BookExplorer({
                   <button
                     onClick={() => {
                       if (chapters.length > 0) {
-                        handleNodeSelect(chapters[0].id, 'chapter');
+                        handleNodeSelect(chapters[0].id, "chapter");
                       }
                     }}
                     className="px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--color-electric-blue)] to-[var(--color-electric-purple)] text-white font-medium hover:opacity-90 transition-opacity"
@@ -342,19 +449,25 @@ export default function BookExplorer({
                     <div className="text-2xl font-bold text-[var(--color-electric-blue)]">
                       {chapters.length}
                     </div>
-                    <div className="text-xs text-[var(--color-pearl)]">Chapters</div>
+                    <div className="text-xs text-[var(--color-pearl)]">
+                      Chapters
+                    </div>
                   </div>
                   <div className="p-3 rounded-lg bg-white border border-black/5 shadow-sm">
                     <div className="text-2xl font-bold text-[var(--color-electric-cyan)]">
                       {concepts.length}
                     </div>
-                    <div className="text-xs text-[var(--color-pearl)]">Concepts</div>
+                    <div className="text-xs text-[var(--color-pearl)]">
+                      Concepts
+                    </div>
                   </div>
                   <div className="p-3 rounded-lg bg-white border border-black/5 shadow-sm">
                     <div className="text-2xl font-bold text-[var(--color-electric-emerald)]">
                       {quizzes.reduce((acc, q) => acc + q.questions.length, 0)}
                     </div>
-                    <div className="text-xs text-[var(--color-pearl)]">Questions</div>
+                    <div className="text-xs text-[var(--color-pearl)]">
+                      Questions
+                    </div>
                   </div>
                 </div>
               </div>
@@ -363,20 +476,22 @@ export default function BookExplorer({
         </div>
       </main>
 
-      {/* AI Chat Toggle Button */}
-      <button
-        onClick={() => setShowAIChat(!showAIChat)}
-        className={`fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-all z-40 ${
-          showAIChat
-            ? 'bg-white text-[var(--color-snow)] border border-black/10'
-            : 'bg-gradient-to-br from-[var(--color-electric-blue)] to-[var(--color-electric-purple)] text-white'
-        }`}
-      >
-        {showAIChat ? '✕' : '🤖'}
-      </button>
+      {/* AI Chat Toggle Button - Only show in tab mode */}
+      {!useAccordionMode && (
+        <button
+          onClick={() => setShowAIChat(!showAIChat)}
+          className={`fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-all z-40 ${
+            showAIChat
+              ? "bg-white text-[var(--color-snow)] border border-black/10"
+              : "bg-gradient-to-br from-[var(--color-electric-blue)] to-[var(--color-electric-purple)] text-white"
+          }`}
+        >
+          {showAIChat ? "✕" : "🤖"}
+        </button>
+      )}
 
-      {/* AI Chat Panel */}
-      {showAIChat && (
+      {/* AI Chat Panel - Only show in tab mode */}
+      {!useAccordionMode && showAIChat && (
         <AIChat
           bookId={bookId}
           bookTitle={title}
@@ -389,7 +504,7 @@ export default function BookExplorer({
       {/* Highlighted Concept Indicator */}
       {highlightedConcept && (
         <div className="fixed top-20 left-1/2 -translate-x-1/2 px-4 py-2 rounded-lg bg-[var(--color-electric-cyan)]/10 border border-[var(--color-electric-cyan)]/30 text-[var(--color-electric-cyan)] text-sm z-50 animate-pulse shadow-sm">
-          Highlighting: {highlightedConcept.replace(/-/g, ' ')}
+          Highlighting: {highlightedConcept.replace(/-/g, " ")}
         </div>
       )}
     </div>

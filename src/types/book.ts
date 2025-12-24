@@ -60,7 +60,7 @@ export interface Concept {
 export interface ConceptRelationship {
   fromId: string;
   toId: string;
-  type: 'requires' | 'extends' | 'contrasts' | 'applies-to' | 'related';
+  type: "requires" | "extends" | "contrasts" | "applies-to" | "related";
   strength: number; // 0-1
   explanation?: string;
 }
@@ -68,7 +68,7 @@ export interface ConceptRelationship {
 // Quiz Data
 export interface QuizQuestion {
   question: string;
-  type: 'multiple_choice' | 'true_false' | 'scenario';
+  type: "multiple_choice" | "true_false" | "scenario";
   options: string[];
   correct_answer: string;
   explanation: string;
@@ -94,7 +94,7 @@ export interface FeynmanChapterData extends FeynmanData {
 // Mental Models / Schemas
 export interface SchemaData {
   title: string;
-  type: 'mindmap' | 'flowchart' | 'table' | 'diagram';
+  type: "mindmap" | "flowchart" | "table" | "diagram";
   mermaid_code: string;
   description: string;
   source_chapter: string;
@@ -147,7 +147,7 @@ export interface InquiryData {
 
 export interface InquiryQuestion {
   question: string;
-  type: 'socratic' | 'elaborative' | 'application' | 'critical';
+  type: "socratic" | "elaborative" | "application" | "critical";
   follow_ups?: string[];
 }
 
@@ -174,7 +174,7 @@ export interface Milestone {
 // Learning Tree - Hierarchical Navigation Structure
 export interface LearningTreeNode {
   id: string;
-  type: 'book' | 'theme' | 'chapter' | 'concept' | 'depth-level';
+  type: "book" | "theme" | "chapter" | "concept" | "depth-level";
   title: string;
   children: LearningTreeNode[];
   content?: DepthContent;
@@ -184,26 +184,50 @@ export interface LearningTreeNode {
 }
 
 export interface DepthContent {
-  summary?: string;      // Level 1: 30 sec read
-  keyPoints?: string[];  // Level 2: 2-3 min
-  deepDive?: string;     // Level 3: 10-15 min
-  application?: string;  // Level 4: Practical exercises
+  summary?: string; // Level 1: 30 sec read
+  keyPoints?: string[]; // Level 2: 2-3 min
+  deepDive?: string; // Level 3: 10-15 min
+  application?: string; // Level 4: Practical exercises
 }
 
 export type DepthLevel = 1 | 2 | 3 | 4;
 
 export const DEPTH_LEVELS = [
-  { id: 1 as DepthLevel, label: 'Summary', icon: '📋', readTime: '30 sec', description: 'Quick overview' },
-  { id: 2 as DepthLevel, label: 'Key Points', icon: '🔑', readTime: '2-3 min', description: 'Main ideas and takeaways' },
-  { id: 3 as DepthLevel, label: 'Deep Dive', icon: '🔬', readTime: '10-15 min', description: 'Full explanation with examples' },
-  { id: 4 as DepthLevel, label: 'Application', icon: '🎯', readTime: 'Practice', description: 'Exercises and real-world use' },
+  {
+    id: 1 as DepthLevel,
+    label: "Summary",
+    icon: "📋",
+    readTime: "30 sec",
+    description: "Quick overview",
+  },
+  {
+    id: 2 as DepthLevel,
+    label: "Key Points",
+    icon: "🔑",
+    readTime: "2-3 min",
+    description: "Main ideas and takeaways",
+  },
+  {
+    id: 3 as DepthLevel,
+    label: "Deep Dive",
+    icon: "🔬",
+    readTime: "10-15 min",
+    description: "Full explanation with examples",
+  },
+  {
+    id: 4 as DepthLevel,
+    label: "Application",
+    icon: "🎯",
+    readTime: "Practice",
+    description: "Exercises and real-world use",
+  },
 ] as const;
 
 // Spaced Repetition Types (FSRS Algorithm)
 export interface ReviewCard {
   id: string;
   bookId: string;
-  type: 'concept' | 'quiz' | 'feynman';
+  type: "concept" | "quiz" | "feynman";
   front: string;
   back: string;
   stability: number;
@@ -212,7 +236,7 @@ export interface ReviewCard {
   nextReview: Date | null;
   reps: number;
   lapses: number;
-  state: 'new' | 'learning' | 'review' | 'relearning';
+  state: "new" | "learning" | "review" | "relearning";
   sourceId: string; // ID of the concept/quiz it references
 }
 
@@ -234,21 +258,35 @@ export interface ReviewStats {
   mastered: number; // Cards with stability > 30 days
 }
 
+// AI Content Item (for accordion mode)
+export interface AIContentItem {
+  id: string;
+  parentId: string;
+  depth: number;
+  type: "question" | "followup";
+  question: string;
+  answer: string;
+  createdAt: string;
+  isDeleted?: boolean;
+}
+
 // UI Action Types - For AI-triggered navigation
 export type UIAction =
-  | { type: 'navigate'; sectionId: string; highlightText?: string }
-  | { type: 'openDepthLevel'; nodeId: string; depth: DepthLevel }
-  | { type: 'showQuiz'; conceptId: string }
-  | { type: 'highlightConcept'; conceptId: string }
-  | { type: 'showRelated'; conceptId: string }
-  | { type: 'expandTreeNode'; nodeId: string }
-  | { type: 'collapseTreeNode'; nodeId: string }
-  | { type: 'startReview'; filter?: 'due' | 'new' | 'all' };
+  | { type: "navigate"; sectionId: string; highlightText?: string }
+  | { type: "openDepthLevel"; nodeId: string; depth: DepthLevel }
+  | { type: "showQuiz"; conceptId: string }
+  | { type: "highlightConcept"; conceptId: string }
+  | { type: "showRelated"; conceptId: string }
+  | { type: "expandTreeNode"; nodeId: string }
+  | { type: "collapseTreeNode"; nodeId: string }
+  | { type: "startReview"; filter?: "due" | "new" | "all" }
+  | { type: "addAIContent"; item: AIContentItem; autoExpand?: boolean }
+  | { type: "deleteAIContent"; itemId: string };
 
 // Chat Message Types
 export interface ChatMessage {
   id: string;
-  role: 'user' | 'assistant';
+  role: "user" | "assistant";
   content: string;
   timestamp: Date;
   toolCalls?: ToolCall[];
@@ -280,7 +318,13 @@ export interface BookListItem {
 }
 
 export interface StreamingChatResponse {
-  type: 'text_delta' | 'tool_use_start' | 'tool_result' | 'ui_action' | 'done' | 'error';
+  type:
+    | "text_delta"
+    | "tool_use_start"
+    | "tool_result"
+    | "ui_action"
+    | "done"
+    | "error";
   text?: string;
   toolName?: string;
   toolInput?: Record<string, unknown>;

@@ -23,18 +23,39 @@
   --color-electric-rose: #f43f5e;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-purple));
-  --gradient-secondary: linear-gradient(135deg, var(--color-electric-cyan), var(--color-electric-emerald));
-  --gradient-warm: linear-gradient(135deg, var(--color-electric-amber), var(--color-electric-rose));
-  --gradient-dark: linear-gradient(180deg, var(--color-obsidian), var(--color-void));
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-electric-blue),
+    var(--color-electric-purple)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-electric-cyan),
+    var(--color-electric-emerald)
+  );
+  --gradient-warm: linear-gradient(
+    135deg,
+    var(--color-electric-amber),
+    var(--color-electric-rose)
+  );
+  --gradient-dark: linear-gradient(
+    180deg,
+    var(--color-obsidian),
+    var(--color-void)
+  );
+  --gradient-glass: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
 
   /* Shadows */
   --shadow-glow-blue: 0 0 40px rgba(59, 130, 246, 0.15);
   --shadow-glow-purple: 0 0 40px rgba(139, 92, 246, 0.15);
   --shadow-glow-cyan: 0 0 40px rgba(6, 182, 212, 0.15);
   --shadow-deep: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-card:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
 
   /* Animation timing */
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -141,21 +162,40 @@ body {
 
 /* Animated background gradient */
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .animated-gradient {
-  background: linear-gradient(270deg, var(--color-electric-blue), var(--color-electric-purple), var(--color-electric-cyan));
+  background: linear-gradient(
+    270deg,
+    var(--color-electric-blue),
+    var(--color-electric-purple),
+    var(--color-electric-cyan)
+  );
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
 }
 
 /* Pulse ring animation */
 @keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 1; }
-  50% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(0.95); opacity: 1; }
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
 }
 
 .pulse-ring {
@@ -164,8 +204,13 @@ body {
 
 /* Float animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .float {
@@ -174,12 +219,21 @@ body {
 
 /* Shimmer effect */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -322,25 +376,47 @@ body {
   animation: reveal-up 0.6s var(--ease-smooth) forwards;
 }
 
-.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
-.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-children > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-children > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-children > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-children > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-children > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-children > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 /* Typing indicator */
 @keyframes typing-dot {
-  0%, 60%, 100% { transform: translateY(0); }
-  30% { transform: translateY(-5px); }
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
 }
 
 .typing-dot {
   animation: typing-dot 1.2s infinite;
 }
 
-.typing-dot:nth-child(2) { animation-delay: 0.15s; }
-.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+.typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 /* Quiz answer states */
 .answer-correct {
@@ -361,7 +437,9 @@ body {
 /* Focus ring */
 .focus-ring:focus {
   outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-electric-blue);
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px var(--color-electric-blue);
 }
 
 /* Tooltip */
@@ -383,7 +461,9 @@ body {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s, transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -404,13 +484,42 @@ body {
 }
 
 /* Mastery level colors */
-.mastery-novice { color: var(--color-silver); }
-.mastery-learning { color: var(--color-electric-amber); }
-.mastery-familiar { color: var(--color-electric-blue); }
-.mastery-proficient { color: var(--color-electric-cyan); }
-.mastery-mastered { color: var(--color-electric-emerald); }
+.mastery-novice {
+  color: var(--color-silver);
+}
+.mastery-learning {
+  color: var(--color-electric-amber);
+}
+.mastery-familiar {
+  color: var(--color-electric-blue);
+}
+.mastery-proficient {
+  color: var(--color-electric-cyan);
+}
+.mastery-mastered {
+  color: var(--color-electric-emerald);
+}
 
 /* Session timer */
 .session-timer {
   font-variant-numeric: tabular-nums;
+}
+
+/* Highlight flash animation for scrolled-to items */
+@keyframes highlight-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px rgba(16, 185, 129, 0.2),
+      0 0 30px rgba(16, 185, 129, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.highlight-flash {
+  animation: highlight-flash 2s ease-out;
 }
