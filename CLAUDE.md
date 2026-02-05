@@ -1,6 +1,6 @@
 # Project
 
-AI-powered book learning platform built with Next.js 16, React 19, and Tailwind CSS 4. Processes EPUB books via Python scripts using Gemini API to generate summaries, quizzes, Feynman explanations, and learning content. Features accordion-based progressive disclosure with AI chat sidebar.
+Clean, Medium-inspired book reading platform built with Next.js 16, React 19, and Tailwind CSS 4. Processes EPUB books via Python scripts using Gemini API to generate voice-matched chapter summaries. Focus on typography and readability.
 
 # Commands
 
@@ -22,23 +22,25 @@ AI-powered book learning platform built with Next.js 16, React 19, and Tailwind 
 
 # Architecture
 
-- `/src/app/` - Next.js App Router pages and API routes
-- `/src/components/` - React components (LearningInterface, BookExplorer, AIChat, etc.)
-- `/src/lib/` - Utility functions and shared logic
-- `/src/types/` - TypeScript type definitions
-- `/execution/` - Python scripts for book processing (Gemini API)
-- `/data/books/{bookId}/` - Processed book data (content.json, quizzes.json, etc.)
+- `/src/app/` - Next.js App Router pages (Library, Book, Chapter views)
+- `/src/app/api/books/` - API routes (upload, list, status, delete)
+- `/src/components/` - React components (BookCard, UploadDropzone, ChapterNav, Summary)
+- `/src/lib/books.ts` - Book data loading utilities
+- `/src/types/book.ts` - TypeScript types (Book, Chapter, VoiceProfile, ProcessingStatus)
+- `/execution/` - Python scripts for book processing
+  - `process_book.py` - Main orchestrator
+  - `convert_epub_to_markdown.py` - EPUB extraction
+  - `analyze_voice.py` - Voice profile analysis
+  - `generate_summaries.py` - Voice-matched summary generation
+- `/data/books/{bookId}/` - Processed book data (metadata.json, chapters.json, status.json)
 - `/public/books/` - Uploaded EPUB files
 - Path alias: `@/*` maps to `./src/*`
 
 # Conventions
 
 - Use functional React components with hooks
-- Use Zustand for client-side state management
-- Use Vercel AI SDK (@ai-sdk/anthropic, @ai-sdk/react) for AI features
-- Use Tailwind CSS 4 for styling
-- Use framer-motion for animations
-- API routes use Next.js App Router conventions (route.ts)
+- Use Tailwind CSS 4 for styling (typography-focused, serif for reading)
+- API routes use Next.js App Router conventions (route.ts with Promise params)
 - Python scripts use google-generativeai for Gemini API calls
 - Book data stored as JSON in `/data/books/{bookId}/`
 - Components named with PascalCase, files match component names
