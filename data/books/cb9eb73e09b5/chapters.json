@@ -1,57 +1,68 @@
 [
   {
-    "filename": "00_textPart01.html.md",
+    "number": 1,
     "title": "THE NEW RULES",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/00_textPart01.html.md"
+    "markdownPath": "chapters/00_textPart01.html.md",
+    "wordCount": 6456
   },
   {
-    "filename": "01_textPart02.html.md",
+    "number": 2,
     "title": "BE A MIRROR",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/01_textPart02.html.md"
+    "markdownPath": "chapters/01_textPart02.html.md",
+    "wordCount": 8340
   },
   {
-    "filename": "02_textPart03.html.md",
+    "number": 3,
     "title": "DON\u2019T FEEL THEIR PAIN, LABEL IT",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/02_textPart03.html.md"
+    "markdownPath": "chapters/02_textPart03.html.md",
+    "wordCount": 7639
   },
   {
-    "filename": "03_textPart04.html.md",
+    "number": 4,
     "title": "BEWARE \u201cYES\u201d\u2014MASTER \u201cNO\u201d",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/03_textPart04.html.md"
+    "markdownPath": "chapters/03_textPart04.html.md",
+    "wordCount": 6464
   },
   {
-    "filename": "04_textPart05.html.md",
+    "number": 5,
     "title": "TRIGGER THE TWO WORDS THAT IMMEDIATELY TRANSFORM ANY NEGOTIATION",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/04_textPart05.html.md"
+    "markdownPath": "chapters/04_textPart05.html.md",
+    "wordCount": 4871
   },
   {
-    "filename": "05_textPart06.html.md",
+    "number": 6,
     "title": "BEND THEIR REALITY",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/05_textPart06.html.md"
+    "markdownPath": "chapters/05_textPart06.html.md",
+    "wordCount": 8446
   },
   {
-    "filename": "06_textPart07.html.md",
+    "number": 7,
     "title": "CREATE THE ILLUSION OF CONTROL",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/06_textPart07.html.md"
+    "markdownPath": "chapters/06_textPart07.html.md",
+    "wordCount": 6540
   },
   {
-    "filename": "07_textPart08.html.md",
+    "number": 8,
     "title": "GUARANTEE EXECUTION",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/07_textPart08.html.md"
+    "markdownPath": "chapters/07_textPart08.html.md",
+    "wordCount": 7849
   },
   {
-    "filename": "08_textPart09.html.md",
+    "number": 9,
     "title": "BARGAIN HARD",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/08_textPart09.html.md"
+    "markdownPath": "chapters/08_textPart09.html.md",
+    "wordCount": 7510
   },
   {
-    "filename": "09_textPart10.html.md",
+    "number": 10,
     "title": "FIND THE BLACK SWAN",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/09_textPart10.html.md"
+    "markdownPath": "chapters/09_textPart10.html.md",
+    "wordCount": 9814
   },
   {
-    "filename": "10_nav.xhtml.md",
+    "number": 11,
     "title": "nav",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/cb9eb73e09b5/chapters/10_nav.xhtml.md"
+    "markdownPath": "chapters/10_nav.xhtml.md",
+    "wordCount": 179
   }
 ]

@@ -1,152 +1,182 @@
 [
   {
-    "filename": "01_xhtml04_Epigraph.xhtml.md",
+    "number": 1,
     "title": "Epigraph",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/01_xhtml04_Epigraph.xhtml.md"
+    "markdownPath": "chapters/01_xhtml04_Epigraph.xhtml.md",
+    "wordCount": 42
   },
   {
-    "filename": "03_xhtml06_Introduction_My_Story.xhtml.md",
+    "number": 2,
     "title": "Introduction",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/03_xhtml06_Introduction_My_Story.xhtml.md"
+    "markdownPath": "chapters/03_xhtml06_Introduction_My_Story.xhtml.md",
+    "wordCount": 3068
   },
   {
-    "filename": "04_xhtml07_THE_FUNDAMENTALS_Why_.xhtml.md",
+    "number": 3,
     "title": "THE FUNDAMENTALS",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/04_xhtml07_THE_FUNDAMENTALS_Why_.xhtml.md"
+    "markdownPath": "chapters/04_xhtml07_THE_FUNDAMENTALS_Why_.xhtml.md",
+    "wordCount": 11
   },
   {
-    "filename": "05_xhtml08_1_The_Surprising_Powe.xhtml.md",
+    "number": 4,
     "title": "The Surprising Power of Atomic Habits",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/05_xhtml08_1_The_Surprising_Powe.xhtml.md"
+    "markdownPath": "chapters/05_xhtml08_1_The_Surprising_Powe.xhtml.md",
+    "wordCount": 4374
   },
   {
-    "filename": "06_xhtml09_2_How_Your_Habits_Sha.xhtml.md",
+    "number": 5,
     "title": "How Your Habits Shape Your Identity (and Vice Versa)",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/06_xhtml09_2_How_Your_Habits_Sha.xhtml.md"
+    "markdownPath": "chapters/06_xhtml09_2_How_Your_Habits_Sha.xhtml.md",
+    "wordCount": 3557
   },
   {
-    "filename": "07_xhtml10_3_How_to_Build_Better.xhtml.md",
+    "number": 6,
     "title": "How to Build Better Habits in 4 Simple Steps",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/07_xhtml10_3_How_to_Build_Better.xhtml.md"
+    "markdownPath": "chapters/07_xhtml10_3_How_to_Build_Better.xhtml.md",
+    "wordCount": 3429
   },
   {
-    "filename": "08_xhtml12_4_The_Man_Who_Didn_t_.xhtml.md",
+    "number": 7,
     "title": "The Man Who Didn\u2019t Look Right",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/08_xhtml12_4_The_Man_Who_Didn_t_.xhtml.md"
+    "markdownPath": "chapters/08_xhtml12_4_The_Man_Who_Didn_t_.xhtml.md",
+    "wordCount": 2427
   },
   {
-    "filename": "09_xhtml13_5_The_Best_Way_to_Sta.xhtml.md",
+    "number": 8,
     "title": "The Best Way to Start a New Habit",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/09_xhtml13_5_The_Best_Way_to_Sta.xhtml.md"
+    "markdownPath": "chapters/09_xhtml13_5_The_Best_Way_to_Sta.xhtml.md",
+    "wordCount": 2848
   },
   {
-    "filename": "10_xhtml14_6_Motivation_Is_Overr.xhtml.md",
+    "number": 9,
     "title": "Motivation Is Overrated; Environment Often Matters More",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/10_xhtml14_6_Motivation_Is_Overr.xhtml.md"
+    "markdownPath": "chapters/10_xhtml14_6_Motivation_Is_Overr.xhtml.md",
+    "wordCount": 2930
   },
   {
-    "filename": "11_xhtml15_7_The_Secret_to_Self-.xhtml.md",
+    "number": 10,
     "title": "The Secret to Self-Control",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/11_xhtml15_7_The_Secret_to_Self-.xhtml.md"
+    "markdownPath": "chapters/11_xhtml15_7_The_Secret_to_Self-.xhtml.md",
+    "wordCount": 1550
   },
   {
-    "filename": "12_xhtml17_8_How_to_Make_a_Habit.xhtml.md",
+    "number": 11,
     "title": "How to Make a Habit Irresistible",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/12_xhtml17_8_How_to_Make_a_Habit.xhtml.md"
+    "markdownPath": "chapters/12_xhtml17_8_How_to_Make_a_Habit.xhtml.md",
+    "wordCount": 3105
   },
   {
-    "filename": "13_xhtml18_9_The_Role_of_Family_.xhtml.md",
+    "number": 12,
     "title": "The Role of Family and Friends in Shaping Your Habits",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/13_xhtml18_9_The_Role_of_Family_.xhtml.md"
+    "markdownPath": "chapters/13_xhtml18_9_The_Role_of_Family_.xhtml.md",
+    "wordCount": 2922
   },
   {
-    "filename": "14_xhtml19_10_How_to_Find_and_Fi.xhtml.md",
+    "number": 13,
     "title": "How to Find and Fix the Causes of Your Bad Habits",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/14_xhtml19_10_How_to_Find_and_Fi.xhtml.md"
+    "markdownPath": "chapters/14_xhtml19_10_How_to_Find_and_Fi.xhtml.md",
+    "wordCount": 2865
   },
   {
-    "filename": "15_xhtml21_11_Walk_Slowly_but_Ne.xhtml.md",
+    "number": 14,
     "title": "Walk Slowly, but Never Backward",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/15_xhtml21_11_Walk_Slowly_but_Ne.xhtml.md"
+    "markdownPath": "chapters/15_xhtml21_11_Walk_Slowly_but_Ne.xhtml.md",
+    "wordCount": 1655
   },
   {
-    "filename": "16_xhtml22_12_The_Law_of_Least_E.xhtml.md",
+    "number": 15,
     "title": "The Law of Least Effort",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/16_xhtml22_12_The_Law_of_Least_E.xhtml.md"
+    "markdownPath": "chapters/16_xhtml22_12_The_Law_of_Least_E.xhtml.md",
+    "wordCount": 2908
   },
   {
-    "filename": "17_xhtml23_13_How_to_Stop_Procra.xhtml.md",
+    "number": 16,
     "title": "How to Stop Procrastinating by Using the Two-Minute Rule",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/17_xhtml23_13_How_to_Stop_Procra.xhtml.md"
+    "markdownPath": "chapters/17_xhtml23_13_How_to_Stop_Procra.xhtml.md",
+    "wordCount": 2389
   },
   {
-    "filename": "18_xhtml24_14_How_to_Make_Good_H.xhtml.md",
+    "number": 17,
     "title": "How to Make Good Habits Inevitable and Bad Habits Impossible",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/18_xhtml24_14_How_to_Make_Good_H.xhtml.md"
+    "markdownPath": "chapters/18_xhtml24_14_How_to_Make_Good_H.xhtml.md",
+    "wordCount": 2344
   },
   {
-    "filename": "19_xhtml26_15_The_Cardinal_Rule_.xhtml.md",
+    "number": 18,
     "title": "The Cardinal Rule of Behavior Change",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/19_xhtml26_15_The_Cardinal_Rule_.xhtml.md"
+    "markdownPath": "chapters/19_xhtml26_15_The_Cardinal_Rule_.xhtml.md",
+    "wordCount": 3154
   },
   {
-    "filename": "20_xhtml27_16_How_to_Stick_with_.xhtml.md",
+    "number": 19,
     "title": "How to Stick with Good Habits Every Day",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/20_xhtml27_16_How_to_Stick_with_.xhtml.md"
+    "markdownPath": "chapters/20_xhtml27_16_How_to_Stick_with_.xhtml.md",
+    "wordCount": 2898
   },
   {
-    "filename": "21_xhtml28_17_How_an_Accountabil.xhtml.md",
+    "number": 20,
     "title": "How an Accountability Partner Can Change Everything",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/21_xhtml28_17_How_an_Accountabil.xhtml.md"
+    "markdownPath": "chapters/21_xhtml28_17_How_an_Accountabil.xhtml.md",
+    "wordCount": 2181
   },
   {
-    "filename": "22_xhtml29_ADVANCED_TACTICS_How_.xhtml.md",
+    "number": 21,
     "title": "ADVANCED TACTICS",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/22_xhtml29_ADVANCED_TACTICS_How_.xhtml.md"
+    "markdownPath": "chapters/22_xhtml29_ADVANCED_TACTICS_How_.xhtml.md",
+    "wordCount": 15
   },
   {
-    "filename": "23_xhtml30_18_The_Truth_About_Ta.xhtml.md",
+    "number": 22,
     "title": "The Truth About Talent (When Genes Matter and When They Don\u2019t)",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/23_xhtml30_18_The_Truth_About_Ta.xhtml.md"
+    "markdownPath": "chapters/23_xhtml30_18_The_Truth_About_Ta.xhtml.md",
+    "wordCount": 3384
   },
   {
-    "filename": "24_xhtml31_19_The_Goldilocks_Rul.xhtml.md",
+    "number": 23,
     "title": "The Goldilocks Rule: How to Stay Motivated in Life and Work",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/24_xhtml31_19_The_Goldilocks_Rul.xhtml.md"
+    "markdownPath": "chapters/24_xhtml31_19_The_Goldilocks_Rul.xhtml.md",
+    "wordCount": 2261
   },
   {
-    "filename": "25_xhtml32_20_The_Downside_of_Cr.xhtml.md",
+    "number": 24,
     "title": "The Downside of Creating Good Habits",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/25_xhtml32_20_The_Downside_of_Cr.xhtml.md"
+    "markdownPath": "chapters/25_xhtml32_20_The_Downside_of_Cr.xhtml.md",
+    "wordCount": 2968
   },
   {
-    "filename": "26_xhtml33_Conclusion_The_Secret.xhtml.md",
+    "number": 25,
     "title": "Conclusion",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/26_xhtml33_Conclusion_The_Secret.xhtml.md"
+    "markdownPath": "chapters/26_xhtml33_Conclusion_The_Secret.xhtml.md",
+    "wordCount": 783
   },
   {
-    "filename": "27_xhtml35_What_Should_You_Read_.xhtml.md",
+    "number": 26,
     "title": "What Should You Read Next?",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/27_xhtml35_What_Should_You_Read_.xhtml.md"
+    "markdownPath": "chapters/27_xhtml35_What_Should_You_Read_.xhtml.md",
+    "wordCount": 115
   },
   {
-    "filename": "28_xhtml36_Little_Lessons_from_t.xhtml.md",
+    "number": 27,
     "title": "Little Lessons from the Four Laws",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/28_xhtml36_Little_Lessons_from_t.xhtml.md"
+    "markdownPath": "chapters/28_xhtml36_Little_Lessons_from_t.xhtml.md",
+    "wordCount": 1712
   },
   {
-    "filename": "29_xhtml37_How_to_Apply_These_Id.xhtml.md",
+    "number": 28,
     "title": "How to Apply These Ideas to Business",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/29_xhtml37_How_to_Apply_These_Id.xhtml.md"
+    "markdownPath": "chapters/29_xhtml37_How_to_Apply_These_Id.xhtml.md",
+    "wordCount": 77
   },
   {
-    "filename": "30_xhtml38_How_to_Apply_These_Id.xhtml.md",
+    "number": 29,
     "title": "How to Apply These Ideas to Parenting",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/30_xhtml38_How_to_Apply_These_Id.xhtml.md"
+    "markdownPath": "chapters/30_xhtml38_How_to_Apply_These_Id.xhtml.md",
+    "wordCount": 102
   },
   {
-    "filename": "70_xhtml78_next-reads.xhtml.md",
+    "number": 30,
     "title": "What\u2019s next on your reading list?",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/765cef509d19/chapters/70_xhtml78_next-reads.xhtml.md"
+    "markdownPath": "chapters/70_xhtml78_next-reads.xhtml.md",
+    "wordCount": 25
   }
 ]
