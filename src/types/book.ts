@@ -11,6 +11,9 @@ export interface Book {
   createdAt: string;
   processedAt?: string;
   status: BookStatus;
+  // User ownership fields
+  ownerId?: string | null;
+  isPublic: boolean;
 }
 
 export type BookStatus =
