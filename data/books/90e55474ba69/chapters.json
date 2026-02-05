@@ -1,117 +1,140 @@
 [
   {
-    "filename": "00_Chris-Voss_Steve-Shull_FM_EBOOK.xhtml.md",
+    "number": 1,
     "title": "Contents",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/00_Chris-Voss_Steve-Shull_FM_EBOOK.xhtml.md"
+    "markdownPath": "chapters/00_Chris-Voss_Steve-Shull_FM_EBOOK.xhtml.md",
+    "wordCount": 104
   },
   {
-    "filename": "01_Chris-Voss_Steve-Shull_FM_EBOOK-1.xhtml.md",
+    "number": 2,
     "title": "Chris-Voss Steve-Shull FM EBOOK-1",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/01_Chris-Voss_Steve-Shull_FM_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/01_Chris-Voss_Steve-Shull_FM_EBOOK-1.xhtml.md",
+    "wordCount": 143
   },
   {
-    "filename": "03_Chris-Voss_Steve-Shull_FM_EBOOK-3.xhtml.md",
+    "number": 3,
     "title": "Foreword",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/03_Chris-Voss_Steve-Shull_FM_EBOOK-3.xhtml.md"
+    "markdownPath": "chapters/03_Chris-Voss_Steve-Shull_FM_EBOOK-3.xhtml.md",
+    "wordCount": 550
   },
   {
-    "filename": "04_Chris-Voss_Steve-Shull_Intro_EBOOK.xhtml.md",
+    "number": 4,
     "title": "Introduction",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/04_Chris-Voss_Steve-Shull_Intro_EBOOK.xhtml.md"
+    "markdownPath": "chapters/04_Chris-Voss_Steve-Shull_Intro_EBOOK.xhtml.md",
+    "wordCount": 3840
   },
   {
-    "filename": "05_Chris-Voss_Steve-Shull_C1_EBOOK.xhtml.md",
+    "number": 5,
     "title": "Ignore Human Nature at Your Peril",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/05_Chris-Voss_Steve-Shull_C1_EBOOK.xhtml.md"
+    "markdownPath": "chapters/05_Chris-Voss_Steve-Shull_C1_EBOOK.xhtml.md",
+    "wordCount": 3655
   },
   {
-    "filename": "06_Chris-Voss_Steve-Shull_C1_EBOOK-1.xhtml.md",
+    "number": 6,
     "title": "Key Takeaways",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/06_Chris-Voss_Steve-Shull_C1_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/06_Chris-Voss_Steve-Shull_C1_EBOOK-1.xhtml.md",
+    "wordCount": 160
   },
   {
-    "filename": "07_Chris-Voss_Steve-Shull_C2_EBOOK.xhtml.md",
+    "number": 7,
     "title": "The Favorite or the Fool",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/07_Chris-Voss_Steve-Shull_C2_EBOOK.xhtml.md"
+    "markdownPath": "chapters/07_Chris-Voss_Steve-Shull_C2_EBOOK.xhtml.md",
+    "wordCount": 5387
   },
   {
-    "filename": "08_Chris-Voss_Steve-Shull_C2_EBOOK-1.xhtml.md",
+    "number": 8,
     "title": "Tactical Empathy Toolbox",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/08_Chris-Voss_Steve-Shull_C2_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/08_Chris-Voss_Steve-Shull_C2_EBOOK-1.xhtml.md",
+    "wordCount": 183
   },
   {
-    "filename": "09_Chris-Voss_Steve-Shull_C3_EBOOK.xhtml.md",
+    "number": 9,
     "title": "No More Free Consulting",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/09_Chris-Voss_Steve-Shull_C3_EBOOK.xhtml.md"
+    "markdownPath": "chapters/09_Chris-Voss_Steve-Shull_C3_EBOOK.xhtml.md",
+    "wordCount": 4857
   },
   {
-    "filename": "10_Chris-Voss_Steve-Shull_C3_EBOOK-1.xhtml.md",
+    "number": 10,
     "title": "Tactical Empathy Toolbox",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/10_Chris-Voss_Steve-Shull_C3_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/10_Chris-Voss_Steve-Shull_C3_EBOOK-1.xhtml.md",
+    "wordCount": 209
   },
   {
-    "filename": "11_Chris-Voss_Steve-Shull_C4_EBOOK.xhtml.md",
+    "number": 11,
     "title": "Get the Elephants Out Early",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/11_Chris-Voss_Steve-Shull_C4_EBOOK.xhtml.md"
+    "markdownPath": "chapters/11_Chris-Voss_Steve-Shull_C4_EBOOK.xhtml.md",
+    "wordCount": 4951
   },
   {
-    "filename": "12_Chris-Voss_Steve-Shull_C4_EBOOK-1.xhtml.md",
+    "number": 12,
     "title": "Tactical Empathy Toolbox",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/12_Chris-Voss_Steve-Shull_C4_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/12_Chris-Voss_Steve-Shull_C4_EBOOK-1.xhtml.md",
+    "wordCount": 203
   },
   {
-    "filename": "13_Chris-Voss_Steve-Shull_C5_EBOOK.xhtml.md",
+    "number": 13,
     "title": "Put the Responsibility Where It Belongs",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/13_Chris-Voss_Steve-Shull_C5_EBOOK.xhtml.md"
+    "markdownPath": "chapters/13_Chris-Voss_Steve-Shull_C5_EBOOK.xhtml.md",
+    "wordCount": 3121
   },
   {
-    "filename": "14_Chris-Voss_Steve-Shull_C5_EBOOK-1.xhtml.md",
+    "number": 14,
     "title": "Key Takeaways",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/14_Chris-Voss_Steve-Shull_C5_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/14_Chris-Voss_Steve-Shull_C5_EBOOK-1.xhtml.md",
+    "wordCount": 142
   },
   {
-    "filename": "15_Chris-Voss_Steve-Shull_C6_EBOOK.xhtml.md",
+    "number": 15,
     "title": "Let Them Say No",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/15_Chris-Voss_Steve-Shull_C6_EBOOK.xhtml.md"
+    "markdownPath": "chapters/15_Chris-Voss_Steve-Shull_C6_EBOOK.xhtml.md",
+    "wordCount": 2532
   },
   {
-    "filename": "16_Chris-Voss_Steve-Shull_C6_EBOOK-1.xhtml.md",
+    "number": 16,
     "title": "Tactical Empathy Toolbox",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/16_Chris-Voss_Steve-Shull_C6_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/16_Chris-Voss_Steve-Shull_C6_EBOOK-1.xhtml.md",
+    "wordCount": 167
   },
   {
-    "filename": "17_Chris-Voss_Steve-Shull_C7_EBOOK.xhtml.md",
+    "number": 17,
     "title": "Nail the Lasting Impression",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/17_Chris-Voss_Steve-Shull_C7_EBOOK.xhtml.md"
+    "markdownPath": "chapters/17_Chris-Voss_Steve-Shull_C7_EBOOK.xhtml.md",
+    "wordCount": 3160
   },
   {
-    "filename": "18_Chris-Voss_Steve-Shull_C7_EBOOK-1.xhtml.md",
+    "number": 18,
     "title": "Key Takeaways",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/18_Chris-Voss_Steve-Shull_C7_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/18_Chris-Voss_Steve-Shull_C7_EBOOK-1.xhtml.md",
+    "wordCount": 149
   },
   {
-    "filename": "19_Chris-Voss_Steve-Shull_C8_EBOOK.xhtml.md",
+    "number": 19,
     "title": "Be a Full-Service, Full Fee Agent",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/19_Chris-Voss_Steve-Shull_C8_EBOOK.xhtml.md"
+    "markdownPath": "chapters/19_Chris-Voss_Steve-Shull_C8_EBOOK.xhtml.md",
+    "wordCount": 6686
   },
   {
-    "filename": "20_Chris-Voss_Steve-Shull_C8_EBOOK-1.xhtml.md",
+    "number": 20,
     "title": "Key Takeaways",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/20_Chris-Voss_Steve-Shull_C8_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/20_Chris-Voss_Steve-Shull_C8_EBOOK-1.xhtml.md",
+    "wordCount": 158
   },
   {
-    "filename": "21_Chris-Voss_Steve-Shull_BM_EBOOK.xhtml.md",
+    "number": 21,
     "title": "Conclusion",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/21_Chris-Voss_Steve-Shull_BM_EBOOK.xhtml.md"
+    "markdownPath": "chapters/21_Chris-Voss_Steve-Shull_BM_EBOOK.xhtml.md",
+    "wordCount": 2741
   },
   {
-    "filename": "22_Chris-Voss_Steve-Shull_BM_EBOOK-1.xhtml.md",
+    "number": 22,
     "title": "From Steve Shull",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/22_Chris-Voss_Steve-Shull_BM_EBOOK-1.xhtml.md"
+    "markdownPath": "chapters/22_Chris-Voss_Steve-Shull_BM_EBOOK-1.xhtml.md",
+    "wordCount": 726
   },
   {
-    "filename": "23_Chris-Voss_Steve-Shull_BM_EBOOK-2.xhtml.md",
+    "number": 23,
     "title": "About the Authors",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/90e55474ba69/chapters/23_Chris-Voss_Steve-Shull_BM_EBOOK-2.xhtml.md"
+    "markdownPath": "chapters/23_Chris-Voss_Steve-Shull_BM_EBOOK-2.xhtml.md",
+    "wordCount": 114
   }
 ]

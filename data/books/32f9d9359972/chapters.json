@@ -1,102 +1,122 @@
 [
   {
-    "filename": "00_OEBPSTextchapter0000.html.md",
+    "number": 1,
     "title": "Ego, Authority, Failure",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/00_OEBPSTextchapter0000.html.md"
+    "markdownPath": "chapters/00_OEBPSTextchapter0000.html.md",
+    "wordCount": 213
   },
   {
-    "filename": "01_OEBPSTextchapter0001.html.md",
+    "number": 2,
     "title": "Foreword",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/01_OEBPSTextchapter0001.html.md"
+    "markdownPath": "chapters/01_OEBPSTextchapter0001.html.md",
+    "wordCount": 599
   },
   {
-    "filename": "02_OEBPSTextchapter0002.html.md",
+    "number": 3,
     "title": "Introduction",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/02_OEBPSTextchapter0002.html.md"
+    "markdownPath": "chapters/02_OEBPSTextchapter0002.html.md",
+    "wordCount": 2310
   },
   {
-    "filename": "04_OEBPSTextchapter0006.html.md",
+    "number": 4,
     "title": "The Crisis of Leadership and the Hostage Negotiator Framework",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/04_OEBPSTextchapter0006.html.md"
+    "markdownPath": "chapters/04_OEBPSTextchapter0006.html.md",
+    "wordCount": 2796
   },
   {
-    "filename": "05_OEBPSTextchapter0008.html.md",
+    "number": 5,
     "title": "People First",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/05_OEBPSTextchapter0008.html.md"
+    "markdownPath": "chapters/05_OEBPSTextchapter0008.html.md",
+    "wordCount": 3549
   },
   {
-    "filename": "06_OEBPSTextchapter0010.html.md",
+    "number": 6,
     "title": "Humans over Employees",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/06_OEBPSTextchapter0010.html.md"
+    "markdownPath": "chapters/06_OEBPSTextchapter0010.html.md",
+    "wordCount": 5406
   },
   {
-    "filename": "07_OEBPSTextchapter0012.html.md",
+    "number": 7,
     "title": "Tactical Empathy",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/07_OEBPSTextchapter0012.html.md"
+    "markdownPath": "chapters/07_OEBPSTextchapter0012.html.md",
+    "wordCount": 3209
   },
   {
-    "filename": "08_OEBPSTextchapter0014.html.md",
+    "number": 8,
     "title": "Inclusion",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/08_OEBPSTextchapter0014.html.md"
+    "markdownPath": "chapters/08_OEBPSTextchapter0014.html.md",
+    "wordCount": 4685
   },
   {
-    "filename": "09_OEBPSTextchapter0018.html.md",
+    "number": 9,
     "title": "The Action Imperative",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/09_OEBPSTextchapter0018.html.md"
+    "markdownPath": "chapters/09_OEBPSTextchapter0018.html.md",
+    "wordCount": 3971
   },
   {
-    "filename": "10_OEBPSTextchapter0020.html.md",
+    "number": 10,
     "title": "Toxic Leadership",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/10_OEBPSTextchapter0020.html.md"
+    "markdownPath": "chapters/10_OEBPSTextchapter0020.html.md",
+    "wordCount": 3636
   },
   {
-    "filename": "11_OEBPSTextchapter0022.html.md",
+    "number": 11,
     "title": "Emotional Control, Decision-Making, and Mistakes",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/11_OEBPSTextchapter0022.html.md"
+    "markdownPath": "chapters/11_OEBPSTextchapter0022.html.md",
+    "wordCount": 3081
   },
   {
-    "filename": "12_OEBPSTextchapter0024.html.md",
+    "number": 12,
     "title": "Blueflamers",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/12_OEBPSTextchapter0024.html.md"
+    "markdownPath": "chapters/12_OEBPSTextchapter0024.html.md",
+    "wordCount": 1564
   },
   {
-    "filename": "13_OEBPSTextchapter0028.html.md",
+    "number": 13,
     "title": "The Quick Two Plus One",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/13_OEBPSTextchapter0028.html.md"
+    "markdownPath": "chapters/13_OEBPSTextchapter0028.html.md",
+    "wordCount": 3270
   },
   {
-    "filename": "14_OEBPSTextchapter0030.html.md",
+    "number": 14,
     "title": "Delivery, Calibrated Questions, and Paraphrasing",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/14_OEBPSTextchapter0030.html.md"
+    "markdownPath": "chapters/14_OEBPSTextchapter0030.html.md",
+    "wordCount": 3037
   },
   {
-    "filename": "15_OEBPSTextchapter0032.html.md",
+    "number": 15,
     "title": "Accusations Audits and Negotiator Personality Types",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/15_OEBPSTextchapter0032.html.md"
+    "markdownPath": "chapters/15_OEBPSTextchapter0032.html.md",
+    "wordCount": 4134
   },
   {
-    "filename": "16_OEBPSTextchapter0034.html.md",
+    "number": 16,
     "title": "The Best of the Rest",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/16_OEBPSTextchapter0034.html.md"
+    "markdownPath": "chapters/16_OEBPSTextchapter0034.html.md",
+    "wordCount": 3580
   },
   {
-    "filename": "17_OEBPSTextchapter0036.html.md",
+    "number": 17,
     "title": "The Hostage Negotiator Leader",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/17_OEBPSTextchapter0036.html.md"
+    "markdownPath": "chapters/17_OEBPSTextchapter0036.html.md",
+    "wordCount": 1367
   },
   {
-    "filename": "19_OEBPSTextchapter0038.html.md",
+    "number": 18,
     "title": "Hostage Negotiator Parenting",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/19_OEBPSTextchapter0038.html.md"
+    "markdownPath": "chapters/19_OEBPSTextchapter0038.html.md",
+    "wordCount": 2704
   },
   {
-    "filename": "20_OEBPSTextchapter0039.html.md",
+    "number": 19,
     "title": "Bibliography",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/20_OEBPSTextchapter0039.html.md"
+    "markdownPath": "chapters/20_OEBPSTextchapter0039.html.md",
+    "wordCount": 556
   },
   {
-    "filename": "21_nav.xhtml.md",
+    "number": 20,
     "title": "nav",
-    "path": "/Users/craigdossantos/Coding/booksite/data/books/32f9d9359972/chapters/21_nav.xhtml.md"
+    "markdownPath": "chapters/21_nav.xhtml.md",
+    "wordCount": 153
   }
 ]
