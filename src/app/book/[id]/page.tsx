@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { auth } from "@/auth";
 import { getBook } from "@/lib/books";
 import { ChapterList } from "@/components/ChapterList";
 
@@ -9,7 +10,8 @@ interface Props {
 
 export default async function BookDetailPage({ params }: Props) {
   const { id } = await params;
-  const book = await getBook(id);
+  const session = await auth();
+  const book = await getBook(id, session?.user?.id);
 
   if (!book) {
     notFound();
