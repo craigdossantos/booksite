@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { auth } from "@/auth";
 import { getBook, getChapterContent } from "@/lib/books";
 import { ChapterNav } from "@/components/ChapterNav";
 import { Summary } from "@/components/Summary";
@@ -9,7 +10,8 @@ interface Props {
 
 export default async function ChapterPage({ params }: Props) {
   const { id, num } = await params;
-  const book = await getBook(id);
+  const session = await auth();
+  const book = await getBook(id, session?.user?.id);
   const chapterNum = parseInt(num, 10);
 
   if (!book) {

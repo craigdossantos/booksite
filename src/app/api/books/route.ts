@@ -1,7 +1,15 @@
 import { NextResponse } from "next/server";
-import { getBooks } from "@/lib/books";
+import { auth } from "@/auth";
+import { getBooks, getPublicBooks } from "@/lib/books";
 
 export async function GET() {
-  const books = await getBooks();
+  const session = await auth();
+
+  // If authenticated, return public books + user's private books
+  // If not authenticated, return only public books
+  const books = session?.user?.id
+    ? await getBooks(session.user.id)
+    : await getPublicBooks();
+
   return NextResponse.json({ books });
 }

@@ -1,35 +1,33 @@
-import { getBooks } from "@/lib/books";
-import { UploadDropzone } from "@/components/UploadDropzone";
-import { BookCard } from "@/components/BookCard";
-import { EmptyLibrary } from "@/components/EmptyLibrary";
+import { getPublicBooks } from "@/lib/books";
+import { auth } from "@/auth";
+import { LibraryView } from "@/components/LibraryView";
+import { AuthButton } from "@/components/AuthButton";
+import { UserMenu } from "@/components/UserMenu";
 
 export default async function LibraryPage() {
-  const books = await getBooks();
+  const session = await auth();
+  const isAuthenticated = !!session?.user;
+
+  // Fetch initial books (public books for everyone)
+  const initialBooks = await getPublicBooks();
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
-      <header className="mb-12">
-        <h1 className="text-4xl font-serif font-bold text-gray-900">
-          Your Library
-        </h1>
-        <p className="mt-2 text-lg text-gray-600">
-          Upload books and read AI-generated summaries
-        </p>
+      <header className="mb-12 flex items-start justify-between">
+        <div>
+          <h1 className="text-4xl font-serif font-bold text-gray-900">
+            {isAuthenticated ? "Your Library" : "Community Library"}
+          </h1>
+          <p className="mt-2 text-lg text-gray-600">
+            {isAuthenticated
+              ? "Your books and community discoveries"
+              : "Browse books shared by the community"}
+          </p>
+        </div>
+        {isAuthenticated ? <UserMenu /> : <AuthButton />}
       </header>
 
-      <UploadDropzone />
-
-      {books.length === 0 ? (
-        <div className="mt-12">
-          <EmptyLibrary />
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
-          {books.map((book) => (
-            <BookCard key={book.id} book={book} />
-          ))}
-        </div>
-      )}
+      <LibraryView initialBooks={initialBooks} />
     </main>
   );
 }

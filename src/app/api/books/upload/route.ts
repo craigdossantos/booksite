@@ -3,11 +3,23 @@ import { writeFile, mkdir } from "fs/promises";
 import { spawn } from "child_process";
 import { createHash } from "crypto";
 import path from "path";
+import { auth } from "@/auth";
+import { createBook } from "@/lib/books";
 
 export async function POST(request: NextRequest) {
   try {
+    // Require authentication
+    const session = await auth();
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { error: "Authentication required" },
+        { status: 401 },
+      );
+    }
+
     const formData = await request.formData();
     const file = formData.get("file") as File;
+    const isPublic = formData.get("isPublic") === "true";
 
     if (!file) {
       return NextResponse.json({ error: "No file provided" }, { status: 400 });
@@ -54,6 +66,16 @@ export async function POST(request: NextRequest) {
       JSON.stringify(status, null, 2),
     );
 
+    // Create book in database with ownership
+    await createBook({
+      id: bookId,
+      title: file.name.replace(/\.epub$/i, ""),
+      author: "Unknown",
+      ownerId: session.user.id,
+      isPublic,
+      status: "uploading",
+    });
+
     // Start processing in background
     const pythonProcess = spawn(
       "python3",
@@ -74,6 +96,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       bookId,
       status: "uploading",
+      isPublic,
       message: "Book uploaded and processing started",
     });
   } catch (error) {
