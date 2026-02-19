@@ -35,13 +35,13 @@ export default function AISidebar({
         currentSection,
       },
     }),
-    onResponse: (response) => {
-      // Will be called when streaming starts
-      console.log("AI response started");
-    },
-    onFinish: (message) => {
+    onFinish: ({ message }) => {
       // When AI finishes responding, extract and inject content into accordion
-      handleAIResponse(message.content, inputValue);
+      const text = message.parts
+        .filter((p): p is { type: "text"; text: string } => p.type === "text")
+        .map((p) => p.text)
+        .join("");
+      handleAIResponse(text, inputValue);
     },
   });
 
@@ -151,7 +151,15 @@ export default function AISidebar({
           >
             {message.role === "user" ? (
               <div className="bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-2xl rounded-br-sm px-4 py-2 max-w-[80%] shadow">
-                <p className="text-sm">{message.content}</p>
+                <p className="text-sm">
+                  {message.parts
+                    .filter(
+                      (p): p is { type: "text"; text: string } =>
+                        p.type === "text",
+                    )
+                    .map((p) => p.text)
+                    .join("")}
+                </p>
               </div>
             ) : (
               <div className="bg-gray-800 border border-gray-700 rounded-2xl rounded-bl-sm px-4 py-2 max-w-[80%] shadow-sm">
