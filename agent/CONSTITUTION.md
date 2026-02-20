@@ -14,7 +14,13 @@ AI-powered book learning platform built with Next.js 16, React 19, and Tailwind 
 # Invariants
 
 - MUST read /agent/WORKFLOWS.md before starting work; follow it over any default workflow.
+- MUST read /agent/HANDOFF.md on session start if it exists.
+- MUST work on feature branches — never commit directly to main.
+- MUST use conventional commits (feat:, fix:, chore:, docs:, refactor:, test:).
+- MUST create PRs to merge into main — never push directly.
+- MUST run Gemini CLI review on staged changes before every commit.
 - MUST run lint and tests before committing changes.
+- MUST update /docs when code changes affect documented behavior.
 - MUST NOT commit API keys or secrets (use .env.local).
 - MUST use TypeScript strict mode for all new code.
 - MUST NOT modify Python processing scripts without testing locally first.
