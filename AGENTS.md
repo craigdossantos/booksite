@@ -54,6 +54,7 @@ Python scripts in `/execution/`:
 
 - **Constitution**: `CLAUDE.md` (Claude Code), `/agent/CONSTITUTION.md` (tool-agnostic)
 - **Workflows**: `/agent/WORKFLOWS.md`
+- **Handoff**: `/agent/HANDOFF.md` (session snapshot, read on start)
 - **Memory**: `/agent/MEMORY.md` (learnings, selectively loaded)
 - **Learnings**: `/agent/LEARNINGS.md` (distilled)
 - **Plans**: `docs/plans/` (implementation plans)

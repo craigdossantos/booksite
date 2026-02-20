@@ -9,7 +9,13 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
     include: ["**/*.{test,spec}.{ts,tsx}"],
-    exclude: ["node_modules", ".next", "execution/**"],
+    exclude: [
+      "node_modules",
+      ".next",
+      "execution/**",
+      "pipeline-ui/**",
+      "book-agent/**",
+    ],
     coverage: {
       provider: "v8",
       reporter: ["text", "html"],

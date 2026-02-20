@@ -8,6 +8,7 @@ This directory contains configuration and memory files for AI coding agents.
 | ----------------- | ---------------------------------------------- | --------------------------- |
 | `CONSTITUTION.md` | Tool-agnostic constitution (mirrors CLAUDE.md) | Codex, Gemini, other agents |
 | `WORKFLOWS.md`    | Workflow policy - MUST read before work        | All agents                  |
+| `HANDOFF.md`      | Point-in-time session snapshot                 | Read on session start       |
 | `MEMORY.md`       | Append-only learnings                          | Selectively loaded          |
 | `LEARNINGS.md`    | Distilled/promoted learnings                   | Selectively loaded          |
 | `README.md`       | This file - wiring documentation               | Reference only              |
@@ -25,13 +26,22 @@ This directory contains configuration and memory files for AI coding agents.
 
 - **Always loads**: `/CLAUDE.md`
 - **Must read**: `/agent/WORKFLOWS.md` (per invariant in CLAUDE.md)
+- **Must read**: `/agent/HANDOFF.md` on session start if it exists
 - **Optional**: `/agent/MEMORY.md`, `/agent/LEARNINGS.md`
 
 ### Codex / Other Agents
 
 - **Inject**: `/agent/CONSTITUTION.md` (equivalent to CLAUDE.md)
 - **Must read**: `/agent/WORKFLOWS.md`
+- **Must read**: `/agent/HANDOFF.md` on session start if it exists
 - **Retrieve selectively**: `/agent/MEMORY.md`, `/agent/LEARNINGS.md`
+
+## Handoff
+
+- **HANDOFF.md**: Point-in-time session snapshot, overwritten each handoff
+  - Written by: `/agent-handoff` skill
+  - Read on session start to resume context
+  - Ephemeral — not permanent memory
 
 ## Memory vs Learnings
 

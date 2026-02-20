@@ -50,3 +50,6 @@ prisma/dev.db-journal
 
 # conductor
 .context/
+
+# agent artifacts output
+/output/
