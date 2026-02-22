@@ -1,7 +1,8 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { useState, useRef, useEffect } from "react";
+import { DefaultChatTransport } from "ai";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { ChatMessage } from "./ChatMessage";
 
 interface ChatPanelProps {
@@ -18,10 +19,12 @@ export function ChatPanel({
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
 
-  const { messages, sendMessage, status } = useChat({
-    api: `/api/chat/${bookId}`,
-    body: { activeView },
-  });
+  const transport = useMemo(
+    () => new DefaultChatTransport({ api: `/api/chat/${bookId}` }),
+    [bookId],
+  );
+
+  const { messages, sendMessage, status } = useChat({ transport });
 
   const isLoading = status === "streaming" || status === "submitted";
 
@@ -37,7 +40,8 @@ export function ChatPanel({
     if (!last || last.role !== "assistant") return;
     const hasArtifactTool = last.parts.some(
       (p) =>
-        p.type === "tool-createArtifact" || p.type === "tool-updateArtifact",
+        p.type === "dynamic-tool" &&
+        (p.toolName === "createArtifact" || p.toolName === "updateArtifact"),
     );
     if (hasArtifactTool) onArtifactCreated();
   }, [messages, onArtifactCreated]);
@@ -79,7 +83,7 @@ export function ChatPanel({
         onSubmit={(e) => {
           e.preventDefault();
           if (!input.trim() || isLoading) return;
-          sendMessage({ text: input });
+          sendMessage({ text: input }, { body: { activeView } });
           setInput("");
         }}
         className="p-4 border-t border-gray-200 bg-white"

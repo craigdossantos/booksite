@@ -25,13 +25,22 @@ export function ChatMessage({ message }: ChatMessageProps) {
                   {part.text}
                 </div>
               );
-            case "tool-createArtifact":
-            case "tool-updateArtifact":
-              return (
-                <ArtifactCard key={i} toolName={part.type} args={part.args} />
-              );
-            default:
+            case "dynamic-tool":
+              if (
+                part.toolName === "createArtifact" ||
+                part.toolName === "updateArtifact"
+              ) {
+                return (
+                  <ArtifactCard
+                    key={i}
+                    toolName={part.toolName}
+                    input={part.input as Record<string, unknown>}
+                  />
+                );
+              }
               // Hide other tool calls (search, read, notes, etc.)
+              return null;
+            default:
               return null;
           }
         })}
