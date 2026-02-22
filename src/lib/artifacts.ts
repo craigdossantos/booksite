@@ -5,8 +5,13 @@ import type { ArtifactMeta, ArtifactIndexEntry } from "@/types/book";
 
 const DATA_DIR = path.join(process.cwd(), "data", "books");
 
+/** Strip path separators and traversal sequences from an ID. */
+function sanitizeId(id: string): string {
+  return id.replace(/[\/\\\.]+/g, "").slice(0, 64);
+}
+
 function artifactsDir(bookId: string): string {
-  return path.join(DATA_DIR, bookId, "artifacts");
+  return path.join(DATA_DIR, sanitizeId(bookId), "artifacts");
 }
 
 function indexPath(bookId: string): string {
@@ -14,7 +19,7 @@ function indexPath(bookId: string): string {
 }
 
 function artifactDir(bookId: string, artifactId: string): string {
-  return path.join(artifactsDir(bookId), artifactId);
+  return path.join(artifactsDir(bookId), sanitizeId(artifactId));
 }
 
 async function readIndex(bookId: string): Promise<ArtifactIndexEntry[]> {
