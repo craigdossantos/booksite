@@ -50,7 +50,25 @@ export async function POST(request: NextRequest) {
     const epubPath = path.join(booksDir, file.name);
     await writeFile(epubPath, buffer);
 
-    // Initialize status.json
+    // Initialize metadata.json and status.json on filesystem
+    const bookTitle = file.name.replace(/\.epub$/i, "");
+    const now = new Date().toISOString();
+
+    const metadata = {
+      id: bookId,
+      title: bookTitle,
+      author: "Unknown",
+      chapterCount: 0,
+      status: "uploading",
+      isPublic,
+      ownerId: session.user.id,
+      createdAt: now,
+    };
+    await writeFile(
+      path.join(dataDir, "metadata.json"),
+      JSON.stringify(metadata, null, 2),
+    );
+
     const status = {
       bookId,
       status: "uploading",
@@ -58,23 +76,30 @@ export async function POST(request: NextRequest) {
       currentStep: "File uploaded, starting processing",
       chaptersProcessed: 0,
       totalChapters: 0,
-      startedAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      startedAt: now,
+      updatedAt: now,
     };
     await writeFile(
       path.join(dataDir, "status.json"),
       JSON.stringify(status, null, 2),
     );
 
-    // Create book in database with ownership
-    await createBook({
-      id: bookId,
-      title: file.name.replace(/\.epub$/i, ""),
-      author: "Unknown",
-      ownerId: session.user.id,
-      isPublic,
-      status: "uploading",
-    });
+    // Create book in database with ownership (non-fatal if DB unavailable)
+    try {
+      await createBook({
+        id: bookId,
+        title: bookTitle,
+        author: "Unknown",
+        ownerId: session.user.id,
+        isPublic,
+        status: "uploading",
+      });
+    } catch (dbError) {
+      console.warn(
+        "Database unavailable, book saved to filesystem only:",
+        dbError,
+      );
+    }
 
     // Start processing in background
     const pythonProcess = spawn(
