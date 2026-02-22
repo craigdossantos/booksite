@@ -76,7 +76,7 @@ CHAPTER CONTENT:
 Write the summary now, in the author's voice:"""
 
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-exp",
+        model_name="gemini-2.5-flash",
         generation_config={
             "response_mime_type": "application/json",
             "response_schema": SUMMARY_SCHEMA,

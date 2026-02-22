@@ -120,7 +120,7 @@ def process_book(filename: str):
 
     # Step 2: Extract cover
     print("\n=== Step 2: Extracting Cover Image ===")
-    run_script("extract_cover.py", ["--filename", filename])
+    run_script("extract_cover.py", ["--book_id", book_id])
     # Cover extraction is optional, don't fail if it doesn't work
 
     # Count chapters and update metadata
