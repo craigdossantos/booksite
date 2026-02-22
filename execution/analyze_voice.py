@@ -125,7 +125,7 @@ def analyze_voice(book_id: str) -> dict:
 
     # Call Gemini API
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-exp",
+        model_name="gemini-2.5-flash",
         generation_config={
             "response_mime_type": "application/json",
             "response_schema": VOICE_PROFILE_SCHEMA,
