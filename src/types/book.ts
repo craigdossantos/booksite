@@ -75,3 +75,36 @@ export interface UploadResponse {
   bookId: string;
   status: BookStatus;
 }
+
+// Artifact types for agent-created learning materials
+
+export interface ArtifactVersion {
+  version: number;
+  createdAt: string;
+  changeNote: string;
+}
+
+export interface ArtifactMeta {
+  id: string;
+  title: string;
+  description: string;
+  versions: ArtifactVersion[];
+  currentVersion: number;
+  chapters: number[];
+}
+
+export interface ArtifactIndexEntry {
+  id: string;
+  title: string;
+  description: string;
+  currentVersion: number;
+  createdAt: string;
+  updatedAt: string;
+  chapters: number[];
+}
+
+export interface SessionSummary {
+  lastUpdated: string;
+  summary: string;
+  openQuestions: string[];
+}
