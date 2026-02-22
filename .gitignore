@@ -36,9 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
-# python virtual environment
+# python
 venv/
 **/venv/
+__pycache__/
+**/__pycache__/
 
 # typescript
 *.tsbuildinfo
@@ -53,3 +55,4 @@ prisma/dev.db-journal
 
 # agent artifacts output
 /output/
+.env*.local

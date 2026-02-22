@@ -12,9 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Ignore nested project build outputs
+    // Ignore nested project build outputs and worktrees
+    ".claude/**",
     "pipeline-ui/**",
     "book-agent/**",
+    "railway/**",
   ]),
 ]);
 

@@ -65,6 +65,9 @@ model Book {
   coverUrl     String?
   chapterCount Int        @default(0)
   status       String     @default("uploading")
+  progress     Int        @default(0)
+  currentStep  String     @default("")
+  errorMessage String?
   isPublic     Boolean    @default(false)
   ownerId      String?
   owner        User?      @relation(fields: [ownerId], references: [id], onDelete: SetNull)

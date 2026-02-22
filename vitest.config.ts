@@ -12,9 +12,11 @@ export default defineConfig({
     exclude: [
       "node_modules",
       ".next",
+      ".claude/**",
       "execution/**",
       "pipeline-ui/**",
       "book-agent/**",
+      "railway/**",
     ],
     coverage: {
       provider: "v8",
