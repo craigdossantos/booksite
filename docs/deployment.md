@@ -40,10 +40,10 @@ Connection string format:
 
 ```
 # Pooled (runtime)
-postgresql://postgres.{ref}:{password}@aws-0-us-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+postgresql://postgres.{ref}:{password}@aws-1-us-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true
 
 # Direct (migrations)
-postgresql://postgres.{ref}:{password}@aws-0-us-east-1.pooler.supabase.com:5432/postgres
+postgresql://postgres.{ref}:{password}@aws-1-us-east-1.pooler.supabase.com:5432/postgres
 ```
 
 ### Schema Management
