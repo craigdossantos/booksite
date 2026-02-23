@@ -98,7 +98,7 @@ export async function POST(
   const tools = createBookTools(bookId);
 
   const result = streamText({
-    model: anthropic("claude-sonnet-4-5-20250514"),
+    model: anthropic("claude-sonnet-4-6"),
     system: systemPrompt,
     messages: await convertToModelMessages(messages),
     tools,
