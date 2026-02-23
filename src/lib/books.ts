@@ -1,11 +1,10 @@
 /**
- * Book data utilities with Prisma integration
- * Hybrid approach: metadata in SQLite, content on filesystem
+ * Book data utilities — reads from Prisma (DB) + Supabase Storage.
+ * No local filesystem dependency.
  */
 
-import fs from "fs-extra";
-import path from "path";
 import { prisma } from "@/lib/prisma";
+import { supabase, BUCKETS } from "@/lib/supabase";
 import type {
   Book,
   BookWithChapters,
@@ -13,8 +12,6 @@ import type {
   ProcessingStatus,
   VoiceProfile,
 } from "@/types/book";
-
-const DATA_DIR = path.join(process.cwd(), "data", "books");
 
 /**
  * Convert Prisma book to our Book type
@@ -27,6 +24,9 @@ function prismaBookToBook(
     coverUrl: string | null;
     chapterCount: number;
     status: string;
+    progress: number;
+    currentStep: string;
+    errorMessage: string | null;
     isPublic: boolean;
     ownerId: string | null;
     createdAt: Date;
@@ -50,14 +50,18 @@ function prismaBookToBook(
 }
 
 /**
- * Load voice profile from filesystem
+ * Load voice profile from Supabase Storage
  */
 async function loadVoiceProfile(
   bookId: string,
 ): Promise<VoiceProfile | undefined> {
-  const metadataPath = path.join(DATA_DIR, bookId, "metadata.json");
   try {
-    const metadata = await fs.readJson(metadataPath);
+    const { data, error } = await supabase.storage
+      .from(BUCKETS.BOOKS)
+      .download(`${bookId}/metadata.json`);
+    if (error || !data) return undefined;
+    const text = await data.text();
+    const metadata = JSON.parse(text);
     return metadata.voiceProfile;
   } catch {
     return undefined;
@@ -65,66 +69,22 @@ async function loadVoiceProfile(
 }
 
 /**
- * Get all books from the filesystem (fallback when database is unavailable)
- */
-async function getBooksFromFilesystem(): Promise<Book[]> {
-  try {
-    const entries = await fs.readdir(DATA_DIR);
-    const books: Book[] = [];
-
-    for (const entry of entries) {
-      const metadataPath = path.join(DATA_DIR, entry, "metadata.json");
-      try {
-        const metadata = await fs.readJson(metadataPath);
-        books.push({
-          id: metadata.id ?? entry,
-          title: metadata.title ?? "Untitled",
-          author: metadata.author ?? "Unknown",
-          coverUrl: metadata.coverUrl,
-          chapterCount: metadata.chapterCount ?? 0,
-          status: metadata.status ?? "ready",
-          isPublic: true,
-          ownerId: null,
-          createdAt: metadata.createdAt ?? new Date().toISOString(),
-          processedAt: metadata.processedAt,
-          voiceProfile: metadata.voiceProfile,
-        });
-      } catch {
-        // Skip directories without valid metadata
-      }
-    }
-
-    return books.sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
-  } catch {
-    return [];
-  }
-}
-
-/**
- * Get all public books (for community library)
- * Falls back to filesystem if database is unavailable
+ * Get all public books
  */
 export async function getPublicBooks(): Promise<Book[]> {
-  try {
-    const books = await prisma.book.findMany({
-      where: { isPublic: true },
-      orderBy: { createdAt: "desc" },
-    });
+  const books = await prisma.book.findMany({
+    where: { isPublic: true },
+    orderBy: { createdAt: "desc" },
+  });
 
-    const booksWithVoice = await Promise.all(
-      books.map(async (book) => {
-        const voiceProfile = await loadVoiceProfile(book.id);
-        return prismaBookToBook(book, voiceProfile);
-      }),
-    );
+  const booksWithVoice = await Promise.all(
+    books.map(async (book) => {
+      const voiceProfile = await loadVoiceProfile(book.id);
+      return prismaBookToBook(book, voiceProfile);
+    }),
+  );
 
-    return booksWithVoice;
-  } catch {
-    return getBooksFromFilesystem();
-  }
+  return booksWithVoice;
 }
 
 /**
@@ -164,9 +124,7 @@ export async function getUserLibrary(userId: string): Promise<{
 }
 
 /**
- * Get all books in the library (legacy function for backwards compatibility)
- * If userId provided, returns public books + user's private books
- * If no userId, returns only public books
+ * Get all books in the library
  */
 export async function getBooks(userId?: string): Promise<Book[]> {
   const where = userId
@@ -192,86 +150,63 @@ export async function getBooks(userId?: string): Promise<Book[]> {
 
 /**
  * Get a single book by ID with its chapters
- * Returns null if book doesn't exist or user doesn't have access
- * Falls back to filesystem if database is unavailable
  */
 export async function getBook(
   bookId: string,
   userId?: string,
 ): Promise<BookWithChapters | null> {
-  const bookDir = path.join(DATA_DIR, bookId);
+  const book = await prisma.book.findUnique({
+    where: { id: bookId },
+  });
 
+  if (!book) return null;
+
+  if (!book.isPublic && book.ownerId !== userId) {
+    return null;
+  }
+
+  const [voiceProfile, chapters] = await Promise.all([
+    loadVoiceProfile(bookId),
+    loadChapters(bookId),
+  ]);
+
+  return {
+    ...prismaBookToBook(book, voiceProfile),
+    chapters,
+  };
+}
+
+/**
+ * Load chapters.json from Supabase Storage
+ */
+async function loadChapters(bookId: string): Promise<Chapter[]> {
   try {
-    const book = await prisma.book.findUnique({
-      where: { id: bookId },
-    });
-
-    if (!book) return null;
-
-    // Check access: public books or owned by user
-    if (!book.isPublic && book.ownerId !== userId) {
-      return null;
-    }
-
-    const [voiceProfile, chapters] = await Promise.all([
-      loadVoiceProfile(bookId),
-      fs.readJson(path.join(bookDir, "chapters.json")).catch(() => []),
-    ]);
-
-    return {
-      ...prismaBookToBook(book, voiceProfile),
-      chapters: chapters as Chapter[],
-    };
+    const { data, error } = await supabase.storage
+      .from(BUCKETS.BOOKS)
+      .download(`${bookId}/chapters.json`);
+    if (error || !data) return [];
+    const text = await data.text();
+    return JSON.parse(text) as Chapter[];
   } catch {
-    // Fallback: read from filesystem
-    try {
-      const [metadata, chapters] = await Promise.all([
-        fs.readJson(path.join(bookDir, "metadata.json")),
-        fs.readJson(path.join(bookDir, "chapters.json")).catch(() => []),
-      ]);
-
-      return {
-        id: metadata.id ?? bookId,
-        title: metadata.title ?? "Untitled",
-        author: metadata.author ?? "Unknown",
-        coverUrl: metadata.coverUrl,
-        chapterCount: metadata.chapterCount ?? 0,
-        status: metadata.status ?? "ready",
-        isPublic: true,
-        ownerId: null,
-        createdAt: metadata.createdAt ?? new Date().toISOString(),
-        processedAt: metadata.processedAt,
-        voiceProfile: metadata.voiceProfile,
-        chapters: chapters as Chapter[],
-      };
-    } catch {
-      return null;
-    }
+    return [];
   }
 }
 
 /**
  * Check if user can access a book
- * Falls back to filesystem check if database is unavailable
  */
 export async function canAccessBook(
   bookId: string,
   userId?: string,
 ): Promise<boolean> {
-  try {
-    const book = await prisma.book.findUnique({
-      where: { id: bookId },
-      select: { isPublic: true, ownerId: true },
-    });
+  const book = await prisma.book.findUnique({
+    where: { id: bookId },
+    select: { isPublic: true, ownerId: true },
+  });
 
-    if (!book) return false;
-    if (book.isPublic) return true;
-    return book.ownerId === userId;
-  } catch {
-    // Fallback: if metadata.json exists on filesystem, allow access
-    const metadataPath = path.join(DATA_DIR, bookId, "metadata.json");
-    return fs.pathExists(metadataPath);
-  }
+  if (!book) return false;
+  if (book.isPublic) return true;
+  return book.ownerId === userId;
 }
 
 /**
@@ -369,31 +304,52 @@ export async function toggleBookVisibility(
 }
 
 /**
- * Get processing status for a book
+ * Get processing status for a book (from DB columns)
  */
 export async function getProcessingStatus(
   bookId: string,
 ): Promise<ProcessingStatus | null> {
-  const statusPath = path.join(DATA_DIR, bookId, "status.json");
+  const book = await prisma.book.findUnique({
+    where: { id: bookId },
+    select: {
+      id: true,
+      status: true,
+      progress: true,
+      currentStep: true,
+      errorMessage: true,
+      chapterCount: true,
+      createdAt: true,
+    },
+  });
 
-  try {
-    return await fs.readJson(statusPath);
-  } catch {
-    return null;
-  }
+  if (!book) return null;
+
+  return {
+    bookId: book.id,
+    status: book.status as ProcessingStatus["status"],
+    progress: book.progress,
+    currentStep: book.currentStep,
+    chaptersProcessed: book.status === "ready" ? book.chapterCount : 0,
+    totalChapters: book.chapterCount,
+    error: book.errorMessage ?? undefined,
+    startedAt: book.createdAt.toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
 }
 
 /**
- * Get chapter markdown content
+ * Get chapter markdown content from Supabase Storage
  */
 export async function getChapterContent(
   bookId: string,
   markdownPath: string,
 ): Promise<string> {
-  const fullPath = path.join(DATA_DIR, bookId, markdownPath);
-
   try {
-    return await fs.readFile(fullPath, "utf-8");
+    const { data, error } = await supabase.storage
+      .from(BUCKETS.BOOKS)
+      .download(`${bookId}/${markdownPath}`);
+    if (error || !data) return "";
+    return await data.text();
   } catch {
     return "";
   }
@@ -403,32 +359,44 @@ export async function getChapterContent(
  * Check if a book exists
  */
 export async function bookExists(bookId: string): Promise<boolean> {
-  try {
-    const book = await prisma.book.findUnique({
-      where: { id: bookId },
-      select: { id: true },
-    });
-    return book !== null;
-  } catch {
-    const metadataPath = path.join(DATA_DIR, bookId, "metadata.json");
-    return fs.pathExists(metadataPath);
-  }
+  const book = await prisma.book.findUnique({
+    where: { id: bookId },
+    select: { id: true },
+  });
+  return book !== null;
 }
 
 /**
- * Delete a book and all its data
+ * Delete a book and all its data (DB + both Storage buckets)
  */
 export async function deleteBook(bookId: string): Promise<boolean> {
-  const bookDir = path.join(DATA_DIR, bookId);
-
   try {
     // Delete from database (cascades to bookmarks)
     await prisma.book.delete({
       where: { id: bookId },
     });
 
-    // Delete filesystem data
-    await fs.remove(bookDir);
+    // Delete from Supabase Storage — epubs bucket
+    await supabase.storage.from(BUCKETS.EPUBS).remove([`${bookId}.epub`]);
+
+    // Delete from Supabase Storage — books bucket (list then remove)
+    const { data: files } = await supabase.storage
+      .from(BUCKETS.BOOKS)
+      .list(bookId);
+
+    if (files && files.length > 0) {
+      // Also list chapters/ subfolder
+      const { data: chapterFiles } = await supabase.storage
+        .from(BUCKETS.BOOKS)
+        .list(`${bookId}/chapters`);
+
+      const paths = files.map((f) => `${bookId}/${f.name}`);
+      if (chapterFiles) {
+        paths.push(...chapterFiles.map((f) => `${bookId}/chapters/${f.name}`));
+      }
+
+      await supabase.storage.from(BUCKETS.BOOKS).remove(paths);
+    }
 
     return true;
   } catch {
@@ -438,9 +406,6 @@ export async function deleteBook(bookId: string): Promise<boolean> {
 
 // ============ Bookmark Functions ============
 
-/**
- * Create a bookmark
- */
 export async function createBookmark(
   userId: string,
   bookId: string,
@@ -451,14 +416,10 @@ export async function createBookmark(
     });
     return true;
   } catch {
-    // Already bookmarked or book doesn't exist
     return false;
   }
 }
 
-/**
- * Remove a bookmark
- */
 export async function removeBookmark(
   userId: string,
   bookId: string,
@@ -475,9 +436,6 @@ export async function removeBookmark(
   }
 }
 
-/**
- * Check if user has bookmarked a book
- */
 export async function hasBookmarked(
   userId: string,
   bookId: string,
@@ -490,9 +448,6 @@ export async function hasBookmarked(
   return bookmark !== null;
 }
 
-/**
- * Get all bookmarks for a user
- */
 export async function getUserBookmarks(userId: string): Promise<Book[]> {
   const bookmarks = await prisma.bookmark.findMany({
     where: { userId },

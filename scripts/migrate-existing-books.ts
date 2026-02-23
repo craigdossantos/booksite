@@ -1,10 +1,10 @@
 /**
- * Migration script to import existing filesystem books into the database
- * Assigns all books to the specified user email
+ * Migration script to import existing filesystem books into the database.
+ * Run this locally to migrate books from data/books/ into Prisma DB.
  */
 
 import { PrismaClient } from "@prisma/client";
-import fs from "fs-extra";
+import { readFileSync, readdirSync, existsSync, statSync } from "fs";
 import path from "path";
 
 const prisma = new PrismaClient();
@@ -25,7 +25,6 @@ interface BookMetadata {
 async function main() {
   console.log("Starting migration of existing books...\n");
 
-  // Create or get the owner user
   let user = await prisma.user.findUnique({
     where: { email: OWNER_EMAIL },
   });
@@ -43,14 +42,15 @@ async function main() {
     console.log(`Found existing user: ${user.email} (ID: ${user.id})\n`);
   }
 
-  // Get existing books from filesystem
-  if (!(await fs.pathExists(DATA_DIR))) {
+  if (!existsSync(DATA_DIR)) {
     console.log("No books directory found. Nothing to migrate.");
     return;
   }
 
-  const entries = await fs.readdir(DATA_DIR, { withFileTypes: true });
-  const bookDirs = entries.filter((e) => e.isDirectory()).map((e) => e.name);
+  const entries = readdirSync(DATA_DIR);
+  const bookDirs = entries.filter((entry) =>
+    statSync(path.join(DATA_DIR, entry)).isDirectory(),
+  );
 
   console.log(`Found ${bookDirs.length} book(s) to migrate.\n`);
 
@@ -61,14 +61,13 @@ async function main() {
   for (const bookId of bookDirs) {
     const metadataPath = path.join(DATA_DIR, bookId, "metadata.json");
 
-    if (!(await fs.pathExists(metadataPath))) {
+    if (!existsSync(metadataPath)) {
       console.log(`  Skipping ${bookId}: No metadata.json found`);
       skipped++;
       continue;
     }
 
     try {
-      // Check if book already exists in database
       const existingBook = await prisma.book.findUnique({
         where: { id: bookId },
       });
@@ -79,10 +78,10 @@ async function main() {
         continue;
       }
 
-      // Read metadata from filesystem
-      const metadata: BookMetadata = await fs.readJson(metadataPath);
+      const metadata: BookMetadata = JSON.parse(
+        readFileSync(metadataPath, "utf-8"),
+      );
 
-      // Create book in database
       await prisma.book.create({
         data: {
           id: bookId,
@@ -91,7 +90,7 @@ async function main() {
           coverUrl: metadata.coverUrl,
           chapterCount: metadata.chapterCount || 0,
           status: metadata.status || "ready",
-          isPublic: false, // Default to private
+          isPublic: false,
           ownerId: user.id,
           createdAt: new Date(metadata.createdAt),
           processedAt: metadata.processedAt
@@ -116,7 +115,7 @@ async function main() {
 }
 
 main()
-  .catch((e) => {
+  .catch((e: Error) => {
     console.error("Migration failed:", e);
     process.exit(1);
   })
