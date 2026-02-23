@@ -326,7 +326,12 @@ export function createBookTools(bookId: string) {
           htmlContent,
           chapters,
         });
-        return `Artifact created: "${entry.title}" (id: ${entry.id}). It is now visible in the user's Artifacts tab.`;
+        return JSON.stringify({
+          action: "created",
+          id: entry.id,
+          title: entry.title,
+          message: `Artifact created: "${entry.title}" (id: ${entry.id}). It is now visible in the user's Artifacts tab.`,
+        });
       },
     }),
 
@@ -343,7 +348,13 @@ export function createBookTools(bookId: string) {
           htmlContent,
           changeNote,
         });
-        return `Artifact updated to v${meta.currentVersion}: "${meta.title}" — ${changeNote}`;
+        return JSON.stringify({
+          action: "updated",
+          id: artifactId,
+          title: meta.title,
+          version: meta.currentVersion,
+          message: `Artifact updated to v${meta.currentVersion}: "${meta.title}" — ${changeNote}`,
+        });
       },
     }),
 

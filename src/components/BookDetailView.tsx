@@ -28,6 +28,8 @@ export function BookDetailView({
   const [activeView, setActiveView] = useState<
     { type: "chapter" | "artifact"; id: string } | undefined
   >(undefined);
+  // Key to force ArtifactViewer to remount when the same artifact is updated
+  const [viewerKey, setViewerKey] = useState(0);
 
   const refreshArtifacts = useCallback(async () => {
     const res = await fetch(`/api/artifacts/${book.id}`);
@@ -37,10 +39,21 @@ export function BookDetailView({
     }
   }, [book.id]);
 
-  const handleArtifactSelect = (artifactId: string) => {
+  const handleArtifactSelect = useCallback((artifactId: string) => {
+    setActiveTab("artifacts");
     setSelectedArtifactId(artifactId);
     setActiveView({ type: "artifact", id: artifactId });
-  };
+    setViewerKey((k) => k + 1);
+  }, []);
+
+  // Called by ChatPanel when an artifact is created or updated
+  const handleArtifactCreated = useCallback(
+    async (artifactId: string) => {
+      await refreshArtifacts();
+      handleArtifactSelect(artifactId);
+    },
+    [refreshArtifacts, handleArtifactSelect],
+  );
 
   return (
     <div className="h-screen flex flex-col">
@@ -113,6 +126,7 @@ export function BookDetailView({
               <button
                 onClick={() => {
                   setActiveTab("artifacts");
+                  setSelectedArtifactId(null);
                   refreshArtifacts();
                 }}
                 className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
@@ -155,6 +169,7 @@ export function BookDetailView({
                 </button>
                 <div className="h-[600px] border border-gray-200 rounded-lg overflow-hidden">
                   <ArtifactViewer
+                    key={viewerKey}
                     bookId={book.id}
                     artifactId={selectedArtifactId}
                   />
@@ -170,7 +185,8 @@ export function BookDetailView({
             <ChatPanel
               bookId={book.id}
               activeView={activeView}
-              onArtifactCreated={refreshArtifacts}
+              onArtifactCreated={handleArtifactCreated}
+              onArtifactSelect={handleArtifactSelect}
             />
           </div>
         ) : (

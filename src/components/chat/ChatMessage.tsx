@@ -5,9 +5,10 @@ import { ArtifactCard } from "./ArtifactCard";
 
 interface ChatMessageProps {
   message: UIMessage;
+  onArtifactSelect?: (artifactId: string) => void;
 }
 
-export function ChatMessage({ message }: ChatMessageProps) {
+export function ChatMessage({ message, onArtifactSelect }: ChatMessageProps) {
   const isUser = message.role === "user";
 
   return (
@@ -35,6 +36,10 @@ export function ChatMessage({ message }: ChatMessageProps) {
                     key={i}
                     toolName={part.toolName}
                     input={part.input as Record<string, unknown>}
+                    output={
+                      "output" in part ? (part.output as string) : undefined
+                    }
+                    onSelect={onArtifactSelect}
                   />
                 );
               }

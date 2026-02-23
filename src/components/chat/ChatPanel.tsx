@@ -8,16 +8,19 @@ import { ChatMessage } from "./ChatMessage";
 interface ChatPanelProps {
   bookId: string;
   activeView?: { type: "chapter" | "artifact"; id: string };
-  onArtifactCreated?: () => void;
+  onArtifactCreated?: (artifactId: string) => void;
+  onArtifactSelect?: (artifactId: string) => void;
 }
 
 export function ChatPanel({
   bookId,
   activeView,
   onArtifactCreated,
+  onArtifactSelect,
 }: ChatPanelProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
+  const seenArtifactsRef = useRef<Set<string>>(new Set());
 
   const transport = useMemo(
     () => new DefaultChatTransport({ api: `/api/chat/${bookId}` }),
@@ -33,17 +36,31 @@ export function ChatPanel({
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Detect artifact creation in tool results and notify parent
+  // Detect artifact creation/update in tool results and auto-display
   useEffect(() => {
     if (!onArtifactCreated) return;
-    const last = messages[messages.length - 1];
-    if (!last || last.role !== "assistant") return;
-    const hasArtifactTool = last.parts.some(
-      (p) =>
-        p.type === "dynamic-tool" &&
-        (p.toolName === "createArtifact" || p.toolName === "updateArtifact"),
-    );
-    if (hasArtifactTool) onArtifactCreated();
+    for (const msg of messages) {
+      if (msg.role !== "assistant") continue;
+      for (const part of msg.parts) {
+        if (
+          part.type === "dynamic-tool" &&
+          (part.toolName === "createArtifact" ||
+            part.toolName === "updateArtifact") &&
+          "output" in part &&
+          part.output
+        ) {
+          try {
+            const result = JSON.parse(part.output as string);
+            if (result.id && !seenArtifactsRef.current.has(part.toolCallId)) {
+              seenArtifactsRef.current.add(part.toolCallId);
+              onArtifactCreated(result.id);
+            }
+          } catch {
+            // Non-JSON output, ignore
+          }
+        }
+      }
+    }
   }, [messages, onArtifactCreated]);
 
   return (
@@ -66,7 +83,11 @@ export function ChatPanel({
         )}
 
         {messages.map((message) => (
-          <ChatMessage key={message.id} message={message} />
+          <ChatMessage
+            key={message.id}
+            message={message}
+            onArtifactSelect={onArtifactSelect}
+          />
         ))}
 
         {isLoading && (
