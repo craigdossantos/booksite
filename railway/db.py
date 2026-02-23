@@ -1,7 +1,6 @@
 """Database status updates via Supabase PostgREST."""
 
 import os
-from datetime import datetime, timezone
 from supabase import create_client
 
 SUPABASE_URL = os.environ["SUPABASE_URL"]
@@ -24,7 +23,7 @@ def update_book_status(
     processed_at: str | None = None,
 ) -> None:
     """Update book record in the database."""
-    data: dict = {"updatedAt": datetime.now(timezone.utc).isoformat()}
+    data: dict = {}
 
     if status is not None:
         data["status"] = status
