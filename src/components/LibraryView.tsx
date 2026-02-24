@@ -85,6 +85,7 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
         return;
       }
       setOwnedBooks((prev) => prev.filter((b) => b.id !== bookId));
+      setCommunityBooks((prev) => prev.filter((b) => b.id !== bookId));
     } catch {
       alert("Failed to delete book. Please try again.");
     }
@@ -171,7 +172,11 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
                 handleBookmarkToggle(book.id, bookmarked)
               }
               showMenu={isAuthenticated && isOwnedBook(book)}
-              onDelete={() => handleDeleteBook(book.id)}
+              onDelete={
+                isAuthenticated && isOwnedBook(book)
+                  ? () => handleDeleteBook(book.id)
+                  : undefined
+              }
             />
           ))}
         </div>
