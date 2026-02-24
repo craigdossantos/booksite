@@ -42,8 +42,8 @@ export function UploadDropzone() {
           throw new Error(data.error || "Upload failed");
         }
 
-        // Refresh the page to show the new book
-        router.refresh();
+        // Navigate to the book page to show processing status
+        router.push(`/book/${data.bookId}`);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Upload failed");
       } finally {
