@@ -318,13 +318,17 @@ export function createBookTools(bookId: string) {
         chapters: z
           .array(z.number())
           .describe("Chapter numbers this artifact relates to"),
+        type: z
+          .enum(["summary", "quiz", "diagram", "note"])
+          .describe("The type of artifact being created"),
       }),
-      execute: async ({ title, description, htmlContent, chapters }) => {
+      execute: async ({ title, description, htmlContent, chapters, type }) => {
         const entry = await createArtifact(bookId, {
           title,
           description,
           htmlContent,
           chapters,
+          type,
         });
         return JSON.stringify({
           action: "created",

@@ -1,7 +1,11 @@
 import fs from "fs-extra";
 import path from "path";
 import crypto from "crypto";
-import type { ArtifactMeta, ArtifactIndexEntry } from "@/types/book";
+import type {
+  ArtifactMeta,
+  ArtifactIndexEntry,
+  ArtifactType,
+} from "@/types/book";
 
 const DATA_DIR = path.join(process.cwd(), "data", "books");
 
@@ -43,6 +47,7 @@ export async function createArtifact(
     description: string;
     htmlContent: string;
     chapters: number[];
+    type?: ArtifactType;
   },
 ): Promise<ArtifactIndexEntry> {
   const id = crypto.randomBytes(6).toString("hex");
@@ -55,10 +60,13 @@ export async function createArtifact(
   await fs.writeFile(path.join(dir, "v1.html"), input.htmlContent, "utf-8");
 
   // Write meta.json
+  const artifactType = input.type ?? "note";
+
   const meta: ArtifactMeta = {
     id,
     title: input.title,
     description: input.description,
+    type: artifactType,
     versions: [{ version: 1, createdAt: now, changeNote: "Initial creation" }],
     currentVersion: 1,
     chapters: input.chapters,
@@ -71,6 +79,7 @@ export async function createArtifact(
     id,
     title: input.title,
     description: input.description,
+    type: artifactType,
     currentVersion: 1,
     createdAt: now,
     updatedAt: now,

@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo, type RefObject } from "react";
 import { ChatMessage } from "./ChatMessage";
 
 interface ChatPanelProps {
@@ -10,6 +10,25 @@ interface ChatPanelProps {
   activeView?: { type: "chapter" | "artifact"; id: string };
   onArtifactCreated?: (artifactId: string) => void;
   onArtifactSelect?: (artifactId: string) => void;
+  chatInputRef?: RefObject<HTMLInputElement | null>;
+}
+
+function getSuggestions(
+  activeView?: ChatPanelProps["activeView"],
+): { label: string; icon: string }[] {
+  if (!activeView || activeView.type === "chapter") {
+    return [
+      { label: "Summarize this chapter", icon: "visibility" },
+      { label: "Create a quiz", icon: "quiz" },
+      { label: "Extract key concepts", icon: "schema" },
+    ];
+  }
+  // Artifact-context suggestions based on common patterns
+  return [
+    { label: "Generate a quiz from this", icon: "quiz" },
+    { label: "Create a diagram", icon: "schema" },
+    { label: "Write study notes", icon: "description" },
+  ];
 }
 
 export function ChatPanel({
@@ -17,6 +36,7 @@ export function ChatPanel({
   activeView,
   onArtifactCreated,
   onArtifactSelect,
+  chatInputRef,
 }: ChatPanelProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
@@ -30,6 +50,7 @@ export function ChatPanel({
   const { messages, sendMessage, status } = useChat({ transport });
 
   const isLoading = status === "streaming" || status === "submitted";
+  const suggestions = getSuggestions(activeView);
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {
@@ -63,22 +84,54 @@ export function ChatPanel({
     }
   }, [messages, onArtifactCreated]);
 
+  const handleSubmit = (text: string) => {
+    if (!text.trim() || isLoading) return;
+    sendMessage({ text }, { body: { activeView } });
+    setInput("");
+  };
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-gray-200 bg-white">
-        <h3 className="text-sm font-medium text-gray-700">Chat</h3>
+      <div className="p-5 border-b border-slate-100 flex items-center gap-3">
+        <div className="size-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center">
+          <span className="material-symbols-outlined text-white text-xl">
+            auto_awesome
+          </span>
+        </div>
+        <div>
+          <h3 className="font-bold text-sm text-slate-900">Book Companion</h3>
+          <p className="text-xs text-slate-500">Workspace Assistant</p>
+        </div>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
         {messages.length === 0 && (
-          <div className="text-center text-gray-400 text-sm mt-8">
-            <p>Ask me anything about this book.</p>
-            <p className="mt-1">
+          <div className="text-center text-slate-400 text-sm mt-8 px-4">
+            <p className="font-medium text-slate-500 mb-1">
+              How can I help you learn?
+            </p>
+            <p>
               I can read chapters, search for themes, create concept maps, study
               guides, and more.
             </p>
+
+            {/* Suggestion chips */}
+            <div className="flex flex-wrap gap-2 justify-center mt-6">
+              {suggestions.map((s) => (
+                <button
+                  key={s.label}
+                  onClick={() => handleSubmit(s.label)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium rounded-full transition-colors"
+                >
+                  <span className="material-symbols-outlined text-sm">
+                    {s.icon}
+                  </span>
+                  {s.label}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
@@ -91,7 +144,7 @@ export function ChatPanel({
         ))}
 
         {isLoading && (
-          <div className="flex items-center gap-2 text-gray-400 text-sm">
+          <div className="flex items-center gap-2 text-slate-400 text-sm">
             <span className="animate-pulse">●</span>
             <span>Thinking...</span>
           </div>
@@ -103,27 +156,29 @@ export function ChatPanel({
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          if (!input.trim() || isLoading) return;
-          sendMessage({ text: input }, { body: { activeView } });
-          setInput("");
+          handleSubmit(input);
         }}
-        className="p-4 border-t border-gray-200 bg-white"
+        className="p-4 border-t border-slate-200 bg-slate-50"
       >
-        <div className="flex gap-2">
+        <div className="relative">
           <input
+            ref={chatInputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about this book..."
+            aria-label="Ask a question about this book"
             disabled={isLoading}
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+            className="w-full bg-white border border-slate-200 rounded-md pl-3 pr-10 py-2.5 text-sm focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow shadow-sm placeholder:text-slate-400 text-slate-700"
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="px-4 py-2 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="absolute right-1.5 top-1.5 p-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-500 transition-colors disabled:opacity-30"
           >
-            Send
+            <span className="material-symbols-outlined text-lg">
+              arrow_upward
+            </span>
           </button>
         </div>
       </form>

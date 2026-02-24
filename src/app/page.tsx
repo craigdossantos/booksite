@@ -1,33 +1,35 @@
 import { getPublicBooks } from "@/lib/books";
 import { auth } from "@/auth";
 import { LibraryView } from "@/components/LibraryView";
-import { AuthButton } from "@/components/AuthButton";
-import { UserMenu } from "@/components/UserMenu";
+import { AppHeader } from "@/components/AppHeader";
 
 export default async function LibraryPage() {
-  const session = await auth();
+  let session = null;
+  let initialBooks: Awaited<ReturnType<typeof getPublicBooks>> = [];
+  try {
+    session = await auth();
+    initialBooks = await getPublicBooks();
+  } catch {
+    // DB unreachable — render with empty state
+  }
   const isAuthenticated = !!session?.user;
 
-  // Fetch initial books (public books for everyone)
-  const initialBooks = await getPublicBooks();
-
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <header className="mb-12 flex items-start justify-between">
-        <div>
-          <h1 className="text-4xl font-serif font-bold text-gray-900">
+    <div className="min-h-screen flex flex-col">
+      <AppHeader avatarUrl={session?.user?.image ?? undefined} />
+      <main className="flex-1 max-w-6xl mx-auto px-6 py-10 w-full">
+        <header className="mb-10">
+          <h1 className="text-3xl font-bold text-slate-900">
             {isAuthenticated ? "Your Library" : "Community Library"}
           </h1>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-slate-500">
             {isAuthenticated
               ? "Your books and community discoveries"
               : "Browse books shared by the community"}
           </p>
-        </div>
-        {isAuthenticated ? <UserMenu /> : <AuthButton />}
-      </header>
-
-      <LibraryView initialBooks={initialBooks} />
-    </main>
+        </header>
+        <LibraryView initialBooks={initialBooks} />
+      </main>
+    </div>
   );
 }

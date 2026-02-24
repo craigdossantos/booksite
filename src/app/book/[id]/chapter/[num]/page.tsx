@@ -36,12 +36,10 @@ export default async function ChapterPage({ params }: Props) {
       <article className="mt-8">
         {/* Chapter title */}
         <header className="mb-8">
-          <p className="text-sm text-gray-400 mb-2">
+          <p className="text-sm text-slate-500 mb-2">
             {book.title} · Chapter {chapterNum}
           </p>
-          <h1 className="text-3xl font-serif font-bold text-gray-900">
-            {chapter.title}
-          </h1>
+          <h1 className="text-3xl font-bold text-slate-900">{chapter.title}</h1>
         </header>
 
         {/* Summary */}
@@ -52,28 +50,28 @@ export default async function ChapterPage({ params }: Props) {
         )}
 
         {/* Chapter content */}
-        <div className="prose prose-lg prose-gray max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none">
           {content.split("\n").map((paragraph, i) => {
             if (!paragraph.trim()) return null;
 
             // Handle headings
             if (paragraph.startsWith("# ")) {
               return (
-                <h1 key={i} className="text-2xl font-serif font-bold mt-8 mb-4">
+                <h1 key={i} className="text-2xl font-bold mt-8 mb-4">
                   {paragraph.slice(2)}
                 </h1>
               );
             }
             if (paragraph.startsWith("## ")) {
               return (
-                <h2 key={i} className="text-xl font-serif font-bold mt-6 mb-3">
+                <h2 key={i} className="text-xl font-bold mt-6 mb-3">
                   {paragraph.slice(3)}
                 </h2>
               );
             }
             if (paragraph.startsWith("### ")) {
               return (
-                <h3 key={i} className="text-lg font-serif font-bold mt-4 mb-2">
+                <h3 key={i} className="text-lg font-bold mt-4 mb-2">
                   {paragraph.slice(4)}
                 </h3>
               );
@@ -82,7 +80,7 @@ export default async function ChapterPage({ params }: Props) {
             // Handle list items
             if (paragraph.startsWith("- ")) {
               return (
-                <li key={i} className="ml-4 text-gray-700">
+                <li key={i} className="ml-4 text-slate-700">
                   {paragraph.slice(2)}
                 </li>
               );
@@ -90,7 +88,7 @@ export default async function ChapterPage({ params }: Props) {
 
             // Regular paragraph
             return (
-              <p key={i} className="text-gray-700 leading-relaxed mb-4">
+              <p key={i} className="text-slate-700 leading-relaxed mb-4">
                 {paragraph}
               </p>
             );

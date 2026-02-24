@@ -44,22 +44,27 @@ export function ArtifactCard({
     <button
       onClick={handleClick}
       disabled={!artifactId || !onSelect}
-      className="my-2 p-3 bg-white border border-gray-200 rounded-lg shadow-sm w-full text-left hover:border-gray-400 hover:shadow-md transition-all disabled:hover:border-gray-200 disabled:hover:shadow-sm cursor-pointer disabled:cursor-default"
+      className="my-2 p-3 bg-white border border-slate-200 rounded-lg shadow-sm w-full text-left hover:border-slate-400 hover:shadow-md transition-all disabled:hover:border-slate-200 disabled:hover:shadow-sm cursor-pointer disabled:cursor-default"
     >
       <div className="flex items-center gap-2">
-        <span className="text-lg">
-          {isUpdate ? "\u270F\uFE0F" : "\uD83D\uDCC4"}
+        <span className="material-symbols-outlined text-lg text-slate-500">
+          {isUpdate ? "edit_note" : "description"}
         </span>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium text-gray-900">
+          <p className="text-sm font-medium text-slate-900">
             {isUpdate ? "Updated" : "Created"}: {title}
           </p>
           {description && (
-            <p className="text-xs text-gray-500 truncate">{description}</p>
+            <p className="text-xs text-slate-500 truncate">{description}</p>
           )}
         </div>
         {artifactId && onSelect && (
-          <span className="text-xs text-blue-600 shrink-0">View &rarr;</span>
+          <span className="text-xs text-slate-600 font-medium shrink-0 flex items-center gap-0.5">
+            View
+            <span className="material-symbols-outlined text-sm">
+              arrow_forward
+            </span>
+          </span>
         )}
       </div>
     </button>

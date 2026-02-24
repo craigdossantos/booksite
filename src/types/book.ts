@@ -78,6 +78,8 @@ export interface UploadResponse {
 
 // Artifact types for agent-created learning materials
 
+export type ArtifactType = "summary" | "quiz" | "diagram" | "note";
+
 export interface ArtifactVersion {
   version: number;
   createdAt: string;
@@ -88,6 +90,7 @@ export interface ArtifactMeta {
   id: string;
   title: string;
   description: string;
+  type: ArtifactType;
   versions: ArtifactVersion[];
   currentVersion: number;
   chapters: number[];
@@ -97,6 +100,7 @@ export interface ArtifactIndexEntry {
   id: string;
   title: string;
   description: string;
+  type: ArtifactType;
   currentVersion: number;
   createdAt: string;
   updatedAt: string;

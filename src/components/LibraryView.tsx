@@ -122,7 +122,7 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
   if (status === "loading") {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-stone-900" />
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900" />
       </div>
     );
   }
@@ -144,10 +144,10 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
         <div className="mt-12">
           {activeTab === "my-library" && isAuthenticated ? (
             <div className="text-center py-12">
-              <h3 className="text-lg font-medium text-stone-900">
+              <h3 className="text-lg font-medium text-slate-900">
                 Your library is empty
               </h3>
-              <p className="mt-2 text-stone-600">
+              <p className="mt-2 text-slate-600">
                 Upload a book or browse the community library to get started.
               </p>
             </div>
