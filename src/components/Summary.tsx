@@ -21,7 +21,7 @@ export function Summary({ content }: SummaryProps) {
 
       {isExpanded && (
         <div className="px-4 pb-4">
-          <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+          <p className="text-slate-700 leading-relaxed whitespace-pre-wrap">
             {content}
           </p>
         </div>

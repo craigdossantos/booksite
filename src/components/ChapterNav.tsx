@@ -51,7 +51,7 @@ export function ChapterNav({
         {hasPrev ? (
           <Link
             href={`/book/${bookId}/chapter/${currentChapter - 1}`}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             <span>←</span>
             <span>Previous</span>
@@ -59,7 +59,7 @@ export function ChapterNav({
         ) : (
           <Link
             href={`/book/${bookId}`}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             <span>←</span>
             <span>Back to book</span>
@@ -67,7 +67,7 @@ export function ChapterNav({
         )}
       </div>
 
-      <span className="text-sm text-gray-400">
+      <span className="text-sm text-slate-400">
         {currentChapter} of {totalChapters}
       </span>
 
@@ -75,7 +75,7 @@ export function ChapterNav({
         {hasNext ? (
           <Link
             href={`/book/${bookId}/chapter/${currentChapter + 1}`}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             <span>Next</span>
             <span>→</span>
@@ -83,7 +83,7 @@ export function ChapterNav({
         ) : (
           <Link
             href={`/book/${bookId}`}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             <span>Finish</span>
             <span>→</span>

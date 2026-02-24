@@ -10,7 +10,7 @@ export function VisibilityBadge({
   return (
     <span
       className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
-        isPublic ? "bg-green-100 text-green-700" : "bg-stone-100 text-stone-600"
+        isPublic ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-600"
       } ${className}`}
     >
       {isPublic ? (

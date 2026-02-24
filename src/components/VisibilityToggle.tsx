@@ -41,7 +41,7 @@ export function VisibilityToggle({
       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
         isPublic
           ? "bg-green-100 text-green-700 hover:bg-green-200"
-          : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+          : "bg-slate-100 text-slate-600 hover:bg-slate-200"
       } ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
     >
       {isPublic ? (

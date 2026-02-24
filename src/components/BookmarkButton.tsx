@@ -55,7 +55,7 @@ export function BookmarkButton({
       className={`p-2 rounded-full transition-colors ${
         isBookmarked
           ? "bg-amber-100 text-amber-600 hover:bg-amber-200"
-          : "bg-stone-100 text-stone-400 hover:bg-stone-200 hover:text-stone-600"
+          : "bg-slate-100 text-slate-400 hover:bg-slate-200 hover:text-slate-600"
       } ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
       title={isBookmarked ? "Remove from library" : "Add to library"}
     >
