@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createHash, createHmac } from "crypto";
 import { auth } from "@/auth";
 import { createBook } from "@/lib/books";
+import { prisma } from "@/lib/prisma";
 import { supabase, BUCKETS } from "@/lib/supabase";
 
 export async function POST(request: NextRequest) {
@@ -54,6 +55,18 @@ export async function POST(request: NextRequest) {
 
     const bookTitle = file.name.replace(/\.epub$/i, "");
 
+    // Ensure user record exists (JWT strategy doesn't auto-create DB rows)
+    await prisma.user.upsert({
+      where: { id: session.user.id },
+      update: {},
+      create: {
+        id: session.user.id,
+        email: session.user.email,
+        name: session.user.name,
+        image: session.user.image,
+      },
+    });
+
     // Create book record in database
     try {
       await createBook({
@@ -68,10 +81,8 @@ export async function POST(request: NextRequest) {
       console.warn("Database unavailable:", dbError);
       // Clean up uploaded file
       await supabase.storage.from(BUCKETS.EPUBS).remove([`${bookId}.epub`]);
-      const errMsg =
-        dbError instanceof Error ? dbError.message : String(dbError);
       return NextResponse.json(
-        { error: "Database unavailable", detail: errMsg },
+        { error: "Database unavailable" },
         { status: 503 },
       );
     }
