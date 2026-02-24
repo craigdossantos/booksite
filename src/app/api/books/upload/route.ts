@@ -138,9 +138,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error("Upload error:", error);
-    const detail = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to upload book", detail },
+      { error: "Failed to upload book" },
       { status: 500 },
     );
   }
