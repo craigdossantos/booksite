@@ -1,39 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import type { ArtifactIndexEntry, ArtifactType } from "@/types/book";
-
-const TYPE_CONFIG: Record<
-  ArtifactType,
-  { icon: string; label: string; color: string; activeColor: string }
-> = {
-  summary: {
-    icon: "visibility",
-    label: "Summaries",
-    color: "text-emerald-500",
-    activeColor: "border-l-emerald-500",
-  },
-  quiz: {
-    icon: "quiz",
-    label: "Quizzes",
-    color: "text-amber-500",
-    activeColor: "border-l-amber-500",
-  },
-  diagram: {
-    icon: "schema",
-    label: "Diagrams",
-    color: "text-blue-500",
-    activeColor: "border-l-blue-500",
-  },
-  note: {
-    icon: "description",
-    label: "Notes",
-    color: "text-purple-500",
-    activeColor: "border-l-purple-500",
-  },
-};
-
-const TYPE_ORDER: ArtifactType[] = ["summary", "quiz", "diagram", "note"];
+import type { ArtifactIndexEntry } from "@/types/book";
+import {
+  ARTIFACT_TYPE_CONFIG,
+  ARTIFACT_TYPE_ORDER,
+} from "@/lib/artifact-types";
 
 interface ArtifactSidebarProps {
   artifacts: ArtifactIndexEntry[];
@@ -50,9 +22,9 @@ export function ArtifactSidebar({
 }: ArtifactSidebarProps) {
   const grouped = useMemo(
     () =>
-      TYPE_ORDER.map((type) => ({
+      ARTIFACT_TYPE_ORDER.map((type) => ({
         type,
-        config: TYPE_CONFIG[type],
+        config: ARTIFACT_TYPE_CONFIG[type],
         items: artifacts.filter((a) => (a.type ?? "note") === type),
       })).filter((g) => g.items.length > 0),
     [artifacts],
@@ -80,7 +52,7 @@ export function ArtifactSidebar({
           <div key={type} className="mb-6">
             <div className="px-3 mb-2 flex items-center justify-between">
               <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                {config.label}
+                {config.labelPlural}
               </h3>
               <span className="text-xs text-slate-400">{items.length}</span>
             </div>

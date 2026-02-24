@@ -1,37 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { ArtifactMeta, ArtifactType } from "@/types/book";
-
-const TYPE_CONFIG: Record<
-  ArtifactType,
-  { icon: string; label: string; color: string; bgLight: string }
-> = {
-  summary: {
-    icon: "visibility",
-    label: "Summary",
-    color: "text-emerald-500",
-    bgLight: "bg-emerald-50",
-  },
-  quiz: {
-    icon: "quiz",
-    label: "Quiz",
-    color: "text-amber-500",
-    bgLight: "bg-amber-50",
-  },
-  diagram: {
-    icon: "schema",
-    label: "Diagram",
-    color: "text-blue-500",
-    bgLight: "bg-blue-50",
-  },
-  note: {
-    icon: "description",
-    label: "Note",
-    color: "text-purple-500",
-    bgLight: "bg-purple-50",
-  },
-};
+import type { ArtifactMeta } from "@/types/book";
+import { ARTIFACT_TYPE_CONFIG } from "@/lib/artifact-types";
 
 interface ArtifactViewerProps {
   bookId: string;
@@ -81,7 +52,7 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
   }
 
   const artifactType = meta.type ?? "note";
-  const typeConfig = TYPE_CONFIG[artifactType];
+  const typeConfig = ARTIFACT_TYPE_CONFIG[artifactType];
   const createdDate = meta.versions[0]?.createdAt;
   const timeAgo = createdDate ? formatTimeAgo(createdDate) : "";
 
