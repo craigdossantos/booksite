@@ -68,8 +68,10 @@ export async function POST(request: NextRequest) {
       console.warn("Database unavailable:", dbError);
       // Clean up uploaded file
       await supabase.storage.from(BUCKETS.EPUBS).remove([`${bookId}.epub`]);
+      const errMsg =
+        dbError instanceof Error ? dbError.message : String(dbError);
       return NextResponse.json(
-        { error: "Database unavailable" },
+        { error: "Database unavailable", detail: errMsg },
         { status: 503 },
       );
     }
