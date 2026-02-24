@@ -4,7 +4,7 @@ BookSite uses a hybrid storage architecture: Prisma/PostgreSQL for user and book
 
 ## Stack
 
-- **Frontend:** Next.js 16, React 19, Tailwind CSS 4
+- **Frontend:** Next.js 16, React 19, Tailwind CSS 4 (slate palette, Plus Jakarta Sans, Material Symbols)
 - **Database:** PostgreSQL via Supabase (Prisma ORM)
 - **Auth:** NextAuth.js v5 with Google OAuth + PrismaAdapter
 - **AI:** Gemini 2.0 Flash (voice analysis + summary generation)
@@ -34,7 +34,7 @@ EPUB Upload → API Route → Filesystem Storage → Python Processing → JSON 
 src/
   app/
     page.tsx                          # Library view (home)
-    book/[id]/page.tsx                # Book detail + chapter list
+    book/[id]/page.tsx                # Book detail — three-panel Artifact Workspace
     book/[id]/chapter/[num]/page.tsx  # Chapter reader
     api/
       auth/[...nextauth]/route.ts     # OAuth handlers
@@ -47,12 +47,23 @@ src/
       bookmarks/route.ts              # GET/POST bookmarks
       bookmarks/[id]/route.ts         # DELETE bookmark
       user/library/route.ts           # GET owned + bookmarked
-  components/                         # 14 React components
+  components/
+    AppHeader.tsx                     # Shared header with breadcrumb nav
+    ArtifactSidebar.tsx               # Left sidebar: type-grouped artifact list
+    BookDetailView.tsx                # Three-panel layout (sidebar | center | chat)
+    chat/ChatPanel.tsx                # "Book Companion" AI chat with suggestion chips
+    chat/ChatMessage.tsx              # Chat bubble (user/assistant)
+    chat/ArtifactCard.tsx             # Inline artifact card in chat
+    artifacts/ArtifactViewer.tsx      # Type-colored artifact viewer with version nav
+    artifacts/ArtifactList.tsx        # Artifact list (legacy, used in fallback)
   lib/
     books.ts                          # Book CRUD, hybrid Prisma+filesystem
+    artifacts.ts                      # Artifact CRUD (create, list, get by version)
+    artifact-types.ts                 # Shared ArtifactType config (icons, colors)
+    chat-tools.ts                     # AI tool definitions for chat agent
     prisma.ts                         # Prisma client singleton
   types/
-    book.ts                           # Book, Chapter, VoiceProfile types
+    book.ts                           # Book, Chapter, VoiceProfile, ArtifactType types
     next-auth.d.ts                    # Session type extension
   auth.ts                             # NextAuth configuration
 
