@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo, type RefObject } from "react";
 import { ChatMessage } from "./ChatMessage";
 
 interface ChatPanelProps {
@@ -10,6 +10,7 @@ interface ChatPanelProps {
   activeView?: { type: "chapter" | "artifact"; id: string };
   onArtifactCreated?: (artifactId: string) => void;
   onArtifactSelect?: (artifactId: string) => void;
+  chatInputRef?: RefObject<HTMLInputElement | null>;
 }
 
 function getSuggestions(
@@ -35,6 +36,7 @@ export function ChatPanel({
   activeView,
   onArtifactCreated,
   onArtifactSelect,
+  chatInputRef,
 }: ChatPanelProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
@@ -160,10 +162,12 @@ export function ChatPanel({
       >
         <div className="relative">
           <input
+            ref={chatInputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about this book..."
+            aria-label="Ask a question about this book"
             disabled={isLoading}
             className="w-full bg-white border border-slate-200 rounded-md pl-3 pr-10 py-2.5 text-sm focus:ring-2 focus:ring-slate-400 focus:border-transparent outline-none transition-shadow shadow-sm placeholder:text-slate-400 text-slate-700"
           />

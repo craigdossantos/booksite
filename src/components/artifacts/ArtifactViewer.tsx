@@ -119,8 +119,12 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
             onClick={() => setViewVersion((v) => Math.max(1, v - 1))}
             disabled={viewVersion <= 1}
             className="p-1 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 disabled:opacity-30 transition-colors"
+            aria-label="Previous version"
           >
-            <span className="material-symbols-outlined text-lg">
+            <span
+              className="material-symbols-outlined text-lg"
+              aria-hidden="true"
+            >
               chevron_left
             </span>
           </button>
@@ -133,8 +137,12 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
             }
             disabled={viewVersion >= meta.currentVersion}
             className="p-1 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 disabled:opacity-30 transition-colors"
+            aria-label="Next version"
           >
-            <span className="material-symbols-outlined text-lg">
+            <span
+              className="material-symbols-outlined text-lg"
+              aria-hidden="true"
+            >
               chevron_right
             </span>
           </button>
@@ -142,14 +150,36 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
           <div className="w-px h-5 bg-slate-200 mx-1" />
 
           {/* Action buttons */}
-          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
-            <span className="material-symbols-outlined text-lg">edit</span>
+          <button
+            className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors"
+            aria-label="Edit artifact"
+          >
+            <span
+              className="material-symbols-outlined text-lg"
+              aria-hidden="true"
+            >
+              edit
+            </span>
           </button>
-          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
-            <span className="material-symbols-outlined text-lg">share</span>
+          <button
+            className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors"
+            aria-label="Share artifact"
+          >
+            <span
+              className="material-symbols-outlined text-lg"
+              aria-hidden="true"
+            >
+              share
+            </span>
           </button>
-          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
-            <span className="material-symbols-outlined text-lg">
+          <button
+            className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors"
+            aria-label="More options"
+          >
+            <span
+              className="material-symbols-outlined text-lg"
+              aria-hidden="true"
+            >
               more_horiz
             </span>
           </button>

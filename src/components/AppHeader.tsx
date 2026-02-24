@@ -4,12 +4,14 @@ interface AppHeaderProps {
   bookTitle?: string;
   authorName?: string;
   avatarUrl?: string;
+  onBookTitleClick?: () => void;
 }
 
 export function AppHeader({
   bookTitle,
   authorName,
   avatarUrl,
+  onBookTitleClick,
 }: AppHeaderProps) {
   return (
     <header className="flex items-center justify-between border-b border-slate-200 bg-white px-6 py-3 shrink-0 z-50">
@@ -23,7 +25,21 @@ export function AppHeader({
             {bookTitle && (
               <>
                 <span className="text-slate-400 font-normal mx-2">/</span>
-                {bookTitle}
+                {onBookTitleClick ? (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onBookTitleClick();
+                    }}
+                    className="hover:text-slate-600 transition-colors"
+                    aria-label={`Return to ${bookTitle} chapter list`}
+                  >
+                    {bookTitle}
+                  </button>
+                ) : (
+                  bookTitle
+                )}
               </>
             )}
           </h2>

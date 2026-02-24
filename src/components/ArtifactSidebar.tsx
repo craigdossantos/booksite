@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import type { ArtifactIndexEntry, ArtifactType } from "@/types/book";
 
 const TYPE_CONFIG: Record<
@@ -47,11 +48,15 @@ export function ArtifactSidebar({
   onSelect,
   onCreateNew,
 }: ArtifactSidebarProps) {
-  const grouped = TYPE_ORDER.map((type) => ({
-    type,
-    config: TYPE_CONFIG[type],
-    items: artifacts.filter((a) => (a.type ?? "note") === type),
-  })).filter((g) => g.items.length > 0);
+  const grouped = useMemo(
+    () =>
+      TYPE_ORDER.map((type) => ({
+        type,
+        config: TYPE_CONFIG[type],
+        items: artifacts.filter((a) => (a.type ?? "note") === type),
+      })).filter((g) => g.items.length > 0),
+    [artifacts],
+  );
 
   return (
     <aside className="w-64 bg-slate-50 border-r border-slate-200 flex flex-col shrink-0">
@@ -60,7 +65,12 @@ export function ArtifactSidebar({
           onClick={onCreateNew}
           className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors shadow-sm"
         >
-          <span className="material-symbols-outlined text-lg">add</span>
+          <span
+            className="material-symbols-outlined text-lg"
+            aria-hidden="true"
+          >
+            add
+          </span>
           Create New
         </button>
       </div>
