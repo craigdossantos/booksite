@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { Book } from "@/types/book";
+import { BookCardMenu } from "./BookCardMenu";
 import { BookmarkButton } from "./BookmarkButton";
 import { VisibilityBadge } from "./VisibilityBadge";
 
@@ -9,16 +10,20 @@ interface BookCardProps {
   book: Book;
   showBookmarkButton?: boolean;
   showVisibilityBadge?: boolean;
+  showMenu?: boolean;
   isBookmarked?: boolean;
   onBookmarkToggle?: (bookmarked: boolean) => void;
+  onDelete?: () => void;
 }
 
 export function BookCard({
   book,
   showBookmarkButton = false,
   showVisibilityBadge = false,
+  showMenu = false,
   isBookmarked = false,
   onBookmarkToggle,
+  onDelete,
 }: BookCardProps) {
   const isProcessing = book.status !== "ready" && book.status !== "error";
 
@@ -90,6 +95,13 @@ export function BookCard({
             isBookmarked={isBookmarked}
             onToggle={onBookmarkToggle}
           />
+        </div>
+      )}
+
+      {/* Menu for owned books */}
+      {showMenu && onDelete && (
+        <div className="absolute top-2 right-2">
+          <BookCardMenu bookTitle={book.title} onDelete={onDelete} />
         </div>
       )}
     </div>
