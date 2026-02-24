@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { createHash, createHmac } from "crypto";
 import { auth } from "@/auth";
 import { createBook } from "@/lib/books";
-import { prisma } from "@/lib/prisma";
 import { supabase, BUCKETS } from "@/lib/supabase";
 
 export async function POST(request: NextRequest) {
@@ -55,32 +54,13 @@ export async function POST(request: NextRequest) {
 
     const bookTitle = file.name.replace(/\.epub$/i, "");
 
-    // Ensure user record exists (JWT strategy doesn't auto-create DB rows)
-    // Look up by email first since the DB user ID may differ from the OAuth sub
-    let dbUser = session.user.email
-      ? await prisma.user.findUnique({
-          where: { email: session.user.email },
-        })
-      : await prisma.user.findUnique({ where: { id: session.user.id } });
-
-    if (!dbUser) {
-      dbUser = await prisma.user.create({
-        data: {
-          id: session.user.id,
-          email: session.user.email,
-          name: session.user.name,
-          image: session.user.image,
-        },
-      });
-    }
-
     // Create book record in database
     try {
       await createBook({
         id: bookId,
         title: bookTitle,
         author: "Unknown",
-        ownerId: dbUser.id,
+        ownerId: session.user.id,
         isPublic,
         status: "uploading",
       });
