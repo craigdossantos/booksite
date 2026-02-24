@@ -26,10 +26,10 @@ export function BookCard({
     <div className="relative group">
       <Link
         href={`/book/${book.id}`}
-        className="block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all"
+        className="block bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all"
       >
         {/* Cover Image */}
-        <div className="aspect-[2/3] bg-gray-100 relative">
+        <div className="aspect-[2/3] bg-slate-100 relative">
           {book.coverUrl ? (
             <img
               src={book.coverUrl}
@@ -37,8 +37,13 @@ export function BookCard({
               className="w-full h-full object-cover"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-              <span className="text-4xl">📖</span>
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+              <span
+                className="material-symbols-outlined text-4xl text-slate-400"
+                aria-hidden="true"
+              >
+                menu_book
+              </span>
             </div>
           )}
 
@@ -56,7 +61,12 @@ export function BookCard({
           {book.status === "error" && (
             <div className="absolute inset-0 bg-red-900/50 flex items-center justify-center">
               <div className="text-white text-center px-4">
-                <span className="text-2xl">⚠️</span>
+                <span
+                  className="material-symbols-outlined text-2xl"
+                  aria-hidden="true"
+                >
+                  warning
+                </span>
                 <p className="text-sm mt-1">Processing failed</p>
               </div>
             </div>
@@ -72,11 +82,11 @@ export function BookCard({
 
         {/* Book Info */}
         <div className="p-4">
-          <h3 className="font-serif font-semibold text-gray-900 group-hover:text-gray-700 line-clamp-2 mb-1">
+          <h3 className="font-semibold text-slate-900 group-hover:text-slate-700 line-clamp-2 mb-1">
             {book.title}
           </h3>
-          <p className="text-sm text-gray-600 line-clamp-1">{book.author}</p>
-          <p className="text-xs text-gray-400 mt-2">
+          <p className="text-sm text-slate-600 line-clamp-1">{book.author}</p>
+          <p className="text-xs text-slate-400 mt-2">
             {book.chapterCount} chapters
           </p>
         </div>

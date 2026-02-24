@@ -99,10 +99,10 @@ export function UploadDropzone() {
   // Show loading state while checking auth
   if (isLoading) {
     return (
-      <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center">
+      <div className="border-2 border-dashed border-slate-200 rounded-lg p-8 text-center">
         <div className="animate-pulse">
-          <div className="h-12 w-12 bg-gray-200 rounded-full mx-auto mb-3" />
-          <div className="h-4 bg-gray-200 rounded w-48 mx-auto" />
+          <div className="h-12 w-12 bg-slate-200 rounded-full mx-auto mb-3" />
+          <div className="h-4 bg-slate-200 rounded w-48 mx-auto" />
         </div>
       </div>
     );
@@ -111,18 +111,24 @@ export function UploadDropzone() {
   // Show sign-in prompt for unauthenticated users
   if (!isAuthenticated) {
     return (
-      <div
+      <button
+        type="button"
         onClick={handleClick}
-        className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-stone-400 hover:bg-stone-50 transition-colors"
+        className="w-full border-2 border-dashed border-slate-300 rounded-lg p-8 text-center cursor-pointer hover:border-slate-400 hover:bg-slate-50 transition-colors"
       >
-        <div className="text-4xl mb-3">🔐</div>
-        <p className="text-gray-700 font-medium mb-1">
+        <span
+          className="material-symbols-outlined text-4xl text-slate-400 mb-3 block"
+          aria-hidden="true"
+        >
+          lock
+        </span>
+        <p className="text-slate-700 font-medium mb-1">
           Sign in to upload your books
         </p>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-slate-500">
           Click here to sign in with Google and start building your library
         </p>
-      </div>
+      </button>
     );
   }
 
@@ -135,7 +141,7 @@ export function UploadDropzone() {
         onDrop={handleDrop}
         className={`
           border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors
-          ${isDragging ? "border-green-500 bg-green-50" : "border-gray-300 hover:border-gray-400"}
+          ${isDragging ? "border-emerald-500 bg-emerald-50" : "border-slate-300 hover:border-slate-400"}
           ${isUploading ? "opacity-50 pointer-events-none" : ""}
         `}
       >
@@ -149,16 +155,21 @@ export function UploadDropzone() {
 
         {isUploading ? (
           <div className="flex flex-col items-center">
-            <div className="animate-spin w-8 h-8 border-2 border-green-600 border-t-transparent rounded-full mb-3" />
-            <p className="text-gray-600">Uploading...</p>
+            <div className="animate-spin w-8 h-8 border-2 border-emerald-600 border-t-transparent rounded-full mb-3" />
+            <p className="text-slate-600">Uploading...</p>
           </div>
         ) : (
           <>
-            <div className="text-4xl mb-3">📤</div>
-            <p className="text-gray-700 font-medium mb-1">
+            <span
+              className="material-symbols-outlined text-4xl text-slate-400 mb-3 block"
+              aria-hidden="true"
+            >
+              upload_file
+            </span>
+            <p className="text-slate-700 font-medium mb-1">
               Drop an EPUB file here or click to browse
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-slate-500">
               We&apos;ll process your book and generate summaries
             </p>
           </>
@@ -174,13 +185,13 @@ export function UploadDropzone() {
             type="checkbox"
             checked={isPublic}
             onChange={(e) => setIsPublic(e.target.checked)}
-            className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+            className="w-4 h-4 text-emerald-600 border-slate-300 rounded focus:ring-emerald-500"
           />
-          <span className="text-sm text-gray-600">
+          <span className="text-sm text-slate-600">
             Share with community (public)
           </span>
         </label>
-        <span className="text-xs text-gray-400">
+        <span className="text-xs text-slate-400">
           {isPublic
             ? "Anyone can view this book"
             : "Only you can view this book"}
