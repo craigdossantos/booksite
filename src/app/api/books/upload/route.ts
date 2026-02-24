@@ -56,16 +56,23 @@ export async function POST(request: NextRequest) {
     const bookTitle = file.name.replace(/\.epub$/i, "");
 
     // Ensure user record exists (JWT strategy doesn't auto-create DB rows)
-    await prisma.user.upsert({
-      where: { id: session.user.id },
-      update: {},
-      create: {
-        id: session.user.id,
-        email: session.user.email,
-        name: session.user.name,
-        image: session.user.image,
-      },
-    });
+    // Look up by email first since the DB user ID may differ from the OAuth sub
+    let dbUser = session.user.email
+      ? await prisma.user.findUnique({
+          where: { email: session.user.email },
+        })
+      : await prisma.user.findUnique({ where: { id: session.user.id } });
+
+    if (!dbUser) {
+      dbUser = await prisma.user.create({
+        data: {
+          id: session.user.id,
+          email: session.user.email,
+          name: session.user.name,
+          image: session.user.image,
+        },
+      });
+    }
 
     // Create book record in database
     try {
@@ -73,7 +80,7 @@ export async function POST(request: NextRequest) {
         id: bookId,
         title: bookTitle,
         author: "Unknown",
-        ownerId: session.user.id,
+        ownerId: dbUser.id,
         isPublic,
         status: "uploading",
       });
@@ -131,9 +138,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error("Upload error:", error);
-    const errMsg = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to upload book", detail: errMsg },
+      { error: "Failed to upload book" },
       { status: 500 },
     );
   }
