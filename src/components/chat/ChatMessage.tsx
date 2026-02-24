@@ -15,7 +15,7 @@ export function ChatMessage({ message, onArtifactSelect }: ChatMessageProps) {
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
         className={`max-w-[85%] rounded-lg px-4 py-2 text-sm ${
-          isUser ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
+          isUser ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-800"
         }`}
       >
         {message.parts.map((part, i) => {
