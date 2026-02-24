@@ -117,6 +117,34 @@ describe("getArtifact", () => {
   });
 });
 
+describe("artifact type field", () => {
+  it("stores type when creating an artifact", async () => {
+    const result = await createArtifact("_test_artifacts", {
+      title: "Quiz: Ch 1-3",
+      description: "Review quiz",
+      htmlContent: "<h1>Quiz</h1>",
+      chapters: [1, 2, 3],
+      type: "quiz",
+    });
+
+    expect(result.type).toBe("quiz");
+
+    const meta = await getArtifact("_test_artifacts", result.id);
+    expect(meta?.type).toBe("quiz");
+  });
+
+  it("defaults to note when type is not provided", async () => {
+    const result = await createArtifact("_test_artifacts", {
+      title: "Untitled",
+      description: "No type",
+      htmlContent: "<p>test</p>",
+      chapters: [],
+    });
+
+    expect(result.type).toBe("note");
+  });
+});
+
 describe("listArtifacts", () => {
   it("returns empty array when no artifacts exist", async () => {
     const list = await listArtifacts("_test_artifacts");
