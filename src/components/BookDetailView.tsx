@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
 import type { BookWithChapters, ArtifactIndexEntry } from "@/types/book";
 import { AppHeader } from "@/components/AppHeader";
 import { ArtifactSidebar } from "@/components/ArtifactSidebar";
 import { ChapterList } from "@/components/ChapterList";
+import { ProcessingOverlay } from "@/components/ProcessingOverlay";
 import { ChatPanel } from "@/components/chat/ChatPanel";
 import { ArtifactViewer } from "@/components/artifacts/ArtifactViewer";
 
@@ -17,6 +19,8 @@ export function BookDetailView({
   book,
   initialArtifacts,
 }: BookDetailViewProps) {
+  const router = useRouter();
+  const [isReady, setIsReady] = useState(book.status === "ready");
   const [artifacts, setArtifacts] = useState(initialArtifacts);
   const [selectedArtifactId, setSelectedArtifactId] = useState<string | null>(
     null,
@@ -55,6 +59,11 @@ export function BookDetailView({
     setSelectedArtifactId(null);
     setActiveView(undefined);
   }, []);
+
+  const handleReady = useCallback(() => {
+    setIsReady(true);
+    router.refresh();
+  }, [router]);
 
   const handleCreateNew = useCallback(() => {
     // Focus the chat input to prompt the user to ask for a new artifact
@@ -127,8 +136,16 @@ export function BookDetailView({
                 </div>
               </header>
 
-              {/* Chapter list */}
-              <ChapterList bookId={book.id} chapters={book.chapters} />
+              {/* Chapter list or processing overlay */}
+              {isReady ? (
+                <ChapterList bookId={book.id} chapters={book.chapters} />
+              ) : (
+                <ProcessingOverlay
+                  bookId={book.id}
+                  initialStatus={book.status}
+                  onReady={handleReady}
+                />
+              )}
             </div>
           )}
         </main>

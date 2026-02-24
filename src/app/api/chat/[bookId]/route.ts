@@ -5,15 +5,12 @@ import {
   stepCountIs,
   type UIMessage,
 } from "ai";
-import fs from "fs-extra";
-import path from "path";
+import { prisma } from "@/lib/prisma";
 import { createBookTools } from "@/lib/chat-tools";
 import { getSessionSummary } from "@/lib/session";
 import { listArtifacts } from "@/lib/artifacts";
 
 export const maxDuration = 60;
-
-const DATA_DIR = path.join(process.cwd(), "data", "books");
 
 interface ChatRequest {
   messages: UIMessage[];
@@ -27,13 +24,13 @@ async function buildSystemPrompt(
   bookId: string,
   activeView?: ChatRequest["activeView"],
 ): Promise<string> {
-  const bookDir = path.join(DATA_DIR, bookId);
-  const metadataPath = path.join(bookDir, "metadata.json");
-
   let bookContext = "";
-  if (await fs.pathExists(metadataPath)) {
-    const meta = await fs.readJson(metadataPath);
-    bookContext = `You are helping the user explore "${meta.title}" by ${meta.author}. The book has ${meta.chapterCount} chapters.`;
+  const book = await prisma.book.findUnique({
+    where: { id: bookId },
+    select: { title: true, author: true, chapterCount: true },
+  });
+  if (book) {
+    bookContext = `You are helping the user explore "${book.title}" by ${book.author}. The book has ${book.chapterCount} chapters.`;
   }
 
   // Load session summary

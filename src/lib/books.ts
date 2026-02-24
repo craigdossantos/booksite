@@ -52,7 +52,7 @@ function prismaBookToBook(
 /**
  * Load voice profile from Supabase Storage
  */
-async function loadVoiceProfile(
+export async function loadVoiceProfile(
   bookId: string,
 ): Promise<VoiceProfile | undefined> {
   try {
@@ -179,7 +179,7 @@ export async function getBook(
 /**
  * Load chapters.json from Supabase Storage
  */
-async function loadChapters(bookId: string): Promise<Chapter[]> {
+export async function loadChapters(bookId: string): Promise<Chapter[]> {
   try {
     const { data, error } = await supabase.storage
       .from(BUCKETS.BOOKS)
