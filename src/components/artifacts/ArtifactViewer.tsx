@@ -1,7 +1,37 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { ArtifactMeta } from "@/types/book";
+import type { ArtifactMeta, ArtifactType } from "@/types/book";
+
+const TYPE_CONFIG: Record<
+  ArtifactType,
+  { icon: string; label: string; color: string; bgLight: string }
+> = {
+  summary: {
+    icon: "visibility",
+    label: "Summary",
+    color: "text-emerald-500",
+    bgLight: "bg-emerald-50",
+  },
+  quiz: {
+    icon: "quiz",
+    label: "Quiz",
+    color: "text-amber-500",
+    bgLight: "bg-amber-50",
+  },
+  diagram: {
+    icon: "schema",
+    label: "Diagram",
+    color: "text-blue-500",
+    bgLight: "bg-blue-50",
+  },
+  note: {
+    icon: "description",
+    label: "Note",
+    color: "text-purple-500",
+    bgLight: "bg-purple-50",
+  },
+};
 
 interface ArtifactViewerProps {
   bookId: string;
@@ -33,7 +63,10 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64 text-gray-400">
+      <div className="flex items-center justify-center h-64 text-slate-400">
+        <span className="material-symbols-outlined animate-spin text-2xl mr-2">
+          progress_activity
+        </span>
         Loading...
       </div>
     );
@@ -41,28 +74,57 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
 
   if (!meta) {
     return (
-      <div className="flex items-center justify-center h-64 text-gray-400">
+      <div className="flex items-center justify-center h-64 text-slate-400">
         Artifact not found.
       </div>
     );
   }
 
+  const artifactType = meta.type ?? "note";
+  const typeConfig = TYPE_CONFIG[artifactType];
+  const createdDate = meta.versions[0]?.createdAt;
+  const timeAgo = createdDate ? formatTimeAgo(createdDate) : "";
+
   return (
-    <div className="flex flex-col h-full">
-      {/* Header with version nav */}
-      <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-gray-50">
-        <h3 className="text-sm font-medium text-gray-700 truncate">
-          {meta.title}
-        </h3>
-        <div className="flex items-center gap-2 text-sm text-gray-500">
+    <div className="flex flex-col h-full bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      {/* Type-colored header */}
+      <div className="flex items-center justify-between px-5 py-3 border-b border-slate-200">
+        <div className="flex items-center gap-3 min-w-0">
+          <div
+            className={`size-9 rounded-lg ${typeConfig.bgLight} flex items-center justify-center`}
+          >
+            <span
+              className={`material-symbols-outlined text-xl ${typeConfig.color}`}
+            >
+              {typeConfig.icon}
+            </span>
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-sm font-bold text-slate-900 truncate">
+              {meta.title}
+            </h3>
+            <p className="text-xs text-slate-500">
+              {typeConfig.label}
+              {timeAgo && <> &middot; Created {timeAgo}</>}
+              {meta.chapters.length > 0 && (
+                <> &middot; Ch {meta.chapters.join(", ")}</>
+              )}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-1 shrink-0">
+          {/* Version nav */}
           <button
             onClick={() => setViewVersion((v) => Math.max(1, v - 1))}
             disabled={viewVersion <= 1}
-            className="px-1 hover:text-gray-900 disabled:opacity-30"
+            className="p-1 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 disabled:opacity-30 transition-colors"
           >
-            &larr;
+            <span className="material-symbols-outlined text-lg">
+              chevron_left
+            </span>
           </button>
-          <span>
+          <span className="text-xs text-slate-500 tabular-nums min-w-[3.5rem] text-center">
             v{viewVersion}/{meta.currentVersion}
           </span>
           <button
@@ -70,9 +132,26 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
               setViewVersion((v) => Math.min(meta.currentVersion, v + 1))
             }
             disabled={viewVersion >= meta.currentVersion}
-            className="px-1 hover:text-gray-900 disabled:opacity-30"
+            className="p-1 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 disabled:opacity-30 transition-colors"
           >
-            &rarr;
+            <span className="material-symbols-outlined text-lg">
+              chevron_right
+            </span>
+          </button>
+
+          <div className="w-px h-5 bg-slate-200 mx-1" />
+
+          {/* Action buttons */}
+          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
+            <span className="material-symbols-outlined text-lg">edit</span>
+          </button>
+          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
+            <span className="material-symbols-outlined text-lg">share</span>
+          </button>
+          <button className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition-colors">
+            <span className="material-symbols-outlined text-lg">
+              more_horiz
+            </span>
           </button>
         </div>
       </div>
@@ -88,4 +167,19 @@ export function ArtifactViewer({ bookId, artifactId }: ArtifactViewerProps) {
       </div>
     </div>
   );
+}
+
+function formatTimeAgo(dateStr: string): string {
+  const now = Date.now();
+  const then = new Date(dateStr).getTime();
+  const diffMs = now - then;
+  const diffMin = Math.floor(diffMs / 60000);
+  if (diffMin < 1) return "just now";
+  if (diffMin < 60) return `${diffMin}m ago`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr}h ago`;
+  const diffDays = Math.floor(diffHr / 24);
+  if (diffDays === 1) return "yesterday";
+  if (diffDays < 30) return `${diffDays}d ago`;
+  return new Date(dateStr).toLocaleDateString();
 }
