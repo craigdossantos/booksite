@@ -4,11 +4,15 @@ import { LibraryView } from "@/components/LibraryView";
 import { AppHeader } from "@/components/AppHeader";
 
 export default async function LibraryPage() {
-  const session = await auth();
+  let session = null;
+  let initialBooks: Awaited<ReturnType<typeof getPublicBooks>> = [];
+  try {
+    session = await auth();
+    initialBooks = await getPublicBooks();
+  } catch {
+    // DB unreachable — render with empty state
+  }
   const isAuthenticated = !!session?.user;
-
-  // Fetch initial books (public books for everyone)
-  const initialBooks = await getPublicBooks();
 
   return (
     <div className="min-h-screen flex flex-col">
