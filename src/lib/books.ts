@@ -237,8 +237,19 @@ export async function createBook(data: {
   chapterCount?: number;
   status?: string;
 }): Promise<Book> {
-  const book = await prisma.book.create({
-    data: {
+  const book = await prisma.book.upsert({
+    where: { id: data.id },
+    update: {
+      title: data.title,
+      author: data.author,
+      ownerId: data.ownerId,
+      isPublic: data.isPublic ?? false,
+      status: data.status ?? "uploading",
+      progress: 0,
+      currentStep: "",
+      errorMessage: null,
+    },
+    create: {
       id: data.id,
       title: data.title,
       author: data.author,
