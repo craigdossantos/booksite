@@ -76,6 +76,20 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
     }
   };
 
+  const handleDeleteBook = async (bookId: string) => {
+    try {
+      const res = await fetch(`/api/books/${bookId}`, { method: "DELETE" });
+      if (!res.ok) {
+        const data = await res.json();
+        alert(data.error || "Failed to delete book");
+        return;
+      }
+      setOwnedBooks((prev) => prev.filter((b) => b.id !== bookId));
+    } catch {
+      alert("Failed to delete book. Please try again.");
+    }
+  };
+
   // Get books to display based on current tab and auth status
   const getDisplayBooks = () => {
     if (!isAuthenticated) {
@@ -156,6 +170,8 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
               onBookmarkToggle={(bookmarked) =>
                 handleBookmarkToggle(book.id, bookmarked)
               }
+              showMenu={isAuthenticated && isOwnedBook(book)}
+              onDelete={() => handleDeleteBook(book.id)}
             />
           ))}
         </div>
