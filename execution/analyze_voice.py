@@ -7,40 +7,16 @@ import argparse
 import json
 import os
 import sys
-import google.generativeai as genai
 
-# Configure Gemini
-API_KEY = os.environ.get("GEMINI_API_KEY")
+import anthropic
+
+# Configure Anthropic client
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 if not API_KEY:
-    print("Error: GEMINI_API_KEY environment variable not set.", file=sys.stderr)
+    print("Error: ANTHROPIC_API_KEY environment variable not set.", file=sys.stderr)
     sys.exit(1)
 
-genai.configure(api_key=API_KEY)
-
-VOICE_PROFILE_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "tone": {
-            "type": "string",
-            "description": "The emotional tone (conversational, academic, inspirational, humorous, etc.)"
-        },
-        "style": {
-            "type": "string",
-            "description": "The narrative style (first-person narrative, third-person objective, instructional, etc.)"
-        },
-        "complexity": {
-            "type": "string",
-            "enum": ["simple", "moderate", "complex"],
-            "description": "Vocabulary and sentence complexity level"
-        },
-        "characteristics": {
-            "type": "array",
-            "items": {"type": "string"},
-            "description": "3-5 distinctive stylistic traits of this author"
-        }
-    },
-    "required": ["tone", "style", "complexity", "characteristics"]
-}
+client = anthropic.Anthropic()
 
 VOICE_ANALYSIS_PROMPT = """
 Analyze the writing style of this book excerpt. You are analyzing to create a "voice profile"
@@ -80,7 +56,7 @@ Read the following text carefully and identify:
 Text to analyze:
 {content}
 
-Return ONLY a JSON object matching the schema. Be specific to THIS book's unique voice.
+Return ONLY a raw JSON object (no markdown code fences) with these exact keys: "tone" (string), "style" (string), "complexity" (one of "simple", "moderate", "complex"), "characteristics" (array of 3-5 strings). Be specific to THIS book's unique voice.
 """
 
 
@@ -123,20 +99,19 @@ def analyze_voice(book_id: str) -> dict:
 
     print(f"Analyzing voice profile from {len(chapter_files)} chapters ({total_chars} chars)...")
 
-    # Call Gemini API
-    model = genai.GenerativeModel(
-        model_name="gemini-2.5-flash",
-        generation_config={
-            "response_mime_type": "application/json",
-            "response_schema": VOICE_PROFILE_SCHEMA,
-        }
-    )
-
     try:
-        response = model.generate_content(
-            VOICE_ANALYSIS_PROMPT.format(content=text_sample)
+        message = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=1024,
+            messages=[
+                {"role": "user", "content": VOICE_ANALYSIS_PROMPT.format(content=text_sample)}
+            ]
         )
-        voice_profile = json.loads(response.text)
+        response_text = message.content[0].text.strip()
+        # Extract JSON from response (may be wrapped in markdown code block)
+        if response_text.startswith("```"):
+            response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+        voice_profile = json.loads(response_text)
 
         print(f"Voice profile created:")
         print(f"  Tone: {voice_profile['tone']}")

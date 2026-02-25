@@ -7,28 +7,19 @@ Summary length adapts based on chapter word count.
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime
-import google.generativeai as genai
 
-# Configure Gemini
-API_KEY = os.environ.get("GEMINI_API_KEY")
+import anthropic
+
+# Configure Anthropic client
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 if not API_KEY:
-    print("Error: GEMINI_API_KEY environment variable not set.", file=sys.stderr)
+    print("Error: ANTHROPIC_API_KEY environment variable not set.", file=sys.stderr)
     sys.exit(1)
 
-genai.configure(api_key=API_KEY)
-
-SUMMARY_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "summary": {
-            "type": "string",
-            "description": "The blog-post style summary in the author's voice"
-        }
-    },
-    "required": ["summary"]
-}
+client = anthropic.Anthropic()
 
 
 def get_target_word_count(chapter_word_count: int) -> int:
@@ -43,10 +34,53 @@ def get_target_word_count(chapter_word_count: int) -> int:
         return 600  # 500-700 average
 
 
+def clean_chapter_title(raw_title: str, chapter_content: str) -> str:
+    """Clean up raw chapter title extracted from filename.
+
+    Strips file extensions and prefixes, and falls back to extracting
+    the first heading from the markdown content if the title is generic.
+    """
+    title = raw_title.strip()
+
+    # Strip common file extensions
+    title = re.sub(r'\.(x?html?|xml)$', '', title, flags=re.IGNORECASE)
+
+    # Strip leading 'xhtml' prefix (e.g., "xhtmlChapter01" -> "Chapter01")
+    title = re.sub(r'^xhtml', '', title, flags=re.IGNORECASE)
+
+    # Strip leading zeros-padded numbers with separators (e.g., "00_Chapter Name")
+    title = re.sub(r'^\d+[_\-\s]+', '', title)
+
+    # Replace underscores and hyphens with spaces
+    title = title.replace('_', ' ').replace('-', ' ')
+
+    # Collapse multiple spaces
+    title = re.sub(r'\s+', ' ', title).strip()
+
+    # Check if the title is still generic / unhelpful
+    is_generic = (
+        not title
+        or re.match(r'^(chapter\s*)?\d+$', title, re.IGNORECASE)
+        or re.match(r'^(part|section)\s*\d*$', title, re.IGNORECASE)
+        or len(title) <= 2
+    )
+
+    if is_generic:
+        # Try to extract a real title from the first heading in the markdown
+        heading_match = re.search(r'^#{1,3}\s+(.+)$', chapter_content, re.MULTILINE)
+        if heading_match:
+            extracted = heading_match.group(1).strip()
+            # Only use it if it's substantive
+            if len(extracted) > 2 and not re.match(r'^(chapter\s*)?\d+$', extracted, re.IGNORECASE):
+                return extracted
+
+    return title if title else raw_title
+
+
 def generate_summary(chapter_title: str, chapter_content: str, voice_profile: dict, target_words: int) -> dict:
     """Generate a voice-matched summary for a single chapter."""
 
-    prompt = f"""You are writing a summary in the voice and style of this book's author.
+    prompt = f"""You are writing a blog-post style summary of a book chapter. You must write in the voice and style of the book's author, as if the author themselves were recapping the chapter for a reader.
 
 VOICE PROFILE:
 - Tone: {voice_profile['tone']}
@@ -54,41 +88,39 @@ VOICE PROFILE:
 - Complexity: {voice_profile['complexity']}
 - Characteristics: {', '.join(voice_profile['characteristics'])}
 
-YOUR TASK:
-Write a blog-post style summary of this chapter that:
-1. Matches the author's voice EXACTLY - read the voice profile carefully
-2. Captures the key ideas, insights, and narrative
-3. Feels like it could have been written by the original author
-4. Is approximately {target_words} words (adjust based on content density)
-5. Engages the reader and makes them want to read the full chapter
+INSTRUCTIONS:
+Write a compelling, blog-post style summary of the chapter below. The summary should:
+1. Be written AS the author — use "I" if the original is first-person, match their sentence patterns, vocabulary, and rhythm
+2. Capture the key ideas, arguments, stories, and insights from the chapter
+3. Use markdown formatting: separate paragraphs with blank lines, use **bold** for emphasis on key terms or ideas, and use ### subheadings if the summary is longer than 300 words
+4. Feel like a polished blog post that draws the reader in and makes them want to read the full chapter
+5. Be approximately {target_words} words (vary based on content density — some chapters need more, some less)
 
-DO NOT:
-- Use generic summarization language like "This chapter discusses..."
-- Start with "In this chapter..." or similar meta-phrases
-- Be dry or academic unless that's the author's style
-- Lose the author's personality
+RULES — do NOT violate these:
+- NEVER start with "This chapter discusses...", "In this chapter...", "The author explains...", or any similar meta-framing
+- NEVER refer to "the author" in third person — you ARE the author
+- NEVER use generic summarization language — write with personality and specificity
+- DO open with a hook: a provocative claim, a vivid scene, a question, or a surprising fact from the chapter
 
 CHAPTER TITLE: {chapter_title}
 
 CHAPTER CONTENT:
 {chapter_content[:25000]}
 
-Write the summary now, in the author's voice:"""
-
-    model = genai.GenerativeModel(
-        model_name="gemini-2.5-flash",
-        generation_config={
-            "response_mime_type": "application/json",
-            "response_schema": SUMMARY_SCHEMA,
-        }
-    )
+Write the summary now, in the author's voice. Return ONLY the summary text with markdown formatting — no preamble, no meta-commentary."""
 
     try:
-        response = model.generate_content(prompt)
-        result = json.loads(response.text)
+        message = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=2048,
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        summary_text = message.content[0].text.strip()
         return {
-            "content": result["summary"],
-            "wordCount": len(result["summary"].split()),
+            "content": summary_text,
+            "wordCount": len(summary_text.split()),
             "generatedAt": datetime.now().isoformat()
         }
     except Exception as e:
@@ -145,13 +177,16 @@ def generate_all_summaries(book_id: str, update_status_callback=None):
 
         word_count = len(content.split())
 
-        # Extract title from filename or first heading
+        # Extract raw title from filename
         # Filename format: 00_Chapter_Name.md
         parts = chapter_file.replace('.md', '').split('_', 1)
         if len(parts) > 1:
-            title = parts[1].replace('_', ' ')
+            raw_title = parts[1].replace('_', ' ')
         else:
-            title = chapter_file.replace('.md', '').replace('_', ' ')
+            raw_title = chapter_file.replace('.md', '').replace('_', ' ')
+
+        # Clean up the title
+        title = clean_chapter_title(raw_title, content)
 
         # Check if we already have a summary for this chapter
         existing = next((ch for ch in existing_chapters if ch.get('markdownPath') == f"chapters/{chapter_file}"), None)
