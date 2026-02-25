@@ -2,7 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 import fs from "fs-extra";
 import path from "path";
-import type { Chapter } from "@/types/book";
+import { loadChapters, getChapterContent } from "@/lib/books";
 import {
   createArtifact,
   updateArtifact,
@@ -16,12 +16,6 @@ const DATA_DIR = path.join(process.cwd(), "data", "books");
 
 function bookPath(bookId: string, ...parts: string[]): string {
   return path.join(DATA_DIR, bookId, ...parts);
-}
-
-async function loadChapters(bookId: string): Promise<Chapter[]> {
-  const p = bookPath(bookId, "chapters.json");
-  if (!(await fs.pathExists(p))) return [];
-  return fs.readJson(p);
 }
 
 export function createBookTools(bookId: string) {
@@ -54,10 +48,7 @@ export function createBookTools(bookId: string) {
         if (!chapter) {
           return `Chapter ${chapterNumber} not found. Available: ${chapters.map((c) => c.number).join(", ")}`;
         }
-        const content = await fs.readFile(
-          bookPath(bookId, chapter.markdownPath),
-          "utf-8",
-        );
+        const content = await getChapterContent(bookId, chapter.markdownPath);
         return `# Chapter ${chapter.number}: ${chapter.title}\nWord count: ${chapter.wordCount}\n\n${content}`;
       },
     }),
@@ -79,10 +70,7 @@ export function createBookTools(bookId: string) {
             results.push(`--- Chapter ${num}: NOT FOUND ---`);
             continue;
           }
-          const content = await fs.readFile(
-            bookPath(bookId, chapter.markdownPath),
-            "utf-8",
-          );
+          const content = await getChapterContent(bookId, chapter.markdownPath);
           results.push(
             `--- Chapter ${chapter.number}: ${chapter.title} (${chapter.wordCount} words) ---\n\n${content}`,
           );
@@ -103,9 +91,8 @@ export function createBookTools(bookId: string) {
         const results: string[] = [];
 
         for (const ch of chapters) {
-          const mdPath = bookPath(bookId, ch.markdownPath);
-          if (!(await fs.pathExists(mdPath))) continue;
-          const content = await fs.readFile(mdPath, "utf-8");
+          const content = await getChapterContent(bookId, ch.markdownPath);
+          if (!content) continue;
           const lines = content.split("\n");
           for (let i = 0; i < lines.length; i++) {
             if (lines[i].toLowerCase().includes(queryLower)) {
