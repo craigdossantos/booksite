@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { BookWithChapters, ArtifactIndexEntry } from "@/types/book";
 import { AppHeader } from "@/components/AppHeader";
@@ -31,6 +31,61 @@ export function BookDetailView({
   // Key to force ArtifactViewer to remount when the same artifact is updated
   const [viewerKey, setViewerKey] = useState(0);
   const chatInputRef = useRef<HTMLInputElement>(null);
+
+  // Resizable chat panel
+  const MIN_CHAT_WIDTH = 280;
+  const MAX_CHAT_WIDTH_RATIO = 0.5;
+  const [chatPanelWidth, setChatPanelWidth] = useState(320);
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartWidth = useRef(0);
+
+  const handleDragStart = useCallback(
+    (e: React.MouseEvent) => {
+      isDragging.current = true;
+      dragStartX.current = e.clientX;
+      dragStartWidth.current = chatPanelWidth;
+      document.body.style.cursor = "col-resize";
+      document.body.style.userSelect = "none";
+    },
+    [chatPanelWidth],
+  );
+
+  useEffect(() => {
+    function handleMouseMove(e: MouseEvent) {
+      if (!isDragging.current) return;
+      const delta = dragStartX.current - e.clientX;
+      const maxWidth = window.innerWidth * MAX_CHAT_WIDTH_RATIO;
+      const newWidth = Math.min(
+        maxWidth,
+        Math.max(MIN_CHAT_WIDTH, dragStartWidth.current + delta),
+      );
+      setChatPanelWidth(newWidth);
+    }
+
+    function handleMouseUp() {
+      if (!isDragging.current) return;
+      isDragging.current = false;
+      document.body.style.cursor = "";
+      document.body.style.userSelect = "";
+    }
+
+    function handleWindowResize() {
+      setChatPanelWidth((prev) => {
+        const maxWidth = window.innerWidth * MAX_CHAT_WIDTH_RATIO;
+        return Math.min(maxWidth, Math.max(MIN_CHAT_WIDTH, prev));
+      });
+    }
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const refreshArtifacts = useCallback(async () => {
     const res = await fetch(`/api/artifacts/${book.id}`);
@@ -65,9 +120,15 @@ export function BookDetailView({
     router.refresh();
   }, [router]);
 
-  const handleCreateNew = useCallback(() => {
-    // Focus the chat input to prompt the user to ask for a new artifact
-    chatInputRef.current?.focus();
+  const setChatInputRef = useRef<((text: string) => void) | null>(null);
+
+  const handleInputReady = useCallback((setter: (text: string) => void) => {
+    setChatInputRef.current = setter;
+  }, []);
+
+  const handleCreateNewWithTemplate = useCallback((templatePrompt: string) => {
+    setChatInputRef.current?.(templatePrompt);
+    requestAnimationFrame(() => chatInputRef.current?.focus());
   }, []);
 
   return (
@@ -84,7 +145,7 @@ export function BookDetailView({
           artifacts={artifacts}
           selectedId={selectedArtifactId}
           onSelect={handleArtifactSelect}
-          onCreateNew={handleCreateNew}
+          onCreateNew={handleCreateNewWithTemplate}
         />
 
         {/* Center — main content area */}
@@ -150,14 +211,28 @@ export function BookDetailView({
           )}
         </main>
 
+        {/* Drag handle for resizing chat panel */}
+        <div
+          role="separator"
+          aria-orientation="vertical"
+          onMouseDown={handleDragStart}
+          className="w-1 relative cursor-col-resize group shrink-0 bg-slate-200 hover:bg-slate-300 transition-colors"
+        >
+          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 h-8 top-1/2 -translate-y-1/2 bg-slate-300 group-hover:bg-slate-400 rounded-full transition-colors" />
+        </div>
+
         {/* Right panel — always-visible chat */}
-        <aside className="w-80 bg-white border-l border-slate-200 flex flex-col shrink-0">
+        <aside
+          className="bg-white border-l border-slate-200 flex flex-col shrink-0"
+          style={{ width: chatPanelWidth }}
+        >
           <ChatPanel
             bookId={book.id}
             activeView={activeView}
             onArtifactCreated={handleArtifactCreated}
             onArtifactSelect={handleArtifactSelect}
             chatInputRef={chatInputRef}
+            onInputReady={handleInputReady}
           />
         </aside>
       </div>

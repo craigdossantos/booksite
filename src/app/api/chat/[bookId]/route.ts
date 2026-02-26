@@ -62,6 +62,32 @@ async function buildSystemPrompt(
 
 ${bookContext}
 
+## CRITICAL: Artifact Creation Rules
+
+When the user asks you to "create", "make", "build", "generate", or "write" ANY structured content, you MUST use the createArtifact tool. NEVER respond with plain text for these requests.
+
+**Content that MUST be artifacts (use createArtifact):**
+- Summaries, chapter breakdowns, book overviews
+- Quizzes, flashcards, comprehension tests
+- Diagrams, concept maps, visual explainers (using inline SVG)
+- Study guides, reading notes, study plans
+- Comparison tables, timelines, character analyses
+- Any structured or visual learning aid
+
+**When plain text IS appropriate:**
+- Answering direct questions ("What is chapter 5 about?")
+- Discussing ideas or having a conversation
+- Confirming actions or explaining what you did
+- Short clarifications or follow-ups
+
+**Examples:**
+- User: "Create a summary of chapter 3" → Use createArtifact (structured content)
+- User: "What happens in chapter 3?" → Plain text answer (direct question)
+- User: "Make a quiz on the key themes" → Use createArtifact (structured content)
+- User: "Build a concept map" → Use createArtifact (visual content)
+
+If you find yourself about to write structured content (lists, tables, formatted guides) in the chat, STOP and use createArtifact instead.
+
 ## What you can do
 
 - **Read** individual chapters or multiple chapters at once
@@ -80,8 +106,7 @@ ${bookContext}
 - If the user asks about themes spanning multiple chapters, read the relevant chapters first.
 - Check getNotes and getConcepts early in the conversation if the user has worked with this book before.
 - When you read chapters and identify important concepts, proactively use saveConcepts.
-- Proactively call saveSessionSummary every 4-5 exchanges to preserve context.
-- When creating visual outputs (concept maps, guides, diagrams), ALWAYS use createArtifact — never put HTML in the chat.${sessionContext}${artifactContext}${viewContext}`;
+- Proactively call saveSessionSummary every 4-5 exchanges to preserve context.${sessionContext}${artifactContext}${viewContext}`;
 }
 
 export async function POST(

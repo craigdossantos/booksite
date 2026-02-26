@@ -1,17 +1,18 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 import type { ArtifactIndexEntry } from "@/types/book";
 import {
   ARTIFACT_TYPE_CONFIG,
   ARTIFACT_TYPE_ORDER,
+  ARTIFACT_TEMPLATE_PROMPTS,
 } from "@/lib/artifact-types";
 
 interface ArtifactSidebarProps {
   artifacts: ArtifactIndexEntry[];
   selectedId: string | null;
   onSelect: (id: string) => void;
-  onCreateNew: () => void;
+  onCreateNew: (templatePrompt: string) => void;
 }
 
 export function ArtifactSidebar({
@@ -30,11 +31,38 @@ export function ArtifactSidebar({
     [artifacts],
   );
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!dropdownOpen) return;
+
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    }
+
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") setDropdownOpen(false);
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [dropdownOpen]);
+
   return (
     <aside className="w-64 bg-slate-50 border-r border-slate-200 flex flex-col shrink-0">
-      <div className="p-4">
+      <div className="p-4" ref={dropdownRef}>
         <button
-          onClick={onCreateNew}
+          onClick={() => setDropdownOpen(!dropdownOpen)}
           className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors shadow-sm"
         >
           <span
@@ -44,7 +72,46 @@ export function ArtifactSidebar({
             add
           </span>
           Create New
+          <span
+            className={`material-symbols-outlined text-lg transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+            aria-hidden="true"
+          >
+            expand_more
+          </span>
         </button>
+
+        {dropdownOpen && (
+          <div className="mt-2 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-10">
+            {ARTIFACT_TYPE_ORDER.map((type) => {
+              const config = ARTIFACT_TYPE_CONFIG[type];
+              const prompt = ARTIFACT_TEMPLATE_PROMPTS[type];
+              return (
+                <button
+                  key={type}
+                  onClick={() => {
+                    setDropdownOpen(false);
+                    onCreateNew(prompt);
+                  }}
+                  className="w-full flex items-start gap-3 px-3 py-2.5 text-left hover:bg-slate-50 transition-colors"
+                >
+                  <span
+                    className={`material-symbols-outlined text-lg mt-0.5 ${config.color}`}
+                  >
+                    {config.icon}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-slate-900">
+                      {config.label}
+                    </div>
+                    <div className="text-xs text-slate-500 truncate">
+                      {prompt}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <div className="flex-1 overflow-y-auto custom-scrollbar px-3 pb-4">
