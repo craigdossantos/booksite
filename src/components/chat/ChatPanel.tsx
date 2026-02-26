@@ -11,6 +11,7 @@ interface ChatPanelProps {
   onArtifactCreated?: (artifactId: string) => void;
   onArtifactSelect?: (artifactId: string) => void;
   chatInputRef?: RefObject<HTMLInputElement | null>;
+  onInputReady?: (setter: (text: string) => void) => void;
 }
 
 function getSuggestions(
@@ -37,6 +38,7 @@ export function ChatPanel({
   onArtifactCreated,
   onArtifactSelect,
   chatInputRef,
+  onInputReady,
 }: ChatPanelProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
@@ -51,6 +53,11 @@ export function ChatPanel({
 
   const isLoading = status === "streaming" || status === "submitted";
   const suggestions = getSuggestions(activeView);
+
+  // Expose input setter to parent for template pre-fill
+  useEffect(() => {
+    onInputReady?.(setInput);
+  }, [onInputReady]);
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {

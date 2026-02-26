@@ -51,3 +51,11 @@ export const ARTIFACT_TYPE_ORDER: ArtifactType[] = [
   "diagram",
   "note",
 ];
+
+export const ARTIFACT_TEMPLATE_PROMPTS: Record<ArtifactType, string> = {
+  summary: "Create a detailed summary of the key ideas and arguments",
+  quiz: "Create an interactive quiz to test understanding of the main concepts",
+  diagram:
+    "Create a visual diagram showing the relationships between key concepts",
+  note: "Create organized study notes highlighting the most important takeaways",
+};
