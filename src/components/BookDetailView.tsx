@@ -115,21 +115,42 @@ export function BookDetailView({
     setActiveView(undefined);
   }, []);
 
+  const handleChapterExpand = useCallback((chapterNumber: number | null) => {
+    setActiveView(
+      chapterNumber != null
+        ? { type: "chapter", id: String(chapterNumber) }
+        : undefined,
+    );
+  }, []);
+
   const handleReady = useCallback(() => {
     setIsReady(true);
     router.refresh();
   }, [router]);
 
-  const setChatInputRef = useRef<((text: string) => void) | null>(null);
+  const chatActionsRef = useRef<{
+    setInput: (text: string) => void;
+    submit: (text: string) => void;
+  } | null>(null);
 
-  const handleInputReady = useCallback((setter: (text: string) => void) => {
-    setChatInputRef.current = setter;
-  }, []);
+  const handleInputReady = useCallback(
+    (actions: {
+      setInput: (text: string) => void;
+      submit: (text: string) => void;
+    }) => {
+      chatActionsRef.current = actions;
+    },
+    [],
+  );
 
-  const handleCreateNewWithTemplate = useCallback((templatePrompt: string) => {
-    setChatInputRef.current?.(templatePrompt);
-    requestAnimationFrame(() => chatInputRef.current?.focus());
-  }, []);
+  const handleCreateNewWithTemplate = useCallback(
+    (templatePrompt: string) => {
+      const chapterSuffix =
+        activeView?.type === "chapter" ? ` for chapter ${activeView.id}` : "";
+      chatActionsRef.current?.submit(templatePrompt + chapterSuffix);
+    },
+    [activeView],
+  );
 
   return (
     <div className="h-screen flex flex-col">
@@ -199,7 +220,11 @@ export function BookDetailView({
 
               {/* Chapter list or processing overlay */}
               {isReady ? (
-                <ChapterList bookId={book.id} chapters={book.chapters} />
+                <ChapterList
+                  bookId={book.id}
+                  chapters={book.chapters}
+                  onChapterExpand={handleChapterExpand}
+                />
               ) : (
                 <ProcessingOverlay
                   bookId={book.id}

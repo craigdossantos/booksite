@@ -6,6 +6,7 @@ import type { Chapter } from "@/types/book";
 interface ChapterListProps {
   bookId: string;
   chapters: Chapter[];
+  onChapterExpand?: (chapterNumber: number | null) => void;
 }
 
 /**
@@ -43,13 +44,17 @@ function SummaryContent({ content }: { content: string }) {
   );
 }
 
-export function ChapterList({ bookId: _bookId, chapters }: ChapterListProps) {
+export function ChapterList({
+  bookId: _bookId,
+  chapters,
+  onChapterExpand,
+}: ChapterListProps) {
   const [expandedChapter, setExpandedChapter] = useState<number | null>(null);
 
   const toggleChapter = (chapterNumber: number) => {
-    setExpandedChapter((prev) =>
-      prev === chapterNumber ? null : chapterNumber,
-    );
+    const next = expandedChapter === chapterNumber ? null : chapterNumber;
+    setExpandedChapter(next);
+    onChapterExpand?.(next);
   };
 
   return (
