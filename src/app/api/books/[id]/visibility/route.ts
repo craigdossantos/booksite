@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { toggleBookVisibility } from "@/lib/books";
 
 export async function PATCH(
@@ -9,8 +9,8 @@ export async function PATCH(
   const { id } = await params;
 
   // Require authentication
-  const session = await auth();
-  if (!session?.user?.id) {
+  const userId = await getAuthUserId();
+  if (!userId) {
     return NextResponse.json(
       { error: "Authentication required" },
       { status: 401 },
@@ -18,7 +18,7 @@ export async function PATCH(
   }
 
   // Toggle visibility (function verifies ownership)
-  const book = await toggleBookVisibility(id, session.user.id);
+  const book = await toggleBookVisibility(id, userId);
 
   if (!book) {
     return NextResponse.json(

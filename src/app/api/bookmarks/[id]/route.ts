@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { removeBookmark } from "@/lib/books";
 
 export async function DELETE(
@@ -8,15 +8,15 @@ export async function DELETE(
 ) {
   const { id: bookId } = await params;
 
-  const session = await auth();
-  if (!session?.user?.id) {
+  const userId = await getAuthUserId();
+  if (!userId) {
     return NextResponse.json(
       { error: "Authentication required" },
       { status: 401 },
     );
   }
 
-  const success = await removeBookmark(session.user.id, bookId);
+  const success = await removeBookmark(userId, bookId);
 
   if (!success) {
     return NextResponse.json({ error: "Bookmark not found" }, { status: 404 });

@@ -4,7 +4,7 @@
  */
 
 import { prisma } from "@/lib/prisma";
-import { supabase, BUCKETS } from "@/lib/supabase";
+import { supabase, BUCKETS } from "@/lib/supabase-storage";
 import type {
   Book,
   BookWithChapters,

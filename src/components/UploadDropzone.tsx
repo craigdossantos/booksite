@@ -2,10 +2,10 @@
 
 import { useState, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { useSession, signIn } from "next-auth/react";
+import { useAuth } from "@/components/AuthProvider";
 
 export function UploadDropzone() {
-  const { data: session, status } = useSession();
+  const { user, loading, signInWithGoogle } = useAuth();
   const [isDragging, setIsDragging] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [isPublic, setIsPublic] = useState(false);
@@ -13,8 +13,8 @@ export function UploadDropzone() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
-  const isAuthenticated = !!session?.user;
-  const isLoading = status === "loading";
+  const isAuthenticated = !!user;
+  const isLoading = loading;
 
   const handleUpload = useCallback(
     async (file: File) => {
@@ -90,11 +90,11 @@ export function UploadDropzone() {
 
   const handleClick = useCallback(() => {
     if (!isAuthenticated) {
-      signIn("google");
+      signInWithGoogle();
       return;
     }
     fileInputRef.current?.click();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, signInWithGoogle]);
 
   // Show loading state while checking auth
   if (isLoading) {

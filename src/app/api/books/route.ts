@@ -1,15 +1,13 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { getBooks, getPublicBooks } from "@/lib/books";
 
 export async function GET() {
-  const session = await auth();
+  const userId = await getAuthUserId();
 
   // If authenticated, return public books + user's private books
   // If not authenticated, return only public books
-  const books = session?.user?.id
-    ? await getBooks(session.user.id)
-    : await getPublicBooks();
+  const books = userId ? await getBooks(userId) : await getPublicBooks();
 
   return NextResponse.json({ books });
 }

@@ -1,22 +1,22 @@
 import { getPublicBooks } from "@/lib/books";
-import { auth } from "@/auth";
+import { getAuthUser } from "@/lib/supabase/auth-helpers";
 import { LibraryView } from "@/components/LibraryView";
 import { AppHeader } from "@/components/AppHeader";
 
 export default async function LibraryPage() {
-  let session = null;
+  let user = null;
   let initialBooks: Awaited<ReturnType<typeof getPublicBooks>> = [];
   try {
-    session = await auth();
+    user = await getAuthUser();
     initialBooks = await getPublicBooks();
   } catch {
     // DB unreachable — render with empty state
   }
-  const isAuthenticated = !!session?.user;
+  const isAuthenticated = !!user;
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AppHeader avatarUrl={session?.user?.image ?? undefined} />
+      <AppHeader avatarUrl={user?.image ?? undefined} />
       <main className="flex-1 max-w-6xl mx-auto px-6 py-10 w-full">
         <header className="mb-10">
           <h1 className="text-3xl font-bold text-slate-900">

@@ -1,13 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { NextRequest } from "next/server";
-import type { Session } from "next-auth";
 import { GET, DELETE } from "@/app/api/books/[id]/route";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { getBook, deleteBook, ownsBook } from "@/lib/books";
 import type { BookWithChapters } from "@/types/book";
 
-vi.mock("@/auth", () => ({
-  auth: vi.fn(),
+vi.mock("@/lib/supabase/auth-helpers", () => ({
+  getAuthUserId: vi.fn(),
 }));
 
 vi.mock("@/lib/books", () => ({
@@ -16,9 +15,7 @@ vi.mock("@/lib/books", () => ({
   ownsBook: vi.fn(),
 }));
 
-const mockAuth = auth as unknown as ReturnType<
-  typeof vi.fn<() => Promise<Session | null>>
->;
+const mockGetAuthUserId = vi.mocked(getAuthUserId);
 const mockGetBook = vi.mocked(getBook);
 const mockDeleteBook = vi.mocked(deleteBook);
 const mockOwnsBook = vi.mocked(ownsBook);
@@ -44,7 +41,7 @@ beforeEach(() => {
 
 describe("GET /api/books/[id]", () => {
   it("returns 404 when book doesn't exist", async () => {
-    mockAuth.mockResolvedValue(null);
+    mockGetAuthUserId.mockResolvedValue(null);
     mockGetBook.mockResolvedValue(null);
 
     const req = new NextRequest("http://localhost/api/books/nonexistent");
@@ -57,10 +54,7 @@ describe("GET /api/books/[id]", () => {
   });
 
   it("returns book data when found", async () => {
-    mockAuth.mockResolvedValue({
-      user: { id: "user-1", name: "Test", email: "t@t.com" },
-      expires: "",
-    });
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockGetBook.mockResolvedValue(TEST_BOOK);
 
     const req = new NextRequest("http://localhost/api/books/test-id");
@@ -75,7 +69,7 @@ describe("GET /api/books/[id]", () => {
 
 describe("DELETE /api/books/[id]", () => {
   it("returns 401 when not authenticated", async () => {
-    mockAuth.mockResolvedValue(null);
+    mockGetAuthUserId.mockResolvedValue(null);
 
     const req = new NextRequest("http://localhost/api/books/test-id", {
       method: "DELETE",
@@ -88,10 +82,7 @@ describe("DELETE /api/books/[id]", () => {
   });
 
   it("returns 403 when user doesn't own the book", async () => {
-    mockAuth.mockResolvedValue({
-      user: { id: "user-1", name: "Test", email: "t@t.com" },
-      expires: "",
-    });
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockOwnsBook.mockResolvedValue(false);
 
     const req = new NextRequest("http://localhost/api/books/test-id", {
@@ -106,10 +97,7 @@ describe("DELETE /api/books/[id]", () => {
   });
 
   it("returns 200 and calls deleteBook when owner requests deletion", async () => {
-    mockAuth.mockResolvedValue({
-      user: { id: "user-1", name: "Test", email: "t@t.com" },
-      expires: "",
-    });
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockOwnsBook.mockResolvedValue(true);
     mockDeleteBook.mockResolvedValue(true);
 
@@ -125,10 +113,7 @@ describe("DELETE /api/books/[id]", () => {
   });
 
   it("returns 500 when deleteBook fails", async () => {
-    mockAuth.mockResolvedValue({
-      user: { id: "user-1", name: "Test", email: "t@t.com" },
-      expires: "",
-    });
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockOwnsBook.mockResolvedValue(true);
     mockDeleteBook.mockResolvedValue(false);
 

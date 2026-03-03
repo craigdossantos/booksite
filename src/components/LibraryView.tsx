@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
+import { useAuth } from "@/components/AuthProvider";
 import { LibraryTabs, LibraryTab } from "./LibraryTabs";
 import { BookCard } from "./BookCard";
 import { EmptyLibrary } from "./EmptyLibrary";
@@ -13,8 +13,8 @@ interface LibraryViewProps {
 }
 
 export function LibraryView({ initialBooks }: LibraryViewProps) {
-  const { data: session, status } = useSession();
-  const isAuthenticated = !!session?.user;
+  const { user, loading } = useAuth();
+  const isAuthenticated = !!user;
   const [activeTab, setActiveTab] = useState<LibraryTab>("my-library");
   const [ownedBooks, setOwnedBooks] = useState<Book[]>([]);
   const [bookmarkedBooks, setBookmarkedBooks] = useState<Book[]>([]);
@@ -110,7 +110,7 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
   };
 
   const displayBooks = getDisplayBooks();
-  const userId = session?.user?.id;
+  const userId = user?.id;
 
   // Check if a book is owned by current user
   const isOwnedBook = (book: Book) => book.ownerId === userId;
@@ -119,7 +119,7 @@ export function LibraryView({ initialBooks }: LibraryViewProps) {
   const isBookmarkedBook = (book: Book) =>
     bookmarkedBooks.some((b) => b.id === book.id);
 
-  if (status === "loading") {
+  if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900" />

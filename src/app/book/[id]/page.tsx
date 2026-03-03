@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { getBook } from "@/lib/books";
 import { listArtifacts } from "@/lib/artifacts";
 import { BookDetailView } from "@/components/BookDetailView";
@@ -10,8 +10,8 @@ interface Props {
 
 export default async function BookDetailPage({ params }: Props) {
   const { id } = await params;
-  const session = await auth();
-  const book = await getBook(id, session?.user?.id);
+  const userId = await getAuthUserId();
+  const book = await getBook(id, userId ?? undefined);
 
   if (!book) {
     notFound();
