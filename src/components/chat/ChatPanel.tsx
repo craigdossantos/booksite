@@ -11,7 +11,10 @@ interface ChatPanelProps {
   onArtifactCreated?: (artifactId: string) => void;
   onArtifactSelect?: (artifactId: string) => void;
   chatInputRef?: RefObject<HTMLInputElement | null>;
-  onInputReady?: (setter: (text: string) => void) => void;
+  onInputReady?: (actions: {
+    setInput: (text: string) => void;
+    submit: (text: string) => void;
+  }) => void;
 }
 
 function getSuggestions(
@@ -54,11 +57,6 @@ export function ChatPanel({
   const isLoading = status === "streaming" || status === "submitted";
   const suggestions = getSuggestions(activeView);
 
-  // Expose input setter to parent for template pre-fill
-  useEffect(() => {
-    onInputReady?.(setInput);
-  }, [onInputReady]);
-
   // Auto-scroll to bottom on new messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -78,7 +76,8 @@ export function ChatPanel({
           part.output
         ) {
           try {
-            const result = JSON.parse(part.output as string);
+            const raw = part.output;
+            const result = typeof raw === "string" ? JSON.parse(raw) : raw;
             if (result.id && !seenArtifactsRef.current.has(part.toolCallId)) {
               seenArtifactsRef.current.add(part.toolCallId);
               onArtifactCreated(result.id);
@@ -96,6 +95,20 @@ export function ChatPanel({
     sendMessage({ text }, { body: { activeView } });
     setInput("");
   };
+
+  // Keep a ref to handleSubmit so the exposed submit closure always calls the latest version
+  const submitRef = useRef(handleSubmit);
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+  });
+
+  // Expose input setter and submit action to parent
+  useEffect(() => {
+    onInputReady?.({
+      setInput,
+      submit: (text: string) => submitRef.current(text),
+    });
+  }, [onInputReady]);
 
   return (
     <div className="flex flex-col h-full">
