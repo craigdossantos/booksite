@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash, createHmac } from "crypto";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import { createBook } from "@/lib/books";
-import { supabase, BUCKETS } from "@/lib/supabase";
+import { supabase, BUCKETS } from "@/lib/supabase-storage";
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await auth();
-    if (!session?.user?.id) {
+    const userId = await getAuthUserId();
+    if (!userId) {
       return NextResponse.json(
         { error: "Authentication required" },
         { status: 401 },
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
         id: bookId,
         title: bookTitle,
         author: "Unknown",
-        ownerId: session.user.id,
+        ownerId: userId,
         isPublic,
         status: "uploading",
       });

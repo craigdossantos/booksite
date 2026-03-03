@@ -25,7 +25,7 @@ vi.mock("@/lib/prisma", () => ({
   },
 }));
 
-vi.mock("@/lib/supabase", () => ({
+vi.mock("@/lib/supabase-storage", () => ({
   supabase: {
     storage: {
       from: vi.fn(() => ({
@@ -40,7 +40,7 @@ vi.mock("@/lib/supabase", () => ({
 
 // Import after mocks are declared
 import { prisma } from "@/lib/prisma";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase-storage";
 import {
   getPublicBooks,
   getBooks,

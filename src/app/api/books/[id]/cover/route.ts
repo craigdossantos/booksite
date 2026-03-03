@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { getPublicBookUrl } from "@/lib/supabase";
+import { getPublicBookUrl } from "@/lib/supabase-storage";
 
 export async function GET(
   request: NextRequest,

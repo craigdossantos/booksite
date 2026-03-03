@@ -1,26 +1,23 @@
 "use client";
 
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useAuth } from "@/components/AuthProvider";
 
 export function AuthButton() {
-  const { data: session, status } = useSession();
+  const { user, loading, signInWithGoogle, signOut } = useAuth();
 
-  if (status === "loading") {
+  if (loading) {
     return <div className="h-10 w-24 animate-pulse bg-slate-200 rounded" />;
   }
 
-  if (session) {
+  if (user) {
+    const avatarUrl = user.user_metadata?.avatar_url as string | undefined;
     return (
       <button
-        onClick={() => signOut()}
+        onClick={signOut}
         className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 hover:text-slate-900 transition-colors"
       >
-        {session.user?.image && (
-          <img
-            src={session.user.image}
-            alt=""
-            className="w-6 h-6 rounded-full"
-          />
+        {avatarUrl && (
+          <img src={avatarUrl} alt="" className="w-6 h-6 rounded-full" />
         )}
         Sign out
       </button>
@@ -29,7 +26,7 @@ export function AuthButton() {
 
   return (
     <button
-      onClick={() => signIn("google")}
+      onClick={signInWithGoogle}
       className="px-4 py-2 text-sm font-medium text-white bg-slate-800 rounded hover:bg-slate-700 transition-colors"
     >
       Sign in with Google

@@ -1,9 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { NextRequest } from "next/server";
-import type { Session } from "next-auth";
 import { GET, POST } from "@/app/api/bookmarks/route";
 import { DELETE } from "@/app/api/bookmarks/[id]/route";
-import { auth } from "@/auth";
+import { getAuthUserId } from "@/lib/supabase/auth-helpers";
 import {
   createBookmark,
   canAccessBook,
@@ -12,8 +11,8 @@ import {
 } from "@/lib/books";
 import type { Book } from "@/types/book";
 
-vi.mock("@/auth", () => ({
-  auth: vi.fn(),
+vi.mock("@/lib/supabase/auth-helpers", () => ({
+  getAuthUserId: vi.fn(),
 }));
 
 vi.mock("@/lib/books", () => ({
@@ -23,9 +22,7 @@ vi.mock("@/lib/books", () => ({
   removeBookmark: vi.fn(),
 }));
 
-const mockAuth = auth as unknown as ReturnType<
-  typeof vi.fn<() => Promise<Session | null>>
->;
+const mockGetAuthUserId = vi.mocked(getAuthUserId);
 const mockCreateBookmark = vi.mocked(createBookmark);
 const mockCanAccessBook = vi.mocked(canAccessBook);
 const mockGetUserBookmarks = vi.mocked(getUserBookmarks);
@@ -52,13 +49,6 @@ const SAMPLE_BOOKMARKS: Book[] = [
   },
 ];
 
-function authedSession(userId = "user-1") {
-  return {
-    user: { id: userId, name: "Test User", email: "test@example.com" },
-    expires: "",
-  };
-}
-
 function makeParams(id: string) {
   return { params: Promise.resolve({ id }) };
 }
@@ -69,7 +59,7 @@ beforeEach(() => {
 
 describe("GET /api/bookmarks", () => {
   it("returns 401 when not authenticated", async () => {
-    mockAuth.mockResolvedValue(null);
+    mockGetAuthUserId.mockResolvedValue(null);
 
     const response = await GET();
     const data = await response.json();
@@ -79,7 +69,7 @@ describe("GET /api/bookmarks", () => {
   });
 
   it("returns bookmarks for authenticated user", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockGetUserBookmarks.mockResolvedValue(SAMPLE_BOOKMARKS);
 
     const response = await GET();
@@ -93,7 +83,7 @@ describe("GET /api/bookmarks", () => {
 
 describe("POST /api/bookmarks", () => {
   it("returns 401 when not authenticated", async () => {
-    mockAuth.mockResolvedValue(null);
+    mockGetAuthUserId.mockResolvedValue(null);
 
     const req = new NextRequest("http://localhost/api/bookmarks", {
       method: "POST",
@@ -107,7 +97,7 @@ describe("POST /api/bookmarks", () => {
   });
 
   it("returns 400 when bookId is missing", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
 
     const req = new NextRequest("http://localhost/api/bookmarks", {
       method: "POST",
@@ -121,7 +111,7 @@ describe("POST /api/bookmarks", () => {
   });
 
   it("returns 404 when book isn't accessible", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockCanAccessBook.mockResolvedValue(false);
 
     const req = new NextRequest("http://localhost/api/bookmarks", {
@@ -137,7 +127,7 @@ describe("POST /api/bookmarks", () => {
   });
 
   it("returns 400 when already bookmarked", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockCanAccessBook.mockResolvedValue(true);
     mockCreateBookmark.mockResolvedValue(false);
 
@@ -154,7 +144,7 @@ describe("POST /api/bookmarks", () => {
   });
 
   it("returns 200 on successful bookmark", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockCanAccessBook.mockResolvedValue(true);
     mockCreateBookmark.mockResolvedValue(true);
 
@@ -173,7 +163,7 @@ describe("POST /api/bookmarks", () => {
 
 describe("DELETE /api/bookmarks/[id]", () => {
   it("returns 401 when not authenticated", async () => {
-    mockAuth.mockResolvedValue(null);
+    mockGetAuthUserId.mockResolvedValue(null);
 
     const req = new NextRequest("http://localhost/api/bookmarks/book-1", {
       method: "DELETE",
@@ -186,7 +176,7 @@ describe("DELETE /api/bookmarks/[id]", () => {
   });
 
   it("returns 404 when bookmark doesn't exist", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockRemoveBookmark.mockResolvedValue(false);
 
     const req = new NextRequest("http://localhost/api/bookmarks/book-99", {
@@ -201,7 +191,7 @@ describe("DELETE /api/bookmarks/[id]", () => {
   });
 
   it("returns 200 on successful removal", async () => {
-    mockAuth.mockResolvedValue(authedSession());
+    mockGetAuthUserId.mockResolvedValue("user-1");
     mockRemoveBookmark.mockResolvedValue(true);
 
     const req = new NextRequest("http://localhost/api/bookmarks/book-1", {

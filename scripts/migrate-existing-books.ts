@@ -4,6 +4,7 @@
  */
 
 import { PrismaClient } from "@prisma/client";
+import { randomUUID } from "crypto";
 import { readFileSync, readdirSync, existsSync, statSync } from "fs";
 import path from "path";
 
@@ -33,6 +34,7 @@ async function main() {
     console.log(`Creating user: ${OWNER_EMAIL}`);
     user = await prisma.user.create({
       data: {
+        id: randomUUID(),
         email: OWNER_EMAIL,
         name: "Craig",
       },
